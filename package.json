@@ -1,0 +1,28 @@
+{
+  "name": "shiftstart-it-support-kb-jekyll",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Enterprise-scale technician-first IT support knowledge base built with Jekyll, Tailwind and a multi-select symptom matcher.",
+  "scripts": {
+    "clean": "rimraf _site assets/data assets/css/site.css",
+    "generate": "node scripts/generate-wizard.js && node scripts/generate-search-data.js",
+    "css": "tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --minify",
+    "jekyll": "bundle exec jekyll build",
+    "build": "npm run clean && npm run vendor && npm run generate && npm run css && bundle exec jekyll build",
+    "dev": "npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
+    "check": "node scripts/validate-content.js",
+    "test": "npm run check && npm run build",
+    "audit-content": "node scripts/validate-content.js",
+    "vendor": "node scripts/vendor-assets.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "lunr": "^2.3.9"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,13 @@
+{% assign command_text = include.command | strip %}
+<div class="command-block"{% if include.diagnostic_id and include.diagnostic_id != "" %} data-diagnostic-id="{{ include.diagnostic_id | escape }}"{% endif %}>
+  <div class="command-head">
+    <span>{{ include.label | default: include.shell | escape }}</span>
+    <div class="flex gap-2">
+      <button class="copy-command" type="button" aria-label="Copy command">Copy</button>
+      {% if include.diagnostic_id and include.diagnostic_id != "" %}
+      <button class="run-diagnostic" type="button" data-diagnostic-action="{{ include.diagnostic_id | escape }}">Run diagnostic</button>
+      {% endif %}
+    </div>
+  </div>
+  <pre><code class="language-{{ include.shell | default: 'text' | escape }}">{{ command_text | escape }}</code></pre>
+</div>

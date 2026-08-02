@@ -1,0 +1,91 @@
+name: Build and deploy Jekyll KB to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Install Ruby dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+
+      - name: Install Node dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Vendor browser dependencies
+        run: npm run vendor
+
+      - name: Validate knowledge-base content
+        run: npm run check
+
+      - name: Generate search and wizard data
+        run: npm run generate
+        env:
+          BASEURL: /${{ github.event.repository.name }}
+
+      - name: Build Tailwind CSS
+        run: npm run css
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --baseurl "/${{ github.event.repository.name }}"
+        env:
+          JEKYLL_ENV: production
+
+      - name: Verify complete enterprise build
+        run: |
+          test -s _site/index.html
+          test -s _site/assets/css/site.css
+          test -s _site/assets/data/search-index.json
+          test -s _site/assets/data/search-documents.json
+          test -s _site/assets/data/wizard-data.json
+          test -s _site/assets/js/lunr.min.js
+          node -e "const d=require('./assets/data/wizard-data.json'); if(d.counts.procedures < 200) throw new Error('Procedure catalogue unexpectedly incomplete'); console.log(d.counts)"
+
+      - name: Upload GitHub Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

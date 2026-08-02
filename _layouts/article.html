@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<article class="shell py-10">
+  <div class="mx-auto max-w-4xl">
+    <div class="mb-4 flex flex-wrap gap-2">
+      <span class="badge">{{ page.content_type }}</span>
+      {% if page.category %}<span class="badge">{{ page.category }}</span>{% endif %}
+      {% if page.severity %}<span class="badge">Severity: {{ page.severity }}</span>{% endif %}{% if page.support_tier %}<span class="badge">{{ page.support_tier }}</span>{% endif %}{% if page.owner_team %}<span class="badge">Owner: {{ page.owner_team }}</span>{% endif %}{% if page.estimated_time %}<span class="badge">{{ page.estimated_time }}</span>{% endif %}
+      {% for tag in page.tags %}<span class="badge">{{ tag }}</span>{% endfor %}
+    </div>
+
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="mt-3 text-lg text-slate-600">{{ page.description }}</p>{% endif %}
+    {% if page.tldr %}<section class="tldr"><h2 class="!mt-0 text-lg">TL;DR</h2><p>{{ page.tldr }}</p></section>{% endif %}
+
+    <div class="article-body">{{ content }}</div>
+
+    {% assign has_related = false %}
+    {% if page.related_symptoms or page.related_causes or page.related_procedures or page.related_commands or page.next_steps %}{% assign has_related = true %}{% endif %}
+    {% if has_related %}
+    <section class="mt-10 border-t border-slate-200 pt-8">
+      <h2 class="!mt-0">Related knowledge</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {% for slug in page.related_symptoms %}
+          {% assign item = site.symptoms | where: "slug", slug | first %}
+          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Symptom</p></a>{% endif %}
+        {% endfor %}
+        {% for slug in page.related_causes %}
+          {% assign item = site.causes | where: "slug", slug | first %}
+          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Cause</p></a>{% endif %}
+        {% endfor %}
+        {% for slug in page.related_procedures %}
+          {% assign item = site.procedures | where: "slug", slug | first %}
+          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Procedure</p></a>{% endif %}
+        {% endfor %}
+        {% for slug in page.next_steps %}
+          {% assign item = site.procedures | where: "slug", slug | first %}
+          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Next procedure</p></a>{% endif %}
+        {% endfor %}
+        {% for slug in page.related_commands %}
+          {% assign item = site.commands | where: "slug", slug | first %}
+          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Diagnostic command</p></a>{% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.escalation %}<section class="escalation"><h2 class="!mt-0 text-xl">Escalation path</h2><p>{{ page.escalation }}</p></section>{% endif %}
+
+    {% if page.content_type == 'procedure' %}
+    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <a class="btn" data-ticket-link href="#">Create pre-filled ITSM ticket</a>
+      <button class="btn-secondary" type="button" data-feedback="up">👍 Helpful</button>
+      <button class="btn-secondary" type="button" data-feedback="down">👎 Not helpful</button>
+    </div>
+    <p id="feedback-status" class="mt-3 text-sm text-slate-500" aria-live="polite"></p>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.data.kb.description | escape }}">
+  <meta name="theme-color" content="#0f172a">
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.data.kb.name | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <script>
+    window.KB_CONFIG = {{ site.data.kb | jsonify }};
+    window.KB_BASE = {{ '/' | relative_url | jsonify }};
+  </script>
+</head>
+<body data-required-role="{{ page.required_role | default: 'technician' | escape }}">
+  {% include header.html %}
+  <main>{{ content }}</main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/lunr.min.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/app.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/search.js' | relative_url }}"></script>
+</body>
+</html>
