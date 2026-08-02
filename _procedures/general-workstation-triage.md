@@ -3,7 +3,7 @@ title: General workstation triage
 slug: general-workstation-triage
 description: A safe first-response workflow when the user's report is vague or spans multiple components.
 content_type: procedure
-category: Desktop
+category: Windows Endpoints
 severity: medium
 tags:
 - triage
@@ -11,19 +11,25 @@ tags:
 - diagnostics
 - evidence
 error_codes: []
-tldr: Define impact, reproduce once, check recent changes, capture basic health data, then isolate account, application,
-  device or network.
+tldr: Define impact, reproduce once, check recent changes, capture basic health data, then isolate account, application, device or network.
 related_symptoms:
 - general-workstation-triage
 related_causes: []
 next_steps: []
-escalation: Escalate to the owning team with a concise problem statement, business impact, reproduction steps, timestamps,
-  screenshots, diagnostic output and every change already made.
+escalation: Escalate to the owning team with a concise problem statement, business impact, reproduction steps, timestamps, screenshots, diagnostic output and every change already made.
 last_reviewed: 2026-08-02
 permalink: /procedures/general-workstation-triage/
 layout: article
 symptom_weights:
   general-workstation-triage: 10
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Steps
 1. Capture who, what, where, when and impact. Ask what changed immediately before the issue.

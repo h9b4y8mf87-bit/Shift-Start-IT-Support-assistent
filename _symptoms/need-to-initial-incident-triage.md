@@ -1,8 +1,7 @@
 ---
-title: Need to initial incident triage
+title: Initial incident triage required
 slug: need-to-initial-incident-triage
-description: 'Observable report: Need to initial incident triage. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Initial incident triage required. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
@@ -15,7 +14,6 @@ permalink: /symptoms/need-to-initial-incident-triage/
 layout: article
 last_reviewed: '2026-08-02'
 ---
-
 ## What to capture
 Record the exact wording, affected users and devices, timestamps, error messages, screenshots, recent changes and business impact. Select this symptom together with every other observed symptom in the wizard; the matcher ranks procedures by combined evidence rather than forcing a single yes/no path.
 

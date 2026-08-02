@@ -12,7 +12,7 @@
     window.KB_BASE = {{ '/' | relative_url | jsonify }};
   </script>
 </head>
-<body data-required-role="{{ page.required_role | default: 'technician' | escape }}">
+<body data-required-role="{{ page.required_role | default: 'technician' | escape }}" data-content-status="{{ page.content_status | default: '' | escape }}">
   {% include header.html %}
   <main>{{ content }}</main>
   {% include footer.html %}

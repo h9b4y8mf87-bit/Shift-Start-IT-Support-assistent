@@ -63,3 +63,33 @@
   .primary-result { @apply border-2 border-emerald-500; }
   .matched-label { @apply text-emerald-800; }
   .catalog-item[hidden] { display: none; }
+
+@layer components {
+  .assurance-banner { @apply flex flex-col gap-4 rounded-2xl border p-5 sm:flex-row sm:items-start sm:justify-between; }
+  .assurance-banner p { @apply mt-2 text-sm; }
+  .assurance-label { @apply !mt-0 text-xs font-bold uppercase tracking-wider; }
+  .assurance-status { @apply shrink-0 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider; }
+  .assurance-banner.status-verified { @apply border-emerald-300 bg-emerald-50 text-emerald-950; }
+  .assurance-banner.status-verified .assurance-status { @apply bg-emerald-700 text-white; }
+  .assurance-banner.status-under_review { @apply border-amber-300 bg-amber-50 text-amber-950; }
+  .assurance-banner.status-under_review .assurance-status { @apply bg-amber-700 text-white; }
+  .assurance-banner.status-draft { @apply border-rose-300 bg-rose-50 text-rose-950; }
+  .assurance-banner.status-draft .assurance-status { @apply bg-rose-700 text-white; }
+  .assurance-banner.status-deprecated { @apply border-slate-400 bg-slate-100 text-slate-900; }
+  .assurance-banner.status-deprecated .assurance-status { @apply bg-slate-700 text-white; }
+  .assurance-meta { @apply mt-6 grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 sm:grid-cols-2; }
+  .assurance-meta div { @apply grid gap-1; }
+  .assurance-meta dt { @apply text-xs font-bold uppercase tracking-wider text-slate-500; }
+  .assurance-meta dd { @apply text-sm font-medium text-slate-800; }
+  .status-verified { @apply bg-emerald-100 text-emerald-800; }
+  .status-under_review { @apply bg-amber-100 text-amber-800; }
+  .status-draft { @apply bg-rose-100 text-rose-800; }
+  .status-deprecated { @apply bg-slate-200 text-slate-700; }
+  .confidence-high { @apply bg-emerald-100 text-emerald-800; }
+  .confidence-medium { @apply bg-blue-100 text-blue-800; }
+  .confidence-low { @apply bg-amber-100 text-amber-800; }
+  .quality-warning { @apply mt-5 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950; }
+  .review-warning { @apply mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-amber-900; }
+  .unmatched-label { @apply text-amber-800; }
+  .btn.is-disabled, .btn[aria-disabled="true"] { @apply cursor-not-allowed bg-slate-400 hover:bg-slate-400; }
+}

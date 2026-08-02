@@ -3,7 +3,7 @@ title: VPN fails to connect
 slug: vpn-fails
 description: The VPN client times out, rejects authentication or cannot reach its gateway.
 content_type: symptom
-category: Network
+category: Network & Connectivity
 severity: high
 tags:
 - vpn

@@ -1,10 +1,9 @@
 ---
 title: No network on docking station
 slug: no-network-docking-station
-description: Isolate dock Ethernet failures across cable, port, adapter, driver and
-  firmware layers.
+description: Isolate dock Ethernet failures across cable, port, adapter, driver and firmware layers.
 content_type: procedure
-category: Network
+category: Network & Connectivity
 severity: medium
 tags:
 - dock
@@ -14,19 +13,24 @@ tags:
 error_codes:
 - Unidentified network
 - Network cable unplugged
-tldr: Reseat power and USB-C, test a known-good cable/port, then reset the dock Ethernet
-  adapter and update approved dock firmware.
+tldr: Reseat power and USB-C, test a known-good cable/port, then reset the dock Ethernet adapter and update approved dock firmware.
 related_symptoms:
 - dock-no-network
 related_causes:
 - dock-adapter-state
 next_steps: []
-escalation: Escalate to Desktop Engineering with laptop and dock models, serials,
-  cable/port tests, adapter status, driver version and whether another laptop works
-  on the same dock.
+escalation: Escalate to Desktop Engineering with laptop and dock models, serials, cable/port tests, adapter status, driver version and whether another laptop works on the same dock.
 last_reviewed: 2026-08-02
 permalink: /procedures/no-network-docking-station/
 layout: article
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Steps
 1. Confirm Wi-Fi works, then test the Ethernet cable and wall port with a known-good device.

@@ -1,7 +1,7 @@
 ---
-title: Request to a vendor RMA
+title: Vendor RMA requested
 slug: request-to-a-vendor-rma
-description: 'Observable report: Request to a vendor RMA. Select it with any other symptoms to receive ranked procedures.'
+description: 'Observable report: Vendor RMA requested. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
@@ -14,7 +14,6 @@ permalink: /symptoms/request-to-a-vendor-rma/
 layout: article
 last_reviewed: '2026-08-02'
 ---
-
 ## What to capture
 Record the exact wording, affected users and devices, timestamps, error messages, screenshots, recent changes and business impact. Select this symptom together with every other observed symptom in the wizard; the matcher ranks procedures by combined evidence rather than forcing a single yes/no path.
 

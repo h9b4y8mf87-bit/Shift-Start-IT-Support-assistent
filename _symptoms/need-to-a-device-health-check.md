@@ -1,8 +1,7 @@
 ---
-title: Need to a device health check
+title: Device health check required
 slug: need-to-a-device-health-check
-description: 'Observable report: Need to a device health check. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Device health check required. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
@@ -15,7 +14,6 @@ permalink: /symptoms/need-to-a-device-health-check/
 layout: article
 last_reviewed: '2026-08-02'
 ---
-
 ## What to capture
 Record the exact wording, affected users and devices, timestamps, error messages, screenshots, recent changes and business impact. Select this symptom together with every other observed symptom in the wizard; the matcher ranks procedures by combined evidence rather than forcing a single yes/no path.
 

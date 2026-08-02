@@ -1,8 +1,7 @@
 ---
-title: Need to an office equipment relocation
+title: Office equipment relocation required
 slug: need-to-an-office-equipment-relocation
-description: 'Observable report: Need to an office equipment relocation. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Office equipment relocation required. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
@@ -15,7 +14,6 @@ permalink: /symptoms/need-to-an-office-equipment-relocation/
 layout: article
 last_reviewed: '2026-08-02'
 ---
-
 ## What to capture
 Record the exact wording, affected users and devices, timestamps, error messages, screenshots, recent changes and business impact. Select this symptom together with every other observed symptom in the wizard; the matcher ranks procedures by combined evidence rather than forcing a single yes/no path.
 

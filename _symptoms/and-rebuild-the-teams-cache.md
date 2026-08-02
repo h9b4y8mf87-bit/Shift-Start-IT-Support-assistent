@@ -1,8 +1,7 @@
 ---
-title: And rebuild the Teams cache
+title: Teams cache needs to be rebuilt
 slug: and-rebuild-the-teams-cache
-description: 'Observable report: And rebuild the Teams cache. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Teams cache needs to be rebuilt. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
@@ -15,7 +14,6 @@ permalink: /symptoms/and-rebuild-the-teams-cache/
 layout: article
 last_reviewed: '2026-08-02'
 ---
-
 ## What to capture
 Record the exact wording, affected users and devices, timestamps, error messages, screenshots, recent changes and business impact. Select this symptom together with every other observed symptom in the wizard; the matcher ranks procedures by combined evidence rather than forcing a single yes/no path.
 

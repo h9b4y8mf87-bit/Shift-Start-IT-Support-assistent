@@ -3,7 +3,7 @@ title: Outlook crashes or will not open
 slug: outlook-crashes
 description: Isolate add-in, profile, navigation pane and Office installation failures.
 content_type: procedure
-category: Microsoft 365
+category: Microsoft 365 & Collaboration
 severity: medium
 tags:
 - outlook
@@ -13,18 +13,24 @@ tags:
 error_codes:
 - Cannot start Microsoft Outlook
 - Outlook has stopped working
-tldr: Open Outlook in safe mode; if it works, disable add-ins. Otherwise reset the
-  navigation pane and test a new mail profile.
+tldr: Open Outlook in safe mode; if it works, disable add-ins. Otherwise reset the navigation pane and test a new mail profile.
 related_symptoms:
 - outlook-wont-open
 related_causes:
 - outlook-addin
 next_steps: []
-escalation: Escalate to the Microsoft 365 team with Office build, crash time, Windows
-  Event Viewer application error, add-in list, safe-mode result and profile test result.
+escalation: Escalate to the Microsoft 365 team with Office build, crash time, Windows Event Viewer application error, add-in list, safe-mode result and profile test result.
 last_reviewed: 2026-08-02
 permalink: /procedures/outlook-crashes/
 layout: article
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Steps
 1. End remaining Outlook processes and start safe mode.

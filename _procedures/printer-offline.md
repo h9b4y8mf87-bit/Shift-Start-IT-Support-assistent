@@ -1,10 +1,9 @@
 ---
 title: Printer shows Offline
 slug: printer-offline
-description: Restore printing by checking reachability, queue state, port and spooler
-  health.
+description: Restore printing by checking reachability, queue state, port and spooler health.
 content_type: procedure
-category: Printing
+category: Printing & Scanning
 severity: low
 tags:
 - printer
@@ -14,18 +13,24 @@ tags:
 error_codes:
 - Printer Offline
 - Error - Printing
-tldr: Confirm the printer is reachable, clear stuck jobs, disable 'Use Printer Offline',
-  then restart the Print Spooler.
+tldr: Confirm the printer is reachable, clear stuck jobs, disable 'Use Printer Offline', then restart the Print Spooler.
 related_symptoms:
 - printer-offline-symptom
 related_causes:
 - stuck-print-queue
 next_steps: []
-escalation: Escalate to Desktop or Print Services with printer name, IP, site, queue
-  screenshot, ping result, port configuration and spooler restart result.
+escalation: Escalate to Desktop or Print Services with printer name, IP, site, queue screenshot, ping result, port configuration and spooler restart result.
 last_reviewed: 2026-08-02
 permalink: /procedures/printer-offline/
 layout: article
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Steps
 1. Check power, display errors, paper and network cable. Print a device configuration page if available.

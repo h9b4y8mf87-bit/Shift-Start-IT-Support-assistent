@@ -3,7 +3,7 @@ title: Outlook will not open
 slug: outlook-wont-open
 description: Outlook closes immediately, hangs at startup or displays a startup error.
 content_type: symptom
-category: Microsoft 365
+category: Microsoft 365 & Collaboration
 severity: medium
 tags:
 - outlook

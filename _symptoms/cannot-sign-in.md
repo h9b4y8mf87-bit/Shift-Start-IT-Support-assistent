@@ -3,7 +3,7 @@ title: User cannot sign in
 slug: cannot-sign-in
 description: The user receives a password, lockout or MFA error when accessing a corporate service.
 content_type: symptom
-category: Identity
+category: Identity & Access Management
 severity: high
 tags:
 - signin

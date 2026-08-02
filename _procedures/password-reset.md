@@ -3,7 +3,7 @@ title: Reset or unlock a user password
 slug: password-reset
 description: Safely restore account access after a forgotten password, expiry or lockout.
 content_type: procedure
-category: Identity
+category: Identity & Access Management
 severity: medium
 tags:
 - password
@@ -13,19 +13,25 @@ tags:
 error_codes:
 - account locked
 - password expired
-tldr: Verify the user, confirm lockout status, then reset or unlock through the approved
-  identity platform and require a secure password change.
+tldr: Verify the user, confirm lockout status, then reset or unlock through the approved identity platform and require a secure password change.
 related_symptoms:
 - cannot-sign-in
 related_causes:
 - account-lockout
 next_steps:
 - mfa-setup-fails
-escalation: Escalate to Identity and Access Management with the verified username,
-  lockout time, source device if known, actions taken and any repeated lockout evidence.
+escalation: Escalate to Identity and Access Management with the verified username, lockout time, source device if known, actions taken and any repeated lockout evidence.
 last_reviewed: 2026-08-02
 permalink: /procedures/password-reset/
 layout: article
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Before you begin
 Confirm the caller's identity using the organisation's approved verification process. Never ask the user to disclose an existing password or MFA code.

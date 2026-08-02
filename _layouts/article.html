@@ -3,15 +3,55 @@ layout: default
 ---
 <article class="shell py-10">
   <div class="mx-auto max-w-4xl">
-    <div class="mb-4 flex flex-wrap gap-2">
+    {% if page.content_type == 'procedure' %}
+      {% assign assurance_status = page.content_status | default: 'under_review' %}
+      <section class="assurance-banner status-{{ assurance_status }}" aria-label="Content assurance status">
+        <div>
+          <p class="assurance-label">Content assurance</p>
+          <h2 class="!mt-1 text-lg">
+            {% case assurance_status %}
+              {% when 'verified' %}Verified operational guidance
+              {% when 'draft' %}Draft guidance — senior review required
+              {% when 'deprecated' %}Deprecated procedure — do not use for new work
+              {% else %}Technical-owner validation pending
+            {% endcase %}
+          </h2>
+          <p>
+            {% case assurance_status %}
+              {% when 'verified' %}This procedure has passed the current content quality gate. Continue to apply organisational approvals and change controls.
+              {% when 'draft' %}This procedure is incomplete. Use it only to gather evidence and involve the owning resolver team before changing production systems.
+              {% when 'deprecated' %}This page is retained for historical links or migration. Use the replacement procedure shown in related knowledge.
+              {% else %}The full runbook is retained, but commands and expected results still require validation in the target enterprise environment. Do not treat this status as production approval.
+            {% endcase %}
+          </p>
+        </div>
+        <span class="assurance-status">{{ assurance_status | replace: '_', ' ' }}</span>
+      </section>
+    {% endif %}
+
+    <div class="mb-4 mt-6 flex flex-wrap gap-2">
       <span class="badge">{{ page.content_type }}</span>
       {% if page.category %}<span class="badge">{{ page.category }}</span>{% endif %}
-      {% if page.severity %}<span class="badge">Severity: {{ page.severity }}</span>{% endif %}{% if page.support_tier %}<span class="badge">{{ page.support_tier }}</span>{% endif %}{% if page.owner_team %}<span class="badge">Owner: {{ page.owner_team }}</span>{% endif %}{% if page.estimated_time %}<span class="badge">{{ page.estimated_time }}</span>{% endif %}
+      {% if page.severity %}<span class="badge">Severity: {{ page.severity }}</span>{% endif %}
+      {% if page.support_tier %}<span class="badge">{{ page.support_tier }}</span>{% endif %}
+      {% if page.owner_team %}<span class="badge">Owner: {{ page.owner_team }}</span>{% endif %}
+      {% if page.estimated_time %}<span class="badge">{{ page.estimated_time }}</span>{% endif %}
+      {% if page.content_status %}<span class="badge status-{{ page.content_status }}">{{ page.content_status | replace: '_', ' ' }}</span>{% endif %}
       {% for tag in page.tags %}<span class="badge">{{ tag }}</span>{% endfor %}
     </div>
 
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p class="mt-3 text-lg text-slate-600">{{ page.description }}</p>{% endif %}
+
+    {% if page.content_type == 'procedure' %}
+    <dl class="assurance-meta">
+      <div><dt>Reviewed by</dt><dd>{{ page.reviewed_by | default: 'Technical owner not yet recorded' }}</dd></div>
+      <div><dt>Last reviewed</dt><dd>{{ page.last_reviewed | default: 'Not recorded' }}</dd></div>
+      <div><dt>Last tested</dt><dd>{{ page.last_tested | default: 'Not yet recorded' }}</dd></div>
+      <div><dt>Quality gate</dt><dd>{{ page.quality_gate | default: 'pending' }}</dd></div>
+    </dl>
+    {% endif %}
+
     {% if page.tldr %}<section class="tldr"><h2 class="!mt-0 text-lg">TL;DR</h2><p>{{ page.tldr }}</p></section>{% endif %}
 
     <div class="article-body">{{ content }}</div>
@@ -32,11 +72,11 @@ layout: default
         {% endfor %}
         {% for slug in page.related_procedures %}
           {% assign item = site.procedures | where: "slug", slug | first %}
-          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Procedure</p></a>{% endif %}
+          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Procedure · {{ item.content_status | default: 'under review' | replace: '_', ' ' }}</p></a>{% endif %}
         {% endfor %}
         {% for slug in page.next_steps %}
           {% assign item = site.procedures | where: "slug", slug | first %}
-          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Next procedure</p></a>{% endif %}
+          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Next procedure · {{ item.content_status | default: 'under review' | replace: '_', ' ' }}</p></a>{% endif %}
         {% endfor %}
         {% for slug in page.related_commands %}
           {% assign item = site.commands | where: "slug", slug | first %}
@@ -50,7 +90,7 @@ layout: default
 
     {% if page.content_type == 'procedure' %}
     <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-      <a class="btn" data-ticket-link href="#">Create pre-filled ITSM ticket</a>
+      <a class="btn" data-ticket-link data-title="{{ page.title | escape }}" data-category="{{ page.category | escape }}" data-severity="{{ page.severity | escape }}" data-owner-team="{{ page.owner_team | escape }}">Create pre-filled ITSM ticket</a>
       <button class="btn-secondary" type="button" data-feedback="up">👍 Helpful</button>
       <button class="btn-secondary" type="button" data-feedback="down">👎 Not helpful</button>
     </div>

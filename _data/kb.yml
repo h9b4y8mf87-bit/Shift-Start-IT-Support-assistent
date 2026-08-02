@@ -1,9 +1,19 @@
 name: ShiftStart IT Support KB
-description: Enterprise-scale, technician-first troubleshooting guidance with a complete
-  catalogue and multi-select symptom matcher.
-ticketUrlTemplate: https://itsm.example.com/new?title={title}&category={category}&article={url}
+description: Enterprise-scale, technician-first troubleshooting guidance with a complete catalogue, governed content assurance and multi-select symptom matching.
 feedbackEndpoint: ''
 zeroResultEndpoint: ''
+itsm:
+  enabled: false
+  provider: generic
+  ticketUrlTemplate: ''
+  openInNewTab: true
+  placeholders:
+    - title
+    - category
+    - url
+    - severity
+    - owner_team
+    - symptoms
 diagnostics:
   enabled: false
   endpoint: ''
@@ -16,3 +26,9 @@ catalogue:
   procedures: 421
   symptoms: 446
   noPagination: true
+contentGovernance:
+  enabled: true
+  defaultStatus: under_review
+  verifiedRequiresNamedReviewer: true
+  generatedBaselineCanBeVerified: false
+  qualityReport: /reports/content-audit.json

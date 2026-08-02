@@ -1,10 +1,9 @@
 ---
 title: VPN not connecting
 slug: vpn-not-connecting
-description: Diagnose internet, DNS, client, credential and gateway causes without
-  unnecessary reinstallation.
+description: Diagnose internet, DNS, client, credential and gateway causes without unnecessary reinstallation.
 content_type: procedure
-category: Network
+category: Network & Connectivity
 severity: high
 tags:
 - vpn
@@ -15,20 +14,25 @@ error_codes:
 - authentication failed
 - gateway unavailable
 - connection timed out
-tldr: Confirm normal internet access, correct system time and gateway reachability;
-  restart the VPN service before resetting or reinstalling the client.
+tldr: Confirm normal internet access, correct system time and gateway reachability; restart the VPN service before resetting or reinstalling the client.
 related_symptoms:
 - vpn-fails
 related_causes:
 - vpn-client-state
 next_steps:
 - password-reset
-escalation: Escalate to Network Operations with user, public IP, VPN client version,
-  gateway, timestamp, exact error, log bundle and results of DNS and reachability
-  tests.
+escalation: Escalate to Network Operations with user, public IP, VPN client version, gateway, timestamp, exact error, log bundle and results of DNS and reachability tests.
 last_reviewed: 2026-08-02
 permalink: /procedures/vpn-not-connecting/
 layout: article
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Steps
 1. Confirm the user can browse a public website without the VPN and that airplane mode is off.

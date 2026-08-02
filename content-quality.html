@@ -1,0 +1,39 @@
+---
+layout: default
+title: Content quality and assurance
+description: Live assurance status for every ShiftStart procedure, including verified, under-review, draft and deprecated guidance.
+permalink: /content-quality/
+---
+<section class="shell py-10">
+  <p class="font-semibold text-blue-700">Knowledge governance</p>
+  <h1>Content quality and assurance</h1>
+  <p class="mt-3 max-w-4xl text-slate-600">Every procedure remains available, but operational trust is explicit. Verified guidance has passed the current quality gate; generated enterprise baseline guidance remains under review until a named technical owner validates commands, expected results and rollback in the target environment.</p>
+
+  {% assign verified = site.procedures | where: 'content_status', 'verified' %}
+  {% assign under_review = site.procedures | where: 'content_status', 'under_review' %}
+  {% assign draft = site.procedures | where: 'content_status', 'draft' %}
+  {% assign deprecated = site.procedures | where: 'content_status', 'deprecated' %}
+  <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="card"><p class="text-sm font-semibold text-emerald-700">Verified</p><p class="mt-2 text-4xl font-bold">{{ verified | size }}</p><p class="mt-2 text-sm text-slate-600">Approved for operational use subject to local change and access controls.</p></div>
+    <div class="card"><p class="text-sm font-semibold text-amber-700">Under review</p><p class="mt-2 text-4xl font-bold">{{ under_review | size }}</p><p class="mt-2 text-sm text-slate-600">Complete baseline guidance awaiting technical-owner validation.</p></div>
+    <div class="card"><p class="text-sm font-semibold text-rose-700">Draft</p><p class="mt-2 text-4xl font-bold">{{ draft | size }}</p><p class="mt-2 text-sm text-slate-600">Evidence-gathering only until senior review is complete.</p></div>
+    <div class="card"><p class="text-sm font-semibold text-slate-700">Deprecated</p><p class="mt-2 text-4xl font-bold">{{ deprecated | size }}</p><p class="mt-2 text-sm text-slate-600">Retained for redirects or history, not active use.</p></div>
+  </div>
+
+  <section class="mt-10 card">
+    <h2 class="!mt-0">Quality gate</h2>
+    <ul class="mt-4 list-disc space-y-2 pl-6">
+      <li>No procedure, symptom, cause or command article may disappear from the generated catalogue.</li>
+      <li>Duplicate taxonomy categories and known malformed generated titles fail validation.</li>
+      <li>Verified procedures require a named reviewer, a passed quality gate and non-generated technical content.</li>
+      <li>High-reuse generic commands are reported, while mismatched commands in verified content fail the build.</li>
+      <li>The multi-select wizard prioritises verified procedures and clearly warns when only under-review guidance matches.</li>
+      <li>The ITSM button remains disabled until an administrator provides an explicit ticket URL template.</li>
+    </ul>
+  </section>
+
+  <div class="mt-8 flex flex-wrap gap-3">
+    <a class="btn" href="{{ '/procedures/' | relative_url }}">Browse all procedures</a>
+    <a class="btn-secondary" href="{{ '/reports/content-audit.json' | relative_url }}">Open latest machine-readable audit</a>
+  </div>
+</section>

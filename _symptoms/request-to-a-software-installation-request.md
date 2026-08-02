@@ -1,8 +1,7 @@
 ---
-title: Request to a software installation request
+title: Software installation request requested
 slug: request-to-a-software-installation-request
-description: 'Observable report: Request to a software installation request. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Software installation request requested. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
@@ -15,7 +14,6 @@ permalink: /symptoms/request-to-a-software-installation-request/
 layout: article
 last_reviewed: '2026-08-02'
 ---
-
 ## What to capture
 Record the exact wording, affected users and devices, timestamps, error messages, screenshots, recent changes and business impact. Select this symptom together with every other observed symptom in the wizard; the matcher ranks procedures by combined evidence rather than forcing a single yes/no path.
 

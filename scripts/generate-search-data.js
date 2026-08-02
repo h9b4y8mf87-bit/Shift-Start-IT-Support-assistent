@@ -3,54 +3,46 @@ const path = require("path");
 const matter = require("gray-matter");
 const lunr = require("lunr");
 
-const collections = ["procedures", "symptoms", "causes", "commands"];
 const baseurl = (process.env.BASEURL || "").replace(/\/$/, "");
-const files = collections.flatMap(collection => {
+const collections = ["procedures", "symptoms", "causes", "commands"];
+const documents = [];
+
+for (const collection of collections) {
   const dir = `_${collection}`;
-  return fs.readdirSync(dir)
-    .filter(name => name.endsWith(".md"))
-    .map(name => path.join(dir, name));
-});
+  for (const name of fs.readdirSync(dir).filter((entry) => entry.endsWith(".md"))) {
+    const parsed = matter(fs.readFileSync(path.join(dir, name), "utf8"));
+    const data = parsed.data;
+    const slug = data.slug || path.basename(name, ".md");
+    documents.push({
+      id: `${collection}:${slug}`,
+      title: data.title || slug,
+      description: data.description || "",
+      type: data.content_type || collection.replace(/s$/, ""),
+      category: data.category || "",
+      severity: data.severity || "",
+      contentStatus: data.content_status || "",
+      reviewedBy: data.reviewed_by || "",
+      tags: (data.tags || []).join(" "),
+      errorCodes: (data.error_codes || []).join(" "),
+      content: parsed.content.replace(/<[^>]+>/g, " ").replace(/\{%[\s\S]*?%\}/g, " ").replace(/\s+/g, " ").trim(),
+      url: `${baseurl}/${collection}/${slug}/`.replace(/\/{2,}/g, "/")
+    });
+  }
+}
 
-const docs = files.map((file, id) => {
-  const parsed = matter(fs.readFileSync(file, "utf8"));
-  const data = parsed.data;
-  const type = data.content_type || path.basename(path.dirname(file)).replace(/^_/, "").replace(/s$/, "");
-  const slug = data.slug || path.basename(file, ".md");
-  const section = type === "procedure" ? "procedures" : `${type}s`;
-  const content = parsed.content
-    .replace(/{%[\s\S]*?%}/g, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/[#>*_`\[\]()|-]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  return {
-    id: String(id),
-    title: data.title,
-    description: data.description || "",
-    type,
-    category: data.category || "",
-    tags: (data.tags || []).join(" "),
-    error_codes: (data.error_codes || []).join(" "),
-    content,
-    url: `${baseurl}/${section}/${slug}/`.replace(/\/{2,}/g, "/")
-  };
-});
-
-const index = lunr(function () {
+const index = lunr(function build() {
   this.ref("id");
-  this.field("title", { boost: 15 });
-  this.field("error_codes", { boost: 14 });
-  this.field("tags", { boost: 9 });
-  this.field("category", { boost: 6 });
-  this.field("description", { boost: 5 });
+  this.field("title", { boost: 12 });
+  this.field("errorCodes", { boost: 12 });
+  this.field("tags", { boost: 8 });
+  this.field("category", { boost: 5 });
+  this.field("description", { boost: 4 });
+  this.field("contentStatus", { boost: 2 });
   this.field("content");
-  docs.forEach(doc => this.add(doc));
+  documents.forEach((document) => this.add(document));
 });
 
-const output = path.join("assets", "data");
-fs.mkdirSync(output, { recursive: true });
-fs.writeFileSync(path.join(output, "search-index.json"), JSON.stringify(index));
-fs.writeFileSync(path.join(output, "search-documents.json"), JSON.stringify(docs, null, 2));
-console.log(`Indexed ${docs.length} Markdown articles`);
+fs.mkdirSync(path.join("assets", "data"), { recursive: true });
+fs.writeFileSync(path.join("assets", "data", "search-index.json"), JSON.stringify(index));
+fs.writeFileSync(path.join("assets", "data", "search-documents.json"), JSON.stringify(documents, null, 2));
+console.log(`Generated search data for ${documents.length} articles`);

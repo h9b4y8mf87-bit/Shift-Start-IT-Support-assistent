@@ -1,154 +1,205 @@
 ---
 title: Add or remove security group membership
 slug: add-or-remove-security-group-membership
-description: Enterprise runbook to add or remove security group membership without skipping evidence, verification,
-  rollback or escalation requirements.
+description: Safely validate, add, remove and verify an approved user, computer, service account or group membership change in Active Directory or Microsoft Entra ID.
 content_type: procedure
 category: Identity & Access Management
-service: Identity & Access Management
+service: Directory group management
 severity: medium
-support_tier: L1-L2
+support_tier: L2
 owner_team: Identity and Access Management
 platforms:
 - Active Directory
-- Entra ID
-- SSO
-risk_level: controlled
+- Microsoft Entra ID
+risk_level: high
 estimated_time: 15-45 minutes
 tags:
-- add
-- group
-- identity-and-access-management
-- l1-l2
-- membership
-- or
-- remove
-- security
+- active-directory
+- entra-id
+- group-membership
+- least-privilege
+- access-control
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
-  remediation for add or remove security group membership, verify the original business task, and escalate with
-  complete logs if recovery is not achieved.
+tldr: Confirm the approved target group and principal, capture current direct and effective membership, identify whether the group is assigned, dynamic, role-assignable or synchronised, make only the approved change with a named administrative account, then verify replication, token refresh and the original business access.
 related_symptoms:
 - need-to-change-security-group-membership
-- cannot-sign-in
 - access-is-denied-or-missing
 symptom_weights:
   need-to-change-security-group-membership: 10
-  cannot-sign-in: 3
-  access-is-denied-or-missing: 3
+  access-is-denied-or-missing: 4
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Identity and Access Management with the exact user or service impact, timestamps and timezone,
-  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
-  status and a clear statement of what remains broken.
+- grant-access-through-an-approved-request
+- remove-inappropriate-or-expired-access
+escalation: Escalate to Identity and Access Management when approval is missing or ambiguous, the group is privileged, role-assignable, dynamic, synchronised from another authority, protected by PIM or access governance, replication does not converge, the requested principal cannot be resolved, or the resulting access is broader than approved. Include the request or change record, before-and-after membership evidence, group and principal object IDs, timestamps, directory source, commands used, replication or token-refresh results and the business test outcome.
 last_reviewed: '2026-08-02'
-review_cycle_days: 180
+review_cycle_days: 90
 required_role: technician
-approval_required: Follow organisational policy for privileged, destructive, security-sensitive or service-impacting
-  actions.
+approval_required: A valid access request or change record approved by the resource owner or delegated authority is mandatory. Privileged and role-assignable groups require the organisation's privileged-access workflow.
+content_status: under_review
+generated_baseline: false
+reviewed_by: ''
+last_tested: ''
+tested_platforms:
+- Active Directory Domain Services
+- Microsoft Entra ID
+source_references:
+- Microsoft Learn - Add-ADGroupMember
+- Microsoft Learn - Remove-ADGroupMember
+- Microsoft Learn - Microsoft Graph group membership cmdlets
+change_record: Rewritten during content remediation to replace an unrelated account-lockout command with group-specific diagnostics, controlled change commands, rollback and verification.
+quality_gate: pending
 permalink: /procedures/add-or-remove-security-group-membership/
 layout: article
 ---
 ## Purpose and scope
-Use this runbook for **add or remove security group membership** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+Use this procedure for an approved request to add or remove a user, computer, service account or nested group from a security group. It covers:
 
-## Preconditions and authorisation
-- Verify the requester, affected user, asset and business service.
-- Confirm that the requested action is permitted for your support role.
-- Protect unsaved work and business data before restarts, profile resets, re-enrolment, removal, wipe, restore or replacement actions.
-- Use named administrative accounts and approved privileged-access workflows. Never request or record a user's password or MFA code.
-- Stop when there is a safety risk, suspected security incident, legal hold, active major incident, unsupported device, data-loss risk or action outside your authority.
+- On-premises Active Directory groups.
+- Microsoft Entra ID assigned-membership groups.
+- Hybrid groups where the source of authority must be identified before making a change.
+
+Do not use this procedure to bypass access governance, alter a dynamic membership rule, change a privileged group without the required privileged-access process, or modify a group whose ownership and business purpose cannot be confirmed.
+
+## Safety and stop conditions
+Stop and escalate before making a change when any of the following applies:
+
+- The request has no valid approval, has conflicting approvals, or names the wrong user, group or environment.
+- The group grants administrative, security, finance, payroll, HR, production, source-code, customer-data or other sensitive access.
+- The group is role-assignable, managed through Privileged Identity Management, controlled by an access package, or subject to an access review.
+- The group uses dynamic membership. Direct member changes are not the correct remediation for a dynamic group.
+- The group is synchronised and the current directory is not the source of authority.
+- Removal may interrupt an active service account, scheduled task, application pool, integration or emergency-access account.
+- The requested change would create circular nesting, excessive privilege or access outside the approved scope.
 
 ## Information and evidence to capture
-- User, department, contact method, location and working hours.
-- Device name, asset tag, serial number, operating system, network and management status where applicable.
-- Exact error text, error code, screenshot, timestamp and timezone.
-- Scope: one user, one device, one location, a group, or the whole service.
-- Last known working time, recent changes and whether another user or device is affected.
-- Business process blocked, workaround availability, urgency and deadline.
+Record all of the following in the ticket before changing membership:
 
-## Scenario-specific diagnostic and remediation plan
-
-### Targeted checks
-- Validate the approved request, data owner and least-privilege role.
-- Check nested groups, dynamic rules, deny assignments and application-side caching.
-
-### Targeted remediation sequence
-1. Change only the approved group or role and record the before-and-after membership.
-2. Allow replication and token refresh, then retest in a new session.
-
-### Scenario-specific success criterion
-The user has the intended access and no additional privilege.
-
+- Request or change-record number and approver.
+- User or object display name, sign-in name, employee or asset identifier and immutable object ID where available.
+- Exact group display name, distinguished name or object ID.
+- Group owner, business purpose, source of authority and membership type.
+- Whether the group is privileged, role-assignable, dynamic, synchronised, nested or licence-bearing.
+- Current direct membership and, when relevant, effective or transitive membership.
+- The specific access expected after the change and the business application or resource used for verification.
 
 ## Procedure
-1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
+1. **Validate the request and resolve the exact objects.** Confirm that the approved request identifies one unambiguous principal and one unambiguous group. Do not rely on display name alone when duplicates exist.
 
-   <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
+   <div class="expected"><strong>Expected result:</strong> The principal and group are uniquely identified, the approval scope matches the proposed change, and the source directory is known.</div>
 
-2. **Determine scope and priority.** Compare another user, device, location or service path where safe. Check monitoring, service-health notices, known errors, major incidents and recent changes.
+2. **Inspect group properties before changing anything.** Confirm group scope and category in Active Directory, or membership type, synchronisation state and role-assignable status in Microsoft Entra ID.
 
-   <div class="expected"><strong>Expected result:</strong> The issue is correctly classified as local, user-specific, device-specific, site-specific, service-wide or a standard request.</div>
-
-3. **Protect data and establish a rollback point.** Save work, record current settings and export or back up configuration where supported. Obtain approval before actions that can interrupt service or remove data.
-
-   <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
-
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
-
-{% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
+{% capture ad_group_properties %}
+$Group = Get-ADGroup -Identity "GROUP_SAM_OR_DN" -Properties GroupCategory,GroupScope,ManagedBy,member
+$Group | Select-Object Name,SamAccountName,GroupCategory,GroupScope,ManagedBy,DistinguishedName
 {% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+{% include command.html shell="powershell" label="Active Directory group properties" command=ad_group_properties %}
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+{% capture entra_group_properties %}
+Connect-MgGraph -Scopes "GroupMember.Read.All","Group.Read.All"
+$Group = Get-MgGroup -Filter "displayName eq 'GROUP_DISPLAY_NAME'" -Property Id,DisplayName,SecurityEnabled,GroupTypes,MembershipRule,OnPremisesSyncEnabled,IsAssignableToRole
+$Group | Select-Object Id,DisplayName,SecurityEnabled,GroupTypes,MembershipRule,OnPremisesSyncEnabled,IsAssignableToRole
+{% endcapture %}
+{% include command.html shell="powershell" label="Microsoft Entra group properties" command=entra_group_properties %}
 
-5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
+   <div class="expected"><strong>Expected result:</strong> You know whether the group can be changed directly in the current directory and whether additional privileged or governance approval is required.</div>
 
-   <div class="expected"><strong>Expected result:</strong> The affected component returns to a supported, known-good state with minimal user or service disruption.</div>
+3. **Capture before-state membership.** Record both the target principal's current groups and the target group's direct members. Use transitive checks only as supporting evidence; a user may have effective access through nesting even when they are not a direct member.
 
-6. **Re-test the original task.** Repeat the exact business action using the same account, device, network and data path. Also test a controlled alternative where useful.
+{% capture ad_membership_evidence %}
+Get-ADPrincipalGroupMembership -Identity "USER_OR_OBJECT" |
+  Sort-Object Name |
+  Select-Object Name,SamAccountName,GroupCategory,GroupScope
 
-   <div class="expected"><strong>Expected result:</strong> The original failure is resolved or the remaining fault is narrowed to a specific dependency.</div>
+Get-ADGroupMember -Identity "GROUP_SAM_OR_DN" -Recursive:$false |
+  Sort-Object Name |
+  Select-Object Name,SamAccountName,ObjectClass,DistinguishedName
+{% endcapture %}
+{% include command.html shell="powershell" label="Active Directory before-state evidence" command=ad_membership_evidence %}
 
-7. **Apply secondary remediation only when justified.** Revoke stale sessions or cached credentials where appropriate, then allow directory and application synchronisation to complete.
+{% capture entra_membership_evidence %}
+$GroupId = "GROUP_OBJECT_ID"
+Get-MgGroupMember -GroupId $GroupId -All |
+  Select-Object Id,AdditionalProperties
+{% endcapture %}
+{% include command.html shell="powershell" label="Microsoft Entra direct members" command=entra_membership_evidence %}
 
-   <div class="expected"><strong>Expected result:</strong> Any deeper change follows an approved runbook, is reversible where possible and is fully recorded.</div>
+   <div class="expected"><strong>Expected result:</strong> The ticket contains a reproducible before-state showing whether the principal is already a direct member, only an indirect member, or not a member.</div>
 
-8. **Validate security, management and compliance.** Confirm encryption, endpoint protection, identity policy, management check-in, logging, patch level and access controls remain healthy where relevant.
+4. **Confirm the change is appropriate for the group type.** For a dynamic group, validate or correct the membership rule through the approved group-management process instead of adding or removing a direct member. For a synchronised group, make the change in the source directory. For a role-assignable or PIM-managed group, use the privileged-governance workflow.
 
-   <div class="expected"><strong>Expected result:</strong> Recovery has not created a security, compliance, licensing or manageability gap.</div>
+   <div class="expected"><strong>Expected result:</strong> The proposed action is being performed in the authoritative system with the correct governance controls.</div>
 
-9. **Complete end-to-end verification.** The verified user can authenticate to the original service with the expected access and no new policy or lockout errors appear.
+5. **Preview the on-premises Active Directory change.** Use `-WhatIf` first and review the target group and principal returned by the command.
 
-   <div class="expected"><strong>Expected result:</strong> The user or service owner confirms the business task is restored and monitoring remains stable.</div>
+{% capture ad_change_preview %}
+Add-ADGroupMember -Identity "GROUP_SAM_OR_DN" -Members "USER_OR_OBJECT" -WhatIf
+Remove-ADGroupMember -Identity "GROUP_SAM_OR_DN" -Members "USER_OR_OBJECT" -WhatIf
+{% endcapture %}
+{% include command.html shell="powershell" label="Preview the approved AD change" command=ad_change_preview %}
 
-10. **Document and close correctly.** Record the cause or best evidence, every command and change, before-and-after results, user confirmation, linked problem/change/vendor records, assets involved and follow-up actions. Do not close while a workaround is unowned or monitoring is still unstable.
+   <div class="expected"><strong>Expected result:</strong> The preview names only the approved group and principal and does not reveal an unexpected nested or similarly named object.</div>
 
-   <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
+6. **Apply only the approved change.** Run one of the following commands, not both. Retain confirmation for removals unless the organisation's controlled automation explicitly handles confirmation and audit logging.
 
-## Rollback and stop conditions
-- Roll back the last change if service worsens, a new error appears or verification fails.
-- Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
-- Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.
-- Stop before deleting profiles, wiping devices, resetting production services, restoring over live data, changing network/security policy or bypassing controls without approval.
+{% capture ad_change_apply %}
+# Approved addition
+Add-ADGroupMember -Identity "GROUP_SAM_OR_DN" -Members "USER_OR_OBJECT" -Confirm
 
-## Evidence required for escalation
-- Ticket priority and business impact.
-- Exact reproduction steps and result.
-- Affected and unaffected comparison points.
-- Diagnostic outputs and relevant logs with timestamps.
-- Screenshots or error codes with sensitive data redacted.
-- Recent changes, updates, deployments or environmental differences.
-- Actions attempted, outcomes and rollback performed.
-- Current workaround and user availability for testing.
+# Approved removal
+Remove-ADGroupMember -Identity "GROUP_SAM_OR_DN" -Members "USER_OR_OBJECT" -Confirm
+{% endcapture %}
+{% include command.html shell="powershell" label="Apply the approved Active Directory change" command=ad_change_apply %}
+
+For a Microsoft Entra assigned-membership group, use an approved Graph session with the least privilege required. Replace the placeholders with immutable object IDs.
+
+{% capture entra_change_apply %}
+Connect-MgGraph -Scopes "GroupMember.ReadWrite.All"
+$GroupId = "GROUP_OBJECT_ID"
+$DirectoryObjectId = "MEMBER_OBJECT_ID"
+
+# Approved addition
+$params = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/$DirectoryObjectId" }
+New-MgGroupMemberByRef -GroupId $GroupId -BodyParameter $params
+
+# Approved removal
+Remove-MgGroupMemberByRef -GroupId $GroupId -DirectoryObjectId $DirectoryObjectId -Confirm
+{% endcapture %}
+{% include command.html shell="powershell" label="Apply the approved Microsoft Entra change" command=entra_change_apply %}
+
+   <div class="expected"><strong>Expected result:</strong> Exactly one approved membership change is accepted by the authoritative directory without broadening the request.</div>
+
+7. **Capture the after-state and compare it with the before-state.** Repeat the direct membership query and save the result in the ticket. Confirm that no unrelated member was added or removed.
+
+   <div class="expected"><strong>Expected result:</strong> The group contains the intended principal after an addition, or no longer contains it after a removal, with no unauthorised side effects.</div>
+
+8. **Allow directory convergence and refresh the user's token.** Replication, synchronisation and application-side authorisation caches may delay access changes. Use a new sign-in session or approved token-refresh method. Do not repeatedly alter membership to compensate for normal convergence time.
+
+   <div class="expected"><strong>Expected result:</strong> The authoritative directory and consuming application show a consistent membership state.</div>
+
+9. **Verify the original business task.** Test the exact resource named in the request. Confirm both positive access and least privilege: the user can perform the approved task but does not receive broader access.
+
+   <div class="expected"><strong>Expected result:</strong> The approved business function works and the effective privilege matches the request.</div>
+
+10. **Document and close.** Record the command or portal action, before-and-after evidence, object IDs, timestamps, directory source, approver, token-refresh method, test result and any delay or exception. Link related change, access-review, PIM or problem records.
+
+   <div class="expected"><strong>Expected result:</strong> Another technician or auditor can reconstruct who approved the change, what changed, where it changed and how access was verified.</div>
+
+## Rollback
+- For an incorrect addition, remove the same principal from the same group after confirming that rollback is authorised.
+- For an incorrect removal, re-add the same principal only when the prior membership was captured and restoration is authorised.
+- Do not attempt rollback in the wrong directory for synchronised groups.
+- If a privileged group change may have been unauthorised, stop normal remediation and invoke the security incident process.
 
 ## Verification checklist
-- [ ] Original business task succeeds.
-- [ ] No related alert, error, lockout or failed job is recurring.
-- [ ] Security and management controls remain active.
-- [ ] User or service owner confirms recovery.
-- [ ] Ticket evidence and categorisation are complete.
-- [ ] Follow-up problem, change, vendor or knowledge work is linked.
+- [ ] Requester, approver, principal and group were uniquely verified.
+- [ ] Group type, source of authority and privileged status were checked.
+- [ ] Before-state direct membership evidence was captured.
+- [ ] Only the approved addition or removal was performed.
+- [ ] After-state membership evidence was captured.
+- [ ] Replication, synchronisation or token refresh was allowed to complete.
+- [ ] The original business task was tested.
+- [ ] Effective access does not exceed the approved scope.
+- [ ] Ticket notes contain object IDs, timestamps, commands, results and rollback information.

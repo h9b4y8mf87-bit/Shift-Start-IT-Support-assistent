@@ -1,10 +1,9 @@
 ---
 title: Teams microphone not working
 slug: teams-microphone-not-working
-description: Restore microphone input by checking privacy, device selection, exclusive
-  access and hardware isolation.
+description: Restore microphone input by checking privacy, device selection, exclusive access and hardware isolation.
 content_type: procedure
-category: Collaboration
+category: Microsoft 365 & Collaboration
 severity: medium
 tags:
 - teams
@@ -13,19 +12,24 @@ tags:
 - permissions
 error_codes:
 - microphone not detected
-tldr: Select the correct input in Teams, confirm Windows microphone privacy permission,
-  then test the device in Sound Recorder.
+tldr: Select the correct input in Teams, confirm Windows microphone privacy permission, then test the device in Sound Recorder.
 related_symptoms:
 - microphone-fails
 related_causes:
 - wrong-audio-device
 next_steps: []
-escalation: Escalate to Collaboration Support with headset model, connection type,
-  Teams version, Windows input test result, privacy setting and whether the device
-  works on another PC.
+escalation: Escalate to Collaboration Support with headset model, connection type, Teams version, Windows input test result, privacy setting and whether the device works on another PC.
 last_reviewed: 2026-08-02
 permalink: /procedures/teams-microphone-not-working/
 layout: article
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Steps
 1. Check physical mute controls and reconnect the headset directly rather than through an untested hub.

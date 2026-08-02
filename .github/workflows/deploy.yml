@@ -1,4 +1,4 @@
-name: Build and deploy Jekyll KB to GitHub Pages
+name: Build and deploy governed Jekyll KB to GitHub Pages
 
 on:
   push:
@@ -26,6 +26,8 @@ jobs:
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -43,13 +45,16 @@ jobs:
       - name: Install Node dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Apply deterministic content remediation
+        run: npm run remediate:apply
+
       - name: Vendor browser dependencies
         run: npm run vendor
 
-      - name: Validate knowledge-base content
+      - name: Validate governed knowledge-base content
         run: npm run check
 
-      - name: Generate search and wizard data
+      - name: Generate search and governed wizard data
         run: npm run generate
         env:
           BASEURL: /${{ github.event.repository.name }}
@@ -70,7 +75,22 @@ jobs:
           test -s _site/assets/data/search-documents.json
           test -s _site/assets/data/wizard-data.json
           test -s _site/assets/js/lunr.min.js
-          node -e "const d=require('./assets/data/wizard-data.json'); if(d.counts.procedures < 200) throw new Error('Procedure catalogue unexpectedly incomplete'); console.log(d.counts)"
+          test -s reports/content-audit.json
+          node - <<'NODE'
+          const data = require('./assets/data/wizard-data.json');
+          if (data.counts.procedures !== 421) throw new Error(`Expected 421 procedures, found ${data.counts.procedures}`);
+          if (data.counts.symptoms !== 446) throw new Error(`Expected 446 symptoms, found ${data.counts.symptoms}`);
+          if (!data.counts.statuses?.verified) throw new Error('No verified procedures were included');
+          if (!data.counts.statuses?.under_review) throw new Error('Under-review procedures were not labelled');
+          console.log(data.counts);
+          NODE
+
+      - name: Upload content audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: shiftstart-content-audit
+          path: reports/content-audit.json
+          if-no-files-found: error
 
       - name: Upload GitHub Pages artifact
         if: github.event_name != 'pull_request'

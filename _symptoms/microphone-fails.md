@@ -3,7 +3,7 @@ title: Microphone is not detected in Teams
 slug: microphone-fails
 description: The user can hear others but cannot send audio in a meeting or test call.
 content_type: symptom
-category: Collaboration
+category: Microsoft 365 & Collaboration
 severity: medium
 tags:
 - teams

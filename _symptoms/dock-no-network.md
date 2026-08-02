@@ -3,7 +3,7 @@ title: Dock Ethernet has no network
 slug: dock-no-network
 description: Wi-Fi works, but Ethernet through a USB-C or Thunderbolt dock does not.
 content_type: symptom
-category: Network
+category: Network & Connectivity
 severity: medium
 tags:
 - dock

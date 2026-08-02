@@ -1,10 +1,9 @@
 ---
 title: Windows PC is unusually slow
 slug: slow-windows-pc
-description: Identify CPU, memory, disk, startup, update and storage-pressure causes
-  before making changes.
+description: Identify CPU, memory, disk, startup, update and storage-pressure causes before making changes.
 content_type: procedure
-category: Desktop
+category: Windows Endpoints
 severity: medium
 tags:
 - performance
@@ -14,19 +13,24 @@ tags:
 error_codes:
 - 100% disk
 - Not responding
-tldr: Check uptime, free disk, top processes and pending restart first; avoid cleanup
-  tools until the bottleneck is identified.
+tldr: Check uptime, free disk, top processes and pending restart first; avoid cleanup tools until the bottleneck is identified.
 related_symptoms:
 - slow-computer
 related_causes:
 - resource-pressure
 next_steps: []
-escalation: Escalate to Endpoint Engineering with performance timestamps, top process
-  data, free space, SMART/health status, Event Viewer errors and whether slowness
-  follows the user or device.
+escalation: Escalate to Endpoint Engineering with performance timestamps, top process data, free space, SMART/health status, Event Viewer errors and whether slowness follows the user or device.
 last_reviewed: 2026-08-02
 permalink: /procedures/slow-windows-pc/
 layout: article
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Steps
 1. Confirm whether the issue affects one app or the whole PC and whether it started after an update.

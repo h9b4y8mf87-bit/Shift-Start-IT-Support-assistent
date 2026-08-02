@@ -1,6 +1,6 @@
 {
   "name": "shiftstart-it-support-kb-jekyll",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "description": "Enterprise-scale technician-first IT support knowledge base built with Jekyll, Tailwind and a multi-select symptom matcher.",
   "scripts": {
@@ -8,12 +8,14 @@
     "generate": "node scripts/generate-wizard.js && node scripts/generate-search-data.js",
     "css": "tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --minify",
     "jekyll": "bundle exec jekyll build",
-    "build": "npm run clean && npm run vendor && npm run generate && npm run css && bundle exec jekyll build",
-    "dev": "npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
+    "build": "npm run clean && npm run remediate:apply && npm run vendor && npm run generate && npm run css && bundle exec jekyll build",
+    "dev": "npm run remediate:apply && npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
     "check": "node scripts/validate-content.js",
-    "test": "npm run check && npm run build",
+    "test": "npm run remediate:apply && npm run check && npm run build",
     "audit-content": "node scripts/validate-content.js",
-    "vendor": "node scripts/vendor-assets.js"
+    "vendor": "node scripts/vendor-assets.js",
+    "remediate:apply": "node scripts/remediate-content.js --apply",
+    "remediate:check": "node scripts/remediate-content.js --check"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

@@ -1,15 +1,14 @@
 ---
 title: Troubleshoot wireless presentation
 slug: troubleshoot-wireless-presentation
-description: Enterprise runbook to troubleshoot wireless presentation without skipping evidence, verification, rollback
-  or escalation requirements.
+description: Enterprise runbook to troubleshoot wireless presentation without skipping evidence, verification, rollback or escalation requirements.
 content_type: procedure
 category: Voice, Telephony & Meeting Rooms
 service: Voice, Telephony & Meeting Rooms
 severity: medium
 support_tier: L1-L2
 owner_team: Unified Communications or AV Support
-platforms:
+platforms: &id001
 - Teams Phone
 - VoIP
 - Meeting rooms
@@ -22,9 +21,7 @@ tags:
 - voice-telephony-and-meeting-rooms
 - wireless
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
-  remediation for troubleshoot wireless presentation, verify the original business task, and escalate with complete
-  logs if recovery is not achieved.
+tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot wireless presentation, verify the original business task, and escalate with complete logs if recovery is not achieved.
 related_symptoms:
 - wireless-presentation
 - calling-audio-video-or-meeting-room-technology-is-not-working
@@ -35,16 +32,21 @@ related_causes: []
 related_commands: []
 next_steps:
 - general-workstation-triage
-escalation: Escalate to Unified Communications or AV Support with the exact user or service impact, timestamps and
-  timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted,
-  rollback status and a clear statement of what remains broken.
+escalation: Escalate to Unified Communications or AV Support with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
-approval_required: Follow organisational policy for privileged, destructive, security-sensitive or service-impacting
-  actions.
+approval_required: Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.
 permalink: /procedures/troubleshoot-wireless-presentation/
 layout: article
+content_status: under_review
+generated_baseline: true
+reviewed_by: ''
+last_tested: ''
+tested_platforms: *id001
+source_references: []
+change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+quality_gate: pending
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot wireless presentation** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

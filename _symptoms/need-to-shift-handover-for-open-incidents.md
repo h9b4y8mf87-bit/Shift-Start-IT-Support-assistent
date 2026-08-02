@@ -1,8 +1,7 @@
 ---
-title: Need to shift handover for open incidents
+title: Shift handover required for open incidents
 slug: need-to-shift-handover-for-open-incidents
-description: 'Observable report: Need to shift handover for open incidents. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Shift handover required for open incidents. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
@@ -15,7 +14,6 @@ permalink: /symptoms/need-to-shift-handover-for-open-incidents/
 layout: article
 last_reviewed: '2026-08-02'
 ---
-
 ## What to capture
 Record the exact wording, affected users and devices, timestamps, error messages, screenshots, recent changes and business impact. Select this symptom together with every other observed symptom in the wizard; the matcher ranks procedures by combined evidence rather than forcing a single yes/no path.
 

@@ -7,9 +7,9 @@ A technician-first internal IT support knowledge base built with **Jekyll 4**, *
 - Four Jekyll collections: `_procedures`, `_symptoms`, `_causes`, and `_commands`
 - Full-text Lunr search generated from Markdown during every build
 - Typo-tolerant search, `/` focus shortcut, arrow navigation, and Enter-to-open
-- YAML-driven diagnostic wizard generated as `assets/data/wizard-data.json`
+- Multi-select symptom matcher generated from every symptom/procedure relationship as `assets/data/wizard-data.json`
 - Automatic command blocks through `_includes/command.html`
-- Copy buttons, optional diagnostic API calls, feedback hooks, ITSM ticket links, and role gates
+- Copy buttons, optional diagnostic API calls, feedback hooks, explicitly configured ITSM ticket links, content-assurance states, and role gates
 - GitHub Actions deployment to GitHub Pages
 - Netlify Function and Cloudflare Worker placeholders under `api/`
 - A Decap CMS configuration example under `admin/`
@@ -54,7 +54,7 @@ _causes/                     Likely root causes
 _commands/                   Reusable diagnostic commands
 assets/js/                   Search, wizard and feedback behaviour
 _assets/css/tailwind.css      Tailwind source
-scripts/                     Validation and JSON generation
+scripts/                     Remediation, validation and JSON generation
 api/                         Future serverless endpoints
 templates/                   Authoring templates
 ```
@@ -89,17 +89,17 @@ For a future remote diagnostic button, add a configured diagnostic ID:
 {% raw %}{% include command.html shell="powershell" label="PowerShell" command=kb_command_1 diagnostic_id="network-baseline" %}{% endraw %}
 ```
 
-## Update the wizard
+## Update the symptom matcher
 
-Edit `_data/wizard-questions.yml`. Each non-terminal node has `question`, `yes`, and `no`. Each terminal node has `procedure`, `title`, and an optional `summary`.
-
-Then run:
+The matcher is generated from `related_symptoms`, `related_procedures`, and `symptom_weights` in Markdown front matter. Add or update those relationships, then run:
 
 ```bash
+npm run remediate:apply
+npm run check
 npm run generate
 ```
 
-The build converts the YAML to `assets/data/wizard-data.json` automatically.
+Every procedure is evaluated. Verified procedures receive a ranking boost; under-review and draft guidance is labelled in results, and every additional match can be expanded rather than silently omitted.
 
 ## Search index
 
@@ -112,13 +112,17 @@ These JSON files can also be consumed by a Slack or Teams bot. A bot endpoint ca
 
 ## Configure the ITSM ticket link
 
-Edit `_data/kb.yml`:
+The button is deliberately disabled until an administrator supplies a real integration. Edit `_data/kb.yml`:
 
 ```yaml
-ticketUrlTemplate: "https://itsm.example.com/new?title={title}&category={category}&article={url}"
+itsm:
+  enabled: true
+  provider: generic
+  ticketUrlTemplate: "https://YOUR-ITSM/new?title={title}&category={category}&article={url}&severity={severity}&owner={owner_team}&symptoms={symptoms}"
+  openInNewTab: true
 ```
 
-Supported placeholders are `{title}`, `{category}`, and `{url}`.
+Supported placeholders are `{title}`, `{category}`, `{url}`, `{severity}`, `{owner_team}`, and `{symptoms}`. Never leave a placeholder or example-domain URL enabled in production.
 
 ## Feedback and zero-result analytics
 
@@ -155,6 +159,21 @@ access:
 ```
 
 Your identity layer can set `window.KB_USER = { role: "technician" }` before `app.js` loads. Elements using `data-role="technician,admin"` will then be filtered. This is only a presentation hook; use Cloudflare Access, an authenticated proxy, or private hosting for real access control.
+
+
+## Content governance
+
+All 421 procedures remain present. The build applies deterministic taxonomy/title remediation and requires one of four assurance states: `verified`, `under_review`, `draft`, or `deprecated`. Generated baseline procedures default to `under_review`; they cannot become `verified` without a named reviewer and a passed quality gate.
+
+Useful commands:
+
+```bash
+npm run remediate:apply   # apply canonical categories, title fixes and assurance metadata
+npm run check             # validate relationships, quality gates and known command defects
+npm run test              # remediation, validation and full production build
+```
+
+The build emits `reports/content-audit.json`, and the site publishes a human-readable `/content-quality/` dashboard.
 
 ## GitHub Pages deployment
 

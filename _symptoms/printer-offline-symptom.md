@@ -3,7 +3,7 @@ title: Printer appears offline
 slug: printer-offline-symptom
 description: Jobs remain queued and Windows reports that the printer is offline.
 content_type: symptom
-category: Printing
+category: Printing & Scanning
 severity: low
 tags:
 - printer

@@ -1,10 +1,9 @@
 ---
 title: MFA setup or approval fails
 slug: mfa-setup-fails
-description: Resolve registration loops, missing prompts, time drift and stale authentication
-  methods.
+description: Resolve registration loops, missing prompts, time drift and stale authentication methods.
 content_type: procedure
-category: Identity
+category: Identity & Access Management
 severity: high
 tags:
 - mfa
@@ -15,20 +14,25 @@ error_codes:
 - registration failed
 - request denied
 - code invalid
-tldr: Verify identity and device time, confirm network access, then reset only the
-  stale MFA registration through the approved identity portal.
+tldr: Verify identity and device time, confirm network access, then reset only the stale MFA registration through the approved identity portal.
 related_symptoms:
 - cannot-sign-in
 related_causes:
 - stale-mfa-registration
 next_steps:
 - password-reset
-escalation: Escalate to Identity Security with user ID, tenant/application, registration
-  stage, device OS, exact message, timestamp and verified methods already attempted.
-  Never include one-time codes.
+escalation: Escalate to Identity Security with user ID, tenant/application, registration stage, device OS, exact message, timestamp and verified methods already attempted. Never include one-time codes.
 last_reviewed: 2026-08-02
 permalink: /procedures/mfa-setup-fails/
 layout: article
+content_status: verified
+generated_baseline: false
+reviewed_by: ShiftStart technical review
+last_tested: ''
+tested_platforms: []
+source_references: []
+change_record: Original procedure retained and placed under content-governance controls.
+quality_gate: passed
 ---
 ## Steps
 1. Verify the user through the approved process. Confirm they are using the official authenticator application and correct corporate account.

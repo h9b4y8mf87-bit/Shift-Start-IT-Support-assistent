@@ -1,8 +1,7 @@
 ---
-title: Need to an approved remote wipe
+title: Approved remote wipe required
 slug: need-to-an-approved-remote-wipe
-description: 'Observable report: Need to an approved remote wipe. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Approved remote wipe required. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
@@ -15,7 +14,6 @@ permalink: /symptoms/need-to-an-approved-remote-wipe/
 layout: article
 last_reviewed: '2026-08-02'
 ---
-
 ## What to capture
 Record the exact wording, affected users and devices, timestamps, error messages, screenshots, recent changes and business impact. Select this symptom together with every other observed symptom in the wizard; the matcher ranks procedures by combined evidence rather than forcing a single yes/no path.
 
