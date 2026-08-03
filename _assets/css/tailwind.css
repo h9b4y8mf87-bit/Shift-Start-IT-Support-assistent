@@ -387,3 +387,442 @@
   a[href]::after { content: " (" attr(href) ")"; font-size: .8em; overflow-wrap: anywhere; }
   a[href^="#"]::after, a[href^="javascript:"]::after { content: ""; }
 }
+
+/* === ShiftStart responsive symptom wizard fix === */
+#wizard-root {
+  min-width: 0;
+}
+
+#wizard-root .wizard-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+#wizard-root .wizard-toolbar > div:first-child {
+  min-width: 0;
+}
+
+#wizard-root .wizard-count {
+  display: inline-flex;
+  width: fit-content;
+  min-width: 6.5rem;
+  min-height: 4.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  border-radius: 1rem;
+  background: #020617;
+  padding: 0.65rem 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+#wizard-root .wizard-count strong {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+#wizard-root .wizard-count span {
+  margin-top: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#wizard-root .wizard-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+#wizard-root .wizard-controls label {
+  display: grid;
+  min-width: 0;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+#wizard-root .wizard-input {
+  width: 100%;
+  min-width: 0;
+  min-height: 3rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.9rem;
+  background: #ffffff;
+  padding: 0.7rem 0.9rem;
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#wizard-root .wizard-input:focus {
+  border-color: #2563eb;
+  outline: 3px solid rgba(37, 99, 235, 0.16);
+  outline-offset: 0;
+}
+
+#wizard-root .wizard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.8rem;
+}
+
+#wizard-root .wizard-actions button {
+  min-height: 2.75rem;
+  flex: 1 1 12rem;
+}
+
+#wizard-root .selected-symptoms {
+  display: flex;
+  max-height: 10rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  overflow-y: auto;
+  border: 1px solid #dbeafe;
+  border-radius: 1rem;
+  background: #eff6ff;
+  padding: 0.75rem;
+  overscroll-behavior: contain;
+}
+
+#wizard-root .selected-chip {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  border-radius: 9999px;
+  background: #dbeafe;
+  padding: 0.35rem 0.7rem;
+  color: #1e3a8a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+#wizard-root .symptom-groups {
+  display: grid;
+  min-width: 0;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#wizard-root .symptom-group {
+  min-width: 0;
+  overflow: clip;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+#wizard-root .symptom-group > summary {
+  position: relative;
+  display: grid;
+  min-height: 3.25rem;
+  cursor: pointer;
+  list-style: none;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 2.8rem 0.8rem 1rem;
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 750;
+  line-height: 1.35;
+  user-select: none;
+}
+
+#wizard-root .symptom-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+#wizard-root .symptom-group > summary::after {
+  position: absolute;
+  right: 1rem;
+  content: "⌄";
+  color: #475569;
+  font-size: 1.15rem;
+  transform: rotate(-90deg);
+  transition: transform 150ms ease;
+}
+
+#wizard-root .symptom-group[open] > summary {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+#wizard-root .symptom-group[open] > summary::after {
+  transform: rotate(0deg);
+}
+
+#wizard-root .symptom-group > summary > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#wizard-root .symptom-group > summary > span:last-child {
+  min-width: 2rem;
+  border-radius: 9999px;
+  background: #e2e8f0;
+  padding: 0.2rem 0.55rem;
+  color: #334155;
+  font-size: 0.75rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#wizard-root .symptom-grid {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0.75rem;
+  padding: 0.8rem;
+}
+
+#wizard-root .symptom-option {
+  display: grid;
+  min-width: 0;
+  min-height: 100%;
+  cursor: pointer;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0.7rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.9rem;
+  background: #ffffff;
+  padding: 0.85rem;
+  color: #0f172a;
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+  overflow-wrap: anywhere;
+}
+
+#wizard-root .symptom-option:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.07);
+}
+
+#wizard-root .symptom-option:focus-within {
+  border-color: #2563eb;
+  outline: 3px solid rgba(37, 99, 235, 0.18);
+  outline-offset: 1px;
+}
+
+#wizard-root .symptom-option:has(input:checked) {
+  border-color: #2563eb;
+  background: #eff6ff;
+  box-shadow: inset 0 0 0 1px #2563eb;
+}
+
+#wizard-root .symptom-option input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+  margin: 0.15rem 0 0;
+  accent-color: #2563eb;
+}
+
+#wizard-root .symptom-option > span {
+  display: grid;
+  min-width: 0;
+  gap: 0.3rem;
+}
+
+#wizard-root .symptom-option strong {
+  display: block;
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 750;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+#wizard-root .symptom-option small {
+  display: block;
+  color: #64748b;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+#wizard-root .wizard-submit {
+  position: sticky;
+  bottom: max(0.5rem, env(safe-area-inset-bottom, 0px));
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1rem;
+  border: 1px solid #dbeafe;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.75rem;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+#wizard-root .wizard-submit button {
+  width: 100%;
+  min-height: 3rem;
+}
+
+#wizard-root .wizard-submit p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+#wizard-root .wizard-results {
+  min-width: 0;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background: #f8fafc;
+  padding: 1rem;
+}
+
+#wizard-root .result-card {
+  display: grid;
+  min-width: 0;
+  gap: 1rem;
+  align-items: start;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+#wizard-root .result-card > div {
+  min-width: 0;
+}
+
+#wizard-root .result-card h4,
+#wizard-root .result-card p {
+  overflow-wrap: anywhere;
+}
+
+#wizard-root .result-card .btn {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  #wizard-root .wizard-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  #wizard-root .wizard-count {
+    justify-self: end;
+  }
+
+  #wizard-root .wizard-actions button {
+    flex: 0 0 auto;
+  }
+
+  #wizard-root .symptom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1rem;
+  }
+
+  #wizard-root .wizard-submit {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #wizard-root .wizard-submit button {
+    width: auto;
+  }
+
+  #wizard-root .result-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  #wizard-root .result-card .btn {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 768px) {
+  #wizard-root .wizard-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  #wizard-root .symptom-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1536px) {
+  #wizard-root .symptom-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  #wizard-root {
+    padding: 0.8rem;
+  }
+
+  #wizard-root .wizard-count {
+    width: 100%;
+  }
+
+  #wizard-root .wizard-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #wizard-root .wizard-actions button {
+    width: 100%;
+  }
+
+  #wizard-root .symptom-group > summary {
+    padding-left: 0.8rem;
+  }
+
+  #wizard-root .symptom-grid {
+    padding: 0.65rem;
+  }
+
+  #wizard-root .symptom-option {
+    padding: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #wizard-root .symptom-option,
+  #wizard-root .symptom-group > summary::after {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  #wizard-root .symptom-option,
+  #wizard-root .symptom-group,
+  #wizard-root .wizard-submit {
+    border: 1px solid CanvasText;
+  }
+
+  #wizard-root .symptom-option:has(input:checked) {
+    outline: 2px solid Highlight;
+  }
+}
+/* === End ShiftStart responsive symptom wizard fix === */
