@@ -1,8 +1,8 @@
 {
   "name": "shiftstart-it-support-kb-jekyll",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "private": true,
-  "description": "Enterprise-scale technician-first IT support knowledge base built with Jekyll, Tailwind and a multi-select symptom matcher.",
+  "description": "Enterprise-scale, device-optimised technician-first IT support knowledge base built with Jekyll, Tailwind and a multi-select symptom matcher.",
   "scripts": {
     "clean": "rimraf _site assets/data assets/css/site.css",
     "generate": "node scripts/generate-wizard.js && node scripts/generate-search-data.js",
@@ -10,13 +10,14 @@
     "jekyll": "bundle exec jekyll build",
     "build": "npm run clean && npm run remediate:apply && npm run vendor && npm run generate && npm run css && bundle exec jekyll build",
     "dev": "npm run remediate:apply && npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
-    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js",
+    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check",
     "test": "npm run remediate:apply && npm run check && npm run build",
     "audit-content": "node scripts/validate-content.js",
     "vendor": "node scripts/vendor-assets.js",
     "remediate:apply": "node scripts/remediate-content.js --apply",
     "remediate:check": "node scripts/remediate-content.js --check",
-    "post-remediation-check": "node scripts/post-remediation-check.js"
+    "post-remediation-check": "node scripts/post-remediation-check.js",
+    "responsive:check": "node scripts/validate-responsive.js && node --check assets/js/app.js && node --check assets/js/search.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

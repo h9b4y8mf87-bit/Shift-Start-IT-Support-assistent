@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<article class="shell py-10">
-  <div class="mx-auto max-w-4xl">
+<article class="shell article-shell">
+  <div class="article-column">
     {% if page.content_type == 'procedure' %}
       {% assign assurance_status = page.content_status | default: 'under_review' %}
       <section class="assurance-banner status-{{ assurance_status }}" aria-label="Content assurance status">
@@ -30,7 +30,7 @@ layout: default
       </section>
     {% endif %}
 
-    <div class="mb-4 mt-6 flex flex-wrap gap-2">
+    <div class="article-badges" aria-label="Article metadata">
       <span class="badge">{{ page.content_type }}</span>
       {% if page.category %}<span class="badge">{{ page.category }}</span>{% endif %}
       {% if page.severity %}<span class="badge">Severity: {{ page.severity }}</span>{% endif %}
@@ -55,14 +55,14 @@ layout: default
 
     {% if page.tldr %}<section class="tldr"><h2 class="!mt-0 text-lg">TL;DR</h2><p>{{ page.tldr }}</p></section>{% endif %}
 
-    <div class="article-body">{{ content }}</div>
+    <div class="article-body" data-article-body>{{ content }}</div>
 
     {% assign has_related = false %}
     {% if page.related_symptoms or page.related_causes or page.related_procedures or page.related_commands or page.next_steps %}{% assign has_related = true %}{% endif %}
     {% if has_related %}
-    <section class="mt-10 border-t border-slate-200 pt-8">
+    <section class="related-section">
       <h2 class="!mt-0">Related knowledge</h2>
-      <div class="mt-4 grid gap-3 md:grid-cols-2">
+      <div class="related-grid">
         {% for slug in page.related_symptoms %}
           {% assign item = site.symptoms | where: "slug", slug | first %}
           {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Symptom</p></a>{% endif %}
@@ -90,12 +90,12 @@ layout: default
     {% if page.escalation %}<section class="escalation"><h2 class="!mt-0 text-xl">Escalation path</h2><p>{{ page.escalation }}</p></section>{% endif %}
 
     {% if page.content_type == 'procedure' %}
-    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+    <div class="procedure-actions" data-procedure-actions>
       <a class="btn" data-ticket-link data-title="{{ page.title | escape }}" data-category="{{ page.category | escape }}" data-severity="{{ page.severity | escape }}" data-owner-team="{{ page.owner_team | escape }}">Create pre-filled ITSM ticket</a>
       <button class="btn-secondary" type="button" data-feedback="up">👍 Helpful</button>
       <button class="btn-secondary" type="button" data-feedback="down">👎 Not helpful</button>
     </div>
-    <p id="feedback-status" class="mt-3 text-sm text-slate-500" aria-live="polite"></p>
+    <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
     {% endif %}
   </div>
 </article>

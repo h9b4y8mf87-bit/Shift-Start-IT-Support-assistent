@@ -7,24 +7,29 @@ layout: default
   {% when 'causes' %}{% assign items = site.causes %}
   {% when 'commands' %}{% assign items = site.commands %}
 {% endcase %}
-<section class="shell py-10" data-catalog-root>
-  <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-    <div><p class="font-semibold text-blue-700">Complete catalogue</p><h1>{{ page.title }}</h1><p class="mt-3 max-w-3xl text-slate-600">{{ page.description }}</p></div>
-    <div class="catalog-total"><strong>{{ items | size }}</strong><span>{{ page.collection_name }}</span></div>
+<section class="shell page-section" data-catalog-root>
+  <div class="catalog-heading">
+    <div>
+      <p class="eyebrow">Complete catalogue</p>
+      <h1>{{ page.title }}</h1>
+      <p class="mt-3 max-w-3xl text-slate-600">{{ page.description }}</p>
+    </div>
+    <div class="catalog-total" aria-label="{{ items | size }} {{ page.collection_name }}"><strong>{{ items | size }}</strong><span>{{ page.collection_name }}</span></div>
   </div>
-  <div class="catalog-controls mt-8">
-    <label><span>Filter this catalogue</span><input class="wizard-input" type="search" data-catalog-search placeholder="Title, category, platform, tag or description"></label>
-    <label><span>Category</span><select class="wizard-input" data-catalog-category><option value="all">All categories</option>{% assign cats = items | map: 'category' | uniq | sort %}{% for cat in cats %}<option value="{{ cat | escape }}">{{ cat }}</option>{% endfor %}</select></label>
-    {% if page.collection_name == 'procedures' %}
-    <label><span>Content assurance</span><select class="wizard-input" data-catalog-status><option value="all">All assurance states</option><option value="verified">Verified</option><option value="under_review">Under review</option><option value="draft">Draft</option><option value="deprecated">Deprecated</option></select></label>
-    {% endif %}
+
+  <div class="catalog-filter-panel">
+    <div class="catalog-controls">
+      <label><span>Filter this catalogue</span><input class="wizard-input" type="search" inputmode="search" enterkeyhint="search" data-catalog-search placeholder="Title, category, platform, tag or description"></label>
+      <label><span>Category</span><select class="wizard-input" data-catalog-category><option value="all">All categories</option>{% assign cats = items | map: 'category' | uniq | sort %}{% for cat in cats %}<option value="{{ cat | escape }}">{{ cat }}</option>{% endfor %}</select></label>
+    </div>
+    <p class="catalog-count" data-catalog-count aria-live="polite">Showing every {{ page.collection_name }} article. Nothing is paginated or truncated.</p>
   </div>
-  <p class="mt-4 text-sm text-slate-600" data-catalog-count>Showing every {{ page.collection_name }} article. Nothing is paginated or truncated.</p>
-  <div class="mt-8 grid gap-4 md:grid-cols-2" data-catalog-items>
+
+  <div class="catalog-grid" data-catalog-items>
     {% assign sorted_items = items | sort: 'title' %}
     {% for item in sorted_items %}
-    <a class="card catalog-item" href="{{ item.url | relative_url }}" data-category="{{ item.category | escape }}" data-status="{{ item.content_status | default: '' | escape }}" data-search="{{ item.title | append: ' ' | append: item.description | append: ' ' | append: item.category | append: ' ' | append: item.tags | append: ' ' | append: item.platforms | append: ' ' | append: item.content_status | downcase | escape }}">
-      <div class="flex flex-wrap justify-between gap-4"><strong>{{ item.title }}</strong><div class="flex flex-wrap gap-2">{% if item.content_status %}<span class="badge status-{{ item.content_status }}">{{ item.content_status | replace: '_', ' ' }}</span>{% endif %}{% if item.severity %}<span class="badge">{{ item.severity }}</span>{% endif %}</div></div>
+    <a class="card catalog-item" href="{{ item.url | relative_url }}" data-category="{{ item.category | escape }}" data-search="{{ item.title | append: ' ' | append: item.description | append: ' ' | append: item.category | append: ' ' | append: item.tags | append: ' ' | append: item.platforms | downcase | escape }}">
+      <div class="catalog-card-heading"><strong>{{ item.title }}</strong>{% if item.severity %}<span class="badge">{{ item.severity }}</span>{% endif %}</div>
       <p class="mt-2 text-sm text-slate-600">{{ item.description }}</p>
       {% if item.support_tier or item.owner_team %}<p class="mt-3 text-xs text-slate-500">{{ item.support_tier }}{% if item.support_tier and item.owner_team %} · {% endif %}{{ item.owner_team }}</p>{% endif %}
     </a>
@@ -32,5 +37,5 @@ layout: default
   </div>
 </section>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{const root=document.querySelector('[data-catalog-root]');if(!root)return;const q=root.querySelector('[data-catalog-search]');const c=root.querySelector('[data-catalog-category]');const s=root.querySelector('[data-catalog-status]');const items=[...root.querySelectorAll('.catalog-item')];const count=root.querySelector('[data-catalog-count]');const apply=()=>{const term=q.value.trim().toLowerCase();let shown=0;items.forEach(el=>{const ok=(!term||el.dataset.search.includes(term))&&(c.value==='all'||el.dataset.category===c.value)&&(!s||s.value==='all'||el.dataset.status===s.value);el.hidden=!ok;if(ok)shown++;});count.textContent=`Showing ${shown} of ${items.length} articles. No pagination is used.`};q.addEventListener('input',apply);c.addEventListener('change',apply);if(s)s.addEventListener('change',apply);});
+document.addEventListener('DOMContentLoaded',()=>{const root=document.querySelector('[data-catalog-root]');if(!root)return;const q=root.querySelector('[data-catalog-search]');const c=root.querySelector('[data-catalog-category]');const items=[...root.querySelectorAll('.catalog-item')];const count=root.querySelector('[data-catalog-count]');let frame;const apply=()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{const term=q.value.trim().toLowerCase();let shown=0;items.forEach(el=>{const ok=(!term||el.dataset.search.includes(term))&&(c.value==='all'||el.dataset.category===c.value);el.hidden=!ok;if(ok)shown++;});count.textContent=`Showing ${shown} of ${items.length} articles. No pagination is used.`;});};q.addEventListener('input',apply,{passive:true});c.addEventListener('change',apply);});
 </script>

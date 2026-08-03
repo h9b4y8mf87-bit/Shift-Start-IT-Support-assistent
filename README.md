@@ -218,3 +218,7 @@ This edition contains **421 complete procedure files** across **19 technical-sup
 The multi-select wizard reads every Markdown symptom and procedure during the build. Technicians may select any number of symptoms, filter the full list, select all visible symptoms, and receive ranked procedures based on weighted direct relationships. No procedure is hard-coded into the browser and none is excluded from the generated wizard data.
 
 “Complete enterprise baseline” means broad L1-L3 workplace, identity, endpoint, network, collaboration, security, infrastructure, cloud, application, voice, data and lifecycle coverage. Organisation-specific systems, contracts, emergency contacts, regulatory controls, approval matrices and proprietary application runbooks must still be added as Markdown for the environment in which the KB is deployed.
+
+## Device optimisation
+
+The interface supports phones, tablets, laptops, desktop monitors, ultrawide displays, touch input, keyboard-only use, high-contrast modes and print. Run `npm run responsive:check` to validate the responsive contract. See `DEVICE-OPTIMISATION.md` for the implemented behaviour.
