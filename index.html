@@ -35,7 +35,7 @@ permalink: /
   <div class="common-grid">
     {% assign common = site.procedures | sort: 'title' %}
     {% for item in common limit: 12 %}
-    <a class="card" href="{{ item.url | relative_url }}"><div class="flex items-start justify-between gap-3"><strong>{{ item.title }}</strong><span class="badge">{{ item.severity }}</span></div><p class="mt-3 text-sm text-slate-600">{{ item.description }}</p></a>
+    <a class="card" href="{{ item.url | relative_url }}"><div class="card-heading-row"><strong>{{ item.title }}</strong><span class="badge" aria-label="Severity: {{ item.severity | escape }}">{{ item.severity }}</span></div><p class="mt-3 text-sm text-slate-600">{{ item.description }}</p></a>
     {% endfor %}
   </div>
 </section>
