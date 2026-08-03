@@ -1,7 +1,7 @@
 ---
-title: Standard service request requested
+title: Standard service request required
 slug: request-to-a-standard-service-request
-description: 'Observable report: Standard service request requested. Select it with any other symptoms to receive ranked procedures.'
+description: 'Observable report: Standard service request required. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium

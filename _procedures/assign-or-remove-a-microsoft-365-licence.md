@@ -51,7 +51,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -99,14 +99,19 @@ The correct service plans are provisioned without consuming an unintended licenc
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inspect the user’s assigned licences and tenant SKU capacity.** Confirm usage location, direct versus group-based assignment and available units before changing licensing.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Connect-MgGraph -Scopes "User.Read.All","Organization.Read.All"
+Get-MgUser -UserId "user@contoso.com" -Property Id,DisplayName,UserPrincipalName,UsageLocation,AssignedLicenses,LicenseAssignmentStates |
+  Select-Object Id,DisplayName,UserPrincipalName,UsageLocation,AssignedLicenses,LicenseAssignmentStates
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Get-MgSubscribedSku -All |
+  Select-Object SkuPartNumber,SkuId,ConsumedUnits,PrepaidUnits
+{% endcapture %}
+{% include command.html shell="powershell" label="Microsoft 365 licence evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> The current licence source, service plans, usage location and tenant capacity are known before an approved assignment or removal.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

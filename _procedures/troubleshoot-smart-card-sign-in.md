@@ -49,7 +49,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -97,14 +97,17 @@ The exact scenario “Troubleshoot smart-card sign-in” is resolved and the ori
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inspect the smart card, certificate chain and sign-in context.** Confirm reader detection, certificate purpose, validity, private-key access and domain reachability before replacing certificates or middleware.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
+certutil.exe -scinfo
+whoami.exe /all
+klist.exe
+nltest.exe /dsgetdc:contoso.com
 {% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+{% include command.html shell="powershell" label="Smart-card sign-in evidence" command=enterprise_command %}
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+   <div class="expected"><strong>Expected result:</strong> Reader, certificate, Kerberos and domain evidence identifies whether the failure is card, certificate, middleware, PIN, trust or connectivity related.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

@@ -48,7 +48,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -96,14 +96,20 @@ The user sends, receives, searches or opens the required message successfully.
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inspect the shared mailbox and all existing delegate permissions.** Confirm whether Full Access, Send As or Send on Behalf is requested; these are separate permissions and must not be assumed equivalent.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Connect-ExchangeOnline
+Get-MailboxPermission -Identity "shared@contoso.com" |
+  Where-Object { -not $_.IsInherited } |
+  Select-Object User,AccessRights,Deny,IsInherited
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Get-RecipientPermission -Identity "shared@contoso.com" |
+  Select-Object Trustee,AccessRights,IsInherited
+{% endcapture %}
+{% include command.html shell="powershell" label="Shared mailbox permission evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> Existing Full Access and Send As entries are recorded so only the approved permission type is added, changed or removed.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

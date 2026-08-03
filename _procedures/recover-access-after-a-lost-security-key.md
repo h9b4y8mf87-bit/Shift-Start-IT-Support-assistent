@@ -51,7 +51,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -99,14 +99,19 @@ The user completes MFA with the approved method and the old method no longer wor
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inventory registered FIDO2 keys and available recovery methods.** Complete approved identity verification before removing a key or issuing a temporary recovery mechanism.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Connect-MgGraph -Scopes "UserAuthenticationMethod.Read.All","AuditLog.Read.All"
+Get-MgUserAuthenticationFido2Method -UserId "user@contoso.com" |
+  Select-Object Id,DisplayName,Model,AttestationLevel,CreatedDateTime
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Get-MgUserAuthenticationMethod -UserId "user@contoso.com" |
+  Select-Object Id,AdditionalProperties
+{% endcapture %}
+{% include command.html shell="powershell" label="Security-key recovery evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> The lost key is distinguished from remaining authentication and recovery methods so the correct registration can be revoked without locking out the user.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

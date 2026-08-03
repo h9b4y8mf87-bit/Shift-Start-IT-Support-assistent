@@ -24,6 +24,7 @@ layout: default
               {% else %}The full runbook is retained, but commands and expected results still require validation in the target enterprise environment. Do not treat this status as production approval.
             {% endcase %}
           </p>
+          <p class="mt-3 text-sm"><a href="{{ '/content-quality/' | relative_url }}">Review the content-quality policy</a> · <a href="{{ '/reports/content-audit.json' | relative_url }}">Open the machine-readable audit</a></p>
         </div>
         <span class="assurance-status">{{ assurance_status | replace: '_', ' ' }}</span>
       </section>

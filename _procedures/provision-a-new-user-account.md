@@ -49,7 +49,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -97,14 +97,18 @@ The new user can authenticate and access only approved services.
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Check for duplicate identities and confirm the target organisational unit.** Search by immutable business identifiers, UPN and email aliases before creating a new account.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Get-ADUser -Filter "UserPrincipalName -eq 'new.user@contoso.com' -or mail -eq 'new.user@contoso.com'" -Properties mail,employeeID,Enabled |
+  Select-Object SamAccountName,UserPrincipalName,mail,employeeID,Enabled,DistinguishedName
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Get-ADOrganizationalUnit -Filter * |
+  Select-Object Name,DistinguishedName
+{% endcapture %}
+{% include command.html shell="powershell" label="New-account pre-provisioning evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> No conflicting identity exists and the approved OU, naming convention and authoritative source are confirmed before account creation.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

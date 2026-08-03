@@ -48,7 +48,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -96,14 +96,20 @@ The new user can authenticate and access only approved services.
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Check whether the guest already exists and review sign-in evidence.** Use immutable identifiers where possible and confirm invitation, redemption and current account state before creating another guest object.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Connect-MgGraph -Scopes "User.Read.All","AuditLog.Read.All"
+Get-MgUser -Filter "userType eq 'Guest'" -All |
+  Where-Object { $_.Mail -eq "guest@example.com" -or $_.UserPrincipalName -like "guest_*" } |
+  Select-Object Id,DisplayName,UserPrincipalName,Mail,AccountEnabled,ExternalUserState
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Get-MgAuditLogSignIn -Filter "userPrincipalName eq 'guest@example.com'" -Top 20 |
+  Select-Object CreatedDateTime,AppDisplayName,Status,ConditionalAccessStatus
+{% endcapture %}
+{% include command.html shell="powershell" label="External guest evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> Any existing guest object, invitation state and recent sign-in failure are identified before provisioning or reinvitation.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

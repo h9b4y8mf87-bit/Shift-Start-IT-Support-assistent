@@ -10,12 +10,13 @@
     "jekyll": "bundle exec jekyll build",
     "build": "npm run clean && npm run remediate:apply && npm run vendor && npm run generate && npm run css && bundle exec jekyll build",
     "dev": "npm run remediate:apply && npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
-    "check": "node scripts/validate-content.js",
+    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js",
     "test": "npm run remediate:apply && npm run check && npm run build",
     "audit-content": "node scripts/validate-content.js",
     "vendor": "node scripts/vendor-assets.js",
     "remediate:apply": "node scripts/remediate-content.js --apply",
-    "remediate:check": "node scripts/remediate-content.js --check"
+    "remediate:check": "node scripts/remediate-content.js --check",
+    "post-remediation-check": "node scripts/post-remediation-check.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

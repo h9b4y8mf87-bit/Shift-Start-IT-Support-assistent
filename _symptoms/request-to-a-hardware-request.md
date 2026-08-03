@@ -1,7 +1,7 @@
 ---
-title: Hardware request requested
+title: New hardware requested
 slug: request-to-a-hardware-request
-description: 'Observable report: Hardware request requested. Select it with any other symptoms to receive ranked procedures.'
+description: 'Observable report: New hardware requested. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium

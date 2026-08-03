@@ -1,7 +1,7 @@
 ---
-title: A paper jam safely
+title: Paper jam needs to be cleared safely
 slug: a-paper-jam-safely
-description: 'Observable report: A paper jam safely. Select it with any other symptoms to receive ranked procedures.'
+description: 'Observable report: Paper jam needs to be cleared safely. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Printing & Scanning
 severity: medium

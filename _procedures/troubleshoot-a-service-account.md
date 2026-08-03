@@ -48,7 +48,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -96,14 +96,17 @@ The exact scenario “Troubleshoot a service account” is resolved and the orig
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inspect the service account and its service principal names without changing credentials.** Confirm account state, password policy, SPNs and dependent services or tasks.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Get-ADUser -Identity "service_account" -Properties Enabled,LockedOut,PasswordLastSet,PasswordNeverExpires,LastLogonDate,ServicePrincipalName |
+  Select-Object SamAccountName,Enabled,LockedOut,PasswordLastSet,PasswordNeverExpires,LastLogonDate,ServicePrincipalName
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+setspn.exe -L service_account
+{% endcapture %}
+{% include command.html shell="powershell" label="Service-account evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> The account state, password timing and SPN registrations can be correlated with the failing service without resetting the credential prematurely.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

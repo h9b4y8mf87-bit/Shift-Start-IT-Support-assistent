@@ -50,7 +50,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -98,14 +98,20 @@ The user has the intended access and no additional privilege.
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inspect current effective access and the proposed entitlement.** Confirm the authoritative group or role, owner, approval and whether access is direct, inherited, nested or application-managed.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Get-ADPrincipalGroupMembership -Identity "username" |
+  Sort-Object Name |
+  Select-Object Name,SamAccountName,GroupCategory,GroupScope
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Connect-MgGraph -Scopes "User.Read.All","GroupMember.Read.All"
+Get-MgUserMemberOf -UserId "user@contoso.com" -All |
+  Select-Object Id,AdditionalProperties
+{% endcapture %}
+{% include command.html shell="powershell" label="Approved-access evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> Current direct and inherited access is documented so the approved entitlement can be granted through the correct authoritative mechanism without privilege duplication.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

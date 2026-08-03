@@ -48,7 +48,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -96,14 +96,22 @@ The user completes MFA with the approved method and the old method no longer wor
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inventory the user’s passwordless methods and recent sign-ins.** Confirm method type, device association and authentication error before resetting any FIDO2, Authenticator or Windows Hello registration.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Connect-MgGraph -Scopes "UserAuthenticationMethod.Read.All","AuditLog.Read.All"
+Get-MgUserAuthenticationFido2Method -UserId "user@contoso.com" |
+  Select-Object Id,DisplayName,Model,CreatedDateTime
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Get-MgUserAuthenticationWindowsHelloForBusinessMethod -UserId "user@contoso.com" |
+  Select-Object Id,DisplayName,CreatedDateTime,KeyStrength
+
+Get-MgAuditLogSignIn -Filter "userPrincipalName eq 'user@contoso.com'" -Top 20 |
+  Select-Object CreatedDateTime,AuthenticationRequirement,AuthenticationDetails,Status
+{% endcapture %}
+{% include command.html shell="powershell" label="Passwordless sign-in evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> Registered passwordless methods and the failing authentication stage are identified before a method is removed or re-enrolled.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

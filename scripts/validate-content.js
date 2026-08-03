@@ -17,7 +17,7 @@ const warnings = [];
 const records = {};
 const commandUse = new Map();
 
-const malformedTitle = /^(?:Need to (?:a|an) |Request to (?:a|an) |And rebuild\b|Need to initial\b|Need to shift handover\b)/i;
+const malformedTitle = /^(?:Need to (?:a|an) |Request to (?:a|an) |And rebuild\b|Need to initial\b|Need to shift handover\b|A paper jam safely$)|\brequest requested$/i;
 const duplicateCategories = new Set(Object.keys(governance.canonicalCategories));
 const genericDescriptions = /^Enterprise runbook to\b/i;
 
@@ -109,6 +109,7 @@ if (String(kb?.itsm?.ticketUrlTemplate || kb?.ticketUrlTemplate || "").includes(
 }
 
 const report = {
+  schemaVersion: 2,
   generatedAt: new Date().toISOString(),
   counts: Object.fromEntries(Object.entries(records).map(([name, collection]) => [name, collection.size])),
   statusCounts: [...records.procedures.values()].reduce((acc, item) => {
@@ -117,7 +118,14 @@ const report = {
     return acc;
   }, {}),
   errors,
-  warnings
+  warnings,
+  checks: {
+    malformedTitles: { detected: errors.filter((entry) => entry.includes("malformed generated title")).length, passed: !errors.some((entry) => entry.includes("malformed generated title")) },
+    duplicateTaxonomy: { detected: errors.filter((entry) => entry.includes("duplicate taxonomy category")).length, passed: !errors.some((entry) => entry.includes("duplicate taxonomy category")) },
+    reusedGenericCommands: { detected: warnings.filter((entry) => entry.includes("Generic command block reused")).length, passed: !warnings.some((entry) => entry.includes("Generic command block reused")) },
+    procedureAssuranceBanner: { passed: articleLayout.includes("assurance-banner") },
+    globalQualityNavigation: { passed: fs.readFileSync("_includes/header.html", "utf8").includes("/content-quality/") }
+  }
 };
 fs.mkdirSync("reports", { recursive: true });
 fs.writeFileSync("reports/content-audit.json", JSON.stringify(report, null, 2));

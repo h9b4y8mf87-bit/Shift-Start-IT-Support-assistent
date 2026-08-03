@@ -49,7 +49,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -97,14 +97,17 @@ Access is removed at the authorised time and retained data remains owned and rec
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Confirm why and when the account was disabled before enabling it.** Check the authoritative HR or access record, directory state and recent changes; do not restore an account disabled for security or leaver processing without approval.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Get-ADUser -Identity "username" -Properties Enabled,whenChanged,Description,Manager,AccountExpirationDate |
+  Select-Object SamAccountName,Enabled,whenChanged,Description,Manager,AccountExpirationDate,DistinguishedName
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Enable-ADAccount -Identity "username" -WhatIf
+{% endcapture %}
+{% include command.html shell="powershell" label="Disabled-account evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> The disablement reason and account lifecycle state are known, and the preview confirms the exact approved account that would be enabled.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

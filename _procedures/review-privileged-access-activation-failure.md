@@ -49,7 +49,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -97,14 +97,21 @@ The exact scenario “Review privileged access activation failure” is resolved
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inspect eligible and active privileged-role assignments.** Confirm the principal, role, scope, activation window and policy result before changing any privileged assignment.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Connect-MgGraph -Scopes "RoleEligibilitySchedule.Read.Directory","RoleAssignmentSchedule.Read.Directory"
+Get-MgRoleManagementDirectoryRoleEligibilityScheduleInstance -All |
+  Where-Object PrincipalId -eq "PRINCIPAL_OBJECT_ID" |
+  Select-Object PrincipalId,RoleDefinitionId,DirectoryScopeId,StartDateTime,EndDateTime
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Get-MgRoleManagementDirectoryRoleAssignmentScheduleInstance -All |
+  Where-Object PrincipalId -eq "PRINCIPAL_OBJECT_ID" |
+  Select-Object PrincipalId,RoleDefinitionId,AssignmentType,Status,StartDateTime,EndDateTime
+{% endcapture %}
+{% include command.html shell="powershell" label="Privileged role assignment evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> The user’s eligibility, active assignment, scope and activation timing are known, allowing the failure to be separated from approval, MFA, Conditional Access or policy issues.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 

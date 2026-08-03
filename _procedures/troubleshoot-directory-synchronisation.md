@@ -47,7 +47,7 @@ reviewed_by: ''
 last_tested: ''
 tested_platforms: *id001
 source_references: []
-change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 ---
 ## Purpose and scope
@@ -95,14 +95,18 @@ The affected files synchronise and match the validated cloud version.
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Run non-destructive diagnostics.** Check the authoritative directory, identity-provider sign-in logs, group or role assignment, licence state, authentication method and policy result.
+4. **Inspect synchronisation scheduling, connector activity and recent run status.** Run these commands only on the approved Microsoft Entra Connect server or management host.
 
 {% capture enterprise_command %}
-Get-ADUser -Identity username -Properties Enabled,LockedOut,PasswordExpired,LastLogonDate | Select SamAccountName,Enabled,LockedOut,PasswordExpired,LastLogonDate
-{% endcapture %}
-{% include command.html shell="powershell" label="Identity evidence" command=enterprise_command %}
+Import-Module ADSync
+Get-ADSyncScheduler |
+  Select-Object SyncCycleEnabled,CurrentlyEffectiveSyncCycleInterval,NextSyncCyclePolicyType,NextSyncCycleStartTimeInUTC
 
-   <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
+Get-ADSyncConnectorRunStatus
+{% endcapture %}
+{% include command.html shell="powershell" label="Directory synchronisation evidence" command=enterprise_command %}
+
+   <div class="expected"><strong>Expected result:</strong> Scheduler state and active connector runs show whether the issue is scheduling, connector, export, import or synchronisation-engine related.</div>
 
 5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
 
