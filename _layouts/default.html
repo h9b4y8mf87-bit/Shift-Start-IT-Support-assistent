@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="{{ page.description | default: site.data.kb.description | escape }}">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#0c1d36">
   <meta name="color-scheme" content="light">
   <meta name="format-detection" content="telephone=no">
   <meta name="mobile-web-app-capable" content="yes">
@@ -17,7 +17,7 @@
     window.KB_BASE = {{ '/' | relative_url | jsonify }};
   </script>
 </head>
-<body class="min-h-full" data-required-role="{{ page.required_role | default: 'technician' | escape }}" data-content-status="{{ page.content_status | default: '' | escape }}">
+<body class="min-h-full clay-ui" data-required-role="{{ page.required_role | default: 'technician' | escape }}" data-content-status="{{ page.content_status | default: '' | escape }}">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   {% include header.html %}
   <main id="main-content" tabindex="-1">{{ content }}</main>
