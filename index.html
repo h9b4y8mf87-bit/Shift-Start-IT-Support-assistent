@@ -4,38 +4,128 @@ title: Technician dashboard
 description: Search, diagnose and resolve common internal IT issues quickly.
 permalink: /
 ---
-<section class="shell dashboard-hero">
-  <div class="dashboard-hero-grid">
-    <div>
+{% assign verified_procedures = site.procedures | where: 'content_status', 'verified' %}
+{% assign critical_procedures = site.procedures | where: 'severity', 'critical' %}
+{% assign support_domains = site.procedures | group_by: 'category' | sort: 'name' %}
+
+<section class="shell dashboard-hero sv-hero">
+  <div class="dashboard-hero-grid sv-hero-grid">
+    <div class="sv-hero-copy">
+      <div class="sv-operational-kicker"><span aria-hidden="true"></span>Operational IT support library</div>
       <p class="font-semibold text-blue-700">Your first tab for every shift</p>
       <h1 class="mt-2">Solve the issue. Verify the outcome. Escalate with evidence.</h1>
+      <p class="sv-support-line" aria-label="ShiftStart service promise"><strong>Clear procedures.</strong> <em>Safer support.</em></p>
       <p class="mt-5 max-w-3xl text-lg text-slate-600">Use search when you know the symptom. Use the wizard when the report is vague. Every procedure includes complete evidence, safety, diagnostic, remediation, rollback, verification and escalation guidance. The catalogue and wizard index every procedure in the repository.</p>
+
+      <div class="sv-hero-proof" aria-label="Knowledge base summary">
+        <div><strong>{{ site.procedures | size }}</strong><span>Complete procedures</span></div>
+        <div><strong>{{ support_domains | size }}</strong><span>Support domains</span></div>
+        <div><strong>{{ verified_procedures | size }}</strong><span>Verified guides</span></div>
+        <div><strong>{{ critical_procedures | size }}</strong><span>Critical-risk guides</span></div>
+      </div>
+
       <div class="dashboard-entry-grid">
-        <a class="card" href="{{ '/procedures/' | relative_url }}"><strong>Browse procedures</strong><p class="mt-2 text-sm text-slate-600">Known fixes, expected results and escalation paths.</p></a>
-        <a class="card" href="{{ '/symptoms/' | relative_url }}"><strong>Browse symptoms</strong><p class="mt-2 text-sm text-slate-600">Start from what the user can see.</p></a>
-        <a class="card" href="#wizard"><strong>I’m not sure</strong><p class="mt-2 text-sm text-slate-600">Let the decision tree narrow it down.</p></a>
+        <a class="card sv-entry-card" href="{{ '/procedures/' | relative_url }}"><span class="sv-entry-number">01</span><strong>Browse procedures</strong><p class="mt-2 text-sm text-slate-600">Known fixes, expected results and escalation paths.</p></a>
+        <a class="card sv-entry-card" href="{{ '/symptoms/' | relative_url }}"><span class="sv-entry-number">02</span><strong>Browse symptoms</strong><p class="mt-2 text-sm text-slate-600">Start from what the user can see.</p></a>
+        <a class="card sv-entry-card" href="#wizard"><span class="sv-entry-number">03</span><strong>I’m not sure</strong><p class="mt-2 text-sm text-slate-600">Let the decision tree narrow it down.</p></a>
       </div>
     </div>
-    <aside class="card shift-checklist">
-      <h2 class="!mt-0 text-xl">Shift checklist</h2>
-      <ol class="mt-4 list-decimal space-y-3 pl-5 text-sm text-slate-700">
-        <li>Confirm user, device and business impact.</li>
-        <li>Capture the exact error and time observed.</li>
-        <li>Use the least disruptive diagnostic first.</li>
-        <li>Record commands, results and changes.</li>
-      </ol>
-    </aside>
+
+    <div class="sv-hero-side">
+      <aside class="sv-control-console" aria-label="ShiftStart operational status">
+        <div class="sv-console-header"><div><span class="sv-status-dot" aria-hidden="true"></span><strong>Library controls active</strong></div><span>Enterprise KB</span></div>
+        <div class="sv-console-body">
+          <p class="sv-console-label">Controlled support workflow</p>
+          <ol class="sv-assurance-list">
+            <li><span>01</span><div><strong>Risk &amp; permissions</strong><small>Know the impact and authority before acting</small></div></li>
+            <li><span>02</span><div><strong>Controlled resolution</strong><small>Follow evidence-led diagnostic and remediation steps</small></div></li>
+            <li><span>03</span><div><strong>Validation &amp; rollback</strong><small>Confirm recovery or reverse safely</small></div></li>
+            <li><span>04</span><div><strong>Escalation &amp; evidence</strong><small>Hand over or close tickets with useful evidence</small></div></li>
+          </ol>
+        </div>
+        <div class="sv-console-footer"><span>Content assurance</span><strong>{{ verified_procedures | size }} verified · {{ site.procedures | size | minus: verified_procedures.size }} governed review</strong></div>
+      </aside>
+
+      <aside class="card shift-checklist">
+        <h2 class="!mt-0 text-xl">Shift checklist</h2>
+        <ol class="mt-4 list-decimal space-y-3 pl-5 text-sm text-slate-700">
+          <li>Confirm user, device and business impact.</li>
+          <li>Capture the exact error and time observed.</li>
+          <li>Use the least disruptive diagnostic first.</li>
+          <li>Record commands, results and changes.</li>
+        </ol>
+      </aside>
+    </div>
   </div>
 </section>
+
+<section class="sv-signal-strip" aria-label="Knowledge base operating principles">
+  <div class="shell">
+    <span>Identity verified</span>
+    <span>Least privilege</span>
+    <span>Data protected first</span>
+    <span>Every change auditable</span>
+    <span>Closure evidence required</span>
+  </div>
+</section>
+
 <section id="wizard" class="wizard-section">
   <div class="shell"><div class="wizard-column"><p class="font-semibold text-blue-700">Multi-select enterprise symptom wizard</p><h2 class="!mt-1">Select every symptom that applies</h2><div id="wizard-root" class="card mt-6" data-source="{{ '/assets/data/wizard-data.json' | relative_url }}"><p>Loading all symptoms and procedures…</p></div></div></div>
 </section>
-<section class="shell page-section">
-  <h2 class="!mt-0">Common procedures</h2>
+
+<section class="shell page-section sv-common-section">
+  <div class="sv-section-heading">
+    <div><span class="sv-section-kicker">Knowledge base</span><h2 class="!mt-1">Common procedures</h2></div>
+    <p>Procedure cards keep the existing ShiftStart content while making operational risk, ownership and assurance easier to scan.</p>
+  </div>
   <div class="common-grid">
     {% assign common = site.procedures | sort: 'title' %}
     {% for item in common limit: 12 %}
-    <a class="card" href="{{ item.url | relative_url }}"><div class="card-heading-row"><strong>{{ item.title }}</strong><span class="badge" aria-label="Severity: {{ item.severity | escape }}">{{ item.severity }}</span></div><p class="mt-3 text-sm text-slate-600">{{ item.description }}</p></a>
+    <a class="card sv-procedure-card" href="{{ item.url | relative_url }}">
+      <div class="sv-card-topline">
+        <span class="sv-risk-badge sv-risk-{{ item.severity | default: 'medium' }}">{{ item.severity | default: 'medium' }} risk</span>
+        <span class="sv-card-status status-{{ item.content_status | default: 'under_review' }}">{{ item.content_status | default: 'under_review' | replace: '_', ' ' }}</span>
+      </div>
+      <p class="sv-card-category">{{ item.category }}</p>
+      <div class="card-heading-row"><strong>{{ item.title }}</strong><span class="badge" aria-label="Severity: {{ item.severity | escape }}">{{ item.severity }}</span></div>
+      <p class="mt-3 text-sm text-slate-600">{{ item.description }}</p>
+      <dl class="sv-card-facts">
+        {% if item.support_tier %}<div><dt>Tier</dt><dd>{{ item.support_tier }}</dd></div>{% endif %}
+        {% if item.estimated_time %}<div><dt>Time</dt><dd>{{ item.estimated_time }}</dd></div>{% endif %}
+        {% if item.owner_team %}<div><dt>Owner</dt><dd>{{ item.owner_team }}</dd></div>{% endif %}
+      </dl>
+      <span class="sv-card-action">Open controlled procedure <span aria-hidden="true">→</span></span>
+    </a>
     {% endfor %}
   </div>
+</section>
+
+<section class="sv-governance-section" id="governance">
+  <div class="shell sv-governance-grid">
+    <div class="sv-governance-copy">
+      <span class="sv-section-kicker sv-kicker-light">Quality system</span>
+      <h2>Knowledge that stays accountable</h2>
+      <p>ShiftStart keeps ownership, review status, technical validation and audit evidence visible instead of presenting every article as equally trustworthy.</p>
+      <div class="sv-governance-actions"><a class="btn sv-button-light" href="{{ '/content-quality/' | relative_url }}">Open quality controls</a><a class="btn-secondary sv-button-outline-light" href="{{ '/reports/content-audit.json' | relative_url }}">Open content audit</a></div>
+    </div>
+    <div class="sv-governance-cards">
+      <article><span>01</span><h3>Draft</h3><p>Author against the complete operational template.</p></article>
+      <article><span>02</span><h3>Review</h3><p>Technical, safety and relationship checks happen before approval.</p></article>
+      <article><span>03</span><h3>Publish</h3><p>Approved or clearly-labelled guidance becomes searchable for support teams.</p></article>
+      <article><span>04</span><h3>Revalidate</h3><p>Quality status and audit checks keep procedures accountable over time.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="shell page-section sv-coverage-section" id="coverage-map">
+  <div class="sv-section-heading">
+    <div><span class="sv-section-kicker">Coverage map</span><h2 class="!mt-1">Enterprise support domains</h2></div>
+    <p>All current ShiftStart categories remain available. This map is generated from the repository rather than maintained as a separate reduced list.</p>
+  </div>
+  <div class="sv-coverage-grid">
+    {% for domain in support_domains %}
+      <article><span class="sv-coverage-number">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><h3>{{ domain.name }}</h3><p>{{ domain.items | size }} procedures</p></article>
+    {% endfor %}
+  </div>
+  <div class="sv-coverage-actions"><a class="btn-secondary" href="{{ '/enterprise-coverage/' | relative_url }}">Open complete coverage manifest</a><a class="btn-secondary" href="{{ '/procedures/' | relative_url }}">Browse all {{ site.procedures | size }} procedures</a></div>
 </section>
