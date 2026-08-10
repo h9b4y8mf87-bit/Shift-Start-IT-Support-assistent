@@ -107,3 +107,48 @@
     });
   }
 })();
+
+/* === ShiftStart homepage + mobile polish === */
+(() => {
+  "use strict";
+  document.addEventListener("DOMContentLoaded", initPriorityDomains);
+
+  function initPriorityDomains() {
+    const grid = document.querySelector("[data-priority-domains]");
+    const toggle = document.querySelector("[data-domain-toggle]");
+    if (!grid || !toggle) return;
+
+    const cards = [...grid.querySelectorAll("[data-domain-count]")];
+    cards.sort((a,b) => {
+      const byCount = Number(b.dataset.domainCount || 0) - Number(a.dataset.domainCount || 0);
+      return byCount || (a.dataset.domainName || "").localeCompare(b.dataset.domainName || "");
+    });
+    cards.forEach(card => grid.appendChild(card));
+
+    const collapsedCount = Math.min(5, cards.length);
+    let expanded = false;
+
+    function render() {
+      cards.forEach((card,index) => {
+        card.hidden = !expanded && index >= collapsedCount;
+      });
+      toggle.hidden = cards.length <= collapsedCount;
+      toggle.textContent = expanded ? "Show top 5 domains" : `See all ${cards.length} domains`;
+      toggle.setAttribute("aria-expanded", String(expanded));
+    }
+
+    toggle.addEventListener("click", () => {
+      expanded = !expanded;
+      render();
+      if (!expanded) {
+        grid.scrollIntoView({
+          block: "nearest",
+          behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+        });
+      }
+    });
+
+    render();
+  }
+})();
+/* === End ShiftStart homepage + mobile polish === */
