@@ -1,16 +1,15 @@
 ---
 title: A failed mouse or pointing device
 slug: a-failed-mouse-or-pointing-device
-description: 'Observable report: A failed mouse or pointing device. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A failed mouse or pointing device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: high
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-failed-mouse-or-pointing-device
+  - hardware-and-peripherals
+  - troubleshoot-a-failed-mouse-or-pointing-device
 related_procedures:
-- troubleshoot-a-failed-mouse-or-pointing-device
+  - troubleshoot-a-failed-mouse-or-pointing-device
 permalink: /symptoms/a-failed-mouse-or-pointing-device/
 layout: article
 last_reviewed: '2026-08-02'

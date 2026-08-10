@@ -1,16 +1,15 @@
 ---
 title: Need to securely wipe a retired device
 slug: need-to-securely-wipe-a-retired-device
-description: 'Observable report: Need to securely wipe a retired device. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to securely wipe a retired device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- securely-wipe-a-retired-device
+  - lifecycle-and-asset-management
+  - securely-wipe-a-retired-device
 related_procedures:
-- securely-wipe-a-retired-device
+  - securely-wipe-a-retired-device
 permalink: /symptoms/need-to-securely-wipe-a-retired-device/
 layout: article
 last_reviewed: '2026-08-02'

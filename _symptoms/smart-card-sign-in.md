@@ -6,10 +6,10 @@ content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- troubleshoot-smart-card-sign-in
+  - identity-and-access-management
+  - troubleshoot-smart-card-sign-in
 related_procedures:
-- troubleshoot-smart-card-sign-in
+  - troubleshoot-smart-card-sign-in
 permalink: /symptoms/smart-card-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

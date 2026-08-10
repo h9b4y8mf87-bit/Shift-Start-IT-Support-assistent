@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-bluetooth-devices
-- windows-endpoints
+  - troubleshoot-bluetooth-devices
+  - windows-endpoints
 related_procedures:
-- troubleshoot-bluetooth-devices
+  - troubleshoot-bluetooth-devices
 permalink: /symptoms/bluetooth-devices/
 layout: article
 last_reviewed: '2026-08-02'

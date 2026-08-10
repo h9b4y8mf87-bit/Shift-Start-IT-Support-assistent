@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-an-http-500-error
+  - business-applications-and-browsers
+  - troubleshoot-an-http-500-error
 related_procedures:
-- troubleshoot-an-http-500-error
+  - troubleshoot-an-http-500-error
 permalink: /symptoms/an-http-500-error/
 layout: article
 last_reviewed: '2026-08-02'

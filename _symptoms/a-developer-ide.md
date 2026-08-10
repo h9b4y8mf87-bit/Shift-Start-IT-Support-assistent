@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-a-developer-ide
+  - linux-and-developer-workstations
+  - troubleshoot-a-developer-ide
 related_procedures:
-- troubleshoot-a-developer-ide
+  - troubleshoot-a-developer-ide
 permalink: /symptoms/a-developer-ide/
 layout: article
 last_reviewed: '2026-08-02'

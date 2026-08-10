@@ -1,16 +1,15 @@
 ---
 title: Reported an impossible-travel alert
 slug: reported-an-impossible-travel-alert
-description: 'Observable report: Reported an impossible-travel alert. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Reported an impossible-travel alert. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- respond-to-an-impossible-travel-alert
-- security-and-compliance
+  - respond-to-an-impossible-travel-alert
+  - security-and-compliance
 related_procedures:
-- respond-to-an-impossible-travel-alert
+  - respond-to-an-impossible-travel-alert
 permalink: /symptoms/reported-an-impossible-travel-alert/
 layout: article
 last_reviewed: '2026-08-02'

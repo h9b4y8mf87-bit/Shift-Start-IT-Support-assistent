@@ -1,16 +1,15 @@
 ---
 title: Need to validate replacement hardware before handover
 slug: need-to-validate-replacement-hardware-before-handover
-description: 'Observable report: Need to validate replacement hardware before handover. Select it with any other
-  symptoms to receive ranked procedures.'
+description: 'Observable report: Need to validate replacement hardware before handover. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- validate-replacement-hardware-before-handover
+  - hardware-and-peripherals
+  - validate-replacement-hardware-before-handover
 related_procedures:
-- validate-replacement-hardware-before-handover
+  - validate-replacement-hardware-before-handover
 permalink: /symptoms/need-to-validate-replacement-hardware-before-handover/
 layout: article
 last_reviewed: '2026-08-02'

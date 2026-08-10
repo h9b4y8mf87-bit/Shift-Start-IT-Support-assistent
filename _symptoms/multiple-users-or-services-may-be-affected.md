@@ -1,45 +1,44 @@
 ---
 title: Multiple users or services may be affected
 slug: multiple-users-or-services-may-be-affected
-description: 'Observable report: Multiple users or services may be affected. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Multiple users or services may be affected. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- assess-business-impact-and-urgency
-- classify-incident-category-and-priority
-- complete-a-post-incident-review
-- create-a-problem-record-from-recurring-incidents
-- create-or-update-a-knowledge-article
-- declare-and-coordinate-a-major-incident
-- document-a-ticket-to-enterprise-standard
-- engage-a-third-party-vendor-for-support
-- escalate-an-incident-with-complete-evidence
-- handle-a-duplicate-incident
-- link-an-incident-to-a-recent-change
-- manage-an-sla-breach-risk
+  - assess-business-impact-and-urgency
+  - classify-incident-category-and-priority
+  - complete-a-post-incident-review
+  - create-a-problem-record-from-recurring-incidents
+  - create-or-update-a-knowledge-article
+  - declare-and-coordinate-a-major-incident
+  - document-a-ticket-to-enterprise-standard
+  - engage-a-third-party-vendor-for-support
+  - escalate-an-incident-with-complete-evidence
+  - handle-a-duplicate-incident
+  - link-an-incident-to-a-recent-change
+  - manage-an-sla-breach-risk
 related_procedures:
-- assess-business-impact-and-urgency
-- classify-incident-category-and-priority
-- complete-a-post-incident-review
-- create-a-problem-record-from-recurring-incidents
-- create-or-update-a-knowledge-article
-- declare-and-coordinate-a-major-incident
-- document-a-ticket-to-enterprise-standard
-- engage-a-third-party-vendor-for-support
-- escalate-an-incident-with-complete-evidence
-- handle-a-duplicate-incident
-- link-an-incident-to-a-recent-change
-- manage-an-sla-breach-risk
-- perform-initial-incident-triage
-- perform-shift-handover-for-open-incidents
-- process-a-standard-service-request
-- provide-secure-remote-support
-- support-a-vip-or-executive-user
-- triage-an-office-or-site-wide-outage
-- validate-service-restoration-before-closure
-- verify-caller-identity-before-support
+  - assess-business-impact-and-urgency
+  - classify-incident-category-and-priority
+  - complete-a-post-incident-review
+  - create-a-problem-record-from-recurring-incidents
+  - create-or-update-a-knowledge-article
+  - declare-and-coordinate-a-major-incident
+  - document-a-ticket-to-enterprise-standard
+  - engage-a-third-party-vendor-for-support
+  - escalate-an-incident-with-complete-evidence
+  - handle-a-duplicate-incident
+  - link-an-incident-to-a-recent-change
+  - manage-an-sla-breach-risk
+  - perform-initial-incident-triage
+  - perform-shift-handover-for-open-incidents
+  - process-a-standard-service-request
+  - provide-secure-remote-support
+  - support-a-vip-or-executive-user
+  - triage-an-office-or-site-wide-outage
+  - validate-service-restoration-before-closure
+  - verify-caller-identity-before-support
 permalink: /symptoms/multiple-users-or-services-may-be-affected/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Enterprise software deployment
 slug: enterprise-software-deployment
-description: 'Observable report: Enterprise software deployment. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Enterprise software deployment. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-enterprise-software-deployment
-- windows-endpoints
+  - troubleshoot-enterprise-software-deployment
+  - windows-endpoints
 related_procedures:
-- troubleshoot-enterprise-software-deployment
+  - troubleshoot-enterprise-software-deployment
 permalink: /symptoms/enterprise-software-deployment/
 layout: article
 last_reviewed: '2026-08-02'

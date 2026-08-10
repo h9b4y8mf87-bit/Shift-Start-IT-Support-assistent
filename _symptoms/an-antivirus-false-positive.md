@@ -1,16 +1,15 @@
 ---
 title: An antivirus false positive
 slug: an-antivirus-false-positive
-description: 'Observable report: An antivirus false positive. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: An antivirus false positive. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- resolve-an-antivirus-false-positive
-- security-and-compliance
+  - resolve-an-antivirus-false-positive
+  - security-and-compliance
 related_procedures:
-- resolve-an-antivirus-false-positive
+  - resolve-an-antivirus-false-positive
 permalink: /symptoms/an-antivirus-false-positive/
 layout: article
 last_reviewed: '2026-08-02'

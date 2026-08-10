@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-crm-client
+  - business-applications-and-browsers
+  - troubleshoot-a-crm-client
 related_procedures:
-- troubleshoot-a-crm-client
+  - troubleshoot-a-crm-client
 permalink: /symptoms/a-crm-client/
 layout: article
 last_reviewed: '2026-08-02'

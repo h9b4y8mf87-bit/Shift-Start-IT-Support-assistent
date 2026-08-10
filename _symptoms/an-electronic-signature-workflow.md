@@ -1,16 +1,15 @@
 ---
 title: An electronic-signature workflow
 slug: an-electronic-signature-workflow
-description: 'Observable report: An electronic-signature workflow. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: An electronic-signature workflow. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-an-electronic-signature-workflow
+  - business-applications-and-browsers
+  - troubleshoot-an-electronic-signature-workflow
 related_procedures:
-- troubleshoot-an-electronic-signature-workflow
+  - troubleshoot-an-electronic-signature-workflow
 permalink: /symptoms/an-electronic-signature-workflow/
 layout: article
 last_reviewed: '2026-08-02'

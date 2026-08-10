@@ -1,16 +1,15 @@
 ---
 title: A OneDrive or SharePoint version
 slug: a-onedrive-or-sharepoint-version
-description: 'Observable report: A OneDrive or SharePoint version. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A OneDrive or SharePoint version. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- restore-a-onedrive-or-sharepoint-version
+  - data-protection-backup-and-recovery
+  - restore-a-onedrive-or-sharepoint-version
 related_procedures:
-- restore-a-onedrive-or-sharepoint-version
+  - restore-a-onedrive-or-sharepoint-version
 permalink: /symptoms/a-onedrive-or-sharepoint-version/
 layout: article
 last_reviewed: '2026-08-02'

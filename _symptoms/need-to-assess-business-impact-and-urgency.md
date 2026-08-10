@@ -1,16 +1,15 @@
 ---
 title: Need to assess business impact and urgency
 slug: need-to-assess-business-impact-and-urgency
-description: 'Observable report: Need to assess business impact and urgency. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to assess business impact and urgency. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- assess-business-impact-and-urgency
-- service-desk-and-itsm
+  - assess-business-impact-and-urgency
+  - service-desk-and-itsm
 related_procedures:
-- assess-business-impact-and-urgency
+  - assess-business-impact-and-urgency
 permalink: /symptoms/need-to-assess-business-impact-and-urgency/
 layout: article
 last_reviewed: '2026-08-02'

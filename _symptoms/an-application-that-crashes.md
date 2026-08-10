@@ -1,16 +1,15 @@
 ---
 title: An application that crashes
 slug: an-application-that-crashes
-description: 'Observable report: An application that crashes. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: An application that crashes. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-an-application-that-crashes
-- windows-endpoints
+  - troubleshoot-an-application-that-crashes
+  - windows-endpoints
 related_procedures:
-- troubleshoot-an-application-that-crashes
+  - troubleshoot-an-application-that-crashes
 permalink: /symptoms/an-application-that-crashes/
 layout: article
 last_reviewed: '2026-08-02'

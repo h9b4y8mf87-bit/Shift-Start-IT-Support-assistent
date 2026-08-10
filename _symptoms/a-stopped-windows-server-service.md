@@ -1,16 +1,15 @@
 ---
 title: A stopped Windows Server service
 slug: a-stopped-windows-server-service
-description: 'Observable report: A stopped Windows Server service. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A stopped Windows Server service. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-a-stopped-windows-server-service
+  - servers-and-core-infrastructure
+  - troubleshoot-a-stopped-windows-server-service
 related_procedures:
-- troubleshoot-a-stopped-windows-server-service
+  - troubleshoot-a-stopped-windows-server-service
 permalink: /symptoms/a-stopped-windows-server-service/
 layout: article
 last_reviewed: '2026-08-02'

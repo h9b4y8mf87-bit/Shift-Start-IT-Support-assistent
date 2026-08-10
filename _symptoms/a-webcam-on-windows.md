@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-a-webcam-on-windows
-- windows-endpoints
+  - troubleshoot-a-webcam-on-windows
+  - windows-endpoints
 related_procedures:
-- troubleshoot-a-webcam-on-windows
+  - troubleshoot-a-webcam-on-windows
 permalink: /symptoms/a-webcam-on-windows/
 layout: article
 last_reviewed: '2026-08-02'

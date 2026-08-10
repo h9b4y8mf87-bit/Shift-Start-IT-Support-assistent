@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-linux-vpn
+  - linux-and-developer-workstations
+  - troubleshoot-linux-vpn
 related_procedures:
-- troubleshoot-linux-vpn
+  - troubleshoot-linux-vpn
 permalink: /symptoms/linux-vpn/
 layout: article
 last_reviewed: '2026-08-02'

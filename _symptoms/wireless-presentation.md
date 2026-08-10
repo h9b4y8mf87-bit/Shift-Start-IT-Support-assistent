@@ -3,13 +3,13 @@ title: Wireless presentation
 slug: wireless-presentation
 description: 'Observable report: Wireless presentation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-wireless-presentation
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-wireless-presentation
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-wireless-presentation
+  - troubleshoot-wireless-presentation
 permalink: /symptoms/wireless-presentation/
 layout: article
 last_reviewed: '2026-08-02'

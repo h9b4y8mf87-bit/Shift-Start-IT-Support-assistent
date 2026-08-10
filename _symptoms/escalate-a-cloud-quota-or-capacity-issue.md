@@ -1,16 +1,15 @@
 ---
 title: Escalate a cloud quota or capacity issue
 slug: escalate-a-cloud-quota-or-capacity-issue
-description: 'Observable report: Escalate a cloud quota or capacity issue. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Escalate a cloud quota or capacity issue. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: medium
 tags:
-- cloud-and-virtualisation
-- escalate-a-cloud-quota-or-capacity-issue
+  - cloud-and-virtualisation
+  - escalate-a-cloud-quota-or-capacity-issue
 related_procedures:
-- escalate-a-cloud-quota-or-capacity-issue
+  - escalate-a-cloud-quota-or-capacity-issue
 permalink: /symptoms/escalate-a-cloud-quota-or-capacity-issue/
 layout: article
 last_reviewed: '2026-08-02'

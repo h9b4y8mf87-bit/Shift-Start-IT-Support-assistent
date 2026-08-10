@@ -1,16 +1,15 @@
 ---
 title: Microsoft 365 Apps installation
 slug: microsoft-365-apps-installation
-description: 'Observable report: Microsoft 365 Apps installation. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Microsoft 365 Apps installation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-microsoft-365-apps-installation
+  - microsoft-365-and-collaboration
+  - troubleshoot-microsoft-365-apps-installation
 related_procedures:
-- troubleshoot-microsoft-365-apps-installation
+  - troubleshoot-microsoft-365-apps-installation
 permalink: /symptoms/microsoft-365-apps-installation/
 layout: article
 last_reviewed: '2026-08-02'

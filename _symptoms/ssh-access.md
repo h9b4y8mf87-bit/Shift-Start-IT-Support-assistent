@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-ssh-access
+  - linux-and-developer-workstations
+  - troubleshoot-ssh-access
 related_procedures:
-- troubleshoot-ssh-access
+  - troubleshoot-ssh-access
 permalink: /symptoms/ssh-access/
 layout: article
 last_reviewed: '2026-08-02'

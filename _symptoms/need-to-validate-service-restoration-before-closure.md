@@ -1,16 +1,15 @@
 ---
 title: Need to validate service restoration before closure
 slug: need-to-validate-service-restoration-before-closure
-description: 'Observable report: Need to validate service restoration before closure. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to validate service restoration before closure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- service-desk-and-itsm
-- validate-service-restoration-before-closure
+  - service-desk-and-itsm
+  - validate-service-restoration-before-closure
 related_procedures:
-- validate-service-restoration-before-closure
+  - validate-service-restoration-before-closure
 permalink: /symptoms/need-to-validate-service-restoration-before-closure/
 layout: article
 last_reviewed: '2026-08-02'

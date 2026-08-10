@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: high
 tags:
-- linux-and-developer-workstations
-- troubleshoot-a-failed-systemd-service
+  - linux-and-developer-workstations
+  - troubleshoot-a-failed-systemd-service
 related_procedures:
-- troubleshoot-a-failed-systemd-service
+  - troubleshoot-a-failed-systemd-service
 permalink: /symptoms/a-failed-systemd-service/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-camera-access-on-macos
+  - macos-endpoints
+  - troubleshoot-camera-access-on-macos
 related_procedures:
-- troubleshoot-camera-access-on-macos
+  - troubleshoot-camera-access-on-macos
 permalink: /symptoms/camera-access-on-macos/
 layout: article
 last_reviewed: '2026-08-02'

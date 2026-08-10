@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-a-windows-file-share
+  - servers-and-core-infrastructure
+  - troubleshoot-a-windows-file-share
 related_procedures:
-- troubleshoot-a-windows-file-share
+  - troubleshoot-a-windows-file-share
 permalink: /symptoms/a-windows-file-share/
 layout: article
 last_reviewed: '2026-08-02'

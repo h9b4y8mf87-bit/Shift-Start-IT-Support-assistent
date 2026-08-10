@@ -6,10 +6,10 @@ content_type: symptom
 category: Cloud & Virtualisation
 severity: medium
 tags:
-- cloud-and-virtualisation
-- troubleshoot-cloud-storage-access
+  - cloud-and-virtualisation
+  - troubleshoot-cloud-storage-access
 related_procedures:
-- troubleshoot-cloud-storage-access
+  - troubleshoot-cloud-storage-access
 permalink: /symptoms/cloud-storage-access/
 layout: article
 last_reviewed: '2026-08-02'

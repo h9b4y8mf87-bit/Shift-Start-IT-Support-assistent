@@ -1,7 +1,7 @@
 ---
-title: Resolve a locked, forgotten or expired user password
+title: 'Resolve a locked, forgotten or expired user password'
 slug: password-reset
-description: Restore user access safely after a forgotten password, expiry or lockout without weakening identity controls.
+description: 'Restore user access safely after a forgotten password, expiry or lockout without weakening identity controls.'
 content_type: procedure
 category: Identity & Access Management
 severity: high
@@ -16,18 +16,14 @@ tags:
 error_codes:
   - account locked
   - password expired
-tldr: >-
-  Verify the user, determine whether the account is locked, disabled or expired, then use the approved identity platform
-  to unlock or reset access and confirm the account does not immediately lock again.
+tldr: 'Verify the user, determine whether the account is locked, disabled or expired, then use the approved identity platform to unlock or reset access and confirm the account does not immediately lock again.'
 related_symptoms:
   - cannot-sign-in
 related_causes:
   - account-lockout
 next_steps:
   - mfa-setup-fails
-escalation: >-
-  Escalate to Identity & Access Management if identity cannot be verified, the account repeatedly locks, the source of
-  bad-password attempts is unknown, the account is disabled unexpectedly, or policy prevents a standard reset.
+escalation: 'Escalate to Identity & Access Management if identity cannot be verified, the account repeatedly locks, the source of bad-password attempts is unknown, the account is disabled unexpectedly, or policy prevents a standard reset.'
 risk_model: impact-v1
 risk_basis: High impact - the user may be unable to work and password or lockout remediation affects account security.
 verification_priority: P1
@@ -40,10 +36,8 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references:
-  - https://learn.microsoft.com/powershell/module/activedirectory/get-aduser
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+  - 'https://learn.microsoft.com/powershell/module/activedirectory/get-aduser'
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

@@ -1,16 +1,15 @@
 ---
 title: Accidentally deleted local files
 slug: accidentally-deleted-local-files
-description: 'Observable report: Accidentally deleted local files. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Accidentally deleted local files. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- recover-accidentally-deleted-local-files
-- windows-endpoints
+  - recover-accidentally-deleted-local-files
+  - windows-endpoints
 related_procedures:
-- recover-accidentally-deleted-local-files
+  - recover-accidentally-deleted-local-files
 permalink: /symptoms/accidentally-deleted-local-files/
 layout: article
 last_reviewed: '2026-08-02'

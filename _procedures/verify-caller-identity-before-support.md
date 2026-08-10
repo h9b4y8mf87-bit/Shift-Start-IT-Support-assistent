@@ -1,9 +1,7 @@
 ---
 title: Verify caller identity before support
 slug: verify-caller-identity-before-support
-description: >-
-  Enterprise runbook to verify caller identity before support without skipping evidence, verification, rollback or
-  escalation requirements.
+description: 'Enterprise runbook to verify caller identity before support without skipping evidence, verification, rollback or escalation requirements.'
 content_type: procedure
 category: Service Desk & ITSM
 service: Service Desk & ITSM
@@ -23,10 +21,7 @@ tags:
   - support
   - verify
 error_codes: []
-tldr: >-
-  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
-  remediation for verify caller identity before support, verify the original business task, and escalate with complete
-  logs if recovery is not achieved.
+tldr: 'Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for verify caller identity before support, verify the original business task, and escalate with complete logs if recovery is not achieved.'
 related_symptoms:
   - verify-caller-identity-before-support
   - support-request-requires-triage
@@ -39,14 +34,11 @@ related_causes: []
 related_commands: []
 next_steps:
   - general-workstation-triage
-escalation: >-
-  Escalate to Service Desk Manager or Incident Management with the exact user or service impact, timestamps and
-  timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted,
-  rollback status and a clear statement of what remains broken.
+escalation: 'Escalate to Service Desk Manager or Incident Management with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.'
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
-approval_required: Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.
+approval_required: 'Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.'
 permalink: /procedures/verify-caller-identity-before-support/
 layout: article
 content_status: under_review

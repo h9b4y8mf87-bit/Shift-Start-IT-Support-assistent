@@ -6,10 +6,10 @@ content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- troubleshoot-windows-hello-enrolment
+  - identity-and-access-management
+  - troubleshoot-windows-hello-enrolment
 related_procedures:
-- troubleshoot-windows-hello-enrolment
+  - troubleshoot-windows-hello-enrolment
 permalink: /symptoms/windows-hello-enrolment/
 layout: article
 last_reviewed: '2026-08-02'

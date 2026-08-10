@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- troubleshoot-scan-to-email
+  - printing-and-scanning
+  - troubleshoot-scan-to-email
 related_procedures:
-- troubleshoot-scan-to-email
+  - troubleshoot-scan-to-email
 permalink: /symptoms/scan-to-email/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: A Remote Desktop black screen
 slug: a-remote-desktop-black-screen
-description: 'Observable report: A Remote Desktop black screen. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A Remote Desktop black screen. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- resolve-a-remote-desktop-black-screen
-- windows-endpoints
+  - resolve-a-remote-desktop-black-screen
+  - windows-endpoints
 related_procedures:
-- resolve-a-remote-desktop-black-screen
+  - resolve-a-remote-desktop-black-screen
 permalink: /symptoms/a-remote-desktop-black-screen/
 layout: article
 last_reviewed: '2026-08-02'

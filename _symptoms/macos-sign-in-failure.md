@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: high
 tags:
-- macos-endpoints
-- troubleshoot-macos-sign-in-failure
+  - macos-endpoints
+  - troubleshoot-macos-sign-in-failure
 related_procedures:
-- troubleshoot-macos-sign-in-failure
+  - troubleshoot-macos-sign-in-failure
 permalink: /symptoms/macos-sign-in-failure/
 layout: article
 last_reviewed: '2026-08-02'

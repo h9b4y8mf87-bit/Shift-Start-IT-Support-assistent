@@ -1,16 +1,15 @@
 ---
 title: A business application sign-in
 slug: a-business-application-sign-in
-description: 'Observable report: A business application sign-in. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A business application sign-in. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-business-application-sign-in
+  - business-applications-and-browsers
+  - troubleshoot-a-business-application-sign-in
 related_procedures:
-- troubleshoot-a-business-application-sign-in
+  - troubleshoot-a-business-application-sign-in
 permalink: /symptoms/a-business-application-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

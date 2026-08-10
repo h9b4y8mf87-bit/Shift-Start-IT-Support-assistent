@@ -6,10 +6,10 @@ content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- troubleshoot-gmail-delegation
+  - google-workspace-and-web-collaboration
+  - troubleshoot-gmail-delegation
 related_procedures:
-- troubleshoot-gmail-delegation
+  - troubleshoot-gmail-delegation
 permalink: /symptoms/gmail-delegation/
 layout: article
 last_reviewed: '2026-08-02'

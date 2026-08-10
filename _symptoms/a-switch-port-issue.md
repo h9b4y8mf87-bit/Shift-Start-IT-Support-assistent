@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- triage-a-switch-port-issue
+  - network-and-connectivity
+  - triage-a-switch-port-issue
 related_procedures:
-- triage-a-switch-port-issue
+  - triage-a-switch-port-issue
 permalink: /symptoms/a-switch-port-issue/
 layout: article
 last_reviewed: '2026-08-02'

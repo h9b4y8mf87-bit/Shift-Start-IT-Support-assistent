@@ -6,10 +6,10 @@ content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- perform-initial-incident-triage
-- service-desk-and-itsm
+  - perform-initial-incident-triage
+  - service-desk-and-itsm
 related_procedures:
-- perform-initial-incident-triage
+  - perform-initial-incident-triage
 permalink: /symptoms/need-to-initial-incident-triage/
 layout: article
 last_reviewed: '2026-08-02'

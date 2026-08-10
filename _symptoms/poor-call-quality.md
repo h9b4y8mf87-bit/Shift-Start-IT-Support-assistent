@@ -3,13 +3,13 @@ title: Poor call quality
 slug: poor-call-quality
 description: 'Observable report: Poor call quality. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-poor-call-quality
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-poor-call-quality
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-poor-call-quality
+  - troubleshoot-poor-call-quality
 permalink: /symptoms/poor-call-quality/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: A SharePoint file version
 slug: a-sharepoint-file-version
-description: 'Observable report: A SharePoint file version. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A SharePoint file version. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- restore-a-sharepoint-file-version
+  - microsoft-365-and-collaboration
+  - restore-a-sharepoint-file-version
 related_procedures:
-- restore-a-sharepoint-file-version
+  - restore-a-sharepoint-file-version
 permalink: /symptoms/a-sharepoint-file-version/
 layout: article
 last_reviewed: '2026-08-02'

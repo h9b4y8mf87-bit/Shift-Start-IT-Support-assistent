@@ -1,16 +1,15 @@
 ---
 title: Teams meeting join failure
 slug: teams-meeting-join-failure
-description: 'Observable report: Teams meeting join failure. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Teams meeting join failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: high
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-teams-meeting-join-failure
+  - microsoft-365-and-collaboration
+  - troubleshoot-teams-meeting-join-failure
 related_procedures:
-- troubleshoot-teams-meeting-join-failure
+  - troubleshoot-teams-meeting-join-failure
 permalink: /symptoms/teams-meeting-join-failure/
 layout: article
 last_reviewed: '2026-08-02'

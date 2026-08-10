@@ -1,16 +1,15 @@
 ---
 title: POST errors or beep codes
 slug: post-errors-or-beep-codes
-description: 'Observable report: POST errors or beep codes. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: POST errors or beep codes. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- troubleshoot-post-errors-or-beep-codes
+  - hardware-and-peripherals
+  - troubleshoot-post-errors-or-beep-codes
 related_procedures:
-- troubleshoot-post-errors-or-beep-codes
+  - troubleshoot-post-errors-or-beep-codes
 permalink: /symptoms/post-errors-or-beep-codes/
 layout: article
 last_reviewed: '2026-08-02'

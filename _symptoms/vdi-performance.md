@@ -3,13 +3,13 @@ title: VDI performance
 slug: vdi-performance
 description: 'Observable report: VDI performance. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-vdi-performance
+  - remote-access-vdi-and-daas
+  - troubleshoot-vdi-performance
 related_procedures:
-- troubleshoot-vdi-performance
+  - troubleshoot-vdi-performance
 permalink: /symptoms/vdi-performance/
 layout: article
 last_reviewed: '2026-08-02'

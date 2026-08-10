@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-dhcp-address-assignment
+  - network-and-connectivity
+  - troubleshoot-dhcp-address-assignment
 related_procedures:
-- troubleshoot-dhcp-address-assignment
+  - troubleshoot-dhcp-address-assignment
 permalink: /symptoms/dhcp-address-assignment/
 layout: article
 last_reviewed: '2026-08-02'

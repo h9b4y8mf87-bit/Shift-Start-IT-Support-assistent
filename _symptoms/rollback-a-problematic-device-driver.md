@@ -1,16 +1,15 @@
 ---
 title: Rollback a problematic device driver
 slug: rollback-a-problematic-device-driver
-description: 'Observable report: Rollback a problematic device driver. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Rollback a problematic device driver. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- rollback-a-problematic-device-driver
-- windows-endpoints
+  - rollback-a-problematic-device-driver
+  - windows-endpoints
 related_procedures:
-- rollback-a-problematic-device-driver
+  - rollback-a-problematic-device-driver
 permalink: /symptoms/rollback-a-problematic-device-driver/
 layout: article
 last_reviewed: '2026-08-02'

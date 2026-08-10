@@ -1,16 +1,15 @@
 ---
 title: Need to provision a device with Windows Autopilot
 slug: need-to-provision-a-device-with-windows-autopilot
-description: 'Observable report: Need to provision a device with Windows Autopilot. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to provision a device with Windows Autopilot. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- provision-a-device-with-windows-autopilot
-- windows-endpoints
+  - provision-a-device-with-windows-autopilot
+  - windows-endpoints
 related_procedures:
-- provision-a-device-with-windows-autopilot
+  - provision-a-device-with-windows-autopilot
 permalink: /symptoms/need-to-provision-a-device-with-windows-autopilot/
 layout: article
 last_reviewed: '2026-08-02'

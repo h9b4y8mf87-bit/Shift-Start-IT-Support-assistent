@@ -1,16 +1,15 @@
 ---
 title: Need to create a problem record from recurring incidents
 slug: need-to-create-a-problem-record-from-recurring-incidents
-description: 'Observable report: Need to create a problem record from recurring incidents. Select it with any other
-  symptoms to receive ranked procedures.'
+description: 'Observable report: Need to create a problem record from recurring incidents. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- create-a-problem-record-from-recurring-incidents
-- service-desk-and-itsm
+  - create-a-problem-record-from-recurring-incidents
+  - service-desk-and-itsm
 related_procedures:
-- create-a-problem-record-from-recurring-incidents
+  - create-a-problem-record-from-recurring-incidents
 permalink: /symptoms/need-to-create-a-problem-record-from-recurring-incidents/
 layout: article
 last_reviewed: '2026-08-02'

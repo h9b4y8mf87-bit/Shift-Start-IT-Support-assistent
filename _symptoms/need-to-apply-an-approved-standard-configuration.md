@@ -1,16 +1,15 @@
 ---
 title: Need to apply an approved standard configuration
 slug: need-to-apply-an-approved-standard-configuration
-description: 'Observable report: Need to apply an approved standard configuration. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to apply an approved standard configuration. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- apply-an-approved-standard-configuration
-- lifecycle-and-asset-management
+  - apply-an-approved-standard-configuration
+  - lifecycle-and-asset-management
 related_procedures:
-- apply-an-approved-standard-configuration
+  - apply-an-approved-standard-configuration
 permalink: /symptoms/need-to-apply-an-approved-standard-configuration/
 layout: article
 last_reviewed: '2026-08-02'

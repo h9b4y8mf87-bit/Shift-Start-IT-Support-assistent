@@ -6,10 +6,10 @@ content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-usb-peripheral
+  - hardware-and-peripherals
+  - troubleshoot-a-usb-peripheral
 related_procedures:
-- troubleshoot-a-usb-peripheral
+  - troubleshoot-a-usb-peripheral
 permalink: /symptoms/a-usb-peripheral/
 layout: article
 last_reviewed: '2026-08-02'

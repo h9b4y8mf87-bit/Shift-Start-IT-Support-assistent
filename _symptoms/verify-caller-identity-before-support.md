@@ -1,16 +1,15 @@
 ---
 title: Verify caller identity before support
 slug: verify-caller-identity-before-support
-description: 'Observable report: Verify caller identity before support. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Verify caller identity before support. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- service-desk-and-itsm
-- verify-caller-identity-before-support
+  - service-desk-and-itsm
+  - verify-caller-identity-before-support
 related_procedures:
-- verify-caller-identity-before-support
+  - verify-caller-identity-before-support
 permalink: /symptoms/verify-caller-identity-before-support/
 layout: article
 last_reviewed: '2026-08-02'

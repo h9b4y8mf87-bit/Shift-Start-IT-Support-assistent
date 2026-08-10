@@ -1,16 +1,15 @@
 ---
 title: Access after a lost security key
 slug: access-after-a-lost-security-key
-description: 'Observable report: Access after a lost security key. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Access after a lost security key. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- recover-access-after-a-lost-security-key
+  - identity-and-access-management
+  - recover-access-after-a-lost-security-key
 related_procedures:
-- recover-access-after-a-lost-security-key
+  - recover-access-after-a-lost-security-key
 permalink: /symptoms/access-after-a-lost-security-key/
 layout: article
 last_reviewed: '2026-08-02'

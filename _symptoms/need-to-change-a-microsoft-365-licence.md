@@ -1,16 +1,15 @@
 ---
 title: Need to change a Microsoft 365 licence
 slug: need-to-change-a-microsoft-365-licence
-description: 'Observable report: Need to change a Microsoft 365 licence. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to change a Microsoft 365 licence. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- assign-or-remove-a-microsoft-365-licence
-- identity-and-access-management
+  - assign-or-remove-a-microsoft-365-licence
+  - identity-and-access-management
 related_procedures:
-- assign-or-remove-a-microsoft-365-licence
+  - assign-or-remove-a-microsoft-365-licence
 permalink: /symptoms/need-to-change-a-microsoft-365-licence/
 layout: article
 last_reviewed: '2026-08-02'

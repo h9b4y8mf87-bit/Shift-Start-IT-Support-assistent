@@ -1,16 +1,15 @@
 ---
 title: An Azure virtual machine that is unreachable
 slug: an-azure-virtual-machine-that-is-unreachable
-description: 'Observable report: An Azure virtual machine that is unreachable. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: An Azure virtual machine that is unreachable. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: high
 tags:
-- cloud-and-virtualisation
-- troubleshoot-an-azure-virtual-machine-that-is-unreachable
+  - cloud-and-virtualisation
+  - troubleshoot-an-azure-virtual-machine-that-is-unreachable
 related_procedures:
-- troubleshoot-an-azure-virtual-machine-that-is-unreachable
+  - troubleshoot-an-azure-virtual-machine-that-is-unreachable
 permalink: /symptoms/an-azure-virtual-machine-that-is-unreachable/
 layout: article
 last_reviewed: '2026-08-02'

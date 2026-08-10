@@ -1,16 +1,15 @@
 ---
 title: A temporary Windows profile
 slug: a-temporary-windows-profile
-description: 'Observable report: A temporary Windows profile. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A temporary Windows profile. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- resolve-a-temporary-windows-profile
-- windows-endpoints
+  - resolve-a-temporary-windows-profile
+  - windows-endpoints
 related_procedures:
-- resolve-a-temporary-windows-profile
+  - resolve-a-temporary-windows-profile
 permalink: /symptoms/a-temporary-windows-profile/
 layout: article
 last_reviewed: '2026-08-02'

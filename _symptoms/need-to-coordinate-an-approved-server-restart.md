@@ -1,16 +1,15 @@
 ---
 title: Need to coordinate an approved server restart
 slug: need-to-coordinate-an-approved-server-restart
-description: 'Observable report: Need to coordinate an approved server restart. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to coordinate an approved server restart. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- coordinate-an-approved-server-restart
-- servers-and-core-infrastructure
+  - coordinate-an-approved-server-restart
+  - servers-and-core-infrastructure
 related_procedures:
-- coordinate-an-approved-server-restart
+  - coordinate-an-approved-server-restart
 permalink: /symptoms/need-to-coordinate-an-approved-server-restart/
 layout: article
 last_reviewed: '2026-08-02'

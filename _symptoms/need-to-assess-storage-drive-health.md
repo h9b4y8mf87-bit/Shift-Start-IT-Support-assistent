@@ -1,16 +1,15 @@
 ---
 title: Need to assess storage drive health
 slug: need-to-assess-storage-drive-health
-description: 'Observable report: Need to assess storage drive health. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to assess storage drive health. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- assess-storage-drive-health
-- windows-endpoints
+  - assess-storage-drive-health
+  - windows-endpoints
 related_procedures:
-- assess-storage-drive-health
+  - assess-storage-drive-health
 permalink: /symptoms/need-to-assess-storage-drive-health/
 layout: article
 last_reviewed: '2026-08-02'

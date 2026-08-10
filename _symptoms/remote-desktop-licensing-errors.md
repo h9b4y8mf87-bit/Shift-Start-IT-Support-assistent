@@ -1,16 +1,15 @@
 ---
 title: Remote desktop licensing errors
 slug: remote-desktop-licensing-errors
-description: 'Observable report: Remote desktop licensing errors. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Remote desktop licensing errors. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-remote-desktop-licensing-errors
+  - remote-access-vdi-and-daas
+  - troubleshoot-remote-desktop-licensing-errors
 related_procedures:
-- troubleshoot-remote-desktop-licensing-errors
+  - troubleshoot-remote-desktop-licensing-errors
 permalink: /symptoms/remote-desktop-licensing-errors/
 layout: article
 last_reviewed: '2026-08-02'

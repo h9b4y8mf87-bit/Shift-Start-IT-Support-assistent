@@ -1,16 +1,15 @@
 ---
 title: Split-tunnel application access
 slug: split-tunnel-application-access
-description: 'Observable report: Split-tunnel application access. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Split-tunnel application access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-split-tunnel-application-access
+  - network-and-connectivity
+  - troubleshoot-split-tunnel-application-access
 related_procedures:
-- troubleshoot-split-tunnel-application-access
+  - troubleshoot-split-tunnel-application-access
 permalink: /symptoms/split-tunnel-application-access/
 layout: article
 last_reviewed: '2026-08-02'

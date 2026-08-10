@@ -1,16 +1,15 @@
 ---
 title: Trace an Active Directory account lockout source
 slug: trace-an-active-directory-account-lockout-source
-description: 'Observable report: Trace an Active Directory account lockout source. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Trace an Active Directory account lockout source. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- trace-an-active-directory-account-lockout-source
+  - servers-and-core-infrastructure
+  - trace-an-active-directory-account-lockout-source
 related_procedures:
-- trace-an-active-directory-account-lockout-source
+  - trace-an-active-directory-account-lockout-source
 permalink: /symptoms/trace-an-active-directory-account-lockout-source/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Issue and track a loan device
 slug: issue-and-track-a-loan-device
-description: 'Observable report: Issue and track a loan device. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Issue and track a loan device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- issue-and-track-a-loan-device
+  - hardware-and-peripherals
+  - issue-and-track-a-loan-device
 related_procedures:
-- issue-and-track-a-loan-device
+  - issue-and-track-a-loan-device
 permalink: /symptoms/issue-and-track-a-loan-device/
 layout: article
 last_reviewed: '2026-08-02'

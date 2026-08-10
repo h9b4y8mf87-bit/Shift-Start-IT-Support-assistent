@@ -6,10 +6,10 @@ content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- troubleshoot-google-workspace-sign-in
+  - google-workspace-and-web-collaboration
+  - troubleshoot-google-workspace-sign-in
 related_procedures:
-- troubleshoot-google-workspace-sign-in
+  - troubleshoot-google-workspace-sign-in
 permalink: /symptoms/google-workspace-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

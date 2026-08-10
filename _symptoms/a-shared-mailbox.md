@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-a-shared-mailbox
+  - microsoft-365-and-collaboration
+  - troubleshoot-a-shared-mailbox
 related_procedures:
-- troubleshoot-a-shared-mailbox
+  - troubleshoot-a-shared-mailbox
 permalink: /symptoms/a-shared-mailbox/
 layout: article
 last_reviewed: '2026-08-02'

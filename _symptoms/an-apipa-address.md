@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- resolve-an-apipa-address
+  - network-and-connectivity
+  - resolve-an-apipa-address
 related_procedures:
-- resolve-an-apipa-address
+  - resolve-an-apipa-address
 permalink: /symptoms/an-apipa-address/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Classify incident category and priority
 slug: classify-incident-category-and-priority
-description: 'Observable report: Classify incident category and priority. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Classify incident category and priority. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- classify-incident-category-and-priority
-- service-desk-and-itsm
+  - classify-incident-category-and-priority
+  - service-desk-and-itsm
 related_procedures:
-- classify-incident-category-and-priority
+  - classify-incident-category-and-priority
 permalink: /symptoms/classify-incident-category-and-priority/
 layout: article
 last_reviewed: '2026-08-02'

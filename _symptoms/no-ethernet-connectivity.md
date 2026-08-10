@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: high
 tags:
-- network-and-connectivity
-- troubleshoot-no-ethernet-connectivity
+  - network-and-connectivity
+  - troubleshoot-no-ethernet-connectivity
 related_procedures:
-- troubleshoot-no-ethernet-connectivity
+  - troubleshoot-no-ethernet-connectivity
 permalink: /symptoms/no-ethernet-connectivity/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-git-authentication
+  - linux-and-developer-workstations
+  - troubleshoot-git-authentication
 related_procedures:
-- troubleshoot-git-authentication
+  - troubleshoot-git-authentication
 permalink: /symptoms/git-authentication/
 layout: article
 last_reviewed: '2026-08-02'

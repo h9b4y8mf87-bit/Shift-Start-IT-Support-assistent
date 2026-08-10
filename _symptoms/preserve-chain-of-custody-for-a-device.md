@@ -1,16 +1,15 @@
 ---
 title: Preserve chain of custody for a device
 slug: preserve-chain-of-custody-for-a-device
-description: 'Observable report: Preserve chain of custody for a device. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Preserve chain of custody for a device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- preserve-chain-of-custody-for-a-device
-- security-and-compliance
+  - preserve-chain-of-custody-for-a-device
+  - security-and-compliance
 related_procedures:
-- preserve-chain-of-custody-for-a-device
+  - preserve-chain-of-custody-for-a-device
 permalink: /symptoms/preserve-chain-of-custody-for-a-device/
 layout: article
 last_reviewed: '2026-08-02'

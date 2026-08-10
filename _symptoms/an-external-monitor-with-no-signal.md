@@ -1,16 +1,15 @@
 ---
 title: An external monitor with no signal
 slug: an-external-monitor-with-no-signal
-description: 'Observable report: An external monitor with no signal. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: An external monitor with no signal. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: high
 tags:
-- hardware-and-peripherals
-- troubleshoot-an-external-monitor-with-no-signal
+  - hardware-and-peripherals
+  - troubleshoot-an-external-monitor-with-no-signal
 related_procedures:
-- troubleshoot-an-external-monitor-with-no-signal
+  - troubleshoot-an-external-monitor-with-no-signal
 permalink: /symptoms/an-external-monitor-with-no-signal/
 layout: article
 last_reviewed: '2026-08-02'

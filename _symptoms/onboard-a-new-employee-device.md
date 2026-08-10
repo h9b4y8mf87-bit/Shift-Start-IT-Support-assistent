@@ -1,16 +1,15 @@
 ---
 title: Onboard a new employee device
 slug: onboard-a-new-employee-device
-description: 'Observable report: Onboard a new employee device. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Onboard a new employee device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- onboard-a-new-employee-device
+  - lifecycle-and-asset-management
+  - onboard-a-new-employee-device
 related_procedures:
-- onboard-a-new-employee-device
+  - onboard-a-new-employee-device
 permalink: /symptoms/onboard-a-new-employee-device/
 layout: article
 last_reviewed: '2026-08-02'

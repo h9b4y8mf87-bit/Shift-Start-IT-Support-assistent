@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-slow-vpn-performance
+  - network-and-connectivity
+  - troubleshoot-slow-vpn-performance
 related_procedures:
-- troubleshoot-slow-vpn-performance
+  - troubleshoot-slow-vpn-performance
 permalink: /symptoms/slow-vpn-performance/
 layout: article
 last_reviewed: '2026-08-02'

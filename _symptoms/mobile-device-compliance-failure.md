@@ -1,16 +1,15 @@
 ---
 title: Mobile-device compliance failure
 slug: mobile-device-compliance-failure
-description: 'Observable report: Mobile-device compliance failure. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Mobile-device compliance failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: high
 tags:
-- mobile-devices-and-mdm
-- resolve-mobile-device-compliance-failure
+  - mobile-devices-and-mdm
+  - resolve-mobile-device-compliance-failure
 related_procedures:
-- resolve-mobile-device-compliance-failure
+  - resolve-mobile-device-compliance-failure
 permalink: /symptoms/mobile-device-compliance-failure/
 layout: article
 last_reviewed: '2026-08-02'

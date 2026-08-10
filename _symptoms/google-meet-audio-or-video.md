@@ -1,16 +1,15 @@
 ---
 title: Google Meet audio or video
 slug: google-meet-audio-or-video
-description: 'Observable report: Google Meet audio or video. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Google Meet audio or video. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- troubleshoot-google-meet-audio-or-video
+  - google-workspace-and-web-collaboration
+  - troubleshoot-google-meet-audio-or-video
 related_procedures:
-- troubleshoot-google-meet-audio-or-video
+  - troubleshoot-google-meet-audio-or-video
 permalink: /symptoms/google-meet-audio-or-video/
 layout: article
 last_reviewed: '2026-08-02'

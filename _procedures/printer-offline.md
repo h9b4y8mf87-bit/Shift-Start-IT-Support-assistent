@@ -1,7 +1,7 @@
 ---
 title: Resolve a printer showing Offline
 slug: printer-offline
-description: Restore printing by checking device state, network reachability, queue state, port configuration and spooler health.
+description: 'Restore printing by checking device state, network reachability, queue state, port configuration and spooler health.'
 content_type: procedure
 category: Printing & Scanning
 severity: low
@@ -16,21 +16,15 @@ tags:
 error_codes:
   - Printer Offline
   - Error - Printing
-tldr: >-
-  Confirm power and reachability, clear only failed jobs, disable Use Printer Offline, restart the Print Spooler when
-  approved and verify the queue points to the correct printer or print server.
+tldr: 'Confirm power and reachability, clear only failed jobs, disable Use Printer Offline, restart the Print Spooler when approved and verify the queue points to the correct printer or print server.'
 related_symptoms:
   - printer-offline-symptom
 related_causes:
   - stuck-print-queue
 next_steps: []
-escalation: >-
-  Escalate to Print Services if the device is unreachable, the queue or port is incorrect but cannot be changed safely,
-  the spooler repeatedly fails, or multiple users or printers are affected.
+escalation: 'Escalate to Print Services if the device is unreachable, the queue or port is incorrect but cannot be changed safely, the spooler repeatedly fails, or multiple users or printers are affected.'
 risk_model: impact-v1
-risk_basis: >-
-  Low impact - a single printer outage is normally a minor inconvenience when alternate printing or digital workflow is
-  available.
+risk_basis: Low impact - a single printer outage is normally a minor inconvenience when alternate printing or digital workflow is available.
 verification_priority: P3
 last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/printer-offline/
@@ -41,11 +35,9 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references:
-  - https://learn.microsoft.com/powershell/module/microsoft.powershell.management/restart-service
-  - https://learn.microsoft.com/powershell/module/nettcpip/test-netconnection
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+  - 'https://learn.microsoft.com/powershell/module/microsoft.powershell.management/restart-service'
+  - 'https://learn.microsoft.com/powershell/module/nettcpip/test-netconnection'
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

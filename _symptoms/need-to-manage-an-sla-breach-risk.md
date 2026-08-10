@@ -1,16 +1,15 @@
 ---
 title: Need to manage an SLA breach risk
 slug: need-to-manage-an-sla-breach-risk
-description: 'Observable report: Need to manage an SLA breach risk. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to manage an SLA breach risk. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- manage-an-sla-breach-risk
-- service-desk-and-itsm
+  - manage-an-sla-breach-risk
+  - service-desk-and-itsm
 related_procedures:
-- manage-an-sla-breach-risk
+  - manage-an-sla-breach-risk
 permalink: /symptoms/need-to-manage-an-sla-breach-risk/
 layout: article
 last_reviewed: '2026-08-02'

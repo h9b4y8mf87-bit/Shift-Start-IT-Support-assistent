@@ -1,16 +1,15 @@
 ---
-title: Sleep, wake or hibernation
+title: 'Sleep, wake or hibernation'
 slug: sleep-wake-or-hibernation
-description: 'Observable report: Sleep, wake or hibernation. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Sleep, wake or hibernation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-sleep-wake-or-hibernation
-- windows-endpoints
+  - troubleshoot-sleep-wake-or-hibernation
+  - windows-endpoints
 related_procedures:
-- troubleshoot-sleep-wake-or-hibernation
+  - troubleshoot-sleep-wake-or-hibernation
 permalink: /symptoms/sleep-wake-or-hibernation/
 layout: article
 last_reviewed: '2026-08-02'

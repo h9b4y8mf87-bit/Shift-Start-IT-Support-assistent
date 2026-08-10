@@ -1,16 +1,15 @@
 ---
 title: Verify data after a migration
 slug: verify-data-after-a-migration
-description: 'Observable report: Verify data after a migration. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Verify data after a migration. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- verify-data-after-a-migration
+  - data-protection-backup-and-recovery
+  - verify-data-after-a-migration
 related_procedures:
-- verify-data-after-a-migration
+  - verify-data-after-a-migration
 permalink: /symptoms/verify-data-after-a-migration/
 layout: article
 last_reviewed: '2026-08-02'

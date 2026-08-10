@@ -1,16 +1,15 @@
 ---
 title: Reported suspected data leakage
 slug: reported-suspected-data-leakage
-description: 'Observable report: Reported suspected data leakage. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Reported suspected data leakage. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: critical
 tags:
-- respond-to-suspected-data-leakage
-- security-and-compliance
+  - respond-to-suspected-data-leakage
+  - security-and-compliance
 related_procedures:
-- respond-to-suspected-data-leakage
+  - respond-to-suspected-data-leakage
 permalink: /symptoms/reported-suspected-data-leakage/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: A Windows service that will not start
 slug: a-windows-service-that-will-not-start
-description: 'Observable report: A Windows service that will not start. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A Windows service that will not start. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- resolve-a-windows-service-that-will-not-start
-- windows-endpoints
+  - resolve-a-windows-service-that-will-not-start
+  - windows-endpoints
 related_procedures:
-- resolve-a-windows-service-that-will-not-start
+  - resolve-a-windows-service-that-will-not-start
 permalink: /symptoms/a-windows-service-that-will-not-start/
 layout: article
 last_reviewed: '2026-08-02'

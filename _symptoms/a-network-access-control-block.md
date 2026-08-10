@@ -1,16 +1,15 @@
 ---
 title: A Network Access Control block
 slug: a-network-access-control-block
-description: 'Observable report: A Network Access Control block. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A Network Access Control block. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- resolve-a-network-access-control-block
+  - network-and-connectivity
+  - resolve-a-network-access-control-block
 related_procedures:
-- resolve-a-network-access-control-block
+  - resolve-a-network-access-control-block
 permalink: /symptoms/a-network-access-control-block/
 layout: article
 last_reviewed: '2026-08-02'

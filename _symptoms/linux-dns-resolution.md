@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-linux-dns-resolution
+  - linux-and-developer-workstations
+  - troubleshoot-linux-dns-resolution
 related_procedures:
-- troubleshoot-linux-dns-resolution
+  - troubleshoot-linux-dns-resolution
 permalink: /symptoms/linux-dns-resolution/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Investigate unusual fan noise
 slug: investigate-unusual-fan-noise
-description: 'Observable report: Investigate unusual fan noise. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Investigate unusual fan noise. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- investigate-unusual-fan-noise
+  - hardware-and-peripherals
+  - investigate-unusual-fan-noise
 related_procedures:
-- investigate-unusual-fan-noise
+  - investigate-unusual-fan-noise
 permalink: /symptoms/investigate-unusual-fan-noise/
 layout: article
 last_reviewed: '2026-08-02'

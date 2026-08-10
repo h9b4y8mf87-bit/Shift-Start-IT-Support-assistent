@@ -1,16 +1,15 @@
 ---
 title: Reported unauthorised software
 slug: reported-unauthorised-software
-description: 'Observable report: Reported unauthorised software. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Reported unauthorised software. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- respond-to-unauthorised-software
-- security-and-compliance
+  - respond-to-unauthorised-software
+  - security-and-compliance
 related_procedures:
-- respond-to-unauthorised-software
+  - respond-to-unauthorised-software
 permalink: /symptoms/reported-unauthorised-software/
 layout: article
 last_reviewed: '2026-08-02'

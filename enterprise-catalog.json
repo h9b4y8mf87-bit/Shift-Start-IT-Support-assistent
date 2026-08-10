@@ -1,0 +1,58 @@
+---
+layout: null
+permalink: /assets/data/enterprise-catalog.json
+---
+{
+  "generatedAt": {{ site.time | date_to_xmlschema | jsonify }},
+  "procedures": [
+    {% assign catalog_procedures = site.procedures | sort: 'title' %}
+    {% for item in catalog_procedures %}
+      {% assign severity = item.severity | default: 'low' | downcase %}
+      {% case severity %}{% when 'critical' %}{% assign priority = 'P0' %}{% when 'high' %}{% assign priority = 'P1' %}{% when 'medium' %}{% assign priority = 'P2' %}{% when 'low' %}{% assign priority = 'P3' %}{% else %}{% assign priority = 'P4' %}{% endcase %}
+      {% assign ev = item.verification_evidence %}
+      {% assign ev_count = 0 %}
+      {% if ev.diagnostic_tested %}{% assign ev_count = ev_count | plus: 1 %}{% endif %}
+      {% if ev.remediation_tested %}{% assign ev_count = ev_count | plus: 1 %}{% endif %}
+      {% if ev.rollback_confirmed %}{% assign ev_count = ev_count | plus: 1 %}{% endif %}
+      {% if ev.escalation_confirmed %}{% assign ev_count = ev_count | plus: 1 %}{% endif %}
+      {% if ev.time_validated %}{% assign ev_count = ev_count | plus: 1 %}{% endif %}
+      {% if ev.owner_signoff %}{% assign ev_count = ev_count | plus: 1 %}{% endif %}
+      {
+        "id": {{ item.slug | jsonify }},
+        "title": {{ item.title | jsonify }},
+        "description": {{ item.description | default: '' | jsonify }},
+        "type": "procedure",
+        "url": {{ item.url | relative_url | jsonify }},
+        "category": {{ item.category | default: 'Uncategorised' | jsonify }},
+        "severity": {{ severity | jsonify }},
+        "priority": {{ priority | jsonify }},
+        "contentStatus": {{ item.content_status | default: 'under_review' | jsonify }},
+        "owner": {{ item.owner_team | default: 'Not assigned' | jsonify }},
+        "lastUpdated": {{ item.last_updated | default: item.last_tested | default: item.date | default: '' | date: '%Y-%m-%d' | jsonify }},
+        "lastVerified": {{ item.last_verified | default: item.last_tested | default: '' | date: '%Y-%m-%d' | jsonify }},
+        "nextReviewDue": {{ item.next_review_due | default: '' | date: '%Y-%m-%d' | jsonify }},
+        "supportTier": {{ item.support_tier | default: '' | jsonify }},
+        "errorCodes": {% if item.error_codes %}{{ item.error_codes | jsonify }}{% else %}[]{% endif %},
+        "tags": {% if item.tags %}{{ item.tags | jsonify }}{% else %}[]{% endif %},
+        "platforms": {% if item.platforms %}{{ item.platforms | jsonify }}{% else %}[]{% endif %},
+        "evidenceCount": {{ ev_count }},
+        "evidenceComplete": {% if ev_count == 6 %}true{% else %}false{% endif %}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "symptoms": [
+    {% assign catalog_symptoms = site.symptoms | sort: 'title' %}
+    {% for item in catalog_symptoms %}
+      {
+        "id": {{ item.slug | jsonify }},
+        "title": {{ item.title | jsonify }},
+        "description": {{ item.description | default: '' | jsonify }},
+        "type": "symptom",
+        "url": {{ item.url | relative_url | jsonify }},
+        "category": {{ item.category | default: 'Uncategorised' | jsonify }},
+        "errorCodes": {% if item.error_codes %}{{ item.error_codes | jsonify }}{% else %}[]{% endif %},
+        "tags": {% if item.tags %}{{ item.tags | jsonify }}{% else %}[]{% endif %}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}

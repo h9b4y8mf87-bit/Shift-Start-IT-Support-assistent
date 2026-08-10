@@ -1,9 +1,7 @@
 ---
 title: Migrate an authenticator to a replacement phone
 slug: migrate-an-authenticator-to-a-replacement-phone
-description: >-
-  Enterprise runbook to migrate an authenticator to a replacement phone without skipping evidence, verification,
-  rollback or escalation requirements.
+description: 'Enterprise runbook to migrate an authenticator to a replacement phone without skipping evidence, verification, rollback or escalation requirements.'
 content_type: procedure
 category: Mobile Devices & MDM
 service: Mobile Devices & MDM
@@ -28,10 +26,7 @@ tags:
   - replacement
   - to
 error_codes: []
-tldr: >-
-  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
-  remediation for migrate an authenticator to a replacement phone, verify the original business task, and escalate with
-  complete logs if recovery is not achieved.
+tldr: 'Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for migrate an authenticator to a replacement phone, verify the original business task, and escalate with complete logs if recovery is not achieved.'
 related_symptoms:
   - migrate-an-authenticator-to-a-replacement-phone
   - corporate-access-on-a-mobile-device-is-not-working
@@ -44,14 +39,11 @@ related_causes: []
 related_commands: []
 next_steps:
   - general-workstation-triage
-escalation: >-
-  Escalate to Mobility or Endpoint Engineering with the exact user or service impact, timestamps and timezone, affected
-  assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status
-  and a clear statement of what remains broken.
+escalation: 'Escalate to Mobility or Endpoint Engineering with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.'
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
-approval_required: Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.
+approval_required: 'Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.'
 permalink: /procedures/migrate-an-authenticator-to-a-replacement-phone/
 layout: article
 content_status: under_review

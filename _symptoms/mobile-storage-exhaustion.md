@@ -1,16 +1,15 @@
 ---
 title: Mobile storage exhaustion
 slug: mobile-storage-exhaustion
-description: 'Observable report: Mobile storage exhaustion. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Mobile storage exhaustion. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- troubleshoot-mobile-storage-exhaustion
+  - mobile-devices-and-mdm
+  - troubleshoot-mobile-storage-exhaustion
 related_procedures:
-- troubleshoot-mobile-storage-exhaustion
+  - troubleshoot-mobile-storage-exhaustion
 permalink: /symptoms/mobile-storage-exhaustion/
 layout: article
 last_reviewed: '2026-08-02'

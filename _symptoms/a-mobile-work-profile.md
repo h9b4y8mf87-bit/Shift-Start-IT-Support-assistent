@@ -6,10 +6,10 @@ content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- troubleshoot-a-mobile-work-profile
+  - mobile-devices-and-mdm
+  - troubleshoot-a-mobile-work-profile
 related_procedures:
-- troubleshoot-a-mobile-work-profile
+  - troubleshoot-a-mobile-work-profile
 permalink: /symptoms/a-mobile-work-profile/
 layout: article
 last_reviewed: '2026-08-02'

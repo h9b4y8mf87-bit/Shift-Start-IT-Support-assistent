@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-an-http-404-error
+  - business-applications-and-browsers
+  - troubleshoot-an-http-404-error
 related_procedures:
-- troubleshoot-an-http-404-error
+  - troubleshoot-an-http-404-error
 permalink: /symptoms/an-http-404-error/
 layout: article
 last_reviewed: '2026-08-02'

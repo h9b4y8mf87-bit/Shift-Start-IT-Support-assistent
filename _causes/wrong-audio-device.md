@@ -5,9 +5,9 @@ description: Teams uses the wrong endpoint or Windows blocks microphone access.
 content_type: cause
 probability: high
 related_symptoms:
-- microphone-fails
+  - microphone-fails
 related_procedures:
-- teams-microphone-not-working
+  - teams-microphone-not-working
 permalink: /causes/wrong-audio-device/
 layout: article
 ---

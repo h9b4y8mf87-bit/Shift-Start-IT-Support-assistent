@@ -1,16 +1,15 @@
 ---
 title: A conference-room display
 slug: a-conference-room-display
-description: 'Observable report: A conference-room display. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A conference-room display. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-a-conference-room-display
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-a-conference-room-display
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-a-conference-room-display
+  - troubleshoot-a-conference-room-display
 permalink: /symptoms/a-conference-room-display/
 layout: article
 last_reviewed: '2026-08-02'

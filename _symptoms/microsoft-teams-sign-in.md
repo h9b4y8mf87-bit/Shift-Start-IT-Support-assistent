@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-microsoft-teams-sign-in
+  - microsoft-365-and-collaboration
+  - troubleshoot-microsoft-teams-sign-in
 related_procedures:
-- troubleshoot-microsoft-teams-sign-in
+  - troubleshoot-microsoft-teams-sign-in
 permalink: /symptoms/microsoft-teams-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

@@ -3,13 +3,13 @@ title: A conference-room camera
 slug: a-conference-room-camera
 description: 'Observable report: A conference-room camera. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-a-conference-room-camera
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-a-conference-room-camera
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-a-conference-room-camera
+  - troubleshoot-a-conference-room-camera
 permalink: /symptoms/a-conference-room-camera/
 layout: article
 last_reviewed: '2026-08-02'

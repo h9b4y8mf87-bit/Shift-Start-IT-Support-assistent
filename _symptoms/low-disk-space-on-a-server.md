@@ -1,16 +1,15 @@
 ---
 title: Low disk space on a server
 slug: low-disk-space-on-a-server
-description: 'Observable report: Low disk space on a server. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Low disk space on a server. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: high
 tags:
-- resolve-low-disk-space-on-a-server
-- servers-and-core-infrastructure
+  - resolve-low-disk-space-on-a-server
+  - servers-and-core-infrastructure
 related_procedures:
-- resolve-low-disk-space-on-a-server
+  - resolve-low-disk-space-on-a-server
 permalink: /symptoms/low-disk-space-on-a-server/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- clear-and-rebuild-the-teams-cache
-- microsoft-365-and-collaboration
+  - clear-and-rebuild-the-teams-cache
+  - microsoft-365-and-collaboration
 related_procedures:
-- clear-and-rebuild-the-teams-cache
+  - clear-and-rebuild-the-teams-cache
 permalink: /symptoms/and-rebuild-the-teams-cache/
 layout: article
 last_reviewed: '2026-08-02'

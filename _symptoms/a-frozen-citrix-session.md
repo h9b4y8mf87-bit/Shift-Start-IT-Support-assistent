@@ -3,13 +3,13 @@ title: A frozen Citrix session
 slug: a-frozen-citrix-session
 description: 'Observable report: A frozen Citrix session. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- recover-a-frozen-citrix-session
-- remote-access-vdi-and-daas
+  - recover-a-frozen-citrix-session
+  - remote-access-vdi-and-daas
 related_procedures:
-- recover-a-frozen-citrix-session
+  - recover-a-frozen-citrix-session
 permalink: /symptoms/a-frozen-citrix-session/
 layout: article
 last_reviewed: '2026-08-02'

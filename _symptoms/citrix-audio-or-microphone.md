@@ -1,16 +1,15 @@
 ---
 title: Citrix audio or microphone
 slug: citrix-audio-or-microphone
-description: 'Observable report: Citrix audio or microphone. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Citrix audio or microphone. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-citrix-audio-or-microphone
+  - remote-access-vdi-and-daas
+  - troubleshoot-citrix-audio-or-microphone
 related_procedures:
-- troubleshoot-citrix-audio-or-microphone
+  - troubleshoot-citrix-audio-or-microphone
 permalink: /symptoms/citrix-audio-or-microphone/
 layout: article
 last_reviewed: '2026-08-02'

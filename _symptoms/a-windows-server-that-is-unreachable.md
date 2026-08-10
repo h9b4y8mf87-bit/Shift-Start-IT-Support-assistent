@@ -1,16 +1,15 @@
 ---
 title: A Windows Server that is unreachable
 slug: a-windows-server-that-is-unreachable
-description: 'Observable report: A Windows Server that is unreachable. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A Windows Server that is unreachable. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: critical
 tags:
-- servers-and-core-infrastructure
-- triage-a-windows-server-that-is-unreachable
+  - servers-and-core-infrastructure
+  - triage-a-windows-server-that-is-unreachable
 related_procedures:
-- triage-a-windows-server-that-is-unreachable
+  - triage-a-windows-server-that-is-unreachable
 permalink: /symptoms/a-windows-server-that-is-unreachable/
 layout: article
 last_reviewed: '2026-08-02'

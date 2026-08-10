@@ -1,9 +1,7 @@
 ---
 title: Grant calendar delegate access
 slug: grant-calendar-delegate-access
-description: >-
-  Enterprise runbook to grant calendar delegate access without skipping evidence, verification, rollback or escalation
-  requirements.
+description: 'Enterprise runbook to grant calendar delegate access without skipping evidence, verification, rollback or escalation requirements.'
 content_type: procedure
 category: Identity & Access Management
 service: Identity & Access Management
@@ -24,10 +22,7 @@ tags:
   - identity-and-access-management
   - l1-l2
 error_codes: []
-tldr: >-
-  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
-  remediation for grant calendar delegate access, verify the original business task, and escalate with complete logs if
-  recovery is not achieved.
+tldr: 'Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for grant calendar delegate access, verify the original business task, and escalate with complete logs if recovery is not achieved.'
 related_symptoms:
   - need-calendar-delegate-access
   - cannot-sign-in
@@ -40,14 +35,11 @@ related_causes: []
 related_commands: []
 next_steps:
   - general-workstation-triage
-escalation: >-
-  Escalate to Identity and Access Management with the exact user or service impact, timestamps and timezone, affected
-  assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status
-  and a clear statement of what remains broken.
+escalation: 'Escalate to Identity and Access Management with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.'
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
-approval_required: Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.
+approval_required: 'Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.'
 permalink: /procedures/grant-calendar-delegate-access/
 layout: article
 content_status: under_review
@@ -59,9 +51,7 @@ tested_platforms:
   - Entra ID
   - SSO
 source_references: []
-change_record: >-
-  Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation;
-  full technical-owner validation remains pending.
+change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 risk_model: impact-v1
 risk_basis: 'Medium impact indicators detected: degraded/intermittent service, peripheral issue or an available workaround.'

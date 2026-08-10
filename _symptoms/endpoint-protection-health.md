@@ -1,16 +1,15 @@
 ---
 title: Endpoint protection health
 slug: endpoint-protection-health
-description: 'Observable report: Endpoint protection health. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Endpoint protection health. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- security-and-compliance
-- troubleshoot-endpoint-protection-health
+  - security-and-compliance
+  - troubleshoot-endpoint-protection-health
 related_procedures:
-- troubleshoot-endpoint-protection-health
+  - troubleshoot-endpoint-protection-health
 permalink: /symptoms/endpoint-protection-health/
 layout: article
 last_reviewed: '2026-08-02'

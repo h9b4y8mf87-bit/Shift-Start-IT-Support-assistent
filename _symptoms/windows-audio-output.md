@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-windows-audio-output
-- windows-endpoints
+  - troubleshoot-windows-audio-output
+  - windows-endpoints
 related_procedures:
-- troubleshoot-windows-audio-output
+  - troubleshoot-windows-audio-output
 permalink: /symptoms/windows-audio-output/
 layout: article
 last_reviewed: '2026-08-02'

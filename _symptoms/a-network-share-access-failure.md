@@ -1,16 +1,15 @@
 ---
 title: A network share access failure
 slug: a-network-share-access-failure
-description: 'Observable report: A network share access failure. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A network share access failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: high
 tags:
-- network-and-connectivity
-- troubleshoot-a-network-share-access-failure
+  - network-and-connectivity
+  - troubleshoot-a-network-share-access-failure
 related_procedures:
-- troubleshoot-a-network-share-access-failure
+  - troubleshoot-a-network-share-access-failure
 permalink: /symptoms/a-network-share-access-failure/
 layout: article
 last_reviewed: '2026-08-02'

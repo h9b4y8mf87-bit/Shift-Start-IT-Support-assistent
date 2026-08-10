@@ -1,16 +1,15 @@
 ---
 title: An Intune compliance failure
 slug: an-intune-compliance-failure
-description: 'Observable report: An Intune compliance failure. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: An Intune compliance failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- resolve-an-intune-compliance-failure
-- windows-endpoints
+  - resolve-an-intune-compliance-failure
+  - windows-endpoints
 related_procedures:
-- resolve-an-intune-compliance-failure
+  - resolve-an-intune-compliance-failure
 permalink: /symptoms/an-intune-compliance-failure/
 layout: article
 last_reviewed: '2026-08-02'

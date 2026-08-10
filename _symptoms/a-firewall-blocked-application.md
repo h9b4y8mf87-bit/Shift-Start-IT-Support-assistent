@@ -1,16 +1,15 @@
 ---
 title: A firewall-blocked application
 slug: a-firewall-blocked-application
-description: 'Observable report: A firewall-blocked application. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A firewall-blocked application. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: high
 tags:
-- network-and-connectivity
-- troubleshoot-a-firewall-blocked-application
+  - network-and-connectivity
+  - troubleshoot-a-firewall-blocked-application
 related_procedures:
-- troubleshoot-a-firewall-blocked-application
+  - troubleshoot-a-firewall-blocked-application
 permalink: /symptoms/a-firewall-blocked-application/
 layout: article
 last_reviewed: '2026-08-02'

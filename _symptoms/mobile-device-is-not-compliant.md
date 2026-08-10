@@ -1,43 +1,42 @@
 ---
 title: Mobile device is not compliant
 slug: mobile-device-is-not-compliant
-description: 'Observable report: Mobile device is not compliant. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Mobile device is not compliant. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- configure-corporate-email-on-android
-- configure-corporate-email-on-ios
-- enrol-an-android-device-into-mdm
-- enrol-an-iphone-or-ipad-into-mdm
-- install-or-renew-a-mobile-certificate
-- migrate-an-authenticator-to-a-replacement-phone
-- mobile-devices-and-mdm
-- perform-an-approved-remote-wipe
-- recover-mobile-access-after-a-forgotten-passcode
-- remove-corporate-data-from-a-personal-device
-- resolve-mobile-device-compliance-failure
-- respond-to-a-lost-or-stolen-mobile-device
+  - configure-corporate-email-on-android
+  - configure-corporate-email-on-ios
+  - enrol-an-android-device-into-mdm
+  - enrol-an-iphone-or-ipad-into-mdm
+  - install-or-renew-a-mobile-certificate
+  - migrate-an-authenticator-to-a-replacement-phone
+  - mobile-devices-and-mdm
+  - perform-an-approved-remote-wipe
+  - recover-mobile-access-after-a-forgotten-passcode
+  - remove-corporate-data-from-a-personal-device
+  - resolve-mobile-device-compliance-failure
+  - respond-to-a-lost-or-stolen-mobile-device
 related_procedures:
-- configure-corporate-email-on-android
-- configure-corporate-email-on-ios
-- enrol-an-android-device-into-mdm
-- enrol-an-iphone-or-ipad-into-mdm
-- install-or-renew-a-mobile-certificate
-- migrate-an-authenticator-to-a-replacement-phone
-- perform-an-approved-remote-wipe
-- recover-mobile-access-after-a-forgotten-passcode
-- remove-corporate-data-from-a-personal-device
-- resolve-mobile-device-compliance-failure
-- respond-to-a-lost-or-stolen-mobile-device
-- troubleshoot-a-mobile-work-profile
-- troubleshoot-corporate-wi-fi-on-mobile
-- troubleshoot-excessive-mobile-battery-drain
-- troubleshoot-mobile-application-deployment
-- troubleshoot-mobile-outlook-synchronisation
-- troubleshoot-mobile-storage-exhaustion
-- troubleshoot-mobile-vpn
+  - configure-corporate-email-on-android
+  - configure-corporate-email-on-ios
+  - enrol-an-android-device-into-mdm
+  - enrol-an-iphone-or-ipad-into-mdm
+  - install-or-renew-a-mobile-certificate
+  - migrate-an-authenticator-to-a-replacement-phone
+  - perform-an-approved-remote-wipe
+  - recover-mobile-access-after-a-forgotten-passcode
+  - remove-corporate-data-from-a-personal-device
+  - resolve-mobile-device-compliance-failure
+  - respond-to-a-lost-or-stolen-mobile-device
+  - troubleshoot-a-mobile-work-profile
+  - troubleshoot-corporate-wi-fi-on-mobile
+  - troubleshoot-excessive-mobile-battery-drain
+  - troubleshoot-mobile-application-deployment
+  - troubleshoot-mobile-outlook-synchronisation
+  - troubleshoot-mobile-storage-exhaustion
+  - troubleshoot-mobile-vpn
 permalink: /symptoms/mobile-device-is-not-compliant/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Database connectivity from an application
 slug: database-connectivity-from-an-application
-description: 'Observable report: Database connectivity from an application. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Database connectivity from an application. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-database-connectivity-from-an-application
+  - servers-and-core-infrastructure
+  - troubleshoot-database-connectivity-from-an-application
 related_procedures:
-- troubleshoot-database-connectivity-from-an-application
+  - troubleshoot-database-connectivity-from-an-application
 permalink: /symptoms/database-connectivity-from-an-application/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: A damaged or loose charging port
 slug: a-damaged-or-loose-charging-port
-description: 'Observable report: A damaged or loose charging port. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A damaged or loose charging port. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-damaged-or-loose-charging-port
+  - hardware-and-peripherals
+  - troubleshoot-a-damaged-or-loose-charging-port
 related_procedures:
-- troubleshoot-a-damaged-or-loose-charging-port
+  - troubleshoot-a-damaged-or-loose-charging-port
 permalink: /symptoms/a-damaged-or-loose-charging-port/
 layout: article
 last_reviewed: '2026-08-02'

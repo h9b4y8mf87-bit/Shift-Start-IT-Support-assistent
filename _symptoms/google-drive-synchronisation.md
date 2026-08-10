@@ -1,16 +1,15 @@
 ---
 title: Google Drive synchronisation
 slug: google-drive-synchronisation
-description: 'Observable report: Google Drive synchronisation. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Google Drive synchronisation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- troubleshoot-google-drive-synchronisation
+  - google-workspace-and-web-collaboration
+  - troubleshoot-google-drive-synchronisation
 related_procedures:
-- troubleshoot-google-drive-synchronisation
+  - troubleshoot-google-drive-synchronisation
 permalink: /symptoms/google-drive-synchronisation/
 layout: article
 last_reviewed: '2026-08-02'

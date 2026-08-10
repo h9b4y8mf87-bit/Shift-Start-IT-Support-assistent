@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-linux-certificate-trust
+  - linux-and-developer-workstations
+  - troubleshoot-linux-certificate-trust
 related_procedures:
-- troubleshoot-linux-certificate-trust
+  - troubleshoot-linux-certificate-trust
 permalink: /symptoms/linux-certificate-trust/
 layout: article
 last_reviewed: '2026-08-02'

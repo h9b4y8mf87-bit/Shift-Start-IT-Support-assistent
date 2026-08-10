@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-a-container-runtime
+  - linux-and-developer-workstations
+  - troubleshoot-a-container-runtime
 related_procedures:
-- troubleshoot-a-container-runtime
+  - troubleshoot-a-container-runtime
 permalink: /symptoms/a-container-runtime/
 layout: article
 last_reviewed: '2026-08-02'

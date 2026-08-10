@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-macos-software-update
+  - macos-endpoints
+  - troubleshoot-macos-software-update
 related_procedures:
-- troubleshoot-macos-software-update
+  - troubleshoot-macos-software-update
 permalink: /symptoms/macos-software-update/
 layout: article
 last_reviewed: '2026-08-02'

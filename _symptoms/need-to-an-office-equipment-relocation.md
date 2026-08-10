@@ -6,10 +6,10 @@ content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- perform-an-office-equipment-relocation
+  - lifecycle-and-asset-management
+  - perform-an-office-equipment-relocation
 related_procedures:
-- perform-an-office-equipment-relocation
+  - perform-an-office-equipment-relocation
 permalink: /symptoms/need-to-an-office-equipment-relocation/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-teams-screen-sharing
+  - microsoft-365-and-collaboration
+  - troubleshoot-teams-screen-sharing
 related_procedures:
-- troubleshoot-teams-screen-sharing
+  - troubleshoot-teams-screen-sharing
 permalink: /symptoms/teams-screen-sharing/
 layout: article
 last_reviewed: '2026-08-02'

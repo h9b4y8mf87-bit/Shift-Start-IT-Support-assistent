@@ -1,16 +1,15 @@
 ---
 title: A mapped drive reconnect failure
 slug: a-mapped-drive-reconnect-failure
-description: 'Observable report: A mapped drive reconnect failure. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A mapped drive reconnect failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: high
 tags:
-- network-and-connectivity
-- troubleshoot-a-mapped-drive-reconnect-failure
+  - network-and-connectivity
+  - troubleshoot-a-mapped-drive-reconnect-failure
 related_procedures:
-- troubleshoot-a-mapped-drive-reconnect-failure
+  - troubleshoot-a-mapped-drive-reconnect-failure
 permalink: /symptoms/a-mapped-drive-reconnect-failure/
 layout: article
 last_reviewed: '2026-08-02'

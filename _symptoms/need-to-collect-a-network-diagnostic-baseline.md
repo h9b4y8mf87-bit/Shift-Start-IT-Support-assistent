@@ -1,16 +1,15 @@
 ---
 title: Need to collect a network diagnostic baseline
 slug: need-to-collect-a-network-diagnostic-baseline
-description: 'Observable report: Need to collect a network diagnostic baseline. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to collect a network diagnostic baseline. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- collect-a-network-diagnostic-baseline
-- network-and-connectivity
+  - collect-a-network-diagnostic-baseline
+  - network-and-connectivity
 related_procedures:
-- collect-a-network-diagnostic-baseline
+  - collect-a-network-diagnostic-baseline
 permalink: /symptoms/need-to-collect-a-network-diagnostic-baseline/
 layout: article
 last_reviewed: '2026-08-02'

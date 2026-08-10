@@ -3,13 +3,13 @@ title: A Teams Phone device
 slug: a-teams-phone-device
 description: 'Observable report: A Teams Phone device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-a-teams-phone-device
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-a-teams-phone-device
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-a-teams-phone-device
+  - troubleshoot-a-teams-phone-device
 permalink: /symptoms/a-teams-phone-device/
 layout: article
 last_reviewed: '2026-08-02'

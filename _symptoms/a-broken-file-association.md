@@ -1,16 +1,15 @@
 ---
 title: A broken file association
 slug: a-broken-file-association
-description: 'Observable report: A broken file association. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A broken file association. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- correct-a-broken-file-association
-- windows-endpoints
+  - correct-a-broken-file-association
+  - windows-endpoints
 related_procedures:
-- correct-a-broken-file-association
+  - correct-a-broken-file-association
 permalink: /symptoms/a-broken-file-association/
 layout: article
 last_reviewed: '2026-08-02'

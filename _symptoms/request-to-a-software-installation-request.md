@@ -6,10 +6,10 @@ content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- process-a-software-installation-request
+  - lifecycle-and-asset-management
+  - process-a-software-installation-request
 related_procedures:
-- process-a-software-installation-request
+  - process-a-software-installation-request
 permalink: /symptoms/request-to-a-software-installation-request/
 layout: article
 last_reviewed: '2026-08-02'

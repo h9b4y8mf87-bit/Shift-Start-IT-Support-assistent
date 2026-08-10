@@ -3,13 +3,13 @@ title: HDMI presentation input
 slug: hdmi-presentation-input
 description: 'Observable report: HDMI presentation input. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-hdmi-presentation-input
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-hdmi-presentation-input
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-hdmi-presentation-input
+  - troubleshoot-hdmi-presentation-input
 permalink: /symptoms/hdmi-presentation-input/
 layout: article
 last_reviewed: '2026-08-02'

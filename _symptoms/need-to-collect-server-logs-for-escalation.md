@@ -1,16 +1,15 @@
 ---
 title: Need to collect server logs for escalation
 slug: need-to-collect-server-logs-for-escalation
-description: 'Observable report: Need to collect server logs for escalation. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to collect server logs for escalation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- collect-server-logs-for-escalation
-- servers-and-core-infrastructure
+  - collect-server-logs-for-escalation
+  - servers-and-core-infrastructure
 related_procedures:
-- collect-server-logs-for-escalation
+  - collect-server-logs-for-escalation
 permalink: /symptoms/need-to-collect-server-logs-for-escalation/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Browser cache and cookies safely
 slug: browser-cache-and-cookies-safely
-description: 'Observable report: Browser cache and cookies safely. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Browser cache and cookies safely. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- clear-browser-cache-and-cookies-safely
+  - business-applications-and-browsers
+  - clear-browser-cache-and-cookies-safely
 related_procedures:
-- clear-browser-cache-and-cookies-safely
+  - clear-browser-cache-and-cookies-safely
 permalink: /symptoms/browser-cache-and-cookies-safely/
 layout: article
 last_reviewed: '2026-08-02'

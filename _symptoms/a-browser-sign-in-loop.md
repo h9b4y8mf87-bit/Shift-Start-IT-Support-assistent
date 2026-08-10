@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-browser-sign-in-loop
+  - business-applications-and-browsers
+  - troubleshoot-a-browser-sign-in-loop
 related_procedures:
-- troubleshoot-a-browser-sign-in-loop
+  - troubleshoot-a-browser-sign-in-loop
 permalink: /symptoms/a-browser-sign-in-loop/
 layout: article
 last_reviewed: '2026-08-02'

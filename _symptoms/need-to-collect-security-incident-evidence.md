@@ -1,16 +1,15 @@
 ---
 title: Need to collect security incident evidence
 slug: need-to-collect-security-incident-evidence
-description: 'Observable report: Need to collect security incident evidence. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to collect security incident evidence. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- collect-security-incident-evidence
-- security-and-compliance
+  - collect-security-incident-evidence
+  - security-and-compliance
 related_procedures:
-- collect-security-incident-evidence
+  - collect-security-incident-evidence
 permalink: /symptoms/need-to-collect-security-incident-evidence/
 layout: article
 last_reviewed: '2026-08-02'

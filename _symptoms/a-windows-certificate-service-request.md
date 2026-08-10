@@ -1,16 +1,15 @@
 ---
 title: A Windows certificate service request
 slug: a-windows-certificate-service-request
-description: 'Observable report: A Windows certificate service request. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A Windows certificate service request. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-a-windows-certificate-service-request
+  - servers-and-core-infrastructure
+  - troubleshoot-a-windows-certificate-service-request
 related_procedures:
-- troubleshoot-a-windows-certificate-service-request
+  - troubleshoot-a-windows-certificate-service-request
 permalink: /symptoms/a-windows-certificate-service-request/
 layout: article
 last_reviewed: '2026-08-02'

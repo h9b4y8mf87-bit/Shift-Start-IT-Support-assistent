@@ -3,13 +3,13 @@ title: A failed endpoint backup
 slug: a-failed-endpoint-backup
 description: 'Observable report: A failed endpoint backup. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: high
 tags:
-- data-protection-backup-and-recovery
-- troubleshoot-a-failed-endpoint-backup
+  - data-protection-backup-and-recovery
+  - troubleshoot-a-failed-endpoint-backup
 related_procedures:
-- troubleshoot-a-failed-endpoint-backup
+  - troubleshoot-a-failed-endpoint-backup
 permalink: /symptoms/a-failed-endpoint-backup/
 layout: article
 last_reviewed: '2026-08-02'

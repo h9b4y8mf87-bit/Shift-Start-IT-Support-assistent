@@ -1,16 +1,15 @@
 ---
 title: A network printer that is unreachable
 slug: a-network-printer-that-is-unreachable
-description: 'Observable report: A network printer that is unreachable. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A network printer that is unreachable. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Printing & Scanning
 severity: high
 tags:
-- printing-and-scanning
-- troubleshoot-a-network-printer-that-is-unreachable
+  - printing-and-scanning
+  - troubleshoot-a-network-printer-that-is-unreachable
 related_procedures:
-- troubleshoot-a-network-printer-that-is-unreachable
+  - troubleshoot-a-network-printer-that-is-unreachable
 permalink: /symptoms/a-network-printer-that-is-unreachable/
 layout: article
 last_reviewed: '2026-08-02'

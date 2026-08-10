@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- troubleshoot-poor-print-quality
+  - printing-and-scanning
+  - troubleshoot-poor-print-quality
 related_procedures:
-- troubleshoot-poor-print-quality
+  - troubleshoot-poor-print-quality
 permalink: /symptoms/poor-print-quality/
 layout: article
 last_reviewed: '2026-08-02'

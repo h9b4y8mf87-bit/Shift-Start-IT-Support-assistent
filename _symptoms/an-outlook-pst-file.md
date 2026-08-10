@@ -3,13 +3,13 @@ title: An Outlook PST file
 slug: an-outlook-pst-file
 description: 'Observable report: An Outlook PST file. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- recover-an-outlook-pst-file
+  - data-protection-backup-and-recovery
+  - recover-an-outlook-pst-file
 related_procedures:
-- recover-an-outlook-pst-file
+  - recover-an-outlook-pst-file
 permalink: /symptoms/an-outlook-pst-file/
 layout: article
 last_reviewed: '2026-08-02'

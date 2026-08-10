@@ -1,16 +1,15 @@
 ---
 title: Reported a suspected phishing message
 slug: reported-a-suspected-phishing-message
-description: 'Observable report: Reported a suspected phishing message. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Reported a suspected phishing message. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- respond-to-a-suspected-phishing-message
-- security-and-compliance
+  - respond-to-a-suspected-phishing-message
+  - security-and-compliance
 related_procedures:
-- respond-to-a-suspected-phishing-message
+  - respond-to-a-suspected-phishing-message
 permalink: /symptoms/reported-a-suspected-phishing-message/
 layout: article
 last_reviewed: '2026-08-02'

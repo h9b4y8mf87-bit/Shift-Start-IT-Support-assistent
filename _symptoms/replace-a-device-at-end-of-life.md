@@ -1,16 +1,15 @@
 ---
 title: Replace a device at end of life
 slug: replace-a-device-at-end-of-life
-description: 'Observable report: Replace a device at end of life. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Replace a device at end of life. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- replace-a-device-at-end-of-life
+  - lifecycle-and-asset-management
+  - replace-a-device-at-end-of-life
 related_procedures:
-- replace-a-device-at-end-of-life
+  - replace-a-device-at-end-of-life
 permalink: /symptoms/replace-a-device-at-end-of-life/
 layout: article
 last_reviewed: '2026-08-02'

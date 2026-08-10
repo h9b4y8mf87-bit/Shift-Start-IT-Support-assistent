@@ -1,16 +1,15 @@
 ---
 title: Need to install or update a printer driver
 slug: need-to-install-or-update-a-printer-driver
-description: 'Observable report: Need to install or update a printer driver. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to install or update a printer driver. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- install-or-update-a-printer-driver
-- printing-and-scanning
+  - install-or-update-a-printer-driver
+  - printing-and-scanning
 related_procedures:
-- install-or-update-a-printer-driver
+  - install-or-update-a-printer-driver
 permalink: /symptoms/need-to-install-or-update-a-printer-driver/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- troubleshoot-memory-hardware-errors
+  - hardware-and-peripherals
+  - troubleshoot-memory-hardware-errors
 related_procedures:
-- troubleshoot-memory-hardware-errors
+  - troubleshoot-memory-hardware-errors
 permalink: /symptoms/memory-hardware-errors/
 layout: article
 last_reviewed: '2026-08-02'

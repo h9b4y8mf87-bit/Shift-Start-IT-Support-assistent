@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-usb-storage-not-detected
-- windows-endpoints
+  - troubleshoot-usb-storage-not-detected
+  - windows-endpoints
 related_procedures:
-- troubleshoot-usb-storage-not-detected
+  - troubleshoot-usb-storage-not-detected
 permalink: /symptoms/usb-storage-not-detected/
 layout: article
 last_reviewed: '2026-08-02'

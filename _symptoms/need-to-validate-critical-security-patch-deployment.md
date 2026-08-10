@@ -1,16 +1,15 @@
 ---
 title: Need to validate critical security patch deployment
 slug: need-to-validate-critical-security-patch-deployment
-description: 'Observable report: Need to validate critical security patch deployment. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to validate critical security patch deployment. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- security-and-compliance
-- validate-critical-security-patch-deployment
+  - security-and-compliance
+  - validate-critical-security-patch-deployment
 related_procedures:
-- validate-critical-security-patch-deployment
+  - validate-critical-security-patch-deployment
 permalink: /symptoms/need-to-validate-critical-security-patch-deployment/
 layout: article
 last_reviewed: '2026-08-02'

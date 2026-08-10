@@ -1,16 +1,15 @@
 ---
 title: A frozen or unresponsive Windows session
 slug: a-frozen-or-unresponsive-windows-session
-description: 'Observable report: A frozen or unresponsive Windows session. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: A frozen or unresponsive Windows session. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- recover-a-frozen-or-unresponsive-windows-session
-- windows-endpoints
+  - recover-a-frozen-or-unresponsive-windows-session
+  - windows-endpoints
 related_procedures:
-- recover-a-frozen-or-unresponsive-windows-session
+  - recover-a-frozen-or-unresponsive-windows-session
 permalink: /symptoms/a-frozen-or-unresponsive-windows-session/
 layout: article
 last_reviewed: '2026-08-02'

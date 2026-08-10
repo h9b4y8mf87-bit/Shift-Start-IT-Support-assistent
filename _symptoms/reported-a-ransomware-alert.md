@@ -1,16 +1,15 @@
 ---
 title: Reported a ransomware alert
 slug: reported-a-ransomware-alert
-description: 'Observable report: Reported a ransomware alert. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Reported a ransomware alert. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: critical
 tags:
-- respond-to-a-ransomware-alert
-- security-and-compliance
+  - respond-to-a-ransomware-alert
+  - security-and-compliance
 related_procedures:
-- respond-to-a-ransomware-alert
+  - respond-to-a-ransomware-alert
 permalink: /symptoms/reported-a-ransomware-alert/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Mobile access after a forgotten passcode
 slug: mobile-access-after-a-forgotten-passcode
-description: 'Observable report: Mobile access after a forgotten passcode. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Mobile access after a forgotten passcode. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- recover-mobile-access-after-a-forgotten-passcode
+  - mobile-devices-and-mdm
+  - recover-mobile-access-after-a-forgotten-passcode
 related_procedures:
-- recover-mobile-access-after-a-forgotten-passcode
+  - recover-mobile-access-after-a-forgotten-passcode
 permalink: /symptoms/mobile-access-after-a-forgotten-passcode/
 layout: article
 last_reviewed: '2026-08-02'

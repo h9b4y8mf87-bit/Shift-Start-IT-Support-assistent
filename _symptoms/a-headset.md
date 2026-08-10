@@ -6,10 +6,10 @@ content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-headset
+  - hardware-and-peripherals
+  - troubleshoot-a-headset
 related_procedures:
-- troubleshoot-a-headset
+  - troubleshoot-a-headset
 permalink: /symptoms/a-headset/
 layout: article
 last_reviewed: '2026-08-02'

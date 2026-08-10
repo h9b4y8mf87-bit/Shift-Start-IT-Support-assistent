@@ -1,16 +1,15 @@
 ---
 title: Intermittent network connectivity
 slug: intermittent-network-connectivity
-description: 'Observable report: Intermittent network connectivity. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Intermittent network connectivity. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-intermittent-network-connectivity
+  - network-and-connectivity
+  - troubleshoot-intermittent-network-connectivity
 related_procedures:
-- troubleshoot-intermittent-network-connectivity
+  - troubleshoot-intermittent-network-connectivity
 permalink: /symptoms/intermittent-network-connectivity/
 layout: article
 last_reviewed: '2026-08-02'

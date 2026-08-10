@@ -1,16 +1,15 @@
 ---
 title: An AWS EC2 instance that is unreachable
 slug: an-aws-ec2-instance-that-is-unreachable
-description: 'Observable report: An AWS EC2 instance that is unreachable. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: An AWS EC2 instance that is unreachable. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: high
 tags:
-- cloud-and-virtualisation
-- troubleshoot-an-aws-ec2-instance-that-is-unreachable
+  - cloud-and-virtualisation
+  - troubleshoot-an-aws-ec2-instance-that-is-unreachable
 related_procedures:
-- troubleshoot-an-aws-ec2-instance-that-is-unreachable
+  - troubleshoot-an-aws-ec2-instance-that-is-unreachable
 permalink: /symptoms/an-aws-ec2-instance-that-is-unreachable/
 layout: article
 last_reviewed: '2026-08-02'

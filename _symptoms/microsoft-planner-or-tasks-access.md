@@ -1,16 +1,15 @@
 ---
 title: Microsoft Planner or Tasks access
 slug: microsoft-planner-or-tasks-access
-description: 'Observable report: Microsoft Planner or Tasks access. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Microsoft Planner or Tasks access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-microsoft-planner-or-tasks-access
+  - microsoft-365-and-collaboration
+  - troubleshoot-microsoft-planner-or-tasks-access
 related_procedures:
-- troubleshoot-microsoft-planner-or-tasks-access
+  - troubleshoot-microsoft-planner-or-tasks-access
 permalink: /symptoms/microsoft-planner-or-tasks-access/
 layout: article
 last_reviewed: '2026-08-02'

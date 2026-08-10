@@ -3,13 +3,13 @@ title: Migrate a user profile
 slug: migrate-a-user-profile
 description: 'Observable report: Migrate a user profile. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- migrate-a-user-profile
+  - data-protection-backup-and-recovery
+  - migrate-a-user-profile
 related_procedures:
-- migrate-a-user-profile
+  - migrate-a-user-profile
 permalink: /symptoms/migrate-a-user-profile/
 layout: article
 last_reviewed: '2026-08-02'

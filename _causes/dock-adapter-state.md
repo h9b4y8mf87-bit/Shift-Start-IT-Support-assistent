@@ -1,13 +1,13 @@
 ---
 title: Dock Ethernet adapter or firmware state
 slug: dock-adapter-state
-description: The dock NIC is unpowered, disabled, outdated or not negotiating a link.
+description: 'The dock NIC is unpowered, disabled, outdated or not negotiating a link.'
 content_type: cause
 probability: medium
 related_symptoms:
-- dock-no-network
+  - dock-no-network
 related_procedures:
-- no-network-docking-station
+  - no-network-docking-station
 permalink: /causes/dock-adapter-state/
 layout: article
 ---

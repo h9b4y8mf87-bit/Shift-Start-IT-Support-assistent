@@ -1,9 +1,7 @@
 ---
 title: Resolve VPN connection failure
 slug: vpn-not-connecting
-description: >-
-  Diagnose internet, DNS, client, credential and gateway causes without unnecessary reinstallation or certificate
-  removal.
+description: 'Diagnose internet, DNS, client, credential and gateway causes without unnecessary reinstallation or certificate removal.'
 content_type: procedure
 category: Network & Connectivity
 severity: high
@@ -19,22 +17,16 @@ error_codes:
   - authentication failed
   - gateway unavailable
   - connection timed out
-tldr: >-
-  Confirm public internet access, system time, DNS and gateway reachability, restart only the approved VPN client
-  service, then isolate local-network versus corporate-gateway scope.
+tldr: 'Confirm public internet access, system time, DNS and gateway reachability, restart only the approved VPN client service, then isolate local-network versus corporate-gateway scope.'
 related_symptoms:
   - vpn-fails
 related_causes:
   - vpn-client-state
 next_steps:
   - password-reset
-escalation: >-
-  Escalate to Network Operations if the gateway is unreachable from multiple networks, authentication fails after
-  identity validation, the managed client profile is corrupt, or multiple users report the same VPN outage.
+escalation: 'Escalate to Network Operations if the gateway is unreachable from multiple networks, authentication fails after identity validation, the managed client profile is corrupt, or multiple users report the same VPN outage.'
 risk_model: impact-v1
-risk_basis: >-
-  High impact - a remote user can be unable to perform core work and a gateway issue may represent wider service
-  degradation.
+risk_basis: High impact - a remote user can be unable to perform core work and a gateway issue may represent wider service degradation.
 verification_priority: P1
 last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/vpn-not-connecting/
@@ -45,11 +37,9 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references:
-  - https://learn.microsoft.com/powershell/module/dnsclient/resolve-dnsname
-  - https://learn.microsoft.com/powershell/module/nettcpip/test-netconnection
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+  - 'https://learn.microsoft.com/powershell/module/dnsclient/resolve-dnsname'
+  - 'https://learn.microsoft.com/powershell/module/nettcpip/test-netconnection'
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

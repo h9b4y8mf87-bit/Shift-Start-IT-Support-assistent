@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-802-1x-authentication
+  - network-and-connectivity
+  - troubleshoot-802-1x-authentication
 related_procedures:
-- troubleshoot-802-1x-authentication
+  - troubleshoot-802-1x-authentication
 permalink: /symptoms/802-1x-authentication/
 layout: article
 last_reviewed: '2026-08-02'

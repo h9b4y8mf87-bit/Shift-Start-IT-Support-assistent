@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: critical
 tags:
-- network-and-connectivity
-- triage-a-site-wide-lan-outage
+  - network-and-connectivity
+  - triage-a-site-wide-lan-outage
 related_procedures:
-- triage-a-site-wide-lan-outage
+  - triage-a-site-wide-lan-outage
 permalink: /symptoms/a-site-wide-lan-outage/
 layout: article
 last_reviewed: '2026-08-02'

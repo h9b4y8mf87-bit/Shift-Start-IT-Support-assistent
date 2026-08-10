@@ -6,10 +6,10 @@ content_type: symptom
 category: Cloud & Virtualisation
 severity: critical
 tags:
-- cloud-and-virtualisation
-- triage-a-cloud-service-outage
+  - cloud-and-virtualisation
+  - triage-a-cloud-service-outage
 related_procedures:
-- triage-a-cloud-service-outage
+  - triage-a-cloud-service-outage
 permalink: /symptoms/a-cloud-service-outage/
 layout: article
 last_reviewed: '2026-08-02'

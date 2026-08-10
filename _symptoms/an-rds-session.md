@@ -3,13 +3,13 @@ title: An RDS session
 slug: an-rds-session
 description: 'Observable report: An RDS session. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-an-rds-session
+  - remote-access-vdi-and-daas
+  - troubleshoot-an-rds-session
 related_procedures:
-- troubleshoot-an-rds-session
+  - troubleshoot-an-rds-session
 permalink: /symptoms/an-rds-session/
 layout: article
 last_reviewed: '2026-08-02'

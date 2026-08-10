@@ -6,10 +6,10 @@ content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- perform-a-desk-move
+  - lifecycle-and-asset-management
+  - perform-a-desk-move
 related_procedures:
-- perform-a-desk-move
+  - perform-a-desk-move
 permalink: /symptoms/need-to-a-desk-move/
 layout: article
 last_reviewed: '2026-08-02'

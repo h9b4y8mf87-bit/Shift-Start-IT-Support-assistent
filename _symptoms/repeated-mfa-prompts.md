@@ -6,10 +6,10 @@ content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- troubleshoot-repeated-mfa-prompts
+  - identity-and-access-management
+  - troubleshoot-repeated-mfa-prompts
 related_procedures:
-- troubleshoot-repeated-mfa-prompts
+  - troubleshoot-repeated-mfa-prompts
 permalink: /symptoms/repeated-mfa-prompts/
 layout: article
 last_reviewed: '2026-08-02'

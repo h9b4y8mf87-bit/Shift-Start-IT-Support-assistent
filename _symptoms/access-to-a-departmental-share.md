@@ -1,16 +1,15 @@
 ---
 title: Access to a departmental share
 slug: access-to-a-departmental-share
-description: 'Observable report: Access to a departmental share. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Access to a departmental share. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- restore-access-to-a-departmental-share
-- servers-and-core-infrastructure
+  - restore-access-to-a-departmental-share
+  - servers-and-core-infrastructure
 related_procedures:
-- restore-access-to-a-departmental-share
+  - restore-access-to-a-departmental-share
 permalink: /symptoms/access-to-a-departmental-share/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: A local development port conflict
 slug: a-local-development-port-conflict
-description: 'Observable report: A local development port conflict. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A local development port conflict. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-a-local-development-port-conflict
+  - linux-and-developer-workstations
+  - troubleshoot-a-local-development-port-conflict
 related_procedures:
-- troubleshoot-a-local-development-port-conflict
+  - troubleshoot-a-local-development-port-conflict
 permalink: /symptoms/a-local-development-port-conflict/
 layout: article
 last_reviewed: '2026-08-02'

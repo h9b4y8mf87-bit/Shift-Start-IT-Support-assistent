@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- resolve-an-exhausted-dhcp-scope
-- servers-and-core-infrastructure
+  - resolve-an-exhausted-dhcp-scope
+  - servers-and-core-infrastructure
 related_procedures:
-- resolve-an-exhausted-dhcp-scope
+  - resolve-an-exhausted-dhcp-scope
 permalink: /symptoms/an-exhausted-dhcp-scope/
 layout: article
 last_reviewed: '2026-08-02'

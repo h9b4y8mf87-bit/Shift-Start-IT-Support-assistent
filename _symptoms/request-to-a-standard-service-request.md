@@ -6,10 +6,10 @@ content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- process-a-standard-service-request
-- service-desk-and-itsm
+  - process-a-standard-service-request
+  - service-desk-and-itsm
 related_procedures:
-- process-a-standard-service-request
+  - process-a-standard-service-request
 permalink: /symptoms/request-to-a-standard-service-request/
 layout: article
 last_reviewed: '2026-08-02'

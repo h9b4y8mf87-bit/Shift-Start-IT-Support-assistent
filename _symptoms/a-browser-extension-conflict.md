@@ -1,16 +1,15 @@
 ---
 title: A browser extension conflict
 slug: a-browser-extension-conflict
-description: 'Observable report: A browser extension conflict. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A browser extension conflict. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-browser-extension-conflict
+  - business-applications-and-browsers
+  - troubleshoot-a-browser-extension-conflict
 related_procedures:
-- troubleshoot-a-browser-extension-conflict
+  - troubleshoot-a-browser-extension-conflict
 permalink: /symptoms/a-browser-extension-conflict/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Need to prepare a device for reassignment
 slug: need-to-prepare-a-device-for-reassignment
-description: 'Observable report: Need to prepare a device for reassignment. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to prepare a device for reassignment. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- prepare-a-device-for-reassignment
+  - lifecycle-and-asset-management
+  - prepare-a-device-for-reassignment
 related_procedures:
-- prepare-a-device-for-reassignment
+  - prepare-a-device-for-reassignment
 permalink: /symptoms/need-to-prepare-a-device-for-reassignment/
 layout: article
 last_reviewed: '2026-08-02'

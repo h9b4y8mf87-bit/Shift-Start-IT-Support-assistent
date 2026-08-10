@@ -1,16 +1,15 @@
 ---
 title: Need to audit assigned equipment
 slug: need-to-audit-assigned-equipment
-description: 'Observable report: Need to audit assigned equipment. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to audit assigned equipment. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- audit-assigned-equipment
-- lifecycle-and-asset-management
+  - audit-assigned-equipment
+  - lifecycle-and-asset-management
 related_procedures:
-- audit-assigned-equipment
+  - audit-assigned-equipment
 permalink: /symptoms/need-to-audit-assigned-equipment/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Identity & Access Management
 severity: high
 tags:
-- identity-and-access-management
-- troubleshoot-single-sign-on-failure
+  - identity-and-access-management
+  - troubleshoot-single-sign-on-failure
 related_procedures:
-- troubleshoot-single-sign-on-failure
+  - troubleshoot-single-sign-on-failure
 permalink: /symptoms/single-sign-on-failure/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-failing-storage-device
+  - hardware-and-peripherals
+  - troubleshoot-a-failing-storage-device
 related_procedures:
-- troubleshoot-a-failing-storage-device
+  - troubleshoot-a-failing-storage-device
 permalink: /symptoms/a-failing-storage-device/
 layout: article
 last_reviewed: '2026-08-02'

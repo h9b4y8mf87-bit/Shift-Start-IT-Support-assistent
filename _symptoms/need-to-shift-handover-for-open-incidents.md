@@ -6,10 +6,10 @@ content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- perform-shift-handover-for-open-incidents
-- service-desk-and-itsm
+  - perform-shift-handover-for-open-incidents
+  - service-desk-and-itsm
 related_procedures:
-- perform-shift-handover-for-open-incidents
+  - perform-shift-handover-for-open-incidents
 permalink: /symptoms/need-to-shift-handover-for-open-incidents/
 layout: article
 last_reviewed: '2026-08-02'

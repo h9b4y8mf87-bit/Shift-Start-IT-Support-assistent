@@ -1,16 +1,15 @@
 ---
 title: Check domain controller health
 slug: check-domain-controller-health
-description: 'Observable report: Check domain controller health. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Check domain controller health. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- check-domain-controller-health
-- servers-and-core-infrastructure
+  - check-domain-controller-health
+  - servers-and-core-infrastructure
 related_procedures:
-- check-domain-controller-health
+  - check-domain-controller-health
 permalink: /symptoms/check-domain-controller-health/
 layout: article
 last_reviewed: '2026-08-02'

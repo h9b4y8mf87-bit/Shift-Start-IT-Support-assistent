@@ -1,16 +1,15 @@
 ---
 title: SharePoint document synchronisation
 slug: sharepoint-document-synchronisation
-description: 'Observable report: SharePoint document synchronisation. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: SharePoint document synchronisation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-sharepoint-document-synchronisation
+  - microsoft-365-and-collaboration
+  - troubleshoot-sharepoint-document-synchronisation
 related_procedures:
-- troubleshoot-sharepoint-document-synchronisation
+  - troubleshoot-sharepoint-document-synchronisation
 permalink: /symptoms/sharepoint-document-synchronisation/
 layout: article
 last_reviewed: '2026-08-02'

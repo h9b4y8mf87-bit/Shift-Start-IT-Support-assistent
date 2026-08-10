@@ -1,16 +1,15 @@
 ---
 title: Audio or microphone on macOS
 slug: audio-or-microphone-on-macos
-description: 'Observable report: Audio or microphone on macOS. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Audio or microphone on macOS. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-audio-or-microphone-on-macos
+  - macos-endpoints
+  - troubleshoot-audio-or-microphone-on-macos
 related_procedures:
-- troubleshoot-audio-or-microphone-on-macos
+  - troubleshoot-audio-or-microphone-on-macos
 permalink: /symptoms/audio-or-microphone-on-macos/
 layout: article
 last_reviewed: '2026-08-02'

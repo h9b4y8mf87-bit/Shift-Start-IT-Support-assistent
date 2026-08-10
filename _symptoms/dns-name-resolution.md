@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-dns-name-resolution
+  - network-and-connectivity
+  - troubleshoot-dns-name-resolution
 related_procedures:
-- troubleshoot-dns-name-resolution
+  - troubleshoot-dns-name-resolution
 permalink: /symptoms/dns-name-resolution/
 layout: article
 last_reviewed: '2026-08-02'

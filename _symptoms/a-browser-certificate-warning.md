@@ -1,16 +1,15 @@
 ---
 title: A browser certificate warning
 slug: a-browser-certificate-warning
-description: 'Observable report: A browser certificate warning. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A browser certificate warning. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- security-and-compliance
-- troubleshoot-a-browser-certificate-warning
+  - security-and-compliance
+  - troubleshoot-a-browser-certificate-warning
 related_procedures:
-- troubleshoot-a-browser-certificate-warning
+  - troubleshoot-a-browser-certificate-warning
 permalink: /symptoms/a-browser-certificate-warning/
 layout: article
 last_reviewed: '2026-08-02'

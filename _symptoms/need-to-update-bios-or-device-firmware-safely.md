@@ -1,16 +1,15 @@
 ---
 title: Need to update BIOS or device firmware safely
 slug: need-to-update-bios-or-device-firmware-safely
-description: 'Observable report: Need to update BIOS or device firmware safely. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to update BIOS or device firmware safely. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- update-bios-or-device-firmware-safely
-- windows-endpoints
+  - update-bios-or-device-firmware-safely
+  - windows-endpoints
 related_procedures:
-- update-bios-or-device-firmware-safely
+  - update-bios-or-device-firmware-safely
 permalink: /symptoms/need-to-update-bios-or-device-firmware-safely/
 layout: article
 last_reviewed: '2026-08-02'

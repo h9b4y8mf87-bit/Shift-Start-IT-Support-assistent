@@ -1,16 +1,15 @@
 ---
 title: Outlook that will not open
 slug: outlook-that-will-not-open
-description: 'Observable report: Outlook that will not open. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Outlook that will not open. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: high
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-outlook-that-will-not-open
+  - microsoft-365-and-collaboration
+  - troubleshoot-outlook-that-will-not-open
 related_procedures:
-- troubleshoot-outlook-that-will-not-open
+  - troubleshoot-outlook-that-will-not-open
 permalink: /symptoms/outlook-that-will-not-open/
 layout: article
 last_reviewed: '2026-08-02'

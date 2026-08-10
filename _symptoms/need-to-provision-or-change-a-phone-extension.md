@@ -1,16 +1,15 @@
 ---
 title: Need to provision or change a phone extension
 slug: need-to-provision-or-change-a-phone-extension
-description: 'Observable report: Need to provision or change a phone extension. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to provision or change a phone extension. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- provision-or-change-a-phone-extension
-- voice-telephony-and-meeting-rooms
+  - provision-or-change-a-phone-extension
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- provision-or-change-a-phone-extension
+  - provision-or-change-a-phone-extension
 permalink: /symptoms/need-to-provision-or-change-a-phone-extension/
 layout: article
 last_reviewed: '2026-08-02'

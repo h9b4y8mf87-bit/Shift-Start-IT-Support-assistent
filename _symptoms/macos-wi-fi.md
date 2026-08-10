@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-macos-wi-fi
+  - macos-endpoints
+  - troubleshoot-macos-wi-fi
 related_procedures:
-- troubleshoot-macos-wi-fi
+  - troubleshoot-macos-wi-fi
 permalink: /symptoms/macos-wi-fi/
 layout: article
 last_reviewed: '2026-08-02'

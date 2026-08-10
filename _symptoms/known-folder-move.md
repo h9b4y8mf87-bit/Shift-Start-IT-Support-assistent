@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-known-folder-move
+  - microsoft-365-and-collaboration
+  - troubleshoot-known-folder-move
 related_procedures:
-- troubleshoot-known-folder-move
+  - troubleshoot-known-folder-move
 permalink: /symptoms/known-folder-move/
 layout: article
 last_reviewed: '2026-08-02'

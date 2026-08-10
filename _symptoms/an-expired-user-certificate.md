@@ -1,16 +1,15 @@
 ---
 title: An expired user certificate
 slug: an-expired-user-certificate
-description: 'Observable report: An expired user certificate. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: An expired user certificate. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- resolve-an-expired-user-certificate
+  - identity-and-access-management
+  - resolve-an-expired-user-certificate
 related_procedures:
-- resolve-an-expired-user-certificate
+  - resolve-an-expired-user-certificate
 permalink: /symptoms/an-expired-user-certificate/
 layout: article
 last_reviewed: '2026-08-02'

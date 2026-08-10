@@ -3,13 +3,13 @@ title: A VDI profile issue
 slug: a-vdi-profile-issue
 description: 'Observable report: A VDI profile issue. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-a-vdi-profile-issue
+  - remote-access-vdi-and-daas
+  - troubleshoot-a-vdi-profile-issue
 related_procedures:
-- troubleshoot-a-vdi-profile-issue
+  - troubleshoot-a-vdi-profile-issue
 permalink: /symptoms/a-vdi-profile-issue/
 layout: article
 last_reviewed: '2026-08-02'

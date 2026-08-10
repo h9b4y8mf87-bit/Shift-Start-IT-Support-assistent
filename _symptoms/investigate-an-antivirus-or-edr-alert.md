@@ -1,16 +1,15 @@
 ---
 title: Investigate an antivirus or EDR alert
 slug: investigate-an-antivirus-or-edr-alert
-description: 'Observable report: Investigate an antivirus or EDR alert. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Investigate an antivirus or EDR alert. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- investigate-an-antivirus-or-edr-alert
-- security-and-compliance
+  - investigate-an-antivirus-or-edr-alert
+  - security-and-compliance
 related_procedures:
-- investigate-an-antivirus-or-edr-alert
+  - investigate-an-antivirus-or-edr-alert
 permalink: /symptoms/investigate-an-antivirus-or-edr-alert/
 layout: article
 last_reviewed: '2026-08-02'

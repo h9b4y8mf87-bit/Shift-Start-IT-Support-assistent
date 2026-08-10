@@ -1,9 +1,7 @@
 ---
 title: Resolve Outlook crashes or failure to open
 slug: outlook-crashes
-description: >-
-  Isolate add-in, profile, navigation-pane and Office-installation failures without destroying the existing mail
-  profile.
+description: 'Isolate add-in, profile, navigation-pane and Office-installation failures without destroying the existing mail profile.'
 content_type: procedure
 category: Microsoft 365 & Collaboration
 severity: medium
@@ -18,17 +16,13 @@ tags:
 error_codes:
   - Cannot start Microsoft Outlook
   - Outlook has stopped working
-tldr: >-
-  Test Classic Outlook in safe mode, isolate add-ins, reset the navigation pane, repair Office and test a temporary mail
-  profile without deleting the original profile.
+tldr: 'Test Classic Outlook in safe mode, isolate add-ins, reset the navigation pane, repair Office and test a temporary mail profile without deleting the original profile.'
 related_symptoms:
   - outlook-wont-open
 related_causes:
   - outlook-addin
 next_steps: []
-escalation: >-
-  Escalate to Microsoft 365 Support if Outlook fails in safe mode, a clean profile also fails, crash events indicate an
-  Office or Windows component fault, or mailbox synchronisation cannot be restored.
+escalation: 'Escalate to Microsoft 365 Support if Outlook fails in safe mode, a clean profile also fails, crash events indicate an Office or Windows component fault, or mailbox synchronisation cannot be restored.'
 risk_model: impact-v1
 risk_basis: Medium impact - the desktop client is degraded while an approved alternative mail-access path may exist.
 verification_priority: P2
@@ -41,10 +35,8 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references:
-  - https://support.microsoft.com/office/lifecycle/command-line-switches-for-microsoft-office-products
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+  - 'https://support.microsoft.com/office/lifecycle/command-line-switches-for-microsoft-office-products'
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

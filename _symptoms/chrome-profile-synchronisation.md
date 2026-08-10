@@ -1,16 +1,15 @@
 ---
 title: Chrome profile synchronisation
 slug: chrome-profile-synchronisation
-description: 'Observable report: Chrome profile synchronisation. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Chrome profile synchronisation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- troubleshoot-chrome-profile-synchronisation
+  - google-workspace-and-web-collaboration
+  - troubleshoot-chrome-profile-synchronisation
 related_procedures:
-- troubleshoot-chrome-profile-synchronisation
+  - troubleshoot-chrome-profile-synchronisation
 permalink: /symptoms/chrome-profile-synchronisation/
 layout: article
 last_reviewed: '2026-08-02'

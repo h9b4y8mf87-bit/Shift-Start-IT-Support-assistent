@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-outlook-search
+  - microsoft-365-and-collaboration
+  - troubleshoot-outlook-search
 related_procedures:
-- troubleshoot-outlook-search
+  - troubleshoot-outlook-search
 permalink: /symptoms/outlook-search/
 layout: article
 last_reviewed: '2026-08-02'

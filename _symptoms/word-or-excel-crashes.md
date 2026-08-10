@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-word-or-excel-crashes
+  - microsoft-365-and-collaboration
+  - troubleshoot-word-or-excel-crashes
 related_procedures:
-- troubleshoot-word-or-excel-crashes
+  - troubleshoot-word-or-excel-crashes
 permalink: /symptoms/word-or-excel-crashes/
 layout: article
 last_reviewed: '2026-08-02'

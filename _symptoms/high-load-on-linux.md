@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-high-load-on-linux
+  - linux-and-developer-workstations
+  - troubleshoot-high-load-on-linux
 related_procedures:
-- troubleshoot-high-load-on-linux
+  - troubleshoot-high-load-on-linux
 permalink: /symptoms/high-load-on-linux/
 layout: article
 last_reviewed: '2026-08-02'

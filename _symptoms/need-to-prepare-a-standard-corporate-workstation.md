@@ -1,16 +1,15 @@
 ---
 title: Need to prepare a standard corporate workstation
 slug: need-to-prepare-a-standard-corporate-workstation
-description: 'Observable report: Need to prepare a standard corporate workstation. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to prepare a standard corporate workstation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- prepare-a-standard-corporate-workstation
+  - lifecycle-and-asset-management
+  - prepare-a-standard-corporate-workstation
 related_procedures:
-- prepare-a-standard-corporate-workstation
+  - prepare-a-standard-corporate-workstation
 permalink: /symptoms/need-to-prepare-a-standard-corporate-workstation/
 layout: article
 last_reviewed: '2026-08-02'

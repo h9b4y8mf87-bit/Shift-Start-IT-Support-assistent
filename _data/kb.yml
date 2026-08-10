@@ -37,3 +37,12 @@ commercial:
   enabled: true
   enquiryEmail: ''
   responseWindow: 'Scoped after enquiry'
+
+enterprise:
+  enabled: true
+  requestProcedureEndpoint: ''
+  editSuggestionEndpoint: ''
+  errorReportEndpoint: ''
+  analyticsEndpoint: ''
+  affiliateTrackingEndpoint: ''
+  telemetryMode: local_browser

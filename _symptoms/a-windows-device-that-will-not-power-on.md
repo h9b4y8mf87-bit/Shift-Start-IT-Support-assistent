@@ -1,16 +1,15 @@
 ---
 title: A Windows device that will not power on
 slug: a-windows-device-that-will-not-power-on
-description: 'Observable report: A Windows device that will not power on. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A Windows device that will not power on. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- troubleshoot-a-windows-device-that-will-not-power-on
-- windows-endpoints
+  - troubleshoot-a-windows-device-that-will-not-power-on
+  - windows-endpoints
 related_procedures:
-- troubleshoot-a-windows-device-that-will-not-power-on
+  - troubleshoot-a-windows-device-that-will-not-power-on
 permalink: /symptoms/a-windows-device-that-will-not-power-on/
 layout: article
 last_reviewed: '2026-08-02'

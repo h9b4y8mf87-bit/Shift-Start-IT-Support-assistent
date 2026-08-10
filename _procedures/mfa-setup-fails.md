@@ -1,7 +1,7 @@
 ---
 title: Resolve MFA setup or approval failure
 slug: mfa-setup-fails
-description: Resolve MFA registration loops, missing prompts, time drift and stale authentication methods safely.
+description: 'Resolve MFA registration loops, missing prompts, time drift and stale authentication methods safely.'
 content_type: procedure
 category: Identity & Access Management
 severity: high
@@ -17,18 +17,14 @@ error_codes:
   - registration failed
   - request denied
   - code invalid
-tldr: >-
-  Verify the user, confirm device time and network access, inspect registered methods, remove only an approved stale
-  method and complete a fresh MFA registration test.
+tldr: 'Verify the user, confirm device time and network access, inspect registered methods, remove only an approved stale method and complete a fresh MFA registration test.'
 related_symptoms:
   - cannot-sign-in
 related_causes:
   - stale-mfa-registration
 next_steps:
   - password-reset
-escalation: >-
-  Escalate to Identity & Access Management if identity cannot be verified, the tenant or Conditional Access policy
-  blocks registration, no secure method remains, or a fresh registration still fails.
+escalation: 'Escalate to Identity & Access Management if identity cannot be verified, the tenant or Conditional Access policy blocks registration, no secure method remains, or a fresh registration still fails.'
 risk_model: impact-v1
 risk_basis: High impact - failed MFA can block all user access and changes to authentication methods affect account security.
 verification_priority: P1
@@ -41,9 +37,7 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references: []
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

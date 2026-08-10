@@ -1,16 +1,15 @@
 ---
 title: Need to review and remove stale VM snapshots safely
 slug: need-to-review-and-remove-stale-vm-snapshots-safely
-description: 'Observable report: Need to review and remove stale VM snapshots safely. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to review and remove stale VM snapshots safely. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: medium
 tags:
-- cloud-and-virtualisation
-- review-and-remove-stale-vm-snapshots-safely
+  - cloud-and-virtualisation
+  - review-and-remove-stale-vm-snapshots-safely
 related_procedures:
-- review-and-remove-stale-vm-snapshots-safely
+  - review-and-remove-stale-vm-snapshots-safely
 permalink: /symptoms/need-to-review-and-remove-stale-vm-snapshots-safely/
 layout: article
 last_reviewed: '2026-08-02'

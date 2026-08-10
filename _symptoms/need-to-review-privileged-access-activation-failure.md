@@ -1,16 +1,15 @@
 ---
 title: Need to review privileged access activation failure
 slug: need-to-review-privileged-access-activation-failure
-description: 'Observable report: Need to review privileged access activation failure. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to review privileged access activation failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: high
 tags:
-- identity-and-access-management
-- review-privileged-access-activation-failure
+  - identity-and-access-management
+  - review-privileged-access-activation-failure
 related_procedures:
-- review-privileged-access-activation-failure
+  - review-privileged-access-activation-failure
 permalink: /symptoms/need-to-review-privileged-access-activation-failure/
 layout: article
 last_reviewed: '2026-08-02'

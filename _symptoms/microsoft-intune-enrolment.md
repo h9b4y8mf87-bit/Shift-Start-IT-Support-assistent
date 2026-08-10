@@ -1,16 +1,15 @@
 ---
 title: Microsoft Intune enrolment
 slug: microsoft-intune-enrolment
-description: 'Observable report: Microsoft Intune enrolment. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Microsoft Intune enrolment. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-microsoft-intune-enrolment
-- windows-endpoints
+  - troubleshoot-microsoft-intune-enrolment
+  - windows-endpoints
 related_procedures:
-- troubleshoot-microsoft-intune-enrolment
+  - troubleshoot-microsoft-intune-enrolment
 permalink: /symptoms/microsoft-intune-enrolment/
 layout: article
 last_reviewed: '2026-08-02'

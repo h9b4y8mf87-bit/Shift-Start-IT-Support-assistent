@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- repair-a-macos-keychain-issue
+  - macos-endpoints
+  - repair-a-macos-keychain-issue
 related_procedures:
-- repair-a-macos-keychain-issue
+  - repair-a-macos-keychain-issue
 permalink: /symptoms/a-macos-keychain-issue/
 layout: article
 last_reviewed: '2026-08-02'

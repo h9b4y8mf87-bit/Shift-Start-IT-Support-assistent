@@ -1,16 +1,15 @@
 ---
 title: Document a ticket to enterprise standard
 slug: document-a-ticket-to-enterprise-standard
-description: 'Observable report: Document a ticket to enterprise standard. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Document a ticket to enterprise standard. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- document-a-ticket-to-enterprise-standard
-- service-desk-and-itsm
+  - document-a-ticket-to-enterprise-standard
+  - service-desk-and-itsm
 related_procedures:
-- document-a-ticket-to-enterprise-standard
+  - document-a-ticket-to-enterprise-standard
 permalink: /symptoms/document-a-ticket-to-enterprise-standard/
 layout: article
 last_reviewed: '2026-08-02'

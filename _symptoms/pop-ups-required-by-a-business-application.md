@@ -1,16 +1,15 @@
 ---
 title: Pop-ups required by a business application
 slug: pop-ups-required-by-a-business-application
-description: 'Observable report: Pop-ups required by a business application. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Pop-ups required by a business application. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-pop-ups-required-by-a-business-application
+  - business-applications-and-browsers
+  - troubleshoot-pop-ups-required-by-a-business-application
 related_procedures:
-- troubleshoot-pop-ups-required-by-a-business-application
+  - troubleshoot-pop-ups-required-by-a-business-application
 permalink: /symptoms/pop-ups-required-by-a-business-application/
 layout: article
 last_reviewed: '2026-08-02'

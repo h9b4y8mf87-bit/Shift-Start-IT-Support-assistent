@@ -6,10 +6,10 @@ content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- troubleshoot-passwordless-sign-in
+  - identity-and-access-management
+  - troubleshoot-passwordless-sign-in
 related_procedures:
-- troubleshoot-passwordless-sign-in
+  - troubleshoot-passwordless-sign-in
 permalink: /symptoms/passwordless-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

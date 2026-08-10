@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- resolve-a-onedrive-sign-in-loop
+  - microsoft-365-and-collaboration
+  - resolve-a-onedrive-sign-in-loop
 related_procedures:
-- resolve-a-onedrive-sign-in-loop
+  - resolve-a-onedrive-sign-in-loop
 permalink: /symptoms/a-onedrive-sign-in-loop/
 layout: article
 last_reviewed: '2026-08-02'

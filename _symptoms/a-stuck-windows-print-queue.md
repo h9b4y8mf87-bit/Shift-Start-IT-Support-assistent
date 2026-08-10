@@ -1,16 +1,15 @@
 ---
 title: A stuck Windows print queue
 slug: a-stuck-windows-print-queue
-description: 'Observable report: A stuck Windows print queue. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A stuck Windows print queue. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- clear-a-stuck-windows-print-queue
-- printing-and-scanning
+  - clear-a-stuck-windows-print-queue
+  - printing-and-scanning
 related_procedures:
-- clear-a-stuck-windows-print-queue
+  - clear-a-stuck-windows-print-queue
 permalink: /symptoms/a-stuck-windows-print-queue/
 layout: article
 last_reviewed: '2026-08-02'

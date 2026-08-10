@@ -1,16 +1,15 @@
 ---
 title: A docking station power issue
 slug: a-docking-station-power-issue
-description: 'Observable report: A docking station power issue. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A docking station power issue. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-docking-station-power-issue
+  - hardware-and-peripherals
+  - troubleshoot-a-docking-station-power-issue
 related_procedures:
-- troubleshoot-a-docking-station-power-issue
+  - troubleshoot-a-docking-station-power-issue
 permalink: /symptoms/a-docking-station-power-issue/
 layout: article
 last_reviewed: '2026-08-02'

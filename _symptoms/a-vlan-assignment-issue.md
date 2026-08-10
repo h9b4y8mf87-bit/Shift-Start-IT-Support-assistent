@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- triage-a-vlan-assignment-issue
+  - network-and-connectivity
+  - triage-a-vlan-assignment-issue
 related_procedures:
-- triage-a-vlan-assignment-issue
+  - triage-a-vlan-assignment-issue
 permalink: /symptoms/a-vlan-assignment-issue/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-proxy-configuration
+  - network-and-connectivity
+  - troubleshoot-proxy-configuration
 related_procedures:
-- troubleshoot-proxy-configuration
+  - troubleshoot-proxy-configuration
 permalink: /symptoms/proxy-configuration/
 layout: article
 last_reviewed: '2026-08-02'

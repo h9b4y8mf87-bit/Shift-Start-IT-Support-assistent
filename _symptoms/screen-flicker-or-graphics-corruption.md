@@ -1,16 +1,15 @@
 ---
 title: Screen flicker or graphics corruption
 slug: screen-flicker-or-graphics-corruption
-description: 'Observable report: Screen flicker or graphics corruption. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Screen flicker or graphics corruption. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-screen-flicker-or-graphics-corruption
-- windows-endpoints
+  - troubleshoot-screen-flicker-or-graphics-corruption
+  - windows-endpoints
 related_procedures:
-- troubleshoot-screen-flicker-or-graphics-corruption
+  - troubleshoot-screen-flicker-or-graphics-corruption
 permalink: /symptoms/screen-flicker-or-graphics-corruption/
 layout: article
 last_reviewed: '2026-08-02'

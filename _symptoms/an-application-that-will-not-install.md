@@ -1,16 +1,15 @@
 ---
 title: An application that will not install
 slug: an-application-that-will-not-install
-description: 'Observable report: An application that will not install. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: An application that will not install. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- troubleshoot-an-application-that-will-not-install
-- windows-endpoints
+  - troubleshoot-an-application-that-will-not-install
+  - windows-endpoints
 related_procedures:
-- troubleshoot-an-application-that-will-not-install
+  - troubleshoot-an-application-that-will-not-install
 permalink: /symptoms/an-application-that-will-not-install/
 layout: article
 last_reviewed: '2026-08-02'

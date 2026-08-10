@@ -1,16 +1,15 @@
 ---
 title: Need to prepare and validate a high-priority video conference
 slug: need-to-prepare-and-validate-a-high-priority-video-conference
-description: 'Observable report: Need to prepare and validate a high-priority video conference. Select it with any
-  other symptoms to receive ranked procedures.'
+description: 'Observable report: Need to prepare and validate a high-priority video conference. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- prepare-and-validate-a-high-priority-video-conference
-- voice-telephony-and-meeting-rooms
+  - prepare-and-validate-a-high-priority-video-conference
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- prepare-and-validate-a-high-priority-video-conference
+  - prepare-and-validate-a-high-priority-video-conference
 permalink: /symptoms/need-to-prepare-and-validate-a-high-priority-video-conference/
 layout: article
 last_reviewed: '2026-08-02'

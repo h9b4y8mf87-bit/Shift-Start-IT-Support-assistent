@@ -1,9 +1,7 @@
 ---
 title: Troubleshoot a headset
 slug: troubleshoot-a-headset
-description: >-
-  Enterprise runbook to troubleshoot a headset without skipping evidence, verification, rollback or escalation
-  requirements.
+description: 'Enterprise runbook to troubleshoot a headset without skipping evidence, verification, rollback or escalation requirements.'
 content_type: procedure
 category: Hardware & Peripherals
 service: Hardware & Peripherals
@@ -21,10 +19,7 @@ tags:
   - l1-l2
   - troubleshoot
 error_codes: []
-tldr: >-
-  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
-  remediation for troubleshoot a headset, verify the original business task, and escalate with complete logs if recovery
-  is not achieved.
+tldr: 'Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot a headset, verify the original business task, and escalate with complete logs if recovery is not achieved.'
 related_symptoms:
   - a-headset
   - hardware-or-peripheral-is-not-functioning
@@ -35,14 +30,11 @@ related_causes: []
 related_commands: []
 next_steps:
   - general-workstation-triage
-escalation: >-
-  Escalate to Workplace Hardware or Vendor Support with the exact user or service impact, timestamps and timezone,
-  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
-  status and a clear statement of what remains broken.
+escalation: 'Escalate to Workplace Hardware or Vendor Support with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.'
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
-approval_required: Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.
+approval_required: 'Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.'
 permalink: /procedures/troubleshoot-a-headset/
 layout: article
 content_status: under_review

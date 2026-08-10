@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-a-development-proxy
+  - linux-and-developer-workstations
+  - troubleshoot-a-development-proxy
 related_procedures:
-- troubleshoot-a-development-proxy
+  - troubleshoot-a-development-proxy
 permalink: /symptoms/a-development-proxy/
 layout: article
 last_reviewed: '2026-08-02'

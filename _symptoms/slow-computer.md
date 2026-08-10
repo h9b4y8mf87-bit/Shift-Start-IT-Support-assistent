@@ -6,12 +6,12 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- performance
-- slow
+  - performance
+  - slow
 related_procedures:
-- slow-windows-pc
+  - slow-windows-pc
 related_causes:
-- resource-pressure
+  - resource-pressure
 permalink: /symptoms/slow-computer/
 layout: article
 ---

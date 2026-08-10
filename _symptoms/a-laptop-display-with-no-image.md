@@ -1,16 +1,15 @@
 ---
 title: A laptop display with no image
 slug: a-laptop-display-with-no-image
-description: 'Observable report: A laptop display with no image. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A laptop display with no image. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: high
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-laptop-display-with-no-image
+  - hardware-and-peripherals
+  - troubleshoot-a-laptop-display-with-no-image
 related_procedures:
-- troubleshoot-a-laptop-display-with-no-image
+  - troubleshoot-a-laptop-display-with-no-image
 permalink: /symptoms/a-laptop-display-with-no-image/
 layout: article
 last_reviewed: '2026-08-02'

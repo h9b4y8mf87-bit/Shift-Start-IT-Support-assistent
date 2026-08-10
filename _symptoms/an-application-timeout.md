@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-an-application-timeout
+  - business-applications-and-browsers
+  - troubleshoot-an-application-timeout
 related_procedures:
-- troubleshoot-an-application-timeout
+  - troubleshoot-an-application-timeout
 permalink: /symptoms/an-application-timeout/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Disk-encryption compliance
 slug: disk-encryption-compliance
-description: 'Observable report: Disk-encryption compliance. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Disk-encryption compliance. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- security-and-compliance
-- troubleshoot-disk-encryption-compliance
+  - security-and-compliance
+  - troubleshoot-disk-encryption-compliance
 related_procedures:
-- troubleshoot-disk-encryption-compliance
+  - troubleshoot-disk-encryption-compliance
 permalink: /symptoms/disk-encryption-compliance/
 layout: article
 last_reviewed: '2026-08-02'

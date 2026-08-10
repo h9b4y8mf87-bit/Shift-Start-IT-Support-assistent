@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-a-captive-portal
+  - network-and-connectivity
+  - troubleshoot-a-captive-portal
 related_procedures:
-- troubleshoot-a-captive-portal
+  - troubleshoot-a-captive-portal
 permalink: /symptoms/a-captive-portal/
 layout: article
 last_reviewed: '2026-08-02'

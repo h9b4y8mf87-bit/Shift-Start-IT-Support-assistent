@@ -6,10 +6,10 @@ content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- restore-a-disabled-user-account
+  - identity-and-access-management
+  - restore-a-disabled-user-account
 related_procedures:
-- restore-a-disabled-user-account
+  - restore-a-disabled-user-account
 permalink: /symptoms/a-disabled-user-account/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Need to link an incident to a recent change
 slug: need-to-link-an-incident-to-a-recent-change
-description: 'Observable report: Need to link an incident to a recent change. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to link an incident to a recent change. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- link-an-incident-to-a-recent-change
-- service-desk-and-itsm
+  - link-an-incident-to-a-recent-change
+  - service-desk-and-itsm
 related_procedures:
-- link-an-incident-to-a-recent-change
+  - link-an-incident-to-a-recent-change
 permalink: /symptoms/need-to-link-an-incident-to-a-recent-change/
 layout: article
 last_reviewed: '2026-08-02'

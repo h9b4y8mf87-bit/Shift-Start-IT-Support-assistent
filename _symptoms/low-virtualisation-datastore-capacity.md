@@ -1,16 +1,15 @@
 ---
 title: Low virtualisation datastore capacity
 slug: low-virtualisation-datastore-capacity
-description: 'Observable report: Low virtualisation datastore capacity. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Low virtualisation datastore capacity. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: medium
 tags:
-- cloud-and-virtualisation
-- resolve-low-virtualisation-datastore-capacity
+  - cloud-and-virtualisation
+  - resolve-low-virtualisation-datastore-capacity
 related_procedures:
-- resolve-low-virtualisation-datastore-capacity
+  - resolve-low-virtualisation-datastore-capacity
 permalink: /symptoms/low-virtualisation-datastore-capacity/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Need to remove an unauthorised browser extension
 slug: need-to-remove-an-unauthorised-browser-extension
-description: 'Observable report: Need to remove an unauthorised browser extension. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to remove an unauthorised browser extension. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- remove-an-unauthorised-browser-extension
-- security-and-compliance
+  - remove-an-unauthorised-browser-extension
+  - security-and-compliance
 related_procedures:
-- remove-an-unauthorised-browser-extension
+  - remove-an-unauthorised-browser-extension
 permalink: /symptoms/need-to-remove-an-unauthorised-browser-extension/
 layout: article
 last_reviewed: '2026-08-02'

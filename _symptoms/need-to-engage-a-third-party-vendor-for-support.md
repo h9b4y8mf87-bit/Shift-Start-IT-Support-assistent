@@ -1,16 +1,15 @@
 ---
 title: Need to engage a third-party vendor for support
 slug: need-to-engage-a-third-party-vendor-for-support
-description: 'Observable report: Need to engage a third-party vendor for support. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to engage a third-party vendor for support. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- engage-a-third-party-vendor-for-support
-- service-desk-and-itsm
+  - engage-a-third-party-vendor-for-support
+  - service-desk-and-itsm
 related_procedures:
-- engage-a-third-party-vendor-for-support
+  - engage-a-third-party-vendor-for-support
 permalink: /symptoms/need-to-engage-a-third-party-vendor-for-support/
 layout: article
 last_reviewed: '2026-08-02'

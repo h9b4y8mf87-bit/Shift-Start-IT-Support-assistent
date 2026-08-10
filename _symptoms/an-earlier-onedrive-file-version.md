@@ -1,16 +1,15 @@
 ---
 title: An earlier OneDrive file version
 slug: an-earlier-onedrive-file-version
-description: 'Observable report: An earlier OneDrive file version. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: An earlier OneDrive file version. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- restore-an-earlier-onedrive-file-version
+  - microsoft-365-and-collaboration
+  - restore-an-earlier-onedrive-file-version
 related_procedures:
-- restore-an-earlier-onedrive-file-version
+  - restore-an-earlier-onedrive-file-version
 permalink: /symptoms/an-earlier-onedrive-file-version/
 layout: article
 last_reviewed: '2026-08-02'

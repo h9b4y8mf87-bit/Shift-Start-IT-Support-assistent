@@ -1,16 +1,15 @@
 ---
 title: Report and contain a phishing email
 slug: report-and-contain-a-phishing-email
-description: 'Observable report: Report and contain a phishing email. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Report and contain a phishing email. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- report-and-contain-a-phishing-email
+  - microsoft-365-and-collaboration
+  - report-and-contain-a-phishing-email
 related_procedures:
-- report-and-contain-a-phishing-email
+  - report-and-contain-a-phishing-email
 permalink: /symptoms/report-and-contain-a-phishing-email/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: A Google Workspace storage quota issue
 slug: a-google-workspace-storage-quota-issue
-description: 'Observable report: A Google Workspace storage quota issue. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A Google Workspace storage quota issue. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- resolve-a-google-workspace-storage-quota-issue
+  - google-workspace-and-web-collaboration
+  - resolve-a-google-workspace-storage-quota-issue
 related_procedures:
-- resolve-a-google-workspace-storage-quota-issue
+  - resolve-a-google-workspace-storage-quota-issue
 permalink: /symptoms/a-google-workspace-storage-quota-issue/
 layout: article
 last_reviewed: '2026-08-02'

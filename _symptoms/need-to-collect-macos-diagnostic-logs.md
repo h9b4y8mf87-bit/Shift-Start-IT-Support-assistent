@@ -1,16 +1,15 @@
 ---
 title: Need to collect macOS diagnostic logs
 slug: need-to-collect-macos-diagnostic-logs
-description: 'Observable report: Need to collect macOS diagnostic logs. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to collect macOS diagnostic logs. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- collect-macos-diagnostic-logs
-- macos-endpoints
+  - collect-macos-diagnostic-logs
+  - macos-endpoints
 related_procedures:
-- collect-macos-diagnostic-logs
+  - collect-macos-diagnostic-logs
 permalink: /symptoms/need-to-collect-macos-diagnostic-logs/
 layout: article
 last_reviewed: '2026-08-02'

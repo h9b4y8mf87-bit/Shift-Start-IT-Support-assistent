@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-a-room-mailbox
+  - microsoft-365-and-collaboration
+  - troubleshoot-a-room-mailbox
 related_procedures:
-- troubleshoot-a-room-mailbox
+  - troubleshoot-a-room-mailbox
 permalink: /symptoms/a-room-mailbox/
 layout: article
 last_reviewed: '2026-08-02'

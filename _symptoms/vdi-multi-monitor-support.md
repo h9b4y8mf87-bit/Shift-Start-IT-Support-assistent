@@ -1,16 +1,15 @@
 ---
 title: VDI multi-monitor support
 slug: vdi-multi-monitor-support
-description: 'Observable report: VDI multi-monitor support. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: VDI multi-monitor support. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-vdi-multi-monitor-support
+  - remote-access-vdi-and-daas
+  - troubleshoot-vdi-multi-monitor-support
 related_procedures:
-- troubleshoot-vdi-multi-monitor-support
+  - troubleshoot-vdi-multi-monitor-support
 permalink: /symptoms/vdi-multi-monitor-support/
 layout: article
 last_reviewed: '2026-08-02'

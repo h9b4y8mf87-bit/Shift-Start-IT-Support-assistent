@@ -1,16 +1,15 @@
 ---
 title: Need to create or update a knowledge article
 slug: need-to-create-or-update-a-knowledge-article
-description: 'Observable report: Need to create or update a knowledge article. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to create or update a knowledge article. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- create-or-update-a-knowledge-article
-- service-desk-and-itsm
+  - create-or-update-a-knowledge-article
+  - service-desk-and-itsm
 related_procedures:
-- create-or-update-a-knowledge-article
+  - create-or-update-a-knowledge-article
 permalink: /symptoms/need-to-create-or-update-a-knowledge-article/
 layout: article
 last_reviewed: '2026-08-02'

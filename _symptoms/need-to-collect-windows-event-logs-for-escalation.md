@@ -1,16 +1,15 @@
 ---
 title: Need to collect Windows event logs for escalation
 slug: need-to-collect-windows-event-logs-for-escalation
-description: 'Observable report: Need to collect Windows event logs for escalation. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to collect Windows event logs for escalation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- collect-windows-event-logs-for-escalation
-- windows-endpoints
+  - collect-windows-event-logs-for-escalation
+  - windows-endpoints
 related_procedures:
-- collect-windows-event-logs-for-escalation
+  - collect-windows-event-logs-for-escalation
 permalink: /symptoms/need-to-collect-windows-event-logs-for-escalation/
 layout: article
 last_reviewed: '2026-08-02'

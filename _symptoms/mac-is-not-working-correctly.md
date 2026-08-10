@@ -1,43 +1,42 @@
 ---
 title: Mac is not working correctly
 slug: mac-is-not-working-correctly
-description: 'Observable report: Mac is not working correctly. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Mac is not working correctly. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- collect-macos-diagnostic-logs
-- enrol-a-mac-into-mdm
-- macos-endpoints
-- provide-secure-remote-support-to-macos
-- recover-a-mac-requesting-a-filevault-recovery-key
-- repair-a-macos-keychain-issue
-- resolve-macos-application-permission-prompts
-- resolve-macos-mdm-compliance-failure
-- troubleshoot-a-certificate-on-macos
-- troubleshoot-a-macos-kernel-panic
-- troubleshoot-an-external-display-on-macos
-- troubleshoot-audio-or-microphone-on-macos
+  - collect-macos-diagnostic-logs
+  - enrol-a-mac-into-mdm
+  - macos-endpoints
+  - provide-secure-remote-support-to-macos
+  - recover-a-mac-requesting-a-filevault-recovery-key
+  - repair-a-macos-keychain-issue
+  - resolve-macos-application-permission-prompts
+  - resolve-macos-mdm-compliance-failure
+  - troubleshoot-a-certificate-on-macos
+  - troubleshoot-a-macos-kernel-panic
+  - troubleshoot-an-external-display-on-macos
+  - troubleshoot-audio-or-microphone-on-macos
 related_procedures:
-- collect-macos-diagnostic-logs
-- enrol-a-mac-into-mdm
-- provide-secure-remote-support-to-macos
-- recover-a-mac-requesting-a-filevault-recovery-key
-- repair-a-macos-keychain-issue
-- resolve-macos-application-permission-prompts
-- resolve-macos-mdm-compliance-failure
-- troubleshoot-a-certificate-on-macos
-- troubleshoot-a-macos-kernel-panic
-- troubleshoot-an-external-display-on-macos
-- troubleshoot-audio-or-microphone-on-macos
-- troubleshoot-camera-access-on-macos
-- troubleshoot-macos-disk-space
-- troubleshoot-macos-sign-in-failure
-- troubleshoot-macos-software-update
-- troubleshoot-macos-vpn
-- troubleshoot-macos-wi-fi
-- troubleshoot-printing-from-macos
+  - collect-macos-diagnostic-logs
+  - enrol-a-mac-into-mdm
+  - provide-secure-remote-support-to-macos
+  - recover-a-mac-requesting-a-filevault-recovery-key
+  - repair-a-macos-keychain-issue
+  - resolve-macos-application-permission-prompts
+  - resolve-macos-mdm-compliance-failure
+  - troubleshoot-a-certificate-on-macos
+  - troubleshoot-a-macos-kernel-panic
+  - troubleshoot-an-external-display-on-macos
+  - troubleshoot-audio-or-microphone-on-macos
+  - troubleshoot-camera-access-on-macos
+  - troubleshoot-macos-disk-space
+  - troubleshoot-macos-sign-in-failure
+  - troubleshoot-macos-software-update
+  - troubleshoot-macos-vpn
+  - troubleshoot-macos-wi-fi
+  - troubleshoot-printing-from-macos
 permalink: /symptoms/mac-is-not-working-correctly/
 layout: article
 last_reviewed: '2026-08-02'

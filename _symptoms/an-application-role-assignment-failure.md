@@ -1,16 +1,15 @@
 ---
 title: An application role assignment failure
 slug: an-application-role-assignment-failure
-description: 'Observable report: An application role assignment failure. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: An application role assignment failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: high
 tags:
-- identity-and-access-management
-- resolve-an-application-role-assignment-failure
+  - identity-and-access-management
+  - resolve-an-application-role-assignment-failure
 related_procedures:
-- resolve-an-application-role-assignment-failure
+  - resolve-an-application-role-assignment-failure
 permalink: /symptoms/an-application-role-assignment-failure/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-onedrive-synchronisation
+  - microsoft-365-and-collaboration
+  - troubleshoot-onedrive-synchronisation
 related_procedures:
-- troubleshoot-onedrive-synchronisation
+  - troubleshoot-onedrive-synchronisation
 permalink: /symptoms/onedrive-synchronisation/
 layout: article
 last_reviewed: '2026-08-02'

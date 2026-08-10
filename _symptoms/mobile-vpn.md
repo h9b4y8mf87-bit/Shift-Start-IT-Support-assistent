@@ -6,10 +6,10 @@ content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- troubleshoot-mobile-vpn
+  - mobile-devices-and-mdm
+  - troubleshoot-mobile-vpn
 related_procedures:
-- troubleshoot-mobile-vpn
+  - troubleshoot-mobile-vpn
 permalink: /symptoms/mobile-vpn/
 layout: article
 last_reviewed: '2026-08-02'

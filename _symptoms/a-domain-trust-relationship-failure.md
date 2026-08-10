@@ -1,16 +1,15 @@
 ---
 title: A domain trust relationship failure
 slug: a-domain-trust-relationship-failure
-description: 'Observable report: A domain trust relationship failure. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A domain trust relationship failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: high
 tags:
-- identity-and-access-management
-- resolve-a-domain-trust-relationship-failure
+  - identity-and-access-management
+  - resolve-a-domain-trust-relationship-failure
 related_procedures:
-- resolve-a-domain-trust-relationship-failure
+  - resolve-a-domain-trust-relationship-failure
 permalink: /symptoms/a-domain-trust-relationship-failure/
 layout: article
 last_reviewed: '2026-08-02'

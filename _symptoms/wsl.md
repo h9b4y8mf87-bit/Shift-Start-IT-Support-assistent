@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-wsl
+  - linux-and-developer-workstations
+  - troubleshoot-wsl
 related_procedures:
-- troubleshoot-wsl
+  - troubleshoot-wsl
 permalink: /symptoms/wsl/
 layout: article
 last_reviewed: '2026-08-02'

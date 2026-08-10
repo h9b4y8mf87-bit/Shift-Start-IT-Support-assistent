@@ -1,16 +1,15 @@
 ---
 title: Need to prepare a device for warranty repair
 slug: need-to-prepare-a-device-for-warranty-repair
-description: 'Observable report: Need to prepare a device for warranty repair. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to prepare a device for warranty repair. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- prepare-a-device-for-warranty-repair
+  - hardware-and-peripherals
+  - prepare-a-device-for-warranty-repair
 related_procedures:
-- prepare-a-device-for-warranty-repair
+  - prepare-a-device-for-warranty-repair
 permalink: /symptoms/need-to-prepare-a-device-for-warranty-repair/
 layout: article
 last_reviewed: '2026-08-02'

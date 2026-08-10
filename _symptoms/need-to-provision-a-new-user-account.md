@@ -1,16 +1,15 @@
 ---
 title: Need to provision a new user account
 slug: need-to-provision-a-new-user-account
-description: 'Observable report: Need to provision a new user account. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to provision a new user account. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- provision-a-new-user-account
+  - identity-and-access-management
+  - provision-a-new-user-account
 related_procedures:
-- provision-a-new-user-account
+  - provision-a-new-user-account
 permalink: /symptoms/need-to-provision-a-new-user-account/
 layout: article
 last_reviewed: '2026-08-02'

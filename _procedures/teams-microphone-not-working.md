@@ -1,7 +1,7 @@
 ---
 title: Resolve a Teams microphone not working
 slug: teams-microphone-not-working
-description: Restore microphone input by checking physical mute, device selection, privacy permissions and Windows audio detection.
+description: 'Restore microphone input by checking physical mute, device selection, privacy permissions and Windows audio detection.'
 content_type: procedure
 category: Microsoft 365 & Collaboration
 severity: medium
@@ -15,19 +15,15 @@ tags:
   - permissions
 error_codes:
   - microphone not detected
-tldr: >-
-  Check physical mute, select the correct input in Teams, confirm Windows microphone privacy permission and test the
-  same device outside Teams before changing drivers.
+tldr: 'Check physical mute, select the correct input in Teams, confirm Windows microphone privacy permission and test the same device outside Teams before changing drivers.'
 related_symptoms:
   - microphone-fails
 related_causes:
   - wrong-audio-device
 next_steps: []
-escalation: >-
-  Escalate to Collaboration Support or Desktop Support if the microphone fails outside Teams, the audio endpoint is
-  absent or unhealthy, privacy policy blocks access, or the device fails on multiple systems.
+escalation: 'Escalate to Collaboration Support or Desktop Support if the microphone fails outside Teams, the audio endpoint is absent or unhealthy, privacy policy blocks access, or the device fails on multiple systems.'
 risk_model: impact-v1
-risk_basis: Medium impact - meeting audio is degraded while chat, phone audio or another approved device may provide a workaround.
+risk_basis: 'Medium impact - meeting audio is degraded while chat, phone audio or another approved device may provide a workaround.'
 verification_priority: P2
 last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/teams-microphone-not-working/
@@ -38,10 +34,8 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references:
-  - https://learn.microsoft.com/powershell/module/pnpdevice/get-pnpdevice
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+  - 'https://learn.microsoft.com/powershell/module/pnpdevice/get-pnpdevice'
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

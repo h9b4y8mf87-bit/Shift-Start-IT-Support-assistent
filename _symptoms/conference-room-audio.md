@@ -3,13 +3,13 @@ title: Conference-room audio
 slug: conference-room-audio
 description: 'Observable report: Conference-room audio. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-conference-room-audio
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-conference-room-audio
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-conference-room-audio
+  - troubleshoot-conference-room-audio
 permalink: /symptoms/conference-room-audio/
 layout: article
 last_reviewed: '2026-08-02'

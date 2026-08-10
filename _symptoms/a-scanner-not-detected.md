@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- troubleshoot-a-scanner-not-detected
+  - printing-and-scanning
+  - troubleshoot-a-scanner-not-detected
 related_procedures:
-- troubleshoot-a-scanner-not-detected
+  - troubleshoot-a-scanner-not-detected
 permalink: /symptoms/a-scanner-not-detected/
 layout: article
 last_reviewed: '2026-08-02'

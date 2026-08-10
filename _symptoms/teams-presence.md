@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-teams-presence
+  - microsoft-365-and-collaboration
+  - troubleshoot-teams-presence
 related_procedures:
-- troubleshoot-teams-presence
+  - troubleshoot-teams-presence
 permalink: /symptoms/teams-presence/
 layout: article
 last_reviewed: '2026-08-02'

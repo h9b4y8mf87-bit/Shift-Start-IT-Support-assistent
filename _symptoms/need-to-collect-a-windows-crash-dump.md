@@ -1,16 +1,15 @@
 ---
 title: Need to collect a Windows crash dump
 slug: need-to-collect-a-windows-crash-dump
-description: 'Observable report: Need to collect a Windows crash dump. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to collect a Windows crash dump. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- collect-a-windows-crash-dump
-- windows-endpoints
+  - collect-a-windows-crash-dump
+  - windows-endpoints
 related_procedures:
-- collect-a-windows-crash-dump
+  - collect-a-windows-crash-dump
 permalink: /symptoms/need-to-collect-a-windows-crash-dump/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: An asset inventory mismatch
 slug: an-asset-inventory-mismatch
-description: 'Observable report: An asset inventory mismatch. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: An asset inventory mismatch. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- correct-an-asset-inventory-mismatch
-- lifecycle-and-asset-management
+  - correct-an-asset-inventory-mismatch
+  - lifecycle-and-asset-management
 related_procedures:
-- correct-an-asset-inventory-mismatch
+  - correct-an-asset-inventory-mismatch
 permalink: /symptoms/an-asset-inventory-mismatch/
 layout: article
 last_reviewed: '2026-08-02'

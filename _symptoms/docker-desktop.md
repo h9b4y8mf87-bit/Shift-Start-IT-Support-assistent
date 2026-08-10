@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-docker-desktop
+  - linux-and-developer-workstations
+  - troubleshoot-docker-desktop
 related_procedures:
-- troubleshoot-docker-desktop
+  - troubleshoot-docker-desktop
 permalink: /symptoms/docker-desktop/
 layout: article
 last_reviewed: '2026-08-02'

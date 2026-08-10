@@ -1,43 +1,42 @@
 ---
 title: A macOS error or access issue is reported
 slug: a-macos-error-or-access-issue-is-reported
-description: 'Observable report: A macOS error or access issue is reported. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: A macOS error or access issue is reported. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- collect-macos-diagnostic-logs
-- enrol-a-mac-into-mdm
-- macos-endpoints
-- provide-secure-remote-support-to-macos
-- recover-a-mac-requesting-a-filevault-recovery-key
-- repair-a-macos-keychain-issue
-- resolve-macos-application-permission-prompts
-- resolve-macos-mdm-compliance-failure
-- troubleshoot-a-certificate-on-macos
-- troubleshoot-a-macos-kernel-panic
-- troubleshoot-an-external-display-on-macos
-- troubleshoot-audio-or-microphone-on-macos
+  - collect-macos-diagnostic-logs
+  - enrol-a-mac-into-mdm
+  - macos-endpoints
+  - provide-secure-remote-support-to-macos
+  - recover-a-mac-requesting-a-filevault-recovery-key
+  - repair-a-macos-keychain-issue
+  - resolve-macos-application-permission-prompts
+  - resolve-macos-mdm-compliance-failure
+  - troubleshoot-a-certificate-on-macos
+  - troubleshoot-a-macos-kernel-panic
+  - troubleshoot-an-external-display-on-macos
+  - troubleshoot-audio-or-microphone-on-macos
 related_procedures:
-- collect-macos-diagnostic-logs
-- enrol-a-mac-into-mdm
-- provide-secure-remote-support-to-macos
-- recover-a-mac-requesting-a-filevault-recovery-key
-- repair-a-macos-keychain-issue
-- resolve-macos-application-permission-prompts
-- resolve-macos-mdm-compliance-failure
-- troubleshoot-a-certificate-on-macos
-- troubleshoot-a-macos-kernel-panic
-- troubleshoot-an-external-display-on-macos
-- troubleshoot-audio-or-microphone-on-macos
-- troubleshoot-camera-access-on-macos
-- troubleshoot-macos-disk-space
-- troubleshoot-macos-sign-in-failure
-- troubleshoot-macos-software-update
-- troubleshoot-macos-vpn
-- troubleshoot-macos-wi-fi
-- troubleshoot-printing-from-macos
+  - collect-macos-diagnostic-logs
+  - enrol-a-mac-into-mdm
+  - provide-secure-remote-support-to-macos
+  - recover-a-mac-requesting-a-filevault-recovery-key
+  - repair-a-macos-keychain-issue
+  - resolve-macos-application-permission-prompts
+  - resolve-macos-mdm-compliance-failure
+  - troubleshoot-a-certificate-on-macos
+  - troubleshoot-a-macos-kernel-panic
+  - troubleshoot-an-external-display-on-macos
+  - troubleshoot-audio-or-microphone-on-macos
+  - troubleshoot-camera-access-on-macos
+  - troubleshoot-macos-disk-space
+  - troubleshoot-macos-sign-in-failure
+  - troubleshoot-macos-software-update
+  - troubleshoot-macos-vpn
+  - troubleshoot-macos-wi-fi
+  - troubleshoot-printing-from-macos
 permalink: /symptoms/a-macos-error-or-access-issue-is-reported/
 layout: article
 last_reviewed: '2026-08-02'

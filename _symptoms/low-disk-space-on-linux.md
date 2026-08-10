@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: high
 tags:
-- linux-and-developer-workstations
-- resolve-low-disk-space-on-linux
+  - linux-and-developer-workstations
+  - resolve-low-disk-space-on-linux
 related_procedures:
-- resolve-low-disk-space-on-linux
+  - resolve-low-disk-space-on-linux
 permalink: /symptoms/low-disk-space-on-linux/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Need access through an approved request
 slug: need-access-through-an-approved-request
-description: 'Observable report: Need access through an approved request. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need access through an approved request. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- grant-access-through-an-approved-request
-- identity-and-access-management
+  - grant-access-through-an-approved-request
+  - identity-and-access-management
 related_procedures:
-- grant-access-through-an-approved-request
+  - grant-access-through-an-approved-request
 permalink: /symptoms/need-access-through-an-approved-request/
 layout: article
 last_reviewed: '2026-08-02'

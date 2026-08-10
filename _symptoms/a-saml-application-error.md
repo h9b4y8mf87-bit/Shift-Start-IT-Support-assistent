@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-saml-application-error
+  - business-applications-and-browsers
+  - troubleshoot-a-saml-application-error
 related_procedures:
-- troubleshoot-a-saml-application-error
+  - troubleshoot-a-saml-application-error
 permalink: /symptoms/a-saml-application-error/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Replace a failed corporate device
 slug: replace-a-failed-corporate-device
-description: 'Observable report: Replace a failed corporate device. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Replace a failed corporate device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: high
 tags:
-- hardware-and-peripherals
-- replace-a-failed-corporate-device
+  - hardware-and-peripherals
+  - replace-a-failed-corporate-device
 related_procedures:
-- replace-a-failed-corporate-device
+  - replace-a-failed-corporate-device
 permalink: /symptoms/replace-a-failed-corporate-device/
 layout: article
 last_reviewed: '2026-08-02'

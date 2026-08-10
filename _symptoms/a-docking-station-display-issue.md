@@ -1,16 +1,15 @@
 ---
 title: A docking station display issue
 slug: a-docking-station-display-issue
-description: 'Observable report: A docking station display issue. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A docking station display issue. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-docking-station-display-issue
+  - hardware-and-peripherals
+  - troubleshoot-a-docking-station-display-issue
 related_procedures:
-- troubleshoot-a-docking-station-display-issue
+  - troubleshoot-a-docking-station-display-issue
 permalink: /symptoms/a-docking-station-display-issue/
 layout: article
 last_reviewed: '2026-08-02'

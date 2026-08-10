@@ -1,16 +1,15 @@
 ---
 title: Cloud application authentication
 slug: cloud-application-authentication
-description: 'Observable report: Cloud application authentication. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Cloud application authentication. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: medium
 tags:
-- cloud-and-virtualisation
-- troubleshoot-cloud-application-authentication
+  - cloud-and-virtualisation
+  - troubleshoot-cloud-application-authentication
 related_procedures:
-- troubleshoot-cloud-application-authentication
+  - troubleshoot-cloud-application-authentication
 permalink: /symptoms/cloud-application-authentication/
 layout: article
 last_reviewed: '2026-08-02'

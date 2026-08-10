@@ -1,16 +1,15 @@
 ---
 title: A Google Drive file version
 slug: a-google-drive-file-version
-description: 'Observable report: A Google Drive file version. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A Google Drive file version. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- restore-a-google-drive-file-version
+  - google-workspace-and-web-collaboration
+  - restore-a-google-drive-file-version
 related_procedures:
-- restore-a-google-drive-file-version
+  - restore-a-google-drive-file-version
 permalink: /symptoms/a-google-drive-file-version/
 layout: article
 last_reviewed: '2026-08-02'

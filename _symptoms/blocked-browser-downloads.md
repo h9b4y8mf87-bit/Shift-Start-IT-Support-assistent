@@ -1,16 +1,15 @@
 ---
 title: Blocked browser downloads
 slug: blocked-browser-downloads
-description: 'Observable report: Blocked browser downloads. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Blocked browser downloads. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: high
 tags:
-- business-applications-and-browsers
-- troubleshoot-blocked-browser-downloads
+  - business-applications-and-browsers
+  - troubleshoot-blocked-browser-downloads
 related_procedures:
-- troubleshoot-blocked-browser-downloads
+  - troubleshoot-blocked-browser-downloads
 permalink: /symptoms/blocked-browser-downloads/
 layout: article
 last_reviewed: '2026-08-02'

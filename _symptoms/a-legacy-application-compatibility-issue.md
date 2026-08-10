@@ -1,16 +1,15 @@
 ---
 title: A legacy application compatibility issue
 slug: a-legacy-application-compatibility-issue
-description: 'Observable report: A legacy application compatibility issue. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: A legacy application compatibility issue. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-legacy-application-compatibility-issue
+  - business-applications-and-browsers
+  - troubleshoot-a-legacy-application-compatibility-issue
 related_procedures:
-- troubleshoot-a-legacy-application-compatibility-issue
+  - troubleshoot-a-legacy-application-compatibility-issue
 permalink: /symptoms/a-legacy-application-compatibility-issue/
 layout: article
 last_reviewed: '2026-08-02'

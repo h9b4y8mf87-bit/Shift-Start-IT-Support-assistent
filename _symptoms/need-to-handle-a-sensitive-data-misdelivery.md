@@ -1,16 +1,15 @@
 ---
 title: Need to handle a sensitive-data misdelivery
 slug: need-to-handle-a-sensitive-data-misdelivery
-description: 'Observable report: Need to handle a sensitive-data misdelivery. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to handle a sensitive-data misdelivery. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- handle-a-sensitive-data-misdelivery
-- security-and-compliance
+  - handle-a-sensitive-data-misdelivery
+  - security-and-compliance
 related_procedures:
-- handle-a-sensitive-data-misdelivery
+  - handle-a-sensitive-data-misdelivery
 permalink: /symptoms/need-to-handle-a-sensitive-data-misdelivery/
 layout: article
 last_reviewed: '2026-08-02'

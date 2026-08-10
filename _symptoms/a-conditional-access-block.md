@@ -1,16 +1,15 @@
 ---
 title: A Conditional Access block
 slug: a-conditional-access-block
-description: 'Observable report: A Conditional Access block. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A Conditional Access block. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- resolve-a-conditional-access-block
+  - identity-and-access-management
+  - resolve-a-conditional-access-block
 related_procedures:
-- resolve-a-conditional-access-block
+  - resolve-a-conditional-access-block
 permalink: /symptoms/a-conditional-access-block/
 layout: article
 last_reviewed: '2026-08-02'

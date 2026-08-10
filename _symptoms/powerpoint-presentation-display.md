@@ -1,16 +1,15 @@
 ---
 title: PowerPoint presentation display
 slug: powerpoint-presentation-display
-description: 'Observable report: PowerPoint presentation display. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: PowerPoint presentation display. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-powerpoint-presentation-display
+  - microsoft-365-and-collaboration
+  - troubleshoot-powerpoint-presentation-display
 related_procedures:
-- troubleshoot-powerpoint-presentation-display
+  - troubleshoot-powerpoint-presentation-display
 permalink: /symptoms/powerpoint-presentation-display/
 layout: article
 last_reviewed: '2026-08-02'

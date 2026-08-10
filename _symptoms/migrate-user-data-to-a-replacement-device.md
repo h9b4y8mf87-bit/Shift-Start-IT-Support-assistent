@@ -1,16 +1,15 @@
 ---
 title: Migrate user data to a replacement device
 slug: migrate-user-data-to-a-replacement-device
-description: 'Observable report: Migrate user data to a replacement device. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Migrate user data to a replacement device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- migrate-user-data-to-a-replacement-device
+  - data-protection-backup-and-recovery
+  - migrate-user-data-to-a-replacement-device
 related_procedures:
-- migrate-user-data-to-a-replacement-device
+  - migrate-user-data-to-a-replacement-device
 permalink: /symptoms/migrate-user-data-to-a-replacement-device/
 layout: article
 last_reviewed: '2026-08-02'

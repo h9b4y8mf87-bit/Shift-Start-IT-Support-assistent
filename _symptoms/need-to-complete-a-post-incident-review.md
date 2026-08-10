@@ -1,16 +1,15 @@
 ---
 title: Need to complete a post-incident review
 slug: need-to-complete-a-post-incident-review
-description: 'Observable report: Need to complete a post-incident review. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to complete a post-incident review. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- complete-a-post-incident-review
-- service-desk-and-itsm
+  - complete-a-post-incident-review
+  - service-desk-and-itsm
 related_procedures:
-- complete-a-post-incident-review
+  - complete-a-post-incident-review
 permalink: /symptoms/need-to-complete-a-post-incident-review/
 layout: article
 last_reviewed: '2026-08-02'

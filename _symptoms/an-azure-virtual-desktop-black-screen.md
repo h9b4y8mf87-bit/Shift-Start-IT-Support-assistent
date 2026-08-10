@@ -1,16 +1,15 @@
 ---
 title: An Azure Virtual Desktop black screen
 slug: an-azure-virtual-desktop-black-screen
-description: 'Observable report: An Azure Virtual Desktop black screen. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: An Azure Virtual Desktop black screen. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- resolve-an-azure-virtual-desktop-black-screen
+  - remote-access-vdi-and-daas
+  - resolve-an-azure-virtual-desktop-black-screen
 related_procedures:
-- resolve-an-azure-virtual-desktop-black-screen
+  - resolve-an-azure-virtual-desktop-black-screen
 permalink: /symptoms/an-azure-virtual-desktop-black-screen/
 layout: article
 last_reviewed: '2026-08-02'

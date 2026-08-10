@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: high
 tags:
-- network-and-connectivity
-- troubleshoot-vpn-certificate-failure
+  - network-and-connectivity
+  - troubleshoot-vpn-certificate-failure
 related_procedures:
-- troubleshoot-vpn-certificate-failure
+  - troubleshoot-vpn-certificate-failure
 permalink: /symptoms/vpn-certificate-failure/
 layout: article
 last_reviewed: '2026-08-02'

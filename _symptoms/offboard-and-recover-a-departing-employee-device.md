@@ -1,16 +1,15 @@
 ---
 title: Offboard and recover a departing employee device
 slug: offboard-and-recover-a-departing-employee-device
-description: 'Observable report: Offboard and recover a departing employee device. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Offboard and recover a departing employee device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- offboard-and-recover-a-departing-employee-device
+  - lifecycle-and-asset-management
+  - offboard-and-recover-a-departing-employee-device
 related_procedures:
-- offboard-and-recover-a-departing-employee-device
+  - offboard-and-recover-a-departing-employee-device
 permalink: /symptoms/offboard-and-recover-a-departing-employee-device/
 layout: article
 last_reviewed: '2026-08-02'

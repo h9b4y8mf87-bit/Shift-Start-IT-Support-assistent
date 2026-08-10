@@ -1,16 +1,15 @@
 ---
 title: A default gateway failure
 slug: a-default-gateway-failure
-description: 'Observable report: A default gateway failure. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A default gateway failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: high
 tags:
-- network-and-connectivity
-- troubleshoot-a-default-gateway-failure
+  - network-and-connectivity
+  - troubleshoot-a-default-gateway-failure
 related_procedures:
-- troubleshoot-a-default-gateway-failure
+  - troubleshoot-a-default-gateway-failure
 permalink: /symptoms/a-default-gateway-failure/
 layout: article
 last_reviewed: '2026-08-02'

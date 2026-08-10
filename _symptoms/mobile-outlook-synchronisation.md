@@ -1,16 +1,15 @@
 ---
 title: Mobile Outlook synchronisation
 slug: mobile-outlook-synchronisation
-description: 'Observable report: Mobile Outlook synchronisation. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Mobile Outlook synchronisation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- troubleshoot-mobile-outlook-synchronisation
+  - mobile-devices-and-mdm
+  - troubleshoot-mobile-outlook-synchronisation
 related_procedures:
-- troubleshoot-mobile-outlook-synchronisation
+  - troubleshoot-mobile-outlook-synchronisation
 permalink: /symptoms/mobile-outlook-synchronisation/
 layout: article
 last_reviewed: '2026-08-02'

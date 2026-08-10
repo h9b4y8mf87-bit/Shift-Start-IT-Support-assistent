@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- troubleshoot-a-label-printer
+  - printing-and-scanning
+  - troubleshoot-a-label-printer
 related_procedures:
-- troubleshoot-a-label-printer
+  - troubleshoot-a-label-printer
 permalink: /symptoms/a-label-printer/
 layout: article
 last_reviewed: '2026-08-02'

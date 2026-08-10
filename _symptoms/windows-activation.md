@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-windows-activation
-- windows-endpoints
+  - troubleshoot-windows-activation
+  - windows-endpoints
 related_procedures:
-- troubleshoot-windows-activation
+  - troubleshoot-windows-activation
 permalink: /symptoms/windows-activation/
 layout: article
 last_reviewed: '2026-08-02'

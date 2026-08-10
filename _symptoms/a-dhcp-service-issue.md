@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- triage-a-dhcp-service-issue
+  - servers-and-core-infrastructure
+  - triage-a-dhcp-service-issue
 related_procedures:
-- triage-a-dhcp-service-issue
+  - triage-a-dhcp-service-issue
 permalink: /symptoms/a-dhcp-service-issue/
 layout: article
 last_reviewed: '2026-08-02'

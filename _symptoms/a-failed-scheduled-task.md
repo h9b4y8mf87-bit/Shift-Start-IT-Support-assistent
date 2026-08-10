@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: high
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-a-failed-scheduled-task
+  - servers-and-core-infrastructure
+  - troubleshoot-a-failed-scheduled-task
 related_procedures:
-- troubleshoot-a-failed-scheduled-task
+  - troubleshoot-a-failed-scheduled-task
 permalink: /symptoms/a-failed-scheduled-task/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,39 +1,38 @@
 ---
 title: A cloud or virtual resource is degraded
 slug: a-cloud-or-virtual-resource-is-degraded
-description: 'Observable report: A cloud or virtual resource is degraded. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A cloud or virtual resource is degraded. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: medium
 tags:
-- cloud-and-virtualisation
-- collect-cloud-resource-diagnostics
-- escalate-a-cloud-quota-or-capacity-issue
-- reset-approved-access-to-an-azure-virtual-machine
-- resolve-low-virtualisation-datastore-capacity
-- review-and-remove-stale-vm-snapshots-safely
-- triage-a-cloud-service-outage
-- troubleshoot-a-cloud-vpn-gateway
-- troubleshoot-a-hyper-v-virtual-machine-that-is-unresponsive
-- troubleshoot-a-load-balanced-application-endpoint
-- troubleshoot-a-vmware-virtual-machine-that-is-unresponsive
-- troubleshoot-an-aws-ec2-instance-that-is-unreachable
+  - cloud-and-virtualisation
+  - collect-cloud-resource-diagnostics
+  - escalate-a-cloud-quota-or-capacity-issue
+  - reset-approved-access-to-an-azure-virtual-machine
+  - resolve-low-virtualisation-datastore-capacity
+  - review-and-remove-stale-vm-snapshots-safely
+  - triage-a-cloud-service-outage
+  - troubleshoot-a-cloud-vpn-gateway
+  - troubleshoot-a-hyper-v-virtual-machine-that-is-unresponsive
+  - troubleshoot-a-load-balanced-application-endpoint
+  - troubleshoot-a-vmware-virtual-machine-that-is-unresponsive
+  - troubleshoot-an-aws-ec2-instance-that-is-unreachable
 related_procedures:
-- collect-cloud-resource-diagnostics
-- escalate-a-cloud-quota-or-capacity-issue
-- reset-approved-access-to-an-azure-virtual-machine
-- resolve-low-virtualisation-datastore-capacity
-- review-and-remove-stale-vm-snapshots-safely
-- triage-a-cloud-service-outage
-- troubleshoot-a-cloud-vpn-gateway
-- troubleshoot-a-hyper-v-virtual-machine-that-is-unresponsive
-- troubleshoot-a-load-balanced-application-endpoint
-- troubleshoot-a-vmware-virtual-machine-that-is-unresponsive
-- troubleshoot-an-aws-ec2-instance-that-is-unreachable
-- troubleshoot-an-azure-virtual-machine-that-is-unreachable
-- troubleshoot-cloud-application-authentication
-- troubleshoot-cloud-storage-access
+  - collect-cloud-resource-diagnostics
+  - escalate-a-cloud-quota-or-capacity-issue
+  - reset-approved-access-to-an-azure-virtual-machine
+  - resolve-low-virtualisation-datastore-capacity
+  - review-and-remove-stale-vm-snapshots-safely
+  - triage-a-cloud-service-outage
+  - troubleshoot-a-cloud-vpn-gateway
+  - troubleshoot-a-hyper-v-virtual-machine-that-is-unresponsive
+  - troubleshoot-a-load-balanced-application-endpoint
+  - troubleshoot-a-vmware-virtual-machine-that-is-unresponsive
+  - troubleshoot-an-aws-ec2-instance-that-is-unreachable
+  - troubleshoot-an-azure-virtual-machine-that-is-unreachable
+  - troubleshoot-cloud-application-authentication
+  - troubleshoot-cloud-storage-access
 permalink: /symptoms/a-cloud-or-virtual-resource-is-degraded/
 layout: article
 last_reviewed: '2026-08-02'

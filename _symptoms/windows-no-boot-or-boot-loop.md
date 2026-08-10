@@ -1,16 +1,15 @@
 ---
 title: Windows no-boot or boot loop
 slug: windows-no-boot-or-boot-loop
-description: 'Observable report: Windows no-boot or boot loop. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Windows no-boot or boot loop. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-windows-no-boot-or-boot-loop
-- windows-endpoints
+  - troubleshoot-windows-no-boot-or-boot-loop
+  - windows-endpoints
 related_procedures:
-- troubleshoot-windows-no-boot-or-boot-loop
+  - troubleshoot-windows-no-boot-or-boot-loop
 permalink: /symptoms/windows-no-boot-or-boot-loop/
 layout: article
 last_reviewed: '2026-08-02'

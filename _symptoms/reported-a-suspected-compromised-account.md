@@ -1,16 +1,15 @@
 ---
 title: Reported a suspected compromised account
 slug: reported-a-suspected-compromised-account
-description: 'Observable report: Reported a suspected compromised account. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Reported a suspected compromised account. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: critical
 tags:
-- identity-and-access-management
-- respond-to-a-suspected-compromised-account
+  - identity-and-access-management
+  - respond-to-a-suspected-compromised-account
 related_procedures:
-- respond-to-a-suspected-compromised-account
+  - respond-to-a-suspected-compromised-account
 permalink: /symptoms/reported-a-suspected-compromised-account/
 layout: article
 last_reviewed: '2026-08-02'

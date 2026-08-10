@@ -1,16 +1,15 @@
 ---
 title: A load-balanced application endpoint
 slug: a-load-balanced-application-endpoint
-description: 'Observable report: A load-balanced application endpoint. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A load-balanced application endpoint. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: medium
 tags:
-- cloud-and-virtualisation
-- troubleshoot-a-load-balanced-application-endpoint
+  - cloud-and-virtualisation
+  - troubleshoot-a-load-balanced-application-endpoint
 related_procedures:
-- troubleshoot-a-load-balanced-application-endpoint
+  - troubleshoot-a-load-balanced-application-endpoint
 permalink: /symptoms/a-load-balanced-application-endpoint/
 layout: article
 last_reviewed: '2026-08-02'

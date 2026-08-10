@@ -1,16 +1,15 @@
 ---
 title: A missing DLL or runtime dependency
 slug: a-missing-dll-or-runtime-dependency
-description: 'Observable report: A missing DLL or runtime dependency. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A missing DLL or runtime dependency. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- resolve-a-missing-dll-or-runtime-dependency
-- windows-endpoints
+  - resolve-a-missing-dll-or-runtime-dependency
+  - windows-endpoints
 related_procedures:
-- resolve-a-missing-dll-or-runtime-dependency
+  - resolve-a-missing-dll-or-runtime-dependency
 permalink: /symptoms/a-missing-dll-or-runtime-dependency/
 layout: article
 last_reviewed: '2026-08-02'

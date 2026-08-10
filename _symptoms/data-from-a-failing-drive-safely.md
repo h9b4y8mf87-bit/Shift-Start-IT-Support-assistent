@@ -1,16 +1,15 @@
 ---
 title: Data from a failing drive safely
 slug: data-from-a-failing-drive-safely
-description: 'Observable report: Data from a failing drive safely. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Data from a failing drive safely. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- recover-data-from-a-failing-drive-safely
+  - data-protection-backup-and-recovery
+  - recover-data-from-a-failing-drive-safely
 related_procedures:
-- recover-data-from-a-failing-drive-safely
+  - recover-data-from-a-failing-drive-safely
 permalink: /symptoms/data-from-a-failing-drive-safely/
 layout: article
 last_reviewed: '2026-08-02'

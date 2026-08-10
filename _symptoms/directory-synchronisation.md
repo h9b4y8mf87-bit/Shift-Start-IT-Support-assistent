@@ -1,16 +1,15 @@
 ---
 title: Directory synchronisation
 slug: directory-synchronisation
-description: 'Observable report: Directory synchronisation. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Directory synchronisation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- troubleshoot-directory-synchronisation
+  - identity-and-access-management
+  - troubleshoot-directory-synchronisation
 related_procedures:
-- troubleshoot-directory-synchronisation
+  - troubleshoot-directory-synchronisation
 permalink: /symptoms/directory-synchronisation/
 layout: article
 last_reviewed: '2026-08-02'

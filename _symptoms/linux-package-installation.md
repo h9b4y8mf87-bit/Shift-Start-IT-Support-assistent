@@ -1,16 +1,15 @@
 ---
 title: Linux package installation
 slug: linux-package-installation
-description: 'Observable report: Linux package installation. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Linux package installation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-linux-package-installation
+  - linux-and-developer-workstations
+  - troubleshoot-linux-package-installation
 related_procedures:
-- troubleshoot-linux-package-installation
+  - troubleshoot-linux-package-installation
 permalink: /symptoms/linux-package-installation/
 layout: article
 last_reviewed: '2026-08-02'

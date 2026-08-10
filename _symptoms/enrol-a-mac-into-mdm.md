@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- enrol-a-mac-into-mdm
-- macos-endpoints
+  - enrol-a-mac-into-mdm
+  - macos-endpoints
 related_procedures:
-- enrol-a-mac-into-mdm
+  - enrol-a-mac-into-mdm
 permalink: /symptoms/enrol-a-mac-into-mdm/
 layout: article
 last_reviewed: '2026-08-02'

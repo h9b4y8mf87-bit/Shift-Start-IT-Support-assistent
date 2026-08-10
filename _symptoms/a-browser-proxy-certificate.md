@@ -1,16 +1,15 @@
 ---
 title: A browser proxy certificate
 slug: a-browser-proxy-certificate
-description: 'Observable report: A browser proxy certificate. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A browser proxy certificate. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-browser-proxy-certificate
+  - business-applications-and-browsers
+  - troubleshoot-a-browser-proxy-certificate
 related_procedures:
-- troubleshoot-a-browser-proxy-certificate
+  - troubleshoot-a-browser-proxy-certificate
 permalink: /symptoms/a-browser-proxy-certificate/
 layout: article
 last_reviewed: '2026-08-02'

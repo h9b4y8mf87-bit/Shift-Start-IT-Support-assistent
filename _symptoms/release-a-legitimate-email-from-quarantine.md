@@ -1,16 +1,15 @@
 ---
 title: Release a legitimate email from quarantine
 slug: release-a-legitimate-email-from-quarantine
-description: 'Observable report: Release a legitimate email from quarantine. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Release a legitimate email from quarantine. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- release-a-legitimate-email-from-quarantine
+  - microsoft-365-and-collaboration
+  - release-a-legitimate-email-from-quarantine
 related_procedures:
-- release-a-legitimate-email-from-quarantine
+  - release-a-legitimate-email-from-quarantine
 permalink: /symptoms/release-a-legitimate-email-from-quarantine/
 layout: article
 last_reviewed: '2026-08-02'

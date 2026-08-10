@@ -1,16 +1,15 @@
 ---
 title: Need calendar delegate access
 slug: need-calendar-delegate-access
-description: 'Observable report: Need calendar delegate access. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Need calendar delegate access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- grant-calendar-delegate-access
-- identity-and-access-management
+  - grant-calendar-delegate-access
+  - identity-and-access-management
 related_procedures:
-- grant-calendar-delegate-access
+  - grant-calendar-delegate-access
 permalink: /symptoms/need-calendar-delegate-access/
 layout: article
 last_reviewed: '2026-08-02'

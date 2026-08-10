@@ -1,16 +1,15 @@
 ---
 title: Mobile application deployment
 slug: mobile-application-deployment
-description: 'Observable report: Mobile application deployment. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Mobile application deployment. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- troubleshoot-mobile-application-deployment
+  - mobile-devices-and-mdm
+  - troubleshoot-mobile-application-deployment
 related_procedures:
-- troubleshoot-mobile-application-deployment
+  - troubleshoot-mobile-application-deployment
 permalink: /symptoms/mobile-application-deployment/
 layout: article
 last_reviewed: '2026-08-02'

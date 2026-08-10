@@ -1,16 +1,15 @@
 ---
 title: Power BI sign-in or access
 slug: power-bi-sign-in-or-access
-description: 'Observable report: Power BI sign-in or access. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Power BI sign-in or access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-power-bi-sign-in-or-access
+  - microsoft-365-and-collaboration
+  - troubleshoot-power-bi-sign-in-or-access
 related_procedures:
-- troubleshoot-power-bi-sign-in-or-access
+  - troubleshoot-power-bi-sign-in-or-access
 permalink: /symptoms/power-bi-sign-in-or-access/
 layout: article
 last_reviewed: '2026-08-02'

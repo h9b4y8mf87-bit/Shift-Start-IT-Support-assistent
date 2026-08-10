@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-a-macos-kernel-panic
+  - macos-endpoints
+  - troubleshoot-a-macos-kernel-panic
 related_procedures:
-- troubleshoot-a-macos-kernel-panic
+  - troubleshoot-a-macos-kernel-panic
 permalink: /symptoms/a-macos-kernel-panic/
 layout: article
 last_reviewed: '2026-08-02'

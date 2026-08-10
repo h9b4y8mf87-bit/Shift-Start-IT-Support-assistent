@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-adobe-acrobat-sign-in
+  - business-applications-and-browsers
+  - troubleshoot-adobe-acrobat-sign-in
 related_procedures:
-- troubleshoot-adobe-acrobat-sign-in
+  - troubleshoot-adobe-acrobat-sign-in
 permalink: /symptoms/adobe-acrobat-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

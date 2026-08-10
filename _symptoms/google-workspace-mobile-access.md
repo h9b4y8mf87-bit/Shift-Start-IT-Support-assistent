@@ -1,16 +1,15 @@
 ---
 title: Google Workspace mobile access
 slug: google-workspace-mobile-access
-description: 'Observable report: Google Workspace mobile access. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Google Workspace mobile access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- troubleshoot-google-workspace-mobile-access
+  - google-workspace-and-web-collaboration
+  - troubleshoot-google-workspace-mobile-access
 related_procedures:
-- troubleshoot-google-workspace-mobile-access
+  - troubleshoot-google-workspace-mobile-access
 permalink: /symptoms/google-workspace-mobile-access/
 layout: article
 last_reviewed: '2026-08-02'

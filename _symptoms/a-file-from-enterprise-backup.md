@@ -1,16 +1,15 @@
 ---
 title: A file from enterprise backup
 slug: a-file-from-enterprise-backup
-description: 'Observable report: A file from enterprise backup. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A file from enterprise backup. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- restore-a-file-from-enterprise-backup
+  - data-protection-backup-and-recovery
+  - restore-a-file-from-enterprise-backup
 related_procedures:
-- restore-a-file-from-enterprise-backup
+  - restore-a-file-from-enterprise-backup
 permalink: /symptoms/a-file-from-enterprise-backup/
 layout: article
 last_reviewed: '2026-08-02'

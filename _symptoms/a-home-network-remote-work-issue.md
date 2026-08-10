@@ -1,16 +1,15 @@
 ---
 title: A home-network remote-work issue
 slug: a-home-network-remote-work-issue
-description: 'Observable report: A home-network remote-work issue. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A home-network remote-work issue. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- triage-a-home-network-remote-work-issue
+  - remote-access-vdi-and-daas
+  - triage-a-home-network-remote-work-issue
 related_procedures:
-- triage-a-home-network-remote-work-issue
+  - triage-a-home-network-remote-work-issue
 permalink: /symptoms/a-home-network-remote-work-issue/
 layout: article
 last_reviewed: '2026-08-02'

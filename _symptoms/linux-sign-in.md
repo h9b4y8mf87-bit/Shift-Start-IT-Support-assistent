@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-linux-sign-in
+  - linux-and-developer-workstations
+  - troubleshoot-linux-sign-in
 related_procedures:
-- troubleshoot-linux-sign-in
+  - troubleshoot-linux-sign-in
 permalink: /symptoms/linux-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

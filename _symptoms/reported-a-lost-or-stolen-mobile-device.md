@@ -1,16 +1,15 @@
 ---
 title: Reported a lost or stolen mobile device
 slug: reported-a-lost-or-stolen-mobile-device
-description: 'Observable report: Reported a lost or stolen mobile device. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Reported a lost or stolen mobile device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: critical
 tags:
-- mobile-devices-and-mdm
-- respond-to-a-lost-or-stolen-mobile-device
+  - mobile-devices-and-mdm
+  - respond-to-a-lost-or-stolen-mobile-device
 related_procedures:
-- respond-to-a-lost-or-stolen-mobile-device
+  - respond-to-a-lost-or-stolen-mobile-device
 permalink: /symptoms/reported-a-lost-or-stolen-mobile-device/
 layout: article
 last_reviewed: '2026-08-02'

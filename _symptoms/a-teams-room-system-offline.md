@@ -1,16 +1,15 @@
 ---
 title: A Teams Room system offline
 slug: a-teams-room-system-offline
-description: 'Observable report: A Teams Room system offline. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A Teams Room system offline. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-a-teams-room-system-offline
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-a-teams-room-system-offline
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-a-teams-room-system-offline
+  - troubleshoot-a-teams-room-system-offline
 permalink: /symptoms/a-teams-room-system-offline/
 layout: article
 last_reviewed: '2026-08-02'

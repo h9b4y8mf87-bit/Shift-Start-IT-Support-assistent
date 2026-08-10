@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- resolve-a-duplicate-ip-address
+  - network-and-connectivity
+  - resolve-a-duplicate-ip-address
 related_procedures:
-- resolve-a-duplicate-ip-address
+  - resolve-a-duplicate-ip-address
 permalink: /symptoms/a-duplicate-ip-address/
 layout: article
 last_reviewed: '2026-08-02'

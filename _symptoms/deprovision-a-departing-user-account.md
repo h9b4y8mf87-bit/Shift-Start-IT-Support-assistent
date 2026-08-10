@@ -1,16 +1,15 @@
 ---
 title: Deprovision a departing user account
 slug: deprovision-a-departing-user-account
-description: 'Observable report: Deprovision a departing user account. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Deprovision a departing user account. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- deprovision-a-departing-user-account
-- identity-and-access-management
+  - deprovision-a-departing-user-account
+  - identity-and-access-management
 related_procedures:
-- deprovision-a-departing-user-account
+  - deprovision-a-departing-user-account
 permalink: /symptoms/deprovision-a-departing-user-account/
 layout: article
 last_reviewed: '2026-08-02'

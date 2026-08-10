@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-a-web-filter-block
+  - network-and-connectivity
+  - troubleshoot-a-web-filter-block
 related_procedures:
-- troubleshoot-a-web-filter-block
+  - troubleshoot-a-web-filter-block
 permalink: /symptoms/a-web-filter-block/
 layout: article
 last_reviewed: '2026-08-02'

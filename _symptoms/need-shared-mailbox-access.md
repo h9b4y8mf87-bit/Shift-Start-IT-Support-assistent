@@ -1,16 +1,15 @@
 ---
 title: Need shared mailbox access
 slug: need-shared-mailbox-access
-description: 'Observable report: Need shared mailbox access. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Need shared mailbox access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- grant-shared-mailbox-access
-- identity-and-access-management
+  - grant-shared-mailbox-access
+  - identity-and-access-management
 related_procedures:
-- grant-shared-mailbox-access
+  - grant-shared-mailbox-access
 permalink: /symptoms/need-shared-mailbox-access/
 layout: article
 last_reviewed: '2026-08-02'

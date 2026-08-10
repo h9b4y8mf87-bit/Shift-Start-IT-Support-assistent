@@ -1,16 +1,15 @@
 ---
 title: Need to provision external guest access
 slug: need-to-provision-external-guest-access
-description: 'Observable report: Need to provision external guest access. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to provision external guest access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- provision-external-guest-access
+  - identity-and-access-management
+  - provision-external-guest-access
 related_procedures:
-- provision-external-guest-access
+  - provision-external-guest-access
 permalink: /symptoms/need-to-provision-external-guest-access/
 layout: article
 last_reviewed: '2026-08-02'

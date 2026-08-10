@@ -3,13 +3,13 @@ title: One-way audio
 slug: one-way-audio
 description: 'Observable report: One-way audio. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-one-way-audio
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-one-way-audio
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-one-way-audio
+  - troubleshoot-one-way-audio
 permalink: /symptoms/one-way-audio/
 layout: article
 last_reviewed: '2026-08-02'

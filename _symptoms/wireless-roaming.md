@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-wireless-roaming
+  - network-and-connectivity
+  - troubleshoot-wireless-roaming
 related_procedures:
-- troubleshoot-wireless-roaming
+  - troubleshoot-wireless-roaming
 permalink: /symptoms/wireless-roaming/
 layout: article
 last_reviewed: '2026-08-02'

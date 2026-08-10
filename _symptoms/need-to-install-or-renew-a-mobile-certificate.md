@@ -1,16 +1,15 @@
 ---
 title: Need to install or renew a mobile certificate
 slug: need-to-install-or-renew-a-mobile-certificate
-description: 'Observable report: Need to install or renew a mobile certificate. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to install or renew a mobile certificate. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- install-or-renew-a-mobile-certificate
-- mobile-devices-and-mdm
+  - install-or-renew-a-mobile-certificate
+  - mobile-devices-and-mdm
 related_procedures:
-- install-or-renew-a-mobile-certificate
+  - install-or-renew-a-mobile-certificate
 permalink: /symptoms/need-to-install-or-renew-a-mobile-certificate/
 layout: article
 last_reviewed: '2026-08-02'

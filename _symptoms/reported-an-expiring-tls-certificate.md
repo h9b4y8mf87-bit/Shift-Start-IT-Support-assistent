@@ -1,16 +1,15 @@
 ---
 title: Reported an expiring TLS certificate
 slug: reported-an-expiring-tls-certificate
-description: 'Observable report: Reported an expiring TLS certificate. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Reported an expiring TLS certificate. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- respond-to-an-expiring-tls-certificate
-- servers-and-core-infrastructure
+  - respond-to-an-expiring-tls-certificate
+  - servers-and-core-infrastructure
 related_procedures:
-- respond-to-an-expiring-tls-certificate
+  - respond-to-an-expiring-tls-certificate
 permalink: /symptoms/reported-an-expiring-tls-certificate/
 layout: article
 last_reviewed: '2026-08-02'

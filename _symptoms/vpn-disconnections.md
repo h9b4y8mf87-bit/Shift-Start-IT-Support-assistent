@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-vpn-disconnections
+  - network-and-connectivity
+  - troubleshoot-vpn-disconnections
 related_procedures:
-- troubleshoot-vpn-disconnections
+  - troubleshoot-vpn-disconnections
 permalink: /symptoms/vpn-disconnections/
 layout: article
 last_reviewed: '2026-08-02'

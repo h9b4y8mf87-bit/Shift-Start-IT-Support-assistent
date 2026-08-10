@@ -1,16 +1,15 @@
 ---
 title: Remote Desktop to a server
 slug: remote-desktop-to-a-server
-description: 'Observable report: Remote Desktop to a server. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Remote Desktop to a server. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-remote-desktop-to-a-server
+  - servers-and-core-infrastructure
+  - troubleshoot-remote-desktop-to-a-server
 related_procedures:
-- troubleshoot-remote-desktop-to-a-server
+  - troubleshoot-remote-desktop-to-a-server
 permalink: /symptoms/remote-desktop-to-a-server/
 layout: article
 last_reviewed: '2026-08-02'

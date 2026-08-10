@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- troubleshoot-universal-print
+  - printing-and-scanning
+  - troubleshoot-universal-print
 related_procedures:
-- troubleshoot-universal-print
+  - troubleshoot-universal-print
 permalink: /symptoms/universal-print/
 layout: article
 last_reviewed: '2026-08-02'

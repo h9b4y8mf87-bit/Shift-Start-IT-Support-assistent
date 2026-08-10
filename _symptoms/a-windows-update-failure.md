@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- troubleshoot-a-windows-update-failure
-- windows-endpoints
+  - troubleshoot-a-windows-update-failure
+  - windows-endpoints
 related_procedures:
-- troubleshoot-a-windows-update-failure
+  - troubleshoot-a-windows-update-failure
 permalink: /symptoms/a-windows-update-failure/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- triage-a-dns-service-issue
+  - servers-and-core-infrastructure
+  - triage-a-dns-service-issue
 related_procedures:
-- triage-a-dns-service-issue
+  - triage-a-dns-service-issue
 permalink: /symptoms/a-dns-service-issue/
 layout: article
 last_reviewed: '2026-08-02'

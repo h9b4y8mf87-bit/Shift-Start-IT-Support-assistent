@@ -6,12 +6,12 @@ content_type: symptom
 category: Windows Endpoints
 severity: critical
 tags:
-- bsod
-- boot
+  - bsod
+  - boot
 related_procedures:
-- bsod-0x0000007b
+  - bsod-0x0000007b
 related_causes:
-- boot-storage-path
+  - boot-storage-path
 permalink: /symptoms/windows-blue-screen/
 layout: article
 ---

@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-network-latency
+  - network-and-connectivity
+  - troubleshoot-network-latency
 related_procedures:
-- troubleshoot-network-latency
+  - troubleshoot-network-latency
 permalink: /symptoms/network-latency/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: A web server HTTP 503 error
 slug: a-web-server-http-503-error
-description: 'Observable report: A web server HTTP 503 error. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A web server HTTP 503 error. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- triage-a-web-server-http-503-error
+  - servers-and-core-infrastructure
+  - triage-a-web-server-http-503-error
 related_procedures:
-- triage-a-web-server-http-503-error
+  - triage-a-web-server-http-503-error
 permalink: /symptoms/a-web-server-http-503-error/
 layout: article
 last_reviewed: '2026-08-02'

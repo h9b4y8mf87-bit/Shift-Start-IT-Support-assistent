@@ -1,16 +1,15 @@
 ---
 title: Support a VIP or executive user
 slug: support-a-vip-or-executive-user
-description: 'Observable report: Support a VIP or executive user. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Support a VIP or executive user. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- service-desk-and-itsm
-- support-a-vip-or-executive-user
+  - service-desk-and-itsm
+  - support-a-vip-or-executive-user
 related_procedures:
-- support-a-vip-or-executive-user
+  - support-a-vip-or-executive-user
 permalink: /symptoms/support-a-vip-or-executive-user/
 layout: article
 last_reviewed: '2026-08-02'

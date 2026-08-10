@@ -1,7 +1,7 @@
 ---
 title: Resolve no network on a docking station
 slug: no-network-docking-station
-description: Isolate dock Ethernet failures across cable, port, adapter, driver and firmware layers.
+description: 'Isolate dock Ethernet failures across cable, port, adapter, driver and firmware layers.'
 content_type: procedure
 category: Network & Connectivity
 severity: medium
@@ -16,17 +16,13 @@ tags:
 error_codes:
   - Unidentified network
   - Network cable unplugged
-tldr: >-
-  Confirm the network path with a known-good cable and port, power-cycle the dock, inspect the dock NIC, then reset only
-  that adapter and apply approved firmware or driver updates.
+tldr: 'Confirm the network path with a known-good cable and port, power-cycle the dock, inspect the dock NIC, then reset only that adapter and apply approved firmware or driver updates.'
 related_symptoms:
   - dock-no-network
 related_causes:
   - dock-adapter-state
 next_steps: []
-escalation: >-
-  Escalate to Desktop Support or Network Operations if another device also fails on the same port, the dock Ethernet
-  adapter is absent, approved driver/firmware remediation fails, or there is evidence of a wider network issue.
+escalation: 'Escalate to Desktop Support or Network Operations if another device also fails on the same port, the dock Ethernet adapter is absent, approved driver/firmware remediation fails, or there is evidence of a wider network issue.'
 risk_model: impact-v1
 risk_basis: Medium impact - wired docking connectivity is degraded but another network path may provide a temporary workaround.
 verification_priority: P2
@@ -39,11 +35,9 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references:
-  - https://learn.microsoft.com/powershell/module/netadapter/disable-netadapter
-  - https://learn.microsoft.com/powershell/module/netadapter/enable-netadapter
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+  - 'https://learn.microsoft.com/powershell/module/netadapter/disable-netadapter'
+  - 'https://learn.microsoft.com/powershell/module/netadapter/enable-netadapter'
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

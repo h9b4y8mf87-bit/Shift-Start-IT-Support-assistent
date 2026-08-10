@@ -3,13 +3,13 @@ title: A softphone sign-in
 slug: a-softphone-sign-in
 description: 'Observable report: A softphone sign-in. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-a-softphone-sign-in
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-a-softphone-sign-in
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-a-softphone-sign-in
+  - troubleshoot-a-softphone-sign-in
 permalink: /symptoms/a-softphone-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

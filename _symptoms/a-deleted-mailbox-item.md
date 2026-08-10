@@ -3,13 +3,13 @@ title: A deleted mailbox item
 slug: a-deleted-mailbox-item
 description: 'Observable report: A deleted mailbox item. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- restore-a-deleted-mailbox-item
+  - data-protection-backup-and-recovery
+  - restore-a-deleted-mailbox-item
 related_procedures:
-- restore-a-deleted-mailbox-item
+  - restore-a-deleted-mailbox-item
 permalink: /symptoms/a-deleted-mailbox-item/
 layout: article
 last_reviewed: '2026-08-02'

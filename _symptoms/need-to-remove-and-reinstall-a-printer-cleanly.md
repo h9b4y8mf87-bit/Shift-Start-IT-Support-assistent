@@ -1,16 +1,15 @@
 ---
 title: Need to remove and reinstall a printer cleanly
 slug: need-to-remove-and-reinstall-a-printer-cleanly
-description: 'Observable report: Need to remove and reinstall a printer cleanly. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to remove and reinstall a printer cleanly. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- remove-and-reinstall-a-printer-cleanly
+  - printing-and-scanning
+  - remove-and-reinstall-a-printer-cleanly
 related_procedures:
-- remove-and-reinstall-a-printer-cleanly
+  - remove-and-reinstall-a-printer-cleanly
 permalink: /symptoms/need-to-remove-and-reinstall-a-printer-cleanly/
 layout: article
 last_reviewed: '2026-08-02'

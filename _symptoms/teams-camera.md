@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-teams-camera
+  - microsoft-365-and-collaboration
+  - troubleshoot-teams-camera
 related_procedures:
-- troubleshoot-teams-camera
+  - troubleshoot-teams-camera
 permalink: /symptoms/teams-camera/
 layout: article
 last_reviewed: '2026-08-02'

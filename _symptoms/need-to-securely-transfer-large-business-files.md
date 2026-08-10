@@ -1,16 +1,15 @@
 ---
 title: Need to securely transfer large business files
 slug: need-to-securely-transfer-large-business-files
-description: 'Observable report: Need to securely transfer large business files. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to securely transfer large business files. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- securely-transfer-large-business-files
+  - data-protection-backup-and-recovery
+  - securely-transfer-large-business-files
 related_procedures:
-- securely-transfer-large-business-files
+  - securely-transfer-large-business-files
 permalink: /symptoms/need-to-securely-transfer-large-business-files/
 layout: article
 last_reviewed: '2026-08-02'

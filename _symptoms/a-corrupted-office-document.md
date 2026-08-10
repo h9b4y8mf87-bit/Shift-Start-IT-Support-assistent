@@ -1,16 +1,15 @@
 ---
 title: A corrupted Office document
 slug: a-corrupted-office-document
-description: 'Observable report: A corrupted Office document. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A corrupted Office document. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- recover-a-corrupted-office-document
+  - data-protection-backup-and-recovery
+  - recover-a-corrupted-office-document
 related_procedures:
-- recover-a-corrupted-office-document
+  - recover-a-corrupted-office-document
 permalink: /symptoms/a-corrupted-office-document/
 layout: article
 last_reviewed: '2026-08-02'

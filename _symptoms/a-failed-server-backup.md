@@ -3,13 +3,13 @@ title: A failed server backup
 slug: a-failed-server-backup
 description: 'Observable report: A failed server backup. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: high
 tags:
-- data-protection-backup-and-recovery
-- troubleshoot-a-failed-server-backup
+  - data-protection-backup-and-recovery
+  - troubleshoot-a-failed-server-backup
 related_procedures:
-- troubleshoot-a-failed-server-backup
+  - troubleshoot-a-failed-server-backup
 permalink: /symptoms/a-failed-server-backup/
 layout: article
 last_reviewed: '2026-08-02'

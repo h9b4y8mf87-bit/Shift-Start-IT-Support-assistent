@@ -3,13 +3,13 @@ title: A Zoom Room system
 slug: a-zoom-room-system
 description: 'Observable report: A Zoom Room system. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-a-zoom-room-system
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-a-zoom-room-system
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-a-zoom-room-system
+  - troubleshoot-a-zoom-room-system
 permalink: /symptoms/a-zoom-room-system/
 layout: article
 last_reviewed: '2026-08-02'

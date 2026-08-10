@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-an-odbc-data-source
+  - servers-and-core-infrastructure
+  - troubleshoot-an-odbc-data-source
 related_procedures:
-- troubleshoot-an-odbc-data-source
+  - troubleshoot-an-odbc-data-source
 permalink: /symptoms/an-odbc-data-source/
 layout: article
 last_reviewed: '2026-08-02'

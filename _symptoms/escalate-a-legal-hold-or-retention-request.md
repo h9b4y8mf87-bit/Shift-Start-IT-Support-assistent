@@ -1,16 +1,15 @@
 ---
 title: Escalate a legal-hold or retention request
 slug: escalate-a-legal-hold-or-retention-request
-description: 'Observable report: Escalate a legal-hold or retention request. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Escalate a legal-hold or retention request. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- escalate-a-legal-hold-or-retention-request
+  - data-protection-backup-and-recovery
+  - escalate-a-legal-hold-or-retention-request
 related_procedures:
-- escalate-a-legal-hold-or-retention-request
+  - escalate-a-legal-hold-or-retention-request
 permalink: /symptoms/escalate-a-legal-hold-or-retention-request/
 layout: article
 last_reviewed: '2026-08-02'

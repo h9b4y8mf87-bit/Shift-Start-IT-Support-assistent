@@ -1,16 +1,15 @@
 ---
 title: Low disk space on Windows
 slug: low-disk-space-on-windows
-description: 'Observable report: Low disk space on Windows. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Low disk space on Windows. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- resolve-low-disk-space-on-windows
-- windows-endpoints
+  - resolve-low-disk-space-on-windows
+  - windows-endpoints
 related_procedures:
-- resolve-low-disk-space-on-windows
+  - resolve-low-disk-space-on-windows
 permalink: /symptoms/low-disk-space-on-windows/
 layout: article
 last_reviewed: '2026-08-02'

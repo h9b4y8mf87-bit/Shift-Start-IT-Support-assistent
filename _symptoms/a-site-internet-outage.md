@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: critical
 tags:
-- network-and-connectivity
-- triage-a-site-internet-outage
+  - network-and-connectivity
+  - triage-a-site-internet-outage
 related_procedures:
-- triage-a-site-internet-outage
+  - triage-a-site-internet-outage
 permalink: /symptoms/a-site-internet-outage/
 layout: article
 last_reviewed: '2026-08-02'

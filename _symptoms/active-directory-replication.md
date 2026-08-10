@@ -1,16 +1,15 @@
 ---
 title: Active Directory replication
 slug: active-directory-replication
-description: 'Observable report: Active Directory replication. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Active Directory replication. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-active-directory-replication
+  - servers-and-core-infrastructure
+  - troubleshoot-active-directory-replication
 related_procedures:
-- troubleshoot-active-directory-replication
+  - troubleshoot-active-directory-replication
 permalink: /symptoms/active-directory-replication/
 layout: article
 last_reviewed: '2026-08-02'

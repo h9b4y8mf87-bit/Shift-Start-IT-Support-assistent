@@ -1,16 +1,15 @@
 ---
 title: Meeting updates or cancellations
 slug: meeting-updates-or-cancellations
-description: 'Observable report: Meeting updates or cancellations. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Meeting updates or cancellations. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-meeting-updates-or-cancellations
+  - microsoft-365-and-collaboration
+  - troubleshoot-meeting-updates-or-cancellations
 related_procedures:
-- troubleshoot-meeting-updates-or-cancellations
+  - troubleshoot-meeting-updates-or-cancellations
 permalink: /symptoms/meeting-updates-or-cancellations/
 layout: article
 last_reviewed: '2026-08-02'

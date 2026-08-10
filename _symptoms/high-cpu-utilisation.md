@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- troubleshoot-high-cpu-utilisation
-- windows-endpoints
+  - troubleshoot-high-cpu-utilisation
+  - windows-endpoints
 related_procedures:
-- troubleshoot-high-cpu-utilisation
+  - troubleshoot-high-cpu-utilisation
 permalink: /symptoms/high-cpu-utilisation/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- troubleshoot-google-calendar-sharing
+  - google-workspace-and-web-collaboration
+  - troubleshoot-google-calendar-sharing
 related_procedures:
-- troubleshoot-google-calendar-sharing
+  - troubleshoot-google-calendar-sharing
 permalink: /symptoms/google-calendar-sharing/
 layout: article
 last_reviewed: '2026-08-02'

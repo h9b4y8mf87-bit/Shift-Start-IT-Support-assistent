@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-macos-disk-space
+  - macos-endpoints
+  - troubleshoot-macos-disk-space
 related_procedures:
-- troubleshoot-macos-disk-space
+  - troubleshoot-macos-disk-space
 permalink: /symptoms/macos-disk-space/
 layout: article
 last_reviewed: '2026-08-02'

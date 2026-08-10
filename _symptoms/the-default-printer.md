@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- set-or-repair-the-default-printer
+  - printing-and-scanning
+  - set-or-repair-the-default-printer
 related_procedures:
-- set-or-repair-the-default-printer
+  - set-or-repair-the-default-printer
 permalink: /symptoms/the-default-printer/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,12 +6,12 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- triage
-- workstation
-- vague-report
-- desktop
+  - triage
+  - workstation
+  - vague-report
+  - desktop
 related_procedures:
-- general-workstation-triage
+  - general-workstation-triage
 permalink: /symptoms/general-workstation-triage/
 layout: article
 last_reviewed: '2026-08-02'

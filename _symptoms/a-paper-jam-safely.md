@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- resolve-a-paper-jam-safely
+  - printing-and-scanning
+  - resolve-a-paper-jam-safely
 related_procedures:
-- resolve-a-paper-jam-safely
+  - resolve-a-paper-jam-safely
 permalink: /symptoms/a-paper-jam-safely/
 layout: article
 last_reviewed: '2026-08-02'

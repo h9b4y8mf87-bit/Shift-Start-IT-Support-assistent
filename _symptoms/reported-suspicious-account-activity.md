@@ -1,16 +1,15 @@
 ---
 title: Reported suspicious account activity
 slug: reported-suspicious-account-activity
-description: 'Observable report: Reported suspicious account activity. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Reported suspicious account activity. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- respond-to-suspicious-account-activity
-- security-and-compliance
+  - respond-to-suspicious-account-activity
+  - security-and-compliance
 related_procedures:
-- respond-to-suspicious-account-activity
+  - respond-to-suspicious-account-activity
 permalink: /symptoms/reported-suspicious-account-activity/
 layout: article
 last_reviewed: '2026-08-02'

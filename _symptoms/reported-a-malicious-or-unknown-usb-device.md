@@ -1,16 +1,15 @@
 ---
 title: Reported a malicious or unknown USB device
 slug: reported-a-malicious-or-unknown-usb-device
-description: 'Observable report: Reported a malicious or unknown USB device. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Reported a malicious or unknown USB device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- respond-to-a-malicious-or-unknown-usb-device
-- security-and-compliance
+  - respond-to-a-malicious-or-unknown-usb-device
+  - security-and-compliance
 related_procedures:
-- respond-to-a-malicious-or-unknown-usb-device
+  - respond-to-a-malicious-or-unknown-usb-device
 permalink: /symptoms/reported-a-malicious-or-unknown-usb-device/
 layout: article
 last_reviewed: '2026-08-02'

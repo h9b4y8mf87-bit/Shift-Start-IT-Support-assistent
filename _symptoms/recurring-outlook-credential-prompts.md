@@ -1,16 +1,15 @@
 ---
 title: Recurring Outlook credential prompts
 slug: recurring-outlook-credential-prompts
-description: 'Observable report: Recurring Outlook credential prompts. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Recurring Outlook credential prompts. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-recurring-outlook-credential-prompts
+  - microsoft-365-and-collaboration
+  - troubleshoot-recurring-outlook-credential-prompts
 related_procedures:
-- troubleshoot-recurring-outlook-credential-prompts
+  - troubleshoot-recurring-outlook-credential-prompts
 permalink: /symptoms/recurring-outlook-credential-prompts/
 layout: article
 last_reviewed: '2026-08-02'

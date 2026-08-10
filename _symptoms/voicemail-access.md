@@ -3,13 +3,13 @@ title: Voicemail access
 slug: voicemail-access
 description: 'Observable report: Voicemail access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-voicemail-access
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-voicemail-access
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-voicemail-access
+  - troubleshoot-voicemail-access
 permalink: /symptoms/voicemail-access/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-a-certificate-on-macos
+  - macos-endpoints
+  - troubleshoot-a-certificate-on-macos
 related_procedures:
-- troubleshoot-a-certificate-on-macos
+  - troubleshoot-a-certificate-on-macos
 permalink: /symptoms/a-certificate-on-macos/
 layout: article
 last_reviewed: '2026-08-02'

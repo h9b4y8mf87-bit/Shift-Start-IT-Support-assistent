@@ -1,16 +1,15 @@
 ---
 title: Migrate an authenticator to a replacement phone
 slug: migrate-an-authenticator-to-a-replacement-phone
-description: 'Observable report: Migrate an authenticator to a replacement phone. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Migrate an authenticator to a replacement phone. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- migrate-an-authenticator-to-a-replacement-phone
-- mobile-devices-and-mdm
+  - migrate-an-authenticator-to-a-replacement-phone
+  - mobile-devices-and-mdm
 related_procedures:
-- migrate-an-authenticator-to-a-replacement-phone
+  - migrate-an-authenticator-to-a-replacement-phone
 permalink: /symptoms/migrate-an-authenticator-to-a-replacement-phone/
 layout: article
 last_reviewed: '2026-08-02'

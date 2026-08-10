@@ -1,16 +1,15 @@
 ---
 title: A zero-trust network client
 slug: a-zero-trust-network-client
-description: 'Observable report: A zero-trust network client. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A zero-trust network client. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-a-zero-trust-network-client
+  - network-and-connectivity
+  - troubleshoot-a-zero-trust-network-client
 related_procedures:
-- troubleshoot-a-zero-trust-network-client
+  - troubleshoot-a-zero-trust-network-client
 permalink: /symptoms/a-zero-trust-network-client/
 layout: article
 last_reviewed: '2026-08-02'

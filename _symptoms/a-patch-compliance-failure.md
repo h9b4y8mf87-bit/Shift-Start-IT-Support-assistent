@@ -1,16 +1,15 @@
 ---
 title: A patch compliance failure
 slug: a-patch-compliance-failure
-description: 'Observable report: A patch compliance failure. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A patch compliance failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- resolve-a-patch-compliance-failure
-- windows-endpoints
+  - resolve-a-patch-compliance-failure
+  - windows-endpoints
 related_procedures:
-- resolve-a-patch-compliance-failure
+  - resolve-a-patch-compliance-failure
 permalink: /symptoms/a-patch-compliance-failure/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- troubleshoot-gmail-send-or-receive
+  - google-workspace-and-web-collaboration
+  - troubleshoot-gmail-send-or-receive
 related_procedures:
-- troubleshoot-gmail-send-or-receive
+  - troubleshoot-gmail-send-or-receive
 permalink: /symptoms/gmail-send-or-receive/
 layout: article
 last_reviewed: '2026-08-02'

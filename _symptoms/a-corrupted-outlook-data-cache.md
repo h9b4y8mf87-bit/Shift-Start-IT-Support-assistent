@@ -1,16 +1,15 @@
 ---
 title: A corrupted Outlook data cache
 slug: a-corrupted-outlook-data-cache
-description: 'Observable report: A corrupted Outlook data cache. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A corrupted Outlook data cache. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- repair-a-corrupted-outlook-data-cache
+  - microsoft-365-and-collaboration
+  - repair-a-corrupted-outlook-data-cache
 related_procedures:
-- repair-a-corrupted-outlook-data-cache
+  - repair-a-corrupted-outlook-data-cache
 permalink: /symptoms/a-corrupted-outlook-data-cache/
 layout: article
 last_reviewed: '2026-08-02'

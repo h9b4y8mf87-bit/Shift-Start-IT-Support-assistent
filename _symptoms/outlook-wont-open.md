@@ -1,17 +1,17 @@
 ---
 title: Outlook will not open
 slug: outlook-wont-open
-description: Outlook closes immediately, hangs at startup or displays a startup error.
+description: 'Outlook closes immediately, hangs at startup or displays a startup error.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- outlook
-- crash
+  - outlook
+  - crash
 related_procedures:
-- outlook-crashes
+  - outlook-crashes
 related_causes:
-- outlook-addin
+  - outlook-addin
 permalink: /symptoms/outlook-wont-open/
 layout: article
 ---

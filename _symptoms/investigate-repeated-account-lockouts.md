@@ -1,16 +1,15 @@
 ---
 title: Investigate repeated account lockouts
 slug: investigate-repeated-account-lockouts
-description: 'Observable report: Investigate repeated account lockouts. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Investigate repeated account lockouts. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- investigate-repeated-account-lockouts
+  - identity-and-access-management
+  - investigate-repeated-account-lockouts
 related_procedures:
-- investigate-repeated-account-lockouts
+  - investigate-repeated-account-lockouts
 permalink: /symptoms/investigate-repeated-account-lockouts/
 layout: article
 last_reviewed: '2026-08-02'

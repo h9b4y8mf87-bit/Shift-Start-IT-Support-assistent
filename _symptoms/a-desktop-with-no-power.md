@@ -6,10 +6,10 @@ content_type: symptom
 category: Hardware & Peripherals
 severity: high
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-desktop-with-no-power
+  - hardware-and-peripherals
+  - troubleshoot-a-desktop-with-no-power
 related_procedures:
-- troubleshoot-a-desktop-with-no-power
+  - troubleshoot-a-desktop-with-no-power
 permalink: /symptoms/a-desktop-with-no-power/
 layout: article
 last_reviewed: '2026-08-02'

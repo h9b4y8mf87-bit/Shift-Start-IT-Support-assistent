@@ -1,16 +1,15 @@
 ---
 title: Need to handle a duplicate incident
 slug: need-to-handle-a-duplicate-incident
-description: 'Observable report: Need to handle a duplicate incident. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to handle a duplicate incident. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- handle-a-duplicate-incident
-- service-desk-and-itsm
+  - handle-a-duplicate-incident
+  - service-desk-and-itsm
 related_procedures:
-- handle-a-duplicate-incident
+  - handle-a-duplicate-incident
 permalink: /symptoms/need-to-handle-a-duplicate-incident/
 layout: article
 last_reviewed: '2026-08-02'

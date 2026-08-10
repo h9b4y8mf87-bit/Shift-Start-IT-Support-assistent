@@ -1,16 +1,15 @@
 ---
 title: Escalate an incident with complete evidence
 slug: escalate-an-incident-with-complete-evidence
-description: 'Observable report: Escalate an incident with complete evidence. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Escalate an incident with complete evidence. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- escalate-an-incident-with-complete-evidence
-- service-desk-and-itsm
+  - escalate-an-incident-with-complete-evidence
+  - service-desk-and-itsm
 related_procedures:
-- escalate-an-incident-with-complete-evidence
+  - escalate-an-incident-with-complete-evidence
 permalink: /symptoms/escalate-an-incident-with-complete-evidence/
 layout: article
 last_reviewed: '2026-08-02'

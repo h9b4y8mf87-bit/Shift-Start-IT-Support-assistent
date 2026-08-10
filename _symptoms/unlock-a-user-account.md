@@ -6,10 +6,10 @@ content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- unlock-a-user-account
+  - identity-and-access-management
+  - unlock-a-user-account
 related_procedures:
-- unlock-a-user-account
+  - unlock-a-user-account
 permalink: /symptoms/unlock-a-user-account/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Need to collect returned equipment
 slug: need-to-collect-returned-equipment
-description: 'Observable report: Need to collect returned equipment. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to collect returned equipment. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- collect-returned-equipment
-- lifecycle-and-asset-management
+  - collect-returned-equipment
+  - lifecycle-and-asset-management
 related_procedures:
-- collect-returned-equipment
+  - collect-returned-equipment
 permalink: /symptoms/need-to-collect-returned-equipment/
 layout: article
 last_reviewed: '2026-08-02'

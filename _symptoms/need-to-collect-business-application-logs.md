@@ -1,16 +1,15 @@
 ---
 title: Need to collect business-application logs
 slug: need-to-collect-business-application-logs
-description: 'Observable report: Need to collect business-application logs. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to collect business-application logs. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- collect-business-application-logs
+  - business-applications-and-browsers
+  - collect-business-application-logs
 related_procedures:
-- collect-business-application-logs
+  - collect-business-application-logs
 permalink: /symptoms/need-to-collect-business-application-logs/
 layout: article
 last_reviewed: '2026-08-02'

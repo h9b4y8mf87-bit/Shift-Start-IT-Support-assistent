@@ -1,40 +1,39 @@
 ---
 title: Printing or scanning is not working
 slug: printing-or-scanning-is-not-working
-description: 'Observable report: Printing or scanning is not working. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Printing or scanning is not working. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- clear-a-stuck-windows-print-queue
-- install-or-update-a-printer-driver
-- printing-and-scanning
-- remove-and-reinstall-a-printer-cleanly
-- resolve-a-paper-jam-safely
-- set-or-repair-the-default-printer
-- troubleshoot-a-label-printer
-- troubleshoot-a-network-printer-that-is-unreachable
-- troubleshoot-a-print-server-outage
-- troubleshoot-a-scanner-not-detected
-- troubleshoot-colour-or-duplex-printing
-- troubleshoot-poor-print-quality
+  - clear-a-stuck-windows-print-queue
+  - install-or-update-a-printer-driver
+  - printing-and-scanning
+  - remove-and-reinstall-a-printer-cleanly
+  - resolve-a-paper-jam-safely
+  - set-or-repair-the-default-printer
+  - troubleshoot-a-label-printer
+  - troubleshoot-a-network-printer-that-is-unreachable
+  - troubleshoot-a-print-server-outage
+  - troubleshoot-a-scanner-not-detected
+  - troubleshoot-colour-or-duplex-printing
+  - troubleshoot-poor-print-quality
 related_procedures:
-- clear-a-stuck-windows-print-queue
-- install-or-update-a-printer-driver
-- remove-and-reinstall-a-printer-cleanly
-- resolve-a-paper-jam-safely
-- set-or-repair-the-default-printer
-- troubleshoot-a-label-printer
-- troubleshoot-a-network-printer-that-is-unreachable
-- troubleshoot-a-print-server-outage
-- troubleshoot-a-scanner-not-detected
-- troubleshoot-colour-or-duplex-printing
-- troubleshoot-poor-print-quality
-- troubleshoot-scan-to-email
-- troubleshoot-scan-to-network-folder
-- troubleshoot-secure-or-follow-me-printing
-- troubleshoot-universal-print
+  - clear-a-stuck-windows-print-queue
+  - install-or-update-a-printer-driver
+  - remove-and-reinstall-a-printer-cleanly
+  - resolve-a-paper-jam-safely
+  - set-or-repair-the-default-printer
+  - troubleshoot-a-label-printer
+  - troubleshoot-a-network-printer-that-is-unreachable
+  - troubleshoot-a-print-server-outage
+  - troubleshoot-a-scanner-not-detected
+  - troubleshoot-colour-or-duplex-printing
+  - troubleshoot-poor-print-quality
+  - troubleshoot-scan-to-email
+  - troubleshoot-scan-to-network-folder
+  - troubleshoot-secure-or-follow-me-printing
+  - troubleshoot-universal-print
 permalink: /symptoms/printing-or-scanning-is-not-working/
 layout: article
 last_reviewed: '2026-08-02'

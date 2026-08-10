@@ -1,16 +1,15 @@
 ---
 title: A wireless access point outage
 slug: a-wireless-access-point-outage
-description: 'Observable report: A wireless access point outage. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A wireless access point outage. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Network & Connectivity
 severity: critical
 tags:
-- network-and-connectivity
-- triage-a-wireless-access-point-outage
+  - network-and-connectivity
+  - triage-a-wireless-access-point-outage
 related_procedures:
-- triage-a-wireless-access-point-outage
+  - triage-a-wireless-access-point-outage
 permalink: /symptoms/a-wireless-access-point-outage/
 layout: article
 last_reviewed: '2026-08-02'

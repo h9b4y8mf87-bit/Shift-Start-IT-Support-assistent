@@ -1,16 +1,15 @@
 ---
 title: Need to remove corporate data from a personal device
 slug: need-to-remove-corporate-data-from-a-personal-device
-description: 'Observable report: Need to remove corporate data from a personal device. Select it with any other
-  symptoms to receive ranked procedures.'
+description: 'Observable report: Need to remove corporate data from a personal device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- remove-corporate-data-from-a-personal-device
+  - mobile-devices-and-mdm
+  - remove-corporate-data-from-a-personal-device
 related_procedures:
-- remove-corporate-data-from-a-personal-device
+  - remove-corporate-data-from-a-personal-device
 permalink: /symptoms/need-to-remove-corporate-data-from-a-personal-device/
 layout: article
 last_reviewed: '2026-08-02'

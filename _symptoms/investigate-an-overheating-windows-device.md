@@ -1,16 +1,15 @@
 ---
 title: Investigate an overheating Windows device
 slug: investigate-an-overheating-windows-device
-description: 'Observable report: Investigate an overheating Windows device. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Investigate an overheating Windows device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- investigate-an-overheating-windows-device
-- windows-endpoints
+  - investigate-an-overheating-windows-device
+  - windows-endpoints
 related_procedures:
-- investigate-an-overheating-windows-device
+  - investigate-an-overheating-windows-device
 permalink: /symptoms/investigate-an-overheating-windows-device/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Need to manage a distribution group membership request
 slug: need-to-manage-a-distribution-group-membership-request
-description: 'Observable report: Need to manage a distribution group membership request. Select it with any other
-  symptoms to receive ranked procedures.'
+description: 'Observable report: Need to manage a distribution group membership request. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- manage-a-distribution-group-membership-request
+  - identity-and-access-management
+  - manage-a-distribution-group-membership-request
 related_procedures:
-- manage-a-distribution-group-membership-request
+  - manage-a-distribution-group-membership-request
 permalink: /symptoms/need-to-manage-a-distribution-group-membership-request/
 layout: article
 last_reviewed: '2026-08-02'

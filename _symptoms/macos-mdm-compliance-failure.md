@@ -1,16 +1,15 @@
 ---
 title: MacOS MDM compliance failure
 slug: macos-mdm-compliance-failure
-description: 'Observable report: MacOS MDM compliance failure. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: MacOS MDM compliance failure. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
 severity: high
 tags:
-- macos-endpoints
-- resolve-macos-mdm-compliance-failure
+  - macos-endpoints
+  - resolve-macos-mdm-compliance-failure
 related_procedures:
-- resolve-macos-mdm-compliance-failure
+  - resolve-macos-mdm-compliance-failure
 permalink: /symptoms/macos-mdm-compliance-failure/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-macos-vpn
+  - macos-endpoints
+  - troubleshoot-macos-vpn
 related_procedures:
-- troubleshoot-macos-vpn
+  - troubleshoot-macos-vpn
 permalink: /symptoms/macos-vpn/
 layout: article
 last_reviewed: '2026-08-02'

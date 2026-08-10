@@ -1,47 +1,46 @@
 ---
 title: A security or compliance concern is reported
 slug: a-security-or-compliance-concern-is-reported
-description: 'Observable report: A security or compliance concern is reported. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: A security or compliance concern is reported. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- collect-security-incident-evidence
-- handle-a-sensitive-data-misdelivery
-- investigate-an-antivirus-or-edr-alert
-- isolate-an-endpoint-through-approved-edr-controls
-- preserve-chain-of-custody-for-a-device
-- remove-an-unauthorised-browser-extension
-- report-a-suspected-social-engineering-call
-- resolve-an-antivirus-false-positive
-- respond-to-a-lost-or-stolen-computer
-- respond-to-a-malicious-or-unknown-usb-device
-- respond-to-a-ransomware-alert
-- respond-to-a-suspected-malware-infection
+  - collect-security-incident-evidence
+  - handle-a-sensitive-data-misdelivery
+  - investigate-an-antivirus-or-edr-alert
+  - isolate-an-endpoint-through-approved-edr-controls
+  - preserve-chain-of-custody-for-a-device
+  - remove-an-unauthorised-browser-extension
+  - report-a-suspected-social-engineering-call
+  - resolve-an-antivirus-false-positive
+  - respond-to-a-lost-or-stolen-computer
+  - respond-to-a-malicious-or-unknown-usb-device
+  - respond-to-a-ransomware-alert
+  - respond-to-a-suspected-malware-infection
 related_procedures:
-- collect-security-incident-evidence
-- handle-a-sensitive-data-misdelivery
-- investigate-an-antivirus-or-edr-alert
-- isolate-an-endpoint-through-approved-edr-controls
-- preserve-chain-of-custody-for-a-device
-- remove-an-unauthorised-browser-extension
-- report-a-suspected-social-engineering-call
-- resolve-an-antivirus-false-positive
-- respond-to-a-lost-or-stolen-computer
-- respond-to-a-malicious-or-unknown-usb-device
-- respond-to-a-ransomware-alert
-- respond-to-a-suspected-malware-infection
-- respond-to-a-suspected-phishing-message
-- respond-to-an-impossible-travel-alert
-- respond-to-suspected-data-leakage
-- respond-to-suspicious-account-activity
-- respond-to-unauthorised-software
-- securely-collect-logs-for-the-security-team
-- troubleshoot-a-browser-certificate-warning
-- troubleshoot-disk-encryption-compliance
-- troubleshoot-endpoint-protection-health
-- validate-critical-security-patch-deployment
+  - collect-security-incident-evidence
+  - handle-a-sensitive-data-misdelivery
+  - investigate-an-antivirus-or-edr-alert
+  - isolate-an-endpoint-through-approved-edr-controls
+  - preserve-chain-of-custody-for-a-device
+  - remove-an-unauthorised-browser-extension
+  - report-a-suspected-social-engineering-call
+  - resolve-an-antivirus-false-positive
+  - respond-to-a-lost-or-stolen-computer
+  - respond-to-a-malicious-or-unknown-usb-device
+  - respond-to-a-ransomware-alert
+  - respond-to-a-suspected-malware-infection
+  - respond-to-a-suspected-phishing-message
+  - respond-to-an-impossible-travel-alert
+  - respond-to-suspected-data-leakage
+  - respond-to-suspicious-account-activity
+  - respond-to-unauthorised-software
+  - securely-collect-logs-for-the-security-team
+  - troubleshoot-a-browser-certificate-warning
+  - troubleshoot-disk-encryption-compliance
+  - troubleshoot-endpoint-protection-health
+  - validate-critical-security-patch-deployment
 permalink: /symptoms/a-security-or-compliance-concern-is-reported/
 layout: article
 last_reviewed: '2026-08-02'

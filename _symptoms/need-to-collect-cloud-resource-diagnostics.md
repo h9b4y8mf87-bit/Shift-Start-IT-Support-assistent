@@ -1,16 +1,15 @@
 ---
 title: Need to collect cloud resource diagnostics
 slug: need-to-collect-cloud-resource-diagnostics
-description: 'Observable report: Need to collect cloud resource diagnostics. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to collect cloud resource diagnostics. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Cloud & Virtualisation
 severity: medium
 tags:
-- cloud-and-virtualisation
-- collect-cloud-resource-diagnostics
+  - cloud-and-virtualisation
+  - collect-cloud-resource-diagnostics
 related_procedures:
-- collect-cloud-resource-diagnostics
+  - collect-cloud-resource-diagnostics
 permalink: /symptoms/need-to-collect-cloud-resource-diagnostics/
 layout: article
 last_reviewed: '2026-08-02'

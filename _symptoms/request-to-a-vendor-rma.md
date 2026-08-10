@@ -6,10 +6,10 @@ content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- hardware-and-peripherals
-- process-a-vendor-rma
+  - hardware-and-peripherals
+  - process-a-vendor-rma
 related_procedures:
-- process-a-vendor-rma
+  - process-a-vendor-rma
 permalink: /symptoms/request-to-a-vendor-rma/
 layout: article
 last_reviewed: '2026-08-02'

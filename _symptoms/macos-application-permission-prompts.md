@@ -1,16 +1,15 @@
 ---
 title: MacOS application permission prompts
 slug: macos-application-permission-prompts
-description: 'Observable report: MacOS application permission prompts. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: MacOS application permission prompts. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- resolve-macos-application-permission-prompts
+  - macos-endpoints
+  - resolve-macos-application-permission-prompts
 related_procedures:
-- resolve-macos-application-permission-prompts
+  - resolve-macos-application-permission-prompts
 permalink: /symptoms/macos-application-permission-prompts/
 layout: article
 last_reviewed: '2026-08-02'

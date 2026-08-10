@@ -1,16 +1,15 @@
 ---
 title: Corporate Wi-Fi on mobile
 slug: corporate-wi-fi-on-mobile
-description: 'Observable report: Corporate Wi-Fi on mobile. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Corporate Wi-Fi on mobile. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- troubleshoot-corporate-wi-fi-on-mobile
+  - mobile-devices-and-mdm
+  - troubleshoot-corporate-wi-fi-on-mobile
 related_procedures:
-- troubleshoot-corporate-wi-fi-on-mobile
+  - troubleshoot-corporate-wi-fi-on-mobile
 permalink: /symptoms/corporate-wi-fi-on-mobile/
 layout: article
 last_reviewed: '2026-08-02'

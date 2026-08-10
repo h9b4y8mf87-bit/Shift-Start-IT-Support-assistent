@@ -6,12 +6,12 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- teams
-- microphone
+  - teams
+  - microphone
 related_procedures:
-- teams-microphone-not-working
+  - teams-microphone-not-working
 related_causes:
-- wrong-audio-device
+  - wrong-audio-device
 permalink: /symptoms/microphone-fails/
 layout: article
 ---

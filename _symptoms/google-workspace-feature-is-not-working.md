@@ -1,34 +1,33 @@
 ---
 title: Google Workspace feature is not working
 slug: google-workspace-feature-is-not-working
-description: 'Observable report: Google Workspace feature is not working. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Google Workspace feature is not working. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Google Workspace & Web Collaboration
 severity: medium
 tags:
-- google-workspace-and-web-collaboration
-- resolve-a-google-workspace-storage-quota-issue
-- restore-a-google-drive-file-version
-- troubleshoot-chrome-profile-synchronisation
-- troubleshoot-gmail-delegation
-- troubleshoot-gmail-send-or-receive
-- troubleshoot-google-calendar-sharing
-- troubleshoot-google-drive-synchronisation
-- troubleshoot-google-meet-audio-or-video
-- troubleshoot-google-workspace-mobile-access
-- troubleshoot-google-workspace-sign-in
+  - google-workspace-and-web-collaboration
+  - resolve-a-google-workspace-storage-quota-issue
+  - restore-a-google-drive-file-version
+  - troubleshoot-chrome-profile-synchronisation
+  - troubleshoot-gmail-delegation
+  - troubleshoot-gmail-send-or-receive
+  - troubleshoot-google-calendar-sharing
+  - troubleshoot-google-drive-synchronisation
+  - troubleshoot-google-meet-audio-or-video
+  - troubleshoot-google-workspace-mobile-access
+  - troubleshoot-google-workspace-sign-in
 related_procedures:
-- resolve-a-google-workspace-storage-quota-issue
-- restore-a-google-drive-file-version
-- troubleshoot-chrome-profile-synchronisation
-- troubleshoot-gmail-delegation
-- troubleshoot-gmail-send-or-receive
-- troubleshoot-google-calendar-sharing
-- troubleshoot-google-drive-synchronisation
-- troubleshoot-google-meet-audio-or-video
-- troubleshoot-google-workspace-mobile-access
-- troubleshoot-google-workspace-sign-in
+  - resolve-a-google-workspace-storage-quota-issue
+  - restore-a-google-drive-file-version
+  - troubleshoot-chrome-profile-synchronisation
+  - troubleshoot-gmail-delegation
+  - troubleshoot-gmail-send-or-receive
+  - troubleshoot-google-calendar-sharing
+  - troubleshoot-google-drive-synchronisation
+  - troubleshoot-google-meet-audio-or-video
+  - troubleshoot-google-workspace-mobile-access
+  - troubleshoot-google-workspace-sign-in
 permalink: /symptoms/google-workspace-feature-is-not-working/
 layout: article
 last_reviewed: '2026-08-02'

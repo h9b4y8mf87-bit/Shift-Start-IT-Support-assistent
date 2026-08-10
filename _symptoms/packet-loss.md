@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-packet-loss
+  - network-and-connectivity
+  - troubleshoot-packet-loss
 related_procedures:
-- troubleshoot-packet-loss
+  - troubleshoot-packet-loss
 permalink: /symptoms/packet-loss/
 layout: article
 last_reviewed: '2026-08-02'

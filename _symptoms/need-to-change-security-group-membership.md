@@ -1,16 +1,15 @@
 ---
 title: Need to change security group membership
 slug: need-to-change-security-group-membership
-description: 'Observable report: Need to change security group membership. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to change security group membership. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- add-or-remove-security-group-membership
-- identity-and-access-management
+  - add-or-remove-security-group-membership
+  - identity-and-access-management
 related_procedures:
-- add-or-remove-security-group-membership
+  - add-or-remove-security-group-membership
 permalink: /symptoms/need-to-change-security-group-membership/
 layout: article
 last_reviewed: '2026-08-02'

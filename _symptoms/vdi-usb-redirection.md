@@ -3,13 +3,13 @@ title: VDI USB redirection
 slug: vdi-usb-redirection
 description: 'Observable report: VDI USB redirection. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-vdi-usb-redirection
+  - remote-access-vdi-and-daas
+  - troubleshoot-vdi-usb-redirection
 related_procedures:
-- troubleshoot-vdi-usb-redirection
+  - troubleshoot-vdi-usb-redirection
 permalink: /symptoms/vdi-usb-redirection/
 layout: article
 last_reviewed: '2026-08-02'

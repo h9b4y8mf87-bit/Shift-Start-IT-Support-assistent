@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: high
 tags:
-- troubleshoot-high-memory-utilisation
-- windows-endpoints
+  - troubleshoot-high-memory-utilisation
+  - windows-endpoints
 related_procedures:
-- troubleshoot-high-memory-utilisation
+  - troubleshoot-high-memory-utilisation
 permalink: /symptoms/high-memory-utilisation/
 layout: article
 last_reviewed: '2026-08-02'

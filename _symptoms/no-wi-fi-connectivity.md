@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: high
 tags:
-- network-and-connectivity
-- troubleshoot-no-wi-fi-connectivity
+  - network-and-connectivity
+  - troubleshoot-no-wi-fi-connectivity
 related_procedures:
-- troubleshoot-no-wi-fi-connectivity
+  - troubleshoot-no-wi-fi-connectivity
 permalink: /symptoms/no-wi-fi-connectivity/
 layout: article
 last_reviewed: '2026-08-02'

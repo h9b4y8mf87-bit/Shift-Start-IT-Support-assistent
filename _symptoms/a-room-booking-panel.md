@@ -3,13 +3,13 @@ title: A room booking panel
 slug: a-room-booking-panel
 description: 'Observable report: A room booking panel. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
 severity: medium
 tags:
-- troubleshoot-a-room-booking-panel
-- voice-telephony-and-meeting-rooms
+  - troubleshoot-a-room-booking-panel
+  - voice-telephony-and-meeting-rooms
 related_procedures:
-- troubleshoot-a-room-booking-panel
+  - troubleshoot-a-room-booking-panel
 permalink: /symptoms/a-room-booking-panel/
 layout: article
 last_reviewed: '2026-08-02'

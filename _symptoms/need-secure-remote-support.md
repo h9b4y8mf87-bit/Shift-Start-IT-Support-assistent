@@ -1,16 +1,15 @@
 ---
 title: Need secure remote support
 slug: need-secure-remote-support
-description: 'Observable report: Need secure remote support. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Need secure remote support. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: medium
 tags:
-- provide-secure-remote-support
-- service-desk-and-itsm
+  - provide-secure-remote-support
+  - service-desk-and-itsm
 related_procedures:
-- provide-secure-remote-support
+  - provide-secure-remote-support
 permalink: /symptoms/need-secure-remote-support/
 layout: article
 last_reviewed: '2026-08-02'

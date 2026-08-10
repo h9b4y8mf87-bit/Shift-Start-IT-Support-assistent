@@ -1,16 +1,15 @@
 ---
 title: Reimage a managed Windows device
 slug: reimage-a-managed-windows-device
-description: 'Observable report: Reimage a managed Windows device. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Reimage a managed Windows device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- reimage-a-managed-windows-device
-- windows-endpoints
+  - reimage-a-managed-windows-device
+  - windows-endpoints
 related_procedures:
-- reimage-a-managed-windows-device
+  - reimage-a-managed-windows-device
 permalink: /symptoms/reimage-a-managed-windows-device/
 layout: article
 last_reviewed: '2026-08-02'

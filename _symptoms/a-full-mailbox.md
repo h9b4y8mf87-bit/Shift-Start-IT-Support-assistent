@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- resolve-a-full-mailbox
+  - microsoft-365-and-collaboration
+  - resolve-a-full-mailbox
 related_procedures:
-- resolve-a-full-mailbox
+  - resolve-a-full-mailbox
 permalink: /symptoms/a-full-mailbox/
 layout: article
 last_reviewed: '2026-08-02'

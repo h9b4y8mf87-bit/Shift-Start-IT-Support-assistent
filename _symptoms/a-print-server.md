@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-a-print-server
+  - servers-and-core-infrastructure
+  - troubleshoot-a-print-server
 related_procedures:
-- troubleshoot-a-print-server
+  - troubleshoot-a-print-server
 permalink: /symptoms/a-print-server/
 layout: article
 last_reviewed: '2026-08-02'

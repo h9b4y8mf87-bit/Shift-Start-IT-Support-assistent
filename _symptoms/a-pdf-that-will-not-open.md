@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: high
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-pdf-that-will-not-open
+  - business-applications-and-browsers
+  - troubleshoot-a-pdf-that-will-not-open
 related_procedures:
-- troubleshoot-a-pdf-that-will-not-open
+  - troubleshoot-a-pdf-that-will-not-open
 permalink: /symptoms/a-pdf-that-will-not-open/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,7 +1,7 @@
 ---
 title: Resolve an unusually slow Windows PC
 slug: slow-windows-pc
-description: Identify CPU, memory, disk, startup, update and storage-pressure causes before applying a targeted change.
+description: 'Identify CPU, memory, disk, startup, update and storage-pressure causes before applying a targeted change.'
 content_type: procedure
 category: Windows Endpoints
 severity: medium
@@ -16,17 +16,13 @@ tags:
 error_codes:
   - 100% disk
   - Not responding
-tldr: >-
-  Define whether slowness is device-wide or application-specific, capture uptime, free space and resource pressure, then
-  apply only the smallest change supported by measured evidence.
+tldr: 'Define whether slowness is device-wide or application-specific, capture uptime, free space and resource pressure, then apply only the smallest change supported by measured evidence.'
 related_symptoms:
   - slow-computer
 related_causes:
   - resource-pressure
 next_steps: []
-escalation: >-
-  Escalate to Endpoint Engineering if storage health is degraded, a security process indicates infection, resource
-  pressure cannot be attributed safely, or the device remains unusable after approved first-line remediation.
+escalation: 'Escalate to Endpoint Engineering if storage health is degraded, a security process indicates infection, resource pressure cannot be attributed safely, or the device remains unusable after approved first-line remediation.'
 risk_model: impact-v1
 risk_basis: Medium impact - performance is degraded rather than fully unavailable and a temporary workaround may exist.
 verification_priority: P2
@@ -39,9 +35,7 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references: []
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

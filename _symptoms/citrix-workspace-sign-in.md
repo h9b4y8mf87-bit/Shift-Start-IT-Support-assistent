@@ -3,13 +3,13 @@ title: Citrix Workspace sign-in
 slug: citrix-workspace-sign-in
 description: 'Observable report: Citrix Workspace sign-in. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-citrix-workspace-sign-in
+  - remote-access-vdi-and-daas
+  - troubleshoot-citrix-workspace-sign-in
 related_procedures:
-- troubleshoot-citrix-workspace-sign-in
+  - troubleshoot-citrix-workspace-sign-in
 permalink: /symptoms/citrix-workspace-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

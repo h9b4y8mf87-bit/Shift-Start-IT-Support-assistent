@@ -1,16 +1,15 @@
 ---
 title: User Account Control or admin-rights requests
 slug: user-account-control-or-admin-rights-requests
-description: 'Observable report: User Account Control or admin-rights requests. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: User Account Control or admin-rights requests. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-user-account-control-or-admin-rights-requests
-- windows-endpoints
+  - troubleshoot-user-account-control-or-admin-rights-requests
+  - windows-endpoints
 related_procedures:
-- troubleshoot-user-account-control-or-admin-rights-requests
+  - troubleshoot-user-account-control-or-admin-rights-requests
 permalink: /symptoms/user-account-control-or-admin-rights-requests/
 layout: article
 last_reviewed: '2026-08-02'

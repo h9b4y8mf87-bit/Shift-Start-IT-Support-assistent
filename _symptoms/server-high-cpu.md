@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: high
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-server-high-cpu
+  - servers-and-core-infrastructure
+  - troubleshoot-server-high-cpu
 related_procedures:
-- troubleshoot-server-high-cpu
+  - troubleshoot-server-high-cpu
 permalink: /symptoms/server-high-cpu/
 layout: article
 last_reviewed: '2026-08-02'

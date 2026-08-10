@@ -1,7 +1,7 @@
 ---
 title: Resolve a missing or disconnected mapped drive
 slug: mapped-drive-missing
-description: Restore an approved network drive by validating network, VPN, DNS, permissions and mapping state.
+description: 'Restore an approved network drive by validating network, VPN, DNS, permissions and mapping state.'
 content_type: procedure
 category: File Services
 severity: high
@@ -16,22 +16,16 @@ tags:
 error_codes:
   - The local device name is already in use
   - Network path was not found
-tldr: >-
-  Confirm corporate network or VPN and the approved UNC path, remove only the stale mapping, then recreate the approved
-  drive mapping and verify authorised file access.
+tldr: 'Confirm corporate network or VPN and the approved UNC path, remove only the stale mapping, then recreate the approved drive mapping and verify authorised file access.'
 related_symptoms:
   - mapped-drive-missing-symptom
 related_causes:
   - stale-drive-mapping
 next_steps:
   - vpn-not-connecting
-escalation: >-
-  Escalate to File Services if the approved UNC path is unreachable, access is denied despite confirmed entitlement,
-  repeated credential prompts occur, or a recreated mapping does not persist.
+escalation: 'Escalate to File Services if the approved UNC path is unreachable, access is denied despite confirmed entitlement, repeated credential prompts occur, or a recreated mapping does not persist.'
 risk_model: impact-v1
-risk_basis: >-
-  High impact - loss of an approved file share can prevent a user from completing core work and may involve
-  access-control issues.
+risk_basis: High impact - loss of an approved file share can prevent a user from completing core work and may involve access-control issues.
 verification_priority: P1
 last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/mapped-drive-missing/
@@ -42,9 +36,7 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references: []
-change_record: >-
-  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
-  evidence.
+change_record: Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

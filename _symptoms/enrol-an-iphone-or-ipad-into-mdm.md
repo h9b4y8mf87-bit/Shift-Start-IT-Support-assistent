@@ -1,16 +1,15 @@
 ---
 title: Enrol an iPhone or iPad into MDM
 slug: enrol-an-iphone-or-ipad-into-mdm
-description: 'Observable report: Enrol an iPhone or iPad into MDM. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Enrol an iPhone or iPad into MDM. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- enrol-an-iphone-or-ipad-into-mdm
-- mobile-devices-and-mdm
+  - enrol-an-iphone-or-ipad-into-mdm
+  - mobile-devices-and-mdm
 related_procedures:
-- enrol-an-iphone-or-ipad-into-mdm
+  - enrol-an-iphone-or-ipad-into-mdm
 permalink: /symptoms/enrol-an-iphone-or-ipad-into-mdm/
 layout: article
 last_reviewed: '2026-08-02'

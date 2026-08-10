@@ -1,16 +1,15 @@
 ---
 title: Need to coordinate a major incident
 slug: need-to-coordinate-a-major-incident
-description: 'Observable report: Need to coordinate a major incident. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need to coordinate a major incident. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: critical
 tags:
-- declare-and-coordinate-a-major-incident
-- service-desk-and-itsm
+  - declare-and-coordinate-a-major-incident
+  - service-desk-and-itsm
 related_procedures:
-- declare-and-coordinate-a-major-incident
+  - declare-and-coordinate-a-major-incident
 permalink: /symptoms/need-to-coordinate-a-major-incident/
 layout: article
 last_reviewed: '2026-08-02'

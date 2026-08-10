@@ -6,10 +6,10 @@ content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- troubleshoot-a-service-account
+  - identity-and-access-management
+  - troubleshoot-a-service-account
 related_procedures:
-- troubleshoot-a-service-account
+  - troubleshoot-a-service-account
 permalink: /symptoms/a-service-account/
 layout: article
 last_reviewed: '2026-08-02'

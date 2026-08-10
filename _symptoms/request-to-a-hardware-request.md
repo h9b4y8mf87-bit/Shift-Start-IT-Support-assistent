@@ -6,10 +6,10 @@ content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- process-a-hardware-request
+  - lifecycle-and-asset-management
+  - process-a-hardware-request
 related_procedures:
-- process-a-hardware-request
+  - process-a-hardware-request
 permalink: /symptoms/request-to-a-hardware-request/
 layout: article
 last_reviewed: '2026-08-02'

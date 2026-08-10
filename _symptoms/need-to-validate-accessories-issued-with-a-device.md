@@ -1,16 +1,15 @@
 ---
 title: Need to validate accessories issued with a device
 slug: need-to-validate-accessories-issued-with-a-device
-description: 'Observable report: Need to validate accessories issued with a device. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to validate accessories issued with a device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- validate-accessories-issued-with-a-device
+  - lifecycle-and-asset-management
+  - validate-accessories-issued-with-a-device
 related_procedures:
-- validate-accessories-issued-with-a-device
+  - validate-accessories-issued-with-a-device
 permalink: /symptoms/need-to-validate-accessories-issued-with-a-device/
 layout: article
 last_reviewed: '2026-08-02'

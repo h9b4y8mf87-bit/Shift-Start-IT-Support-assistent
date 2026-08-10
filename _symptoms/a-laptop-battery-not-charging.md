@@ -1,16 +1,15 @@
 ---
 title: A laptop battery not charging
 slug: a-laptop-battery-not-charging
-description: 'Observable report: A laptop battery not charging. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A laptop battery not charging. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-a-laptop-battery-not-charging
-- windows-endpoints
+  - troubleshoot-a-laptop-battery-not-charging
+  - windows-endpoints
 related_procedures:
-- troubleshoot-a-laptop-battery-not-charging
+  - troubleshoot-a-laptop-battery-not-charging
 permalink: /symptoms/a-laptop-battery-not-charging/
 layout: article
 last_reviewed: '2026-08-02'

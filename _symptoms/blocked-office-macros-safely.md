@@ -1,16 +1,15 @@
 ---
 title: Blocked Office macros safely
 slug: blocked-office-macros-safely
-description: 'Observable report: Blocked Office macros safely. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Blocked Office macros safely. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: high
 tags:
-- microsoft-365-and-collaboration
-- resolve-blocked-office-macros-safely
+  - microsoft-365-and-collaboration
+  - resolve-blocked-office-macros-safely
 related_procedures:
-- resolve-blocked-office-macros-safely
+  - resolve-blocked-office-macros-safely
 permalink: /symptoms/blocked-office-macros-safely/
 layout: article
 last_reviewed: '2026-08-02'

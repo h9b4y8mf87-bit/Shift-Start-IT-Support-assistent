@@ -1,16 +1,15 @@
 ---
 title: Multiple-monitor arrangement or resolution
 slug: multiple-monitor-arrangement-or-resolution
-description: 'Observable report: Multiple-monitor arrangement or resolution. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Multiple-monitor arrangement or resolution. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-multiple-monitor-arrangement-or-resolution
-- windows-endpoints
+  - troubleshoot-multiple-monitor-arrangement-or-resolution
+  - windows-endpoints
 related_procedures:
-- troubleshoot-multiple-monitor-arrangement-or-resolution
+  - troubleshoot-multiple-monitor-arrangement-or-resolution
 permalink: /symptoms/multiple-monitor-arrangement-or-resolution/
 layout: article
 last_reviewed: '2026-08-02'

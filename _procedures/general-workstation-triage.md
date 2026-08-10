@@ -1,9 +1,7 @@
 ---
 title: Resolve a vague or multi-component workstation issue
 slug: general-workstation-triage
-description: >-
-  Use a safe first-response workflow when the user's report is vague or spans account, application, device and network
-  layers.
+description: 'Use a safe first-response workflow when the user''s report is vague or spans account, application, device and network layers.'
 content_type: procedure
 category: Windows Endpoints
 severity: medium
@@ -16,16 +14,12 @@ tags:
   - diagnostics
   - evidence
 error_codes: []
-tldr: >-
-  Define impact, reproduce once, check recent changes, capture baseline health data, isolate the failing layer and apply
-  only the smallest reversible fix supported by evidence.
+tldr: 'Define impact, reproduce once, check recent changes, capture baseline health data, isolate the failing layer and apply only the smallest reversible fix supported by evidence.'
 related_symptoms:
   - general-workstation-triage
 related_causes: []
 next_steps: []
-escalation: >-
-  Escalate to the owning resolver team if the failing layer cannot be isolated safely, the issue affects multiple users
-  or services, or the smallest reversible fix does not restore the expected function.
+escalation: 'Escalate to the owning resolver team if the failing layer cannot be isolated safely, the issue affects multiple users or services, or the smallest reversible fix does not restore the expected function.'
 risk_model: impact-v1
 risk_basis: Medium impact - the scope is initially unclear and a workaround may exist while the failing layer is isolated.
 verification_priority: P2
@@ -40,9 +34,7 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references: []
-change_record: >-
-  Standardised as the Enterprise runbook structural reference; existing verified status retained pending recorded live
-  revalidation evidence.
+change_record: Standardised as the Enterprise runbook structural reference; existing verified status retained pending recorded live revalidation evidence.
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation

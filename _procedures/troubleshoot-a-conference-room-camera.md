@@ -1,12 +1,10 @@
 ---
 title: Troubleshoot a conference-room camera
 slug: troubleshoot-a-conference-room-camera
-description: >-
-  Enterprise runbook to troubleshoot a conference-room camera without skipping evidence, verification, rollback or
-  escalation requirements.
+description: 'Enterprise runbook to troubleshoot a conference-room camera without skipping evidence, verification, rollback or escalation requirements.'
 content_type: procedure
-category: Voice, Telephony & Meeting Rooms
-service: Voice, Telephony & Meeting Rooms
+category: 'Voice, Telephony & Meeting Rooms'
+service: 'Voice, Telephony & Meeting Rooms'
 severity: high
 support_tier: L1-L2
 owner_team: Unified Communications or AV Support
@@ -25,10 +23,7 @@ tags:
   - troubleshoot
   - voice-telephony-and-meeting-rooms
 error_codes: []
-tldr: >-
-  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
-  remediation for troubleshoot a conference-room camera, verify the original business task, and escalate with complete
-  logs if recovery is not achieved.
+tldr: 'Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot a conference-room camera, verify the original business task, and escalate with complete logs if recovery is not achieved.'
 related_symptoms:
   - a-conference-room-camera
   - calling-audio-video-or-meeting-room-technology-is-not-working
@@ -39,14 +34,11 @@ related_causes: []
 related_commands: []
 next_steps:
   - general-workstation-triage
-escalation: >-
-  Escalate to Unified Communications or AV Support with the exact user or service impact, timestamps and timezone,
-  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
-  status and a clear statement of what remains broken.
+escalation: 'Escalate to Unified Communications or AV Support with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.'
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
-approval_required: Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.
+approval_required: 'Follow organisational policy for privileged, destructive, security-sensitive or service-impacting actions.'
 permalink: /procedures/troubleshoot-a-conference-room-camera/
 layout: article
 content_status: under_review

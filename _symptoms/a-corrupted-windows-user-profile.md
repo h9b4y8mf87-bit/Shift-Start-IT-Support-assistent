@@ -1,16 +1,15 @@
 ---
 title: A corrupted Windows user profile
 slug: a-corrupted-windows-user-profile
-description: 'Observable report: A corrupted Windows user profile. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A corrupted Windows user profile. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- repair-a-corrupted-windows-user-profile
-- windows-endpoints
+  - repair-a-corrupted-windows-user-profile
+  - windows-endpoints
 related_procedures:
-- repair-a-corrupted-windows-user-profile
+  - repair-a-corrupted-windows-user-profile
 permalink: /symptoms/a-corrupted-windows-user-profile/
 layout: article
 last_reviewed: '2026-08-02'

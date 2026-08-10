@@ -1,16 +1,15 @@
 ---
 title: Excessive mobile battery drain
 slug: excessive-mobile-battery-drain
-description: 'Observable report: Excessive mobile battery drain. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Excessive mobile battery drain. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- troubleshoot-excessive-mobile-battery-drain
+  - mobile-devices-and-mdm
+  - troubleshoot-excessive-mobile-battery-drain
 related_procedures:
-- troubleshoot-excessive-mobile-battery-drain
+  - troubleshoot-excessive-mobile-battery-drain
 permalink: /symptoms/excessive-mobile-battery-drain/
 layout: article
 last_reviewed: '2026-08-02'

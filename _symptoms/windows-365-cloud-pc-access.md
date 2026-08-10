@@ -1,16 +1,15 @@
 ---
 title: Windows 365 Cloud PC access
 slug: windows-365-cloud-pc-access
-description: 'Observable report: Windows 365 Cloud PC access. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Windows 365 Cloud PC access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-windows-365-cloud-pc-access
+  - remote-access-vdi-and-daas
+  - troubleshoot-windows-365-cloud-pc-access
 related_procedures:
-- troubleshoot-windows-365-cloud-pc-access
+  - troubleshoot-windows-365-cloud-pc-access
 permalink: /symptoms/windows-365-cloud-pc-access/
 layout: article
 last_reviewed: '2026-08-02'

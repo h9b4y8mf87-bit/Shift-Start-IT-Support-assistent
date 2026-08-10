@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-incorrect-system-time
-- windows-endpoints
+  - troubleshoot-incorrect-system-time
+  - windows-endpoints
 related_procedures:
-- troubleshoot-incorrect-system-time
+  - troubleshoot-incorrect-system-time
 permalink: /symptoms/incorrect-system-time/
 layout: article
 last_reviewed: '2026-08-02'

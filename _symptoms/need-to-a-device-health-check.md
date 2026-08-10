@@ -6,10 +6,10 @@ content_type: symptom
 category: Lifecycle & Asset Management
 severity: medium
 tags:
-- lifecycle-and-asset-management
-- perform-a-device-health-check
+  - lifecycle-and-asset-management
+  - perform-a-device-health-check
 related_procedures:
-- perform-a-device-health-check
+  - perform-a-device-health-check
 permalink: /symptoms/need-to-a-device-health-check/
 layout: article
 last_reviewed: '2026-08-02'

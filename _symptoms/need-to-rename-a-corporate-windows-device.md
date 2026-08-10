@@ -1,16 +1,15 @@
 ---
 title: Need to rename a corporate Windows device
 slug: need-to-rename-a-corporate-windows-device
-description: 'Observable report: Need to rename a corporate Windows device. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to rename a corporate Windows device. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- rename-a-corporate-windows-device
-- windows-endpoints
+  - rename-a-corporate-windows-device
+  - windows-endpoints
 related_procedures:
-- rename-a-corporate-windows-device
+  - rename-a-corporate-windows-device
 permalink: /symptoms/need-to-rename-a-corporate-windows-device/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: high
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-server-high-memory
+  - servers-and-core-infrastructure
+  - troubleshoot-server-high-memory
 related_procedures:
-- troubleshoot-server-high-memory
+  - troubleshoot-server-high-memory
 permalink: /symptoms/server-high-memory/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Servers & Core Infrastructure
 severity: medium
 tags:
-- servers-and-core-infrastructure
-- troubleshoot-group-policy-application
+  - servers-and-core-infrastructure
+  - troubleshoot-group-policy-application
 related_procedures:
-- troubleshoot-group-policy-application
+  - troubleshoot-group-policy-application
 permalink: /symptoms/group-policy-application/
 layout: article
 last_reviewed: '2026-08-02'

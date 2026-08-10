@@ -1,16 +1,15 @@
 ---
 title: An accidentally deleted file
 slug: an-accidentally-deleted-file
-description: 'Observable report: An accidentally deleted file. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: An accidentally deleted file. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- restore-an-accidentally-deleted-file
+  - data-protection-backup-and-recovery
+  - restore-an-accidentally-deleted-file
 related_procedures:
-- restore-an-accidentally-deleted-file
+  - restore-an-accidentally-deleted-file
 permalink: /symptoms/an-accidentally-deleted-file/
 layout: article
 last_reviewed: '2026-08-02'

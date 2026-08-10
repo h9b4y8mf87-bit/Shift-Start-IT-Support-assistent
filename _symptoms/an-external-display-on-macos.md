@@ -1,16 +1,15 @@
 ---
 title: An external display on macOS
 slug: an-external-display-on-macos
-description: 'Observable report: An external display on macOS. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: An external display on macOS. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-an-external-display-on-macos
+  - macos-endpoints
+  - troubleshoot-an-external-display-on-macos
 related_procedures:
-- troubleshoot-an-external-display-on-macos
+  - troubleshoot-an-external-display-on-macos
 permalink: /symptoms/an-external-display-on-macos/
 layout: article
 last_reviewed: '2026-08-02'

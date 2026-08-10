@@ -3,13 +3,13 @@ title: Citrix printing
 slug: citrix-printing
 description: 'Observable report: Citrix printing. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-citrix-printing
+  - remote-access-vdi-and-daas
+  - troubleshoot-citrix-printing
 related_procedures:
-- troubleshoot-citrix-printing
+  - troubleshoot-citrix-printing
 permalink: /symptoms/citrix-printing/
 layout: article
 last_reviewed: '2026-08-02'

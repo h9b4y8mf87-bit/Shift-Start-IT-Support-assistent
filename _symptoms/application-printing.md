@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-application-printing
+  - business-applications-and-browsers
+  - troubleshoot-application-printing
 related_procedures:
-- troubleshoot-application-printing
+  - troubleshoot-application-printing
 permalink: /symptoms/application-printing/
 layout: article
 last_reviewed: '2026-08-02'

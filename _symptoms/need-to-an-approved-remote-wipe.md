@@ -6,10 +6,10 @@ content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- mobile-devices-and-mdm
-- perform-an-approved-remote-wipe
+  - mobile-devices-and-mdm
+  - perform-an-approved-remote-wipe
 related_procedures:
-- perform-an-approved-remote-wipe
+  - perform-an-approved-remote-wipe
 permalink: /symptoms/need-to-an-approved-remote-wipe/
 layout: article
 last_reviewed: '2026-08-02'

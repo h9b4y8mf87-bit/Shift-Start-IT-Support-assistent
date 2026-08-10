@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- repair-an-outlook-profile
+  - microsoft-365-and-collaboration
+  - repair-an-outlook-profile
 related_procedures:
-- repair-an-outlook-profile
+  - repair-an-outlook-profile
 permalink: /symptoms/an-outlook-profile/
 layout: article
 last_reviewed: '2026-08-02'

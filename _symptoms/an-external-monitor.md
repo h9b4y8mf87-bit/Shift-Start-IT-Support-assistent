@@ -6,10 +6,10 @@ content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-an-external-monitor
-- windows-endpoints
+  - troubleshoot-an-external-monitor
+  - windows-endpoints
 related_procedures:
-- troubleshoot-an-external-monitor
+  - troubleshoot-an-external-monitor
 permalink: /symptoms/an-external-monitor/
 layout: article
 last_reviewed: '2026-08-02'

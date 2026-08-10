@@ -1,16 +1,15 @@
 ---
 title: Need to validate a backup restore request
 slug: need-to-validate-a-backup-restore-request
-description: 'Observable report: Need to validate a backup restore request. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to validate a backup restore request. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Data Protection, Backup & Recovery
+category: 'Data Protection, Backup & Recovery'
 severity: medium
 tags:
-- data-protection-backup-and-recovery
-- validate-a-backup-restore-request
+  - data-protection-backup-and-recovery
+  - validate-a-backup-restore-request
 related_procedures:
-- validate-a-backup-restore-request
+  - validate-a-backup-restore-request
 permalink: /symptoms/need-to-validate-a-backup-restore-request/
 layout: article
 last_reviewed: '2026-08-02'

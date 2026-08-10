@@ -1,16 +1,15 @@
 ---
 title: An office or site-wide outage
 slug: an-office-or-site-wide-outage
-description: 'Observable report: An office or site-wide outage. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: An office or site-wide outage. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Service Desk & ITSM
 severity: critical
 tags:
-- service-desk-and-itsm
-- triage-an-office-or-site-wide-outage
+  - service-desk-and-itsm
+  - triage-an-office-or-site-wide-outage
 related_procedures:
-- triage-an-office-or-site-wide-outage
+  - triage-an-office-or-site-wide-outage
 permalink: /symptoms/an-office-or-site-wide-outage/
 layout: article
 last_reviewed: '2026-08-02'

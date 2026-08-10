@@ -1,16 +1,15 @@
 ---
 title: Report a suspected social-engineering call
 slug: report-a-suspected-social-engineering-call
-description: 'Observable report: Report a suspected social-engineering call. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Report a suspected social-engineering call. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- report-a-suspected-social-engineering-call
-- security-and-compliance
+  - report-a-suspected-social-engineering-call
+  - security-and-compliance
 related_procedures:
-- report-a-suspected-social-engineering-call
+  - report-a-suspected-social-engineering-call
 permalink: /symptoms/report-a-suspected-social-engineering-call/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-sharepoint-access
+  - microsoft-365-and-collaboration
+  - troubleshoot-sharepoint-access
 related_procedures:
-- troubleshoot-sharepoint-access
+  - troubleshoot-sharepoint-access
 permalink: /symptoms/sharepoint-access/
 layout: article
 last_reviewed: '2026-08-02'

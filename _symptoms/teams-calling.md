@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-teams-calling
+  - microsoft-365-and-collaboration
+  - troubleshoot-teams-calling
 related_procedures:
-- troubleshoot-teams-calling
+  - troubleshoot-teams-calling
 permalink: /symptoms/teams-calling/
 layout: article
 last_reviewed: '2026-08-02'

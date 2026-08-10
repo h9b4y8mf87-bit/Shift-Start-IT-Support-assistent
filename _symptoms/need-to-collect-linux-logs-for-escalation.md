@@ -1,16 +1,15 @@
 ---
 title: Need to collect Linux logs for escalation
 slug: need-to-collect-linux-logs-for-escalation
-description: 'Observable report: Need to collect Linux logs for escalation. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to collect Linux logs for escalation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- collect-linux-logs-for-escalation
-- linux-and-developer-workstations
+  - collect-linux-logs-for-escalation
+  - linux-and-developer-workstations
 related_procedures:
-- collect-linux-logs-for-escalation
+  - collect-linux-logs-for-escalation
 permalink: /symptoms/need-to-collect-linux-logs-for-escalation/
 layout: article
 last_reviewed: '2026-08-02'

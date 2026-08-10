@@ -1,16 +1,15 @@
 ---
 title: Need to validate Microsoft 365 service health
 slug: need-to-validate-microsoft-365-service-health
-description: 'Observable report: Need to validate Microsoft 365 service health. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to validate Microsoft 365 service health. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- validate-microsoft-365-service-health
+  - microsoft-365-and-collaboration
+  - validate-microsoft-365-service-health
 related_procedures:
-- validate-microsoft-365-service-health
+  - validate-microsoft-365-service-health
 permalink: /symptoms/need-to-validate-microsoft-365-service-health/
 layout: article
 last_reviewed: '2026-08-02'

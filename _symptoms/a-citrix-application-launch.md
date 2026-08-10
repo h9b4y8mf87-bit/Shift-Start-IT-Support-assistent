@@ -1,16 +1,15 @@
 ---
 title: A Citrix application launch
 slug: a-citrix-application-launch
-description: 'Observable report: A Citrix application launch. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: A Citrix application launch. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-a-citrix-application-launch
+  - remote-access-vdi-and-daas
+  - troubleshoot-a-citrix-application-launch
 related_procedures:
-- troubleshoot-a-citrix-application-launch
+  - troubleshoot-a-citrix-application-launch
 permalink: /symptoms/a-citrix-application-launch/
 layout: article
 last_reviewed: '2026-08-02'

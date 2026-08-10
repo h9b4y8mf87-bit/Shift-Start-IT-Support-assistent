@@ -6,10 +6,10 @@ content_type: symptom
 category: Network & Connectivity
 severity: medium
 tags:
-- network-and-connectivity
-- troubleshoot-slow-internet-access
+  - network-and-connectivity
+  - troubleshoot-slow-internet-access
 related_procedures:
-- troubleshoot-slow-internet-access
+  - troubleshoot-slow-internet-access
 permalink: /symptoms/slow-internet-access/
 layout: article
 last_reviewed: '2026-08-02'

@@ -1,16 +1,15 @@
 ---
 title: Offline Files synchronisation
 slug: offline-files-synchronisation
-description: 'Observable report: Offline Files synchronisation. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Offline Files synchronisation. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
 severity: medium
 tags:
-- troubleshoot-offline-files-synchronisation
-- windows-endpoints
+  - troubleshoot-offline-files-synchronisation
+  - windows-endpoints
 related_procedures:
-- troubleshoot-offline-files-synchronisation
+  - troubleshoot-offline-files-synchronisation
 permalink: /symptoms/offline-files-synchronisation/
 layout: article
 last_reviewed: '2026-08-02'

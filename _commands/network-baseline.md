@@ -1,12 +1,12 @@
 ---
 title: Windows network baseline
 slug: network-baseline
-description: Capture adapters, addressing, DNS and route information.
+description: 'Capture adapters, addressing, DNS and route information.'
 content_type: command
 platform: Windows PowerShell
 tags:
-- network
-- diagnostics
+  - network
+  - diagnostics
 permalink: /commands/network-baseline/
 layout: article
 ---

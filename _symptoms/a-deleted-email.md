@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- recover-a-deleted-email
+  - microsoft-365-and-collaboration
+  - recover-a-deleted-email
 related_procedures:
-- recover-a-deleted-email
+  - recover-a-deleted-email
 permalink: /symptoms/a-deleted-email/
 layout: article
 last_reviewed: '2026-08-02'

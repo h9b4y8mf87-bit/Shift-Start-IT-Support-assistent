@@ -6,10 +6,10 @@ content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-an-erp-client
+  - business-applications-and-browsers
+  - troubleshoot-an-erp-client
 related_procedures:
-- troubleshoot-an-erp-client
+  - troubleshoot-an-erp-client
 permalink: /symptoms/an-erp-client/
 layout: article
 last_reviewed: '2026-08-02'

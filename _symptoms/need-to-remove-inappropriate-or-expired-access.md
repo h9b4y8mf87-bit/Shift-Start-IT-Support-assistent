@@ -1,16 +1,15 @@
 ---
 title: Need to remove inappropriate or expired access
 slug: need-to-remove-inappropriate-or-expired-access
-description: 'Observable report: Need to remove inappropriate or expired access. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to remove inappropriate or expired access. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Identity & Access Management
 severity: medium
 tags:
-- identity-and-access-management
-- remove-inappropriate-or-expired-access
+  - identity-and-access-management
+  - remove-inappropriate-or-expired-access
 related_procedures:
-- remove-inappropriate-or-expired-access
+  - remove-inappropriate-or-expired-access
 permalink: /symptoms/need-to-remove-inappropriate-or-expired-access/
 layout: article
 last_reviewed: '2026-08-02'

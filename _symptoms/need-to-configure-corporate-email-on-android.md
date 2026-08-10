@@ -1,16 +1,15 @@
 ---
 title: Need to configure corporate email on Android
 slug: need-to-configure-corporate-email-on-android
-description: 'Observable report: Need to configure corporate email on Android. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Need to configure corporate email on Android. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Mobile Devices & MDM
 severity: medium
 tags:
-- configure-corporate-email-on-android
-- mobile-devices-and-mdm
+  - configure-corporate-email-on-android
+  - mobile-devices-and-mdm
 related_procedures:
-- configure-corporate-email-on-android
+  - configure-corporate-email-on-android
 permalink: /symptoms/need-to-configure-corporate-email-on-android/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- troubleshoot-scan-to-network-folder
+  - printing-and-scanning
+  - troubleshoot-scan-to-network-folder
 related_procedures:
-- troubleshoot-scan-to-network-folder
+  - troubleshoot-scan-to-network-folder
 permalink: /symptoms/scan-to-network-folder/
 layout: article
 last_reviewed: '2026-08-02'

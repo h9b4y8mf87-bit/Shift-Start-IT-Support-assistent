@@ -1,16 +1,15 @@
 ---
 title: Need secure remote support to macOS
 slug: need-secure-remote-support-to-macos
-description: 'Observable report: Need secure remote support to macOS. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Need secure remote support to macOS. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- provide-secure-remote-support-to-macos
+  - macos-endpoints
+  - provide-secure-remote-support-to-macos
 related_procedures:
-- provide-secure-remote-support-to-macos
+  - provide-secure-remote-support-to-macos
 permalink: /symptoms/need-secure-remote-support-to-macos/
 layout: article
 last_reviewed: '2026-08-02'

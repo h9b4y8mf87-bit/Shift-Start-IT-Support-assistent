@@ -6,10 +6,10 @@ content_type: symptom
 category: Hardware & Peripherals
 severity: high
 tags:
-- hardware-and-peripherals
-- troubleshoot-a-failed-keyboard
+  - hardware-and-peripherals
+  - troubleshoot-a-failed-keyboard
 related_procedures:
-- troubleshoot-a-failed-keyboard
+  - troubleshoot-a-failed-keyboard
 permalink: /symptoms/a-failed-keyboard/
 layout: article
 last_reviewed: '2026-08-02'

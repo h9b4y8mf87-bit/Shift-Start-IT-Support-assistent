@@ -6,10 +6,10 @@ content_type: symptom
 category: macOS Endpoints
 severity: medium
 tags:
-- macos-endpoints
-- troubleshoot-printing-from-macos
+  - macos-endpoints
+  - troubleshoot-printing-from-macos
 related_procedures:
-- troubleshoot-printing-from-macos
+  - troubleshoot-printing-from-macos
 permalink: /symptoms/printing-from-macos/
 layout: article
 last_reviewed: '2026-08-02'

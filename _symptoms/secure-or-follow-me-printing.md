@@ -1,16 +1,15 @@
 ---
 title: Secure or follow-me printing
 slug: secure-or-follow-me-printing
-description: 'Observable report: Secure or follow-me printing. Select it with any other symptoms to receive ranked
-  procedures.'
+description: 'Observable report: Secure or follow-me printing. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Printing & Scanning
 severity: medium
 tags:
-- printing-and-scanning
-- troubleshoot-secure-or-follow-me-printing
+  - printing-and-scanning
+  - troubleshoot-secure-or-follow-me-printing
 related_procedures:
-- troubleshoot-secure-or-follow-me-printing
+  - troubleshoot-secure-or-follow-me-printing
 permalink: /symptoms/secure-or-follow-me-printing/
 layout: article
 last_reviewed: '2026-08-02'

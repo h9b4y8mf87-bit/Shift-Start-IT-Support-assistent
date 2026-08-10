@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-outlook-add-ins
+  - microsoft-365-and-collaboration
+  - troubleshoot-outlook-add-ins
 related_procedures:
-- troubleshoot-outlook-add-ins
+  - troubleshoot-outlook-add-ins
 permalink: /symptoms/outlook-add-ins/
 layout: article
 last_reviewed: '2026-08-02'

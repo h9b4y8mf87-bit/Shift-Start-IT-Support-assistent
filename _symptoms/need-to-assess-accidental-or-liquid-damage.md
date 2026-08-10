@@ -1,16 +1,15 @@
 ---
 title: Need to assess accidental or liquid damage
 slug: need-to-assess-accidental-or-liquid-damage
-description: 'Observable report: Need to assess accidental or liquid damage. Select it with any other symptoms to
-  receive ranked procedures.'
+description: 'Observable report: Need to assess accidental or liquid damage. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Hardware & Peripherals
 severity: medium
 tags:
-- assess-accidental-or-liquid-damage
-- hardware-and-peripherals
+  - assess-accidental-or-liquid-damage
+  - hardware-and-peripherals
 related_procedures:
-- assess-accidental-or-liquid-damage
+  - assess-accidental-or-liquid-damage
 permalink: /symptoms/need-to-assess-accidental-or-liquid-damage/
 layout: article
 last_reviewed: '2026-08-02'

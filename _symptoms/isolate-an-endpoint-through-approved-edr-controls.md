@@ -1,16 +1,15 @@
 ---
 title: Isolate an endpoint through approved EDR controls
 slug: isolate-an-endpoint-through-approved-edr-controls
-description: 'Observable report: Isolate an endpoint through approved EDR controls. Select it with any other symptoms
-  to receive ranked procedures.'
+description: 'Observable report: Isolate an endpoint through approved EDR controls. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: medium
 tags:
-- isolate-an-endpoint-through-approved-edr-controls
-- security-and-compliance
+  - isolate-an-endpoint-through-approved-edr-controls
+  - security-and-compliance
 related_procedures:
-- isolate-an-endpoint-through-approved-edr-controls
+  - isolate-an-endpoint-through-approved-edr-controls
 permalink: /symptoms/isolate-an-endpoint-through-approved-edr-controls/
 layout: article
 last_reviewed: '2026-08-02'

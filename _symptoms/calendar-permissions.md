@@ -6,10 +6,10 @@ content_type: symptom
 category: Microsoft 365 & Collaboration
 severity: medium
 tags:
-- microsoft-365-and-collaboration
-- troubleshoot-calendar-permissions
+  - microsoft-365-and-collaboration
+  - troubleshoot-calendar-permissions
 related_procedures:
-- troubleshoot-calendar-permissions
+  - troubleshoot-calendar-permissions
 permalink: /symptoms/calendar-permissions/
 layout: article
 last_reviewed: '2026-08-02'

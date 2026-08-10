@@ -6,10 +6,10 @@ content_type: symptom
 category: Linux & Developer Workstations
 severity: medium
 tags:
-- linux-and-developer-workstations
-- troubleshoot-a-git-repository-clone
+  - linux-and-developer-workstations
+  - troubleshoot-a-git-repository-clone
 related_procedures:
-- troubleshoot-a-git-repository-clone
+  - troubleshoot-a-git-repository-clone
 permalink: /symptoms/a-git-repository-clone/
 layout: article
 last_reviewed: '2026-08-02'

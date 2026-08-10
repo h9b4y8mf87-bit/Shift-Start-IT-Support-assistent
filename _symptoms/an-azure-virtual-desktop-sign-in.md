@@ -1,16 +1,15 @@
 ---
 title: An Azure Virtual Desktop sign-in
 slug: an-azure-virtual-desktop-sign-in
-description: 'Observable report: An Azure Virtual Desktop sign-in. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: An Azure Virtual Desktop sign-in. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
-category: Remote Access, VDI & DaaS
+category: 'Remote Access, VDI & DaaS'
 severity: medium
 tags:
-- remote-access-vdi-and-daas
-- troubleshoot-an-azure-virtual-desktop-sign-in
+  - remote-access-vdi-and-daas
+  - troubleshoot-an-azure-virtual-desktop-sign-in
 related_procedures:
-- troubleshoot-an-azure-virtual-desktop-sign-in
+  - troubleshoot-an-azure-virtual-desktop-sign-in
 permalink: /symptoms/an-azure-virtual-desktop-sign-in/
 layout: article
 last_reviewed: '2026-08-02'

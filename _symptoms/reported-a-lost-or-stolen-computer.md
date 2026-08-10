@@ -1,16 +1,15 @@
 ---
 title: Reported a lost or stolen computer
 slug: reported-a-lost-or-stolen-computer
-description: 'Observable report: Reported a lost or stolen computer. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: Reported a lost or stolen computer. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Security & Compliance
 severity: critical
 tags:
-- respond-to-a-lost-or-stolen-computer
-- security-and-compliance
+  - respond-to-a-lost-or-stolen-computer
+  - security-and-compliance
 related_procedures:
-- respond-to-a-lost-or-stolen-computer
+  - respond-to-a-lost-or-stolen-computer
 permalink: /symptoms/reported-a-lost-or-stolen-computer/
 layout: article
 last_reviewed: '2026-08-02'

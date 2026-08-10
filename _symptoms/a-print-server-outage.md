@@ -6,10 +6,10 @@ content_type: symptom
 category: Printing & Scanning
 severity: critical
 tags:
-- printing-and-scanning
-- troubleshoot-a-print-server-outage
+  - printing-and-scanning
+  - troubleshoot-a-print-server-outage
 related_procedures:
-- troubleshoot-a-print-server-outage
+  - troubleshoot-a-print-server-outage
 permalink: /symptoms/a-print-server-outage/
 layout: article
 last_reviewed: '2026-08-02'

@@ -6,12 +6,12 @@ content_type: symptom
 category: Printing & Scanning
 severity: low
 tags:
-- printer
-- queue
+  - printer
+  - queue
 related_procedures:
-- printer-offline
+  - printer-offline
 related_causes:
-- stuck-print-queue
+  - stuck-print-queue
 permalink: /symptoms/printer-offline-symptom/
 layout: article
 ---

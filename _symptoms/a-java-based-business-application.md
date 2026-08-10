@@ -1,16 +1,15 @@
 ---
 title: A Java-based business application
 slug: a-java-based-business-application
-description: 'Observable report: A Java-based business application. Select it with any other symptoms to receive
-  ranked procedures.'
+description: 'Observable report: A Java-based business application. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Business Applications & Browsers
 severity: medium
 tags:
-- business-applications-and-browsers
-- troubleshoot-a-java-based-business-application
+  - business-applications-and-browsers
+  - troubleshoot-a-java-based-business-application
 related_procedures:
-- troubleshoot-a-java-based-business-application
+  - troubleshoot-a-java-based-business-application
 permalink: /symptoms/a-java-based-business-application/
 layout: article
 last_reviewed: '2026-08-02'
