@@ -11,11 +11,13 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.data.kb.name | escape }}</title>
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/shiftstart-favicon.svg' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/supportvault-fusion.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/redesign.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/operational-hardening.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/production-readiness.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/brand.css' | relative_url }}">
   <script>
     window.KB_CONFIG = {{ site.data.kb | jsonify }};
     window.KB_BASE = {{ '/' | relative_url | jsonify }};
