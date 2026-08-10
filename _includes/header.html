@@ -61,6 +61,15 @@
 
     <nav id="mobile-navigation" class="mobile-nav rd-mobile-nav ss-mobile-nav" aria-label="Mobile navigation" hidden>
       <div class="shell ss-mobile-nav-grid">
+        <form class="rd-global-search ss-mobile-search" action="{{ '/search/' | relative_url }}" method="get" role="search" data-search-region>
+          <svg class="rd-search-icon" aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <label class="sr-only" for="kb-search">Search symptoms, procedures, domains or error codes</label>
+          <input id="kb-search" class="search-input rd-search-input ss-mobile-search-input" type="search" name="q" inputmode="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Search symptom, error code or procedure…" aria-controls="search-results" aria-autocomplete="list" aria-expanded="false">
+          <button class="search-clear rd-search-clear ss-mobile-search-clear" type="button" data-search-clear aria-label="Clear search" hidden>Clear</button>
+          <div id="search-results" class="search-results rd-search-results ss-mobile-search-results hidden" role="listbox" aria-label="Search suggestions"></div>
+          <p id="search-status" class="sr-only" aria-live="polite"></p>
+        </form>
+
         <a href="{{ '/' | relative_url }}">Dashboard</a>
         <a href="{{ '/procedures/' | relative_url }}">Procedures</a>
         <a href="{{ '/wizard/' | relative_url }}">Symptom Wizard</a>
