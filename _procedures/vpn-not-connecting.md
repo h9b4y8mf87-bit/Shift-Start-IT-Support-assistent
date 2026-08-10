@@ -43,6 +43,27 @@ change_record: Standardised to the Enterprise runbook template; existing verifie
 quality_gate: passed
 runbook_template: enterprise-v1
 verification_evidence_state: legacy_verified_pending_revalidation
+verification_schema_version: 2
+verification_governance_state: revalidation_required
+verification_v2_complete: false
+verification_v2_score_percent: 17
+verification_v2_missing:
+  - diagnostic_tested
+  - remediation_tested
+  - rollback_or_irreversibility_confirmed
+  - escalation_confirmed
+  - time_validated
+  - expected_result_confirmed
+  - owner_signoff
+  - authoritative_source_provenance
+  - tested_platforms
+  - last_tested
+  - minimum_peer_reviewers
+  - minimum_sme_reviewers
+  - minimum_test_records
+  - minimum_distinct_environments
+  - negative_path_tested
+verification_promotion_ready: false
 ---
 ## Diagnostic Steps
 1. Confirm the user can browse a public website without the VPN and that airplane mode is off.

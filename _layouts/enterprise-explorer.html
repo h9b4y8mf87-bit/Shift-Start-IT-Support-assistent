@@ -54,13 +54,15 @@ layout: default
           <tbody data-procedure-rows>
             {% for item in items %}
               {% assign severity = item.severity | default: 'low' | downcase %}
-              {% case severity %}
-                {% when 'critical' %}{% assign priority = 'P0' %}{% assign priority_order = 0 %}
-                {% when 'high' %}{% assign priority = 'P1' %}{% assign priority_order = 1 %}
-                {% when 'medium' %}{% assign priority = 'P2' %}{% assign priority_order = 2 %}
-                {% when 'low' %}{% assign priority = 'P3' %}{% assign priority_order = 3 %}
-                {% else %}{% assign priority = 'P4' %}{% assign priority_order = 4 %}
+              {% assign priority = item.verification_priority | default: 'P3' %}
+              {% case priority %}
+                {% when 'P0' %}{% assign priority_order = 0 %}
+                {% when 'P1' %}{% assign priority_order = 1 %}
+                {% when 'P2' %}{% assign priority_order = 2 %}
+                {% when 'P3' %}{% assign priority_order = 3 %}
+                {% else %}{% assign priority_order = 4 %}
               {% endcase %}
+              {% assign governance = item.verification_governance_state | default: 'under_review' %}
               {% assign updated = item.last_updated | default: item.last_tested | default: item.date | default: '' %}
               <tr class="ss-procedure-row"
                   data-procedure-row
@@ -72,13 +74,13 @@ layout: default
                   data-priority="{{ priority }}"
                   data-priority-order="{{ priority_order }}"
                   data-severity="{{ severity }}"
-                  data-status="{{ item.content_status | default: 'under_review' | escape }}"
+                  data-status="{{ governance | escape }}"
                   data-updated="{{ updated | date: '%Y-%m-%d' }}"
                   data-owner="{{ item.owner_team | default: 'Not assigned' | escape }}"
                   data-search="{{ item.title | append: ' ' | append: item.description | append: ' ' | append: item.category | append: ' ' | append: item.tags | append: ' ' | append: item.platforms | append: ' ' | append: item.error_codes | append: ' ' | append: item.owner_team | downcase | escape }}">
                 <td><button type="button" class="ss-row-open" data-open-procedure><strong>{{ item.title }}</strong><small>{{ item.category }}</small></button></td>
                 <td><span class="ss-priority ss-priority-{{ priority | downcase }}">{{ priority }}</span></td>
-                <td><span class="ss-status-pill ss-status-{{ item.content_status | default: 'under_review' }}">{% if item.content_status == 'verified' %}✓{% elsif item.content_status == 'deprecated' %}×{% else %}◷{% endif %} {{ item.content_status | default: 'under_review' | replace: '_', ' ' }}</span></td>
+                <td>{% if governance == 'verified' %}<span class="ss-status-pill ss-status-verified">✓ Verified</span>{% elsif governance == 'revalidation_required' %}<span class="ss-status-pill ss-status-revalidation">◷ Revalidation Required</span>{% elsif governance == 'live_validation_pending' %}<span class="ss-status-pill ss-status-under_review">◷ Live Validation Pending</span>{% elsif governance == 'deprecated' %}<span class="ss-status-pill ss-status-deprecated">× Deprecated</span>{% else %}<span class="ss-status-pill ss-status-under_review">◷ {{ governance | replace: '_', ' ' }}</span>{% endif %}</td>
                 <td><time{% if updated %} datetime="{{ updated | date: '%Y-%m-%d' }}"{% endif %}>{{ updated | date: '%Y-%m-%d' | default: 'Not recorded' }}</time></td>
                 <td>{{ item.owner_team | default: 'Not assigned' }}</td>
               </tr>

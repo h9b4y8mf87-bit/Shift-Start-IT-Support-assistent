@@ -18,9 +18,11 @@
     "remediate:check": "node scripts/remediate-content.js --check",
     "post-remediation-check": "node scripts/post-remediation-check.js",
     "responsive:check": "node scripts/validate-responsive.js && node --check assets/js/app.js && node --check assets/js/search.js",
-    "readiness:apply": "node scripts/production-readiness.js --apply",
-    "readiness:promote": "node scripts/production-readiness.js --promote",
-    "readiness:check": "node scripts/validate-readiness.js"
+    "readiness:apply": "node scripts/production-readiness.js --apply && node scripts/verification-v2.js --apply",
+    "readiness:promote": "node scripts/verification-v2.js --promote",
+    "readiness:check": "node scripts/validate-readiness.js && node scripts/validate-verification-v2.js",
+    "verification:v2:report": "node scripts/verification-v2.js",
+    "verification:v2:apply": "node scripts/verification-v2.js --apply"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

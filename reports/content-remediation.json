@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T17:28:32.442Z",
+  "generatedAt": "2026-08-10T18:00:00.120Z",
   "applied": true,
   "procedures": {
     "total": 421,
@@ -13,7 +13,7 @@
     "titlesCorrected": 0
   },
   "categoriesCanonicalised": 0,
-  "filesChanged": 0,
+  "filesChanged": 421,
   "notes": [
     "All procedures remain present; remediation changes metadata, taxonomy and trust signalling without deleting or truncating content.",
     "Generated baseline procedures are marked under_review until a named technical owner validates commands and expected results in the target environment."

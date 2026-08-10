@@ -53,6 +53,26 @@ risk_model: impact-v1
 risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
 verification_priority: P1
 verification_state: awaiting_live_validation
+verification_schema_version: 2
+verification_governance_state: under_review
+verification_v2_complete: false
+verification_v2_score_percent: 22
+verification_v2_missing:
+  - diagnostic_tested
+  - remediation_tested
+  - rollback_or_irreversibility_confirmed
+  - escalation_confirmed
+  - time_validated
+  - expected_result_confirmed
+  - owner_signoff
+  - authoritative_source_provenance
+  - last_tested
+  - minimum_peer_reviewers
+  - minimum_sme_reviewers
+  - minimum_test_records
+  - minimum_distinct_environments
+  - negative_path_tested
+verification_promotion_ready: false
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a shared mailbox** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

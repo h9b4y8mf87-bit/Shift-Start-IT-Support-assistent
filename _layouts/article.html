@@ -12,9 +12,10 @@ layout: default
 {% if ev.time_validated %}{% assign ev_count = ev_count | plus: 1 %}{% endif %}
 {% if ev.owner_signoff %}{% assign ev_count = ev_count | plus: 1 %}{% endif %}
 {% assign evidence_complete = false %}{% if ev_count == 6 %}{% assign evidence_complete = true %}{% endif %}
-{% assign display_status = assurance_status %}{% if assurance_status == 'verified' and evidence_complete == false %}{% assign display_status = 'revalidation' %}{% endif %}
+{% assign display_status = page.verification_governance_state | default: assurance_status %}
 {% assign confidence_percent = ev_count | times: 100 | divided_by: 6 %}
-{% if page.success_rate %}{% assign confidence_percent = page.success_rate %}{% endif %}
+{% if page.verification_v2_score_percent %}{% assign confidence_percent = page.verification_v2_score_percent %}{% elsif page.success_rate %}{% assign confidence_percent = page.success_rate %}{% endif %}
+{% assign verification_missing_count = page.verification_v2_missing | size %}
 {% assign root_cause_summary = page.root_cause | default: page.likely_root_cause | default: 'No structured root-cause summary is recorded yet. Follow the diagnostic section before concluding cause.' %}
 {% assign workaround_summary = page.immediate_workaround | default: page.tldr | default: 'No safe immediate workaround is recorded. Use the diagnostic and remediation controls below.' %}
 
@@ -34,7 +35,8 @@ layout: default
       <div class="rd-card-badges rd-article-badges">
         {% if page.severity %}<span class="rd-risk rd-risk-{{ page.severity | downcase }}">{{ page.severity }} risk</span>{% endif %}
         {% if display_status == 'verified' %}<span class="ss-status-pill ss-status-verified">✓ Verified</span>
-        {% elsif display_status == 'revalidation' %}<span class="ss-status-pill ss-status-revalidation">◷ Revalidation required</span>
+        {% elsif display_status == 'revalidation_required' %}<span class="ss-status-pill ss-status-revalidation">◷ Revalidation Required</span>
+        {% elsif display_status == 'live_validation_pending' %}<span class="ss-status-pill ss-status-under_review">◷ Live Validation Pending</span>
         {% elsif assurance_status == 'deprecated' %}<span class="ss-status-pill ss-status-deprecated">× Deprecated</span>
         {% else %}<span class="ss-status-pill ss-status-under_review">◷ {{ assurance_status | replace: '_', ' ' }}</span>{% endif %}
         {% if page.category %}<span class="badge">{{ page.category }}</span>{% endif %}
@@ -59,7 +61,7 @@ layout: default
 
   <div class="ss-governance-grid">
     <section class="ss-confidence-card" aria-label="Confidence score">
-      <div class="ss-confidence-heading"><div><span>Confidence / evidence</span><strong>{{ confidence_percent }}%</strong></div>{% if page.verified_by_smes %}<small>Verified by {{ page.verified_by_smes }} SMEs</small>{% elsif page.success_rate %}<small>Recorded success rate</small>{% else %}<small>{{ ev_count }}/6 validation evidence controls recorded</small>{% endif %}</div>
+      <div class="ss-confidence-heading"><div><span>Confidence / evidence</span><strong>{{ confidence_percent }}%</strong></div>{% if display_status == 'verified' %}<small>Verification-v2 evidence gate complete</small>{% elsif page.verification_v2_missing %}<small>{{ verification_missing_count }} verification-v2 requirement(s) outstanding</small>{% elsif page.verified_by_smes %}<small>Verified by {{ page.verified_by_smes }} SMEs</small>{% else %}<small>Evidence migration pending</small>{% endif %}</div>
       <div class="ss-confidence-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ confidence_percent }}"><span style="width:{{ confidence_percent }}%"></span></div>
     </section>
     <section class="ss-impact-card" aria-label="Impact scope">
@@ -76,7 +78,7 @@ layout: default
   <section class="ss-lifecycle" aria-label="Procedure lifecycle">
     <div class="ss-lifecycle-step{% if assurance_status == 'draft' %} is-current{% elsif assurance_status != 'draft' %} is-complete{% endif %}"><i>1</i><span>Draft</span></div>
     <div class="ss-lifecycle-line"></div>
-    <div class="ss-lifecycle-step{% if assurance_status == 'under_review' or display_status == 'revalidation' %} is-current{% elsif assurance_status == 'verified' or assurance_status == 'deprecated' %} is-complete{% endif %}"><i>2</i><span>Peer Review</span></div>
+    <div class="ss-lifecycle-step{% if assurance_status == 'under_review' or display_status == 'revalidation_required' or display_status == 'live_validation_pending' %} is-current{% elsif assurance_status == 'verified' or assurance_status == 'deprecated' %} is-complete{% endif %}"><i>2</i><span>Peer Review</span></div>
     <div class="ss-lifecycle-line"></div>
     <div class="ss-lifecycle-step{% if display_status == 'verified' %} is-current{% elsif assurance_status == 'deprecated' %} is-complete{% endif %}"><i>3</i><span>Verified</span></div>
     <div class="ss-lifecycle-line"></div>
@@ -86,8 +88,8 @@ layout: default
   <section class="assurance-banner rd-assurance-callout status-{{ assurance_status }}" aria-label="Content assurance">
     <div class="rd-assurance-icon" aria-hidden="true">{% if display_status == 'verified' %}✓{% else %}◷{% endif %}</div>
     <div>
-      <strong>{% if display_status == 'verified' %}Evidence-complete operational guidance{% elsif display_status == 'revalidation' %}Legacy verified status — revalidation evidence incomplete{% elsif assurance_status == 'draft' %}Draft — senior review required{% elsif assurance_status == 'deprecated' %}Deprecated — use replacement guidance{% else %}Technical-owner validation pending{% endif %}</strong>
-      <p>{% if display_status == 'verified' %}Recorded diagnostic, remediation, rollback, escalation, timing and owner-signoff evidence is complete. Continue to follow organisational change controls.{% elsif display_status == 'revalidation' %}The stored status is verified, but the current evidence gate is incomplete. Treat this procedure as requiring revalidation before relying on the status alone.{% elsif assurance_status == 'under_review' %}Use this runbook with technical-owner judgement until validation is complete. Do not treat under-review content as production approval.{% else %}Review content quality and organisational approvals before applying production changes.{% endif %}</p>
+      <strong>{% if display_status == 'verified' %}Evidence-complete operational guidance{% elsif display_status == 'revalidation_required' %}Revalidation required — verification-v2 evidence incomplete or expired{% elsif display_status == 'live_validation_pending' %}Documentation ready — live validation pending{% elsif assurance_status == 'draft' %}Draft — senior review required{% elsif assurance_status == 'deprecated' %}Deprecated — use replacement guidance{% else %}Technical review in progress{% endif %}</strong>
+      <p>{% if display_status == 'verified' %}This procedure passed the verification-v2 evidence gate and is within its review SLA. Continue to follow organisational change controls.{% elsif display_status == 'revalidation_required' %}A stored verified status exists, but verification-v2 evidence is incomplete or the review SLA has expired. Do not rely on the historical label alone.{% elsif display_status == 'live_validation_pending' %}The runbook structure is ready, but operational evidence or formal promotion is still pending. Use technical-owner judgement.{% elsif assurance_status == 'under_review' %}Technical or documentation review is still incomplete. Do not treat this content as production approval.{% else %}Review content quality and organisational approvals before applying production changes.{% endif %}</p>
       <span>Reviewed by: {{ page.reviewed_by | default: 'Not recorded' }} · Last tested: {{ page.last_tested | default: 'Not recorded' }}</span>
       <span>Governance: <a href="{{ '/reports/content-audit.json' | relative_url }}">Open machine-readable audit report</a></span>
     </div><a href="{{ '/content-quality/' | relative_url }}">Quality details</a>

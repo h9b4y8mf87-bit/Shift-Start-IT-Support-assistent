@@ -55,6 +55,25 @@ risk_model: impact-v1
 risk_basis: 'Medium impact indicators detected: degraded/intermittent service, peripheral issue or an available workaround.'
 verification_priority: P2
 verification_state: awaiting_live_validation
+verification_schema_version: 2
+verification_governance_state: under_review
+verification_v2_complete: false
+verification_v2_score_percent: 24
+verification_v2_missing:
+  - diagnostic_tested
+  - remediation_tested
+  - rollback_or_irreversibility_confirmed
+  - escalation_confirmed
+  - time_validated
+  - expected_result_confirmed
+  - owner_signoff
+  - authoritative_source_provenance
+  - last_tested
+  - minimum_peer_reviewers
+  - minimum_sme_reviewers
+  - minimum_test_records
+  - minimum_distinct_environments
+verification_promotion_ready: false
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot microsoft intune enrolment** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
