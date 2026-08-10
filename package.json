@@ -10,7 +10,7 @@
     "jekyll": "bundle exec jekyll build",
     "build": "npm run clean && npm run remediate:apply && npm run vendor && npm run generate && npm run css && bundle exec jekyll build",
     "dev": "npm run remediate:apply && npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
-    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check && npm run readiness:check",
+    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check && npm run readiness:check && npm run verification:queue && npm run verification:queue:check",
     "test": "npm run remediate:apply && npm run check && npm run build",
     "audit-content": "node scripts/validate-content.js",
     "vendor": "node scripts/vendor-assets.js",
@@ -22,7 +22,9 @@
     "readiness:promote": "node scripts/verification-v2.js --promote",
     "readiness:check": "node scripts/validate-readiness.js && node scripts/validate-verification-v2.js",
     "verification:v2:report": "node scripts/verification-v2.js",
-    "verification:v2:apply": "node scripts/verification-v2.js --apply"
+    "verification:v2:apply": "node scripts/verification-v2.js --apply",
+    "verification:queue": "node scripts/build-verification-priority-queue.js",
+    "verification:queue:check": "node scripts/validate-verification-priority-queue.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
