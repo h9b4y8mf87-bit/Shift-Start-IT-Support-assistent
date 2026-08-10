@@ -1,39 +1,47 @@
 ---
 title: Collect Linux logs for escalation
 slug: collect-linux-logs-for-escalation
-description: Enterprise runbook to collect linux logs for escalation without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to collect linux logs for escalation without skipping evidence, verification, rollback or
+  escalation requirements.
 content_type: procedure
 category: Linux & Developer Workstations
 service: Linux & Developer Workstations
-severity: medium
+severity: high
 support_tier: L1-L2
 owner_team: Linux Platform or Developer Experience
-platforms: &id001
-- Linux
-- Developer tooling
+platforms:
+  - Linux
+  - Developer tooling
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- collect
-- escalation
-- for
-- l1-l2
-- linux
-- linux-and-developer-workstations
-- logs
+  - collect
+  - escalation
+  - for
+  - l1-l2
+  - linux
+  - linux-and-developer-workstations
+  - logs
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for collect linux logs for escalation, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for collect linux logs for escalation, verify the original business task, and escalate with complete logs
+  if recovery is not achieved.
 related_symptoms:
-- need-to-collect-linux-logs-for-escalation
-- linux-or-developer-tooling-is-not-working
+  - need-to-collect-linux-logs-for-escalation
+  - linux-or-developer-tooling-is-not-working
 symptom_weights:
   need-to-collect-linux-logs-for-escalation: 10
   linux-or-developer-tooling-is-not-working: 3
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Linux Platform or Developer Experience with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Linux Platform or Developer Experience with the exact user or service impact, timestamps and timezone,
+  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
+  status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -44,10 +52,18 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Linux
+  - Developer tooling
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: >-
+  High impact indicators detected: privileged, security-sensitive, access-control, credential, encryption or
+  data-exposure operation.
+verification_priority: P1
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **collect linux logs for escalation** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

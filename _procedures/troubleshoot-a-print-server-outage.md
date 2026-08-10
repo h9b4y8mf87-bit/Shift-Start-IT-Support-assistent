@@ -1,40 +1,48 @@
 ---
 title: Troubleshoot a print server outage
 slug: troubleshoot-a-print-server-outage
-description: Enterprise runbook to troubleshoot a print server outage without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to troubleshoot a print server outage without skipping evidence, verification, rollback or
+  escalation requirements.
 content_type: procedure
 category: Printing & Scanning
 service: Printing & Scanning
 severity: critical
 support_tier: L1-L2
 owner_team: Workplace Technology or Print Services
-platforms: &id001
-- Windows
-- macOS
-- Print services
+platforms:
+  - Windows
+  - macOS
+  - Print services
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- a
-- l1-l2
-- outage
-- print
-- printing-and-scanning
-- server
-- troubleshoot
+  - a
+  - l1-l2
+  - outage
+  - print
+  - printing-and-scanning
+  - server
+  - troubleshoot
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot a print server outage, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for troubleshoot a print server outage, verify the original business task, and escalate with complete logs
+  if recovery is not achieved.
 related_symptoms:
-- a-print-server-outage
-- printing-or-scanning-is-not-working
+  - a-print-server-outage
+  - printing-or-scanning-is-not-working
 symptom_weights:
   a-print-server-outage: 10
   printing-or-scanning-is-not-working: 3
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Workplace Technology or Print Services with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Workplace Technology or Print Services with the exact user or service impact, timestamps and timezone,
+  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
+  status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -45,10 +53,19 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Windows
+  - macOS
+  - Print services
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: >-
+  Existing explicit critical classification retained after impact-model review; no stronger critical indicator was
+  detected.
+verification_priority: P0
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a print server outage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

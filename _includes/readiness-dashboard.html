@@ -1,0 +1,57 @@
+{% assign readiness_verified = site.procedures | where: 'content_status', 'verified' %}
+{% assign readiness_review = site.procedures | where: 'content_status', 'under_review' %}
+{% assign readiness_draft = site.procedures | where: 'content_status', 'draft' %}
+{% assign readiness_missing_risk = 0 %}
+{% assign readiness_evidence_complete = site.procedures | where: 'verification_evidence_state', 'complete' %}
+{% for procedure in site.procedures %}
+  {% unless procedure.severity == 'critical' or procedure.severity == 'high' or procedure.severity == 'medium' or procedure.severity == 'low' %}
+    {% assign readiness_missing_risk = readiness_missing_risk | plus: 1 %}
+  {% endunless %}
+{% endfor %}
+{% assign readiness_target_numerator = site.procedures | size | times: 80 %}
+{% assign readiness_target = readiness_target_numerator | plus: 99 | divided_by: 100 %}
+
+<section class="shell rd-readiness-dashboard">
+  <div class="rd-readiness-panel">
+    <div class="rd-readiness-head">
+      <div>
+        <p class="rd-eyebrow">Verification dashboard</p>
+        <h2>Knowledge trust at a glance</h2>
+      </div>
+      <p>Status is not promoted automatically. A new Verified result requires live diagnostic/remediation testing, rollback and escalation confirmation, time validation and owner sign-off.</p>
+    </div>
+
+    <div class="rd-readiness-grid">
+      <div class="rd-readiness-stat verified">
+        <span>✓ Verified status</span>
+        <strong>{{ readiness_verified | size }}</strong>
+        <small>80% target: {{ readiness_target }}</small>
+      </div>
+      <div class="rd-readiness-stat verified">
+        <span>✓ Evidence-complete</span>
+        <strong>{{ readiness_evidence_complete | size }}</strong>
+        <small>Recorded live-test gate</small>
+      </div>
+      <div class="rd-readiness-stat review">
+        <span>↻ Under review</span>
+        <strong>{{ readiness_review | size }}</strong>
+        <small>Prioritised P0 → P3</small>
+      </div>
+      <div class="rd-readiness-stat">
+        <span>📝 Draft</span>
+        <strong>{{ readiness_draft | size }}</strong>
+        <small>Not for routine production use</small>
+      </div>
+      <div class="rd-readiness-stat missing">
+        <span>⚠ Missing risk</span>
+        <strong>{{ readiness_missing_risk }}</strong>
+        <small>Target: 0</small>
+      </div>
+    </div>
+
+    <div class="rd-readiness-foot">
+      <span>Risk model: impact-v1 · Critical=P0 · High=P1 · Medium=P2 · Low=P3</span>
+      <a class="rd-text-action" href="{{ '/content-quality/' | relative_url }}">Open quality controls →</a>
+    </div>
+  </div>
+</section>

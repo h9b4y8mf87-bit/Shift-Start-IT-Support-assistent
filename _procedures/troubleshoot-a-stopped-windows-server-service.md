@@ -1,42 +1,50 @@
 ---
 title: Troubleshoot a stopped Windows Server service
 slug: troubleshoot-a-stopped-windows-server-service
-description: Enterprise runbook to troubleshoot a stopped windows server service without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to troubleshoot a stopped windows server service without skipping evidence, verification, rollback
+  or escalation requirements.
 content_type: procedure
 category: Servers & Core Infrastructure
 service: Servers & Core Infrastructure
-severity: medium
+severity: high
 support_tier: L2-L3
 owner_team: Server or Infrastructure Operations
-platforms: &id001
-- Windows Server
-- AD DS
-- DNS
-- DHCP
+platforms:
+  - Windows Server
+  - AD DS
+  - DNS
+  - DHCP
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- a
-- l2-l3
-- server
-- servers-and-core-infrastructure
-- service
-- stopped
-- troubleshoot
-- windows
+  - a
+  - l2-l3
+  - server
+  - servers-and-core-infrastructure
+  - service
+  - stopped
+  - troubleshoot
+  - windows
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot a stopped windows server service, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for troubleshoot a stopped windows server service, verify the original business task, and escalate with
+  complete logs if recovery is not achieved.
 related_symptoms:
-- a-stopped-windows-server-service
-- a-server-or-infrastructure-service-is-degraded
+  - a-stopped-windows-server-service
+  - a-server-or-infrastructure-service-is-degraded
 symptom_weights:
   a-stopped-windows-server-service: 10
   a-server-or-infrastructure-service-is-degraded: 3
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Server or Infrastructure Operations with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Server or Infrastructure Operations with the exact user or service impact, timestamps and timezone,
+  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
+  status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -47,10 +55,20 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Windows Server
+  - AD DS
+  - DNS
+  - DHCP
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: >-
+  High impact indicators detected: privileged, security-sensitive, access-control, credential, encryption or
+  data-exposure operation.
+verification_priority: P1
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a stopped windows server service** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

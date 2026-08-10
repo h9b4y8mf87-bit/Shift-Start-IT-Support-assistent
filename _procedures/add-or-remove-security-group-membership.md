@@ -1,57 +1,77 @@
 ---
 title: Add or remove security group membership
 slug: add-or-remove-security-group-membership
-description: Safely validate, add, remove and verify an approved user, computer, service account or group membership change in Active Directory or Microsoft Entra ID.
+description: >-
+  Safely validate, add, remove and verify an approved user, computer, service account or group membership change in
+  Active Directory or Microsoft Entra ID.
 content_type: procedure
 category: Identity & Access Management
 service: Directory group management
-severity: medium
+severity: high
 support_tier: L2
 owner_team: Identity and Access Management
 platforms:
-- Active Directory
-- Microsoft Entra ID
+  - Active Directory
+  - Microsoft Entra ID
 risk_level: high
 estimated_time: 15-45 minutes
 tags:
-- active-directory
-- entra-id
-- group-membership
-- least-privilege
-- access-control
+  - active-directory
+  - entra-id
+  - group-membership
+  - least-privilege
+  - access-control
 error_codes: []
-tldr: Confirm the approved target group and principal, capture current direct and effective membership, identify whether the group is assigned, dynamic, role-assignable or synchronised, make only the approved change with a named administrative account, then verify replication, token refresh and the original business access.
+tldr: >-
+  Confirm the approved target group and principal, capture current direct and effective membership, identify whether the
+  group is assigned, dynamic, role-assignable or synchronised, make only the approved change with a named administrative
+  account, then verify replication, token refresh and the original business access.
 related_symptoms:
-- need-to-change-security-group-membership
-- access-is-denied-or-missing
+  - need-to-change-security-group-membership
+  - access-is-denied-or-missing
 symptom_weights:
   need-to-change-security-group-membership: 10
   access-is-denied-or-missing: 4
 related_causes: []
 related_commands: []
 next_steps:
-- grant-access-through-an-approved-request
-- remove-inappropriate-or-expired-access
-escalation: Escalate to Identity and Access Management when approval is missing or ambiguous, the group is privileged, role-assignable, dynamic, synchronised from another authority, protected by PIM or access governance, replication does not converge, the requested principal cannot be resolved, or the resulting access is broader than approved. Include the request or change record, before-and-after membership evidence, group and principal object IDs, timestamps, directory source, commands used, replication or token-refresh results and the business test outcome.
+  - grant-access-through-an-approved-request
+  - remove-inappropriate-or-expired-access
+escalation: >-
+  Escalate to Identity and Access Management when approval is missing or ambiguous, the group is privileged,
+  role-assignable, dynamic, synchronised from another authority, protected by PIM or access governance, replication does
+  not converge, the requested principal cannot be resolved, or the resulting access is broader than approved. Include
+  the request or change record, before-and-after membership evidence, group and principal object IDs, timestamps,
+  directory source, commands used, replication or token-refresh results and the business test outcome.
 last_reviewed: '2026-08-02'
 review_cycle_days: 90
 required_role: technician
-approval_required: A valid access request or change record approved by the resource owner or delegated authority is mandatory. Privileged and role-assignable groups require the organisation's privileged-access workflow.
+approval_required: >-
+  A valid access request or change record approved by the resource owner or delegated authority is mandatory. Privileged
+  and role-assignable groups require the organisation's privileged-access workflow.
 content_status: under_review
 generated_baseline: false
 reviewed_by: ''
 last_tested: ''
 tested_platforms:
-- Active Directory Domain Services
-- Microsoft Entra ID
+  - Active Directory Domain Services
+  - Microsoft Entra ID
 source_references:
-- Microsoft Learn - Add-ADGroupMember
-- Microsoft Learn - Remove-ADGroupMember
-- Microsoft Learn - Microsoft Graph group membership cmdlets
-change_record: Rewritten during content remediation to replace an unrelated account-lockout command with group-specific diagnostics, controlled change commands, rollback and verification.
+  - Microsoft Learn - Add-ADGroupMember
+  - Microsoft Learn - Remove-ADGroupMember
+  - Microsoft Learn - Microsoft Graph group membership cmdlets
+change_record: >-
+  Rewritten during content remediation to replace an unrelated account-lockout command with group-specific diagnostics,
+  controlled change commands, rollback and verification.
 quality_gate: pending
 permalink: /procedures/add-or-remove-security-group-membership/
 layout: article
+risk_model: impact-v1
+risk_basis: >-
+  High impact indicators detected: privileged, security-sensitive, access-control, credential, encryption or
+  data-exposure operation.
+verification_priority: P1
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this procedure for an approved request to add or remove a user, computer, service account or nested group from a security group. It covers:

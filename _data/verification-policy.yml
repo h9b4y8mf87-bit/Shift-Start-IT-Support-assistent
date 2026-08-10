@@ -1,0 +1,38 @@
+schema_version: 1
+risk_model: impact-v1
+verified_target_percent: 80
+risk_levels:
+  critical:
+    priority: P0
+    definition: System down, boot failure, data loss/corruption, confirmed or suspected security breach, or broad outage.
+  high:
+    priority: P1
+    definition: Service degradation, a user unable to perform core work, privileged/security-sensitive change, or sensitive-data exposure risk.
+  medium:
+    priority: P2
+    definition: Intermittent or degraded service, workaround available, peripheral problem, or limited small-group impact.
+  low:
+    priority: P3
+    definition: Minor inconvenience, cosmetic issue, routine request, or simple self-service correction.
+verification_gate:
+  required_for_new_verified_status:
+  - diagnostic_tested
+  - remediation_tested
+  - rollback_confirmed
+  - escalation_confirmed
+  - time_validated
+  - owner_signoff
+  required_metadata:
+  - last_tested
+  - tested_platforms
+  - owner_team
+  - support_tier
+  - estimated_time
+enterprise_runbook:
+  version: enterprise-v1
+  body_section_order:
+  - Diagnostic Steps
+  - Remediation Steps
+  - Rollback Steps
+  - Verification Steps
+  - Escalation Path

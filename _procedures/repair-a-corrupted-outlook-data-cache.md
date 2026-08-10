@@ -1,32 +1,37 @@
 ---
 title: Repair a corrupted Outlook data cache
 slug: repair-a-corrupted-outlook-data-cache
-description: Enterprise runbook to repair a corrupted outlook data cache without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to repair a corrupted outlook data cache without skipping evidence, verification, rollback or
+  escalation requirements.
 content_type: procedure
 category: Microsoft 365 & Collaboration
 service: Microsoft 365 & Collaboration
-severity: medium
+severity: critical
 support_tier: L1-L2
 owner_team: Microsoft 365 or Collaboration Services
-platforms: &id001
-- Microsoft 365
+platforms:
+  - Microsoft 365
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- a
-- cache
-- corrupted
-- data
-- l1-l2
-- microsoft-365-and-collaboration
-- outlook
-- repair
+  - a
+  - cache
+  - corrupted
+  - data
+  - l1-l2
+  - microsoft-365-and-collaboration
+  - outlook
+  - repair
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for repair a corrupted outlook data cache, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for repair a corrupted outlook data cache, verify the original business task, and escalate with complete
+  logs if recovery is not achieved.
 related_symptoms:
-- a-corrupted-outlook-data-cache
-- microsoft-365-feature-is-not-working
-- cloud-collaboration-access-is-failing
+  - a-corrupted-outlook-data-cache
+  - microsoft-365-feature-is-not-working
+  - cloud-collaboration-access-is-failing
 symptom_weights:
   a-corrupted-outlook-data-cache: 10
   microsoft-365-feature-is-not-working: 3
@@ -34,8 +39,11 @@ symptom_weights:
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Microsoft 365 or Collaboration Services with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Microsoft 365 or Collaboration Services with the exact user or service impact, timestamps and timezone,
+  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
+  status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -46,10 +54,17 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Microsoft 365
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: >-
+  Critical impact indicators detected: system/boot outage, data-integrity risk, security breach, or broad service
+  outage.
+verification_priority: P0
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **repair a corrupted outlook data cache** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

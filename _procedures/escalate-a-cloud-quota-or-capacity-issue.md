@@ -1,43 +1,51 @@
 ---
 title: Escalate a cloud quota or capacity issue
 slug: escalate-a-cloud-quota-or-capacity-issue
-description: Enterprise runbook to escalate a cloud quota or capacity issue without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to escalate a cloud quota or capacity issue without skipping evidence, verification, rollback or
+  escalation requirements.
 content_type: procedure
 category: Cloud & Virtualisation
 service: Cloud & Virtualisation
 severity: medium
 support_tier: L2-L3
 owner_team: Cloud Platform or Virtualisation Operations
-platforms: &id001
-- Azure
-- AWS
-- VMware
-- Hyper-V
+platforms:
+  - Azure
+  - AWS
+  - VMware
+  - Hyper-V
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- a
-- capacity
-- cloud
-- cloud-and-virtualisation
-- escalate
-- issue
-- l2-l3
-- or
-- quota
+  - a
+  - capacity
+  - cloud
+  - cloud-and-virtualisation
+  - escalate
+  - issue
+  - l2-l3
+  - or
+  - quota
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for escalate a cloud quota or capacity issue, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for escalate a cloud quota or capacity issue, verify the original business task, and escalate with
+  complete logs if recovery is not achieved.
 related_symptoms:
-- escalate-a-cloud-quota-or-capacity-issue
-- a-cloud-or-virtual-resource-is-degraded
+  - escalate-a-cloud-quota-or-capacity-issue
+  - a-cloud-or-virtual-resource-is-degraded
 symptom_weights:
   escalate-a-cloud-quota-or-capacity-issue: 10
   a-cloud-or-virtual-resource-is-degraded: 3
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Cloud Platform or Virtualisation Operations with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Cloud Platform or Virtualisation Operations with the exact user or service impact, timestamps and
+  timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted,
+  rollback status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -48,10 +56,18 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Azure
+  - AWS
+  - VMware
+  - Hyper-V
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: 'Medium impact indicators detected: degraded/intermittent service, peripheral issue or an available workaround.'
+verification_priority: P2
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **escalate a cloud quota or capacity issue** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

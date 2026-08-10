@@ -1,40 +1,48 @@
 ---
 title: Troubleshoot a laptop display with no image
 slug: troubleshoot-a-laptop-display-with-no-image
-description: Enterprise runbook to troubleshoot a laptop display with no image without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to troubleshoot a laptop display with no image without skipping evidence, verification, rollback or
+  escalation requirements.
 content_type: procedure
 category: Hardware & Peripherals
 service: Hardware & Peripherals
 severity: high
 support_tier: L1-L2
 owner_team: Workplace Hardware or Vendor Support
-platforms: &id001
-- Corporate hardware
+platforms:
+  - Corporate hardware
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- a
-- display
-- hardware-and-peripherals
-- image
-- l1-l2
-- laptop
-- 'no'
-- troubleshoot
-- with
+  - a
+  - display
+  - hardware-and-peripherals
+  - image
+  - l1-l2
+  - laptop
+  - 'no'
+  - troubleshoot
+  - with
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot a laptop display with no image, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for troubleshoot a laptop display with no image, verify the original business task, and escalate with
+  complete logs if recovery is not achieved.
 related_symptoms:
-- a-laptop-display-with-no-image
-- hardware-or-peripheral-is-not-functioning
+  - a-laptop-display-with-no-image
+  - hardware-or-peripheral-is-not-functioning
 symptom_weights:
   a-laptop-display-with-no-image: 10
   hardware-or-peripheral-is-not-functioning: 3
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Workplace Hardware or Vendor Support with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Workplace Hardware or Vendor Support with the exact user or service impact, timestamps and timezone,
+  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
+  status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -45,10 +53,15 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Corporate hardware
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+verification_priority: P1
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a laptop display with no image** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

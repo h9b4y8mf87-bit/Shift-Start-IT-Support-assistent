@@ -1,31 +1,36 @@
 ---
 title: Assess storage drive health
 slug: assess-storage-drive-health
-description: Enterprise runbook to assess storage drive health without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to assess storage drive health without skipping evidence, verification, rollback or escalation
+  requirements.
 content_type: procedure
 category: Windows Endpoints
 service: Windows Endpoints
 severity: medium
 support_tier: L1-L2
 owner_team: Endpoint Engineering
-platforms: &id001
-- Windows 10
-- Windows 11
+platforms:
+  - Windows 10
+  - Windows 11
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- assess
-- drive
-- health
-- l1-l2
-- storage
-- windows-endpoints
+  - assess
+  - drive
+  - health
+  - l1-l2
+  - storage
+  - windows-endpoints
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for assess storage drive health, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for assess storage drive health, verify the original business task, and escalate with complete logs if
+  recovery is not achieved.
 related_symptoms:
-- need-to-assess-storage-drive-health
-- windows-device-is-not-working-correctly
-- a-windows-error-or-performance-issue-is-reported
+  - need-to-assess-storage-drive-health
+  - windows-device-is-not-working-correctly
+  - a-windows-error-or-performance-issue-is-reported
 symptom_weights:
   need-to-assess-storage-drive-health: 10
   windows-device-is-not-working-correctly: 3
@@ -33,8 +38,11 @@ symptom_weights:
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Endpoint Engineering with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Endpoint Engineering with the exact user or service impact, timestamps and timezone, affected assets,
+  screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a
+  clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -45,10 +53,16 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Windows 10
+  - Windows 11
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: 'Medium impact indicators detected: degraded/intermittent service, peripheral issue or an available workaround.'
+verification_priority: P2
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **assess storage drive health** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

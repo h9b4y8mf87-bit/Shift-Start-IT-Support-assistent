@@ -1,34 +1,39 @@
 ---
 title: Troubleshoot excessive mobile battery drain
 slug: troubleshoot-excessive-mobile-battery-drain
-description: Enterprise runbook to troubleshoot excessive mobile battery drain without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to troubleshoot excessive mobile battery drain without skipping evidence, verification, rollback or
+  escalation requirements.
 content_type: procedure
 category: Mobile Devices & MDM
 service: Mobile Devices & MDM
 severity: medium
 support_tier: L1-L2
 owner_team: Mobility or Endpoint Engineering
-platforms: &id001
-- iOS
-- iPadOS
-- Android
-- MDM
+platforms:
+  - iOS
+  - iPadOS
+  - Android
+  - MDM
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- battery
-- drain
-- excessive
-- l1-l2
-- mobile
-- mobile-devices-and-mdm
-- troubleshoot
+  - battery
+  - drain
+  - excessive
+  - l1-l2
+  - mobile
+  - mobile-devices-and-mdm
+  - troubleshoot
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot excessive mobile battery drain, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for troubleshoot excessive mobile battery drain, verify the original business task, and escalate with
+  complete logs if recovery is not achieved.
 related_symptoms:
-- excessive-mobile-battery-drain
-- corporate-access-on-a-mobile-device-is-not-working
-- mobile-device-is-not-compliant
+  - excessive-mobile-battery-drain
+  - corporate-access-on-a-mobile-device-is-not-working
+  - mobile-device-is-not-compliant
 symptom_weights:
   excessive-mobile-battery-drain: 10
   corporate-access-on-a-mobile-device-is-not-working: 3
@@ -36,8 +41,11 @@ symptom_weights:
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Mobility or Endpoint Engineering with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Mobility or Endpoint Engineering with the exact user or service impact, timestamps and timezone, affected
+  assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status
+  and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -48,10 +56,18 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - iOS
+  - iPadOS
+  - Android
+  - MDM
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: 'Medium impact indicators detected: degraded/intermittent service, peripheral issue or an available workaround.'
+verification_priority: P2
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot excessive mobile battery drain** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

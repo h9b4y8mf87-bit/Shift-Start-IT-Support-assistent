@@ -1,28 +1,38 @@
 ---
-title: MFA setup or approval fails
+title: Resolve MFA setup or approval failure
 slug: mfa-setup-fails
-description: Resolve registration loops, missing prompts, time drift and stale authentication methods.
+description: Resolve MFA registration loops, missing prompts, time drift and stale authentication methods safely.
 content_type: procedure
 category: Identity & Access Management
 severity: high
+support_tier: L2
+estimated_time: 10-20 mins
+owner_team: Identity & Access Management
 tags:
-- mfa
-- authenticator
-- identity
-- security
+  - mfa
+  - authenticator
+  - identity
+  - security
 error_codes:
-- registration failed
-- request denied
-- code invalid
-tldr: Verify identity and device time, confirm network access, then reset only the stale MFA registration through the approved identity portal.
+  - registration failed
+  - request denied
+  - code invalid
+tldr: >-
+  Verify the user, confirm device time and network access, inspect registered methods, remove only an approved stale
+  method and complete a fresh MFA registration test.
 related_symptoms:
-- cannot-sign-in
+  - cannot-sign-in
 related_causes:
-- stale-mfa-registration
+  - stale-mfa-registration
 next_steps:
-- password-reset
-escalation: Escalate to Identity Security with user ID, tenant/application, registration stage, device OS, exact message, timestamp and verified methods already attempted. Never include one-time codes.
-last_reviewed: 2026-08-02
+  - password-reset
+escalation: >-
+  Escalate to Identity & Access Management if identity cannot be verified, the tenant or Conditional Access policy
+  blocks registration, no secure method remains, or a fresh registration still fails.
+risk_model: impact-v1
+risk_basis: High impact - failed MFA can block all user access and changes to authentication methods affect account security.
+verification_priority: P1
+last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/mfa-setup-fails/
 layout: article
 content_status: verified
@@ -31,21 +41,38 @@ reviewed_by: ShiftStart technical review
 last_tested: ''
 tested_platforms: []
 source_references: []
-change_record: Original procedure retained and placed under content-governance controls.
+change_record: >-
+  Standardised to the Enterprise runbook template; existing verified status retained pending recorded live revalidation
+  evidence.
 quality_gate: passed
+runbook_template: enterprise-v1
+verification_evidence_state: legacy_verified_pending_revalidation
 ---
-## Steps
-1. Verify the user through the approved process. Confirm they are using the official authenticator application and correct corporate account.
+## Diagnostic Steps
+1. Verify the user's identity through the approved organisational process.
+2. Confirm the user is using the official authenticator application and the correct corporate account.
+3. Confirm automatic date, time and time zone are enabled on both the computer and phone.
+4. Test registration from a standard trusted network and rule out captive portals or restrictive guest Wi-Fi.
+5. In the approved identity administration portal, inspect the currently registered authentication methods.
 
-2. Ensure automatic date, time and time zone are enabled on both computer and phone.
+## Remediation Steps
+1. Remove only the stale, replaced or explicitly approved authentication method.
+2. Start a new registration in a private browser window.
+3. Complete the registration and send a test notification.
+4. Confirm the new method is listed in the identity platform.
 
-3. Test from a standard network and disable captive portals or restrictive guest Wi-Fi.
+## Rollback Steps
+1. Do not restore an insecure or lost authentication method merely to regain access.
+2. If a still-controlled approved method was removed in error and policy permits restoration, re-register that method using the normal secure process.
+3. If no secure method remains, stop and escalate rather than bypassing MFA controls.
 
-4. In the identity administration portal, inspect registered methods. Remove only the stale or replaced device registration after approval.
+## Verification Steps
+1. Sign out fully.
+2. Perform one fresh sign-in that requires MFA.
+3. Approve the prompt using the newly registered method.
+4. Confirm backup methods comply with organisational policy.
+5. Confirm no one-time code or secret was captured in the ticket.
 
-5. Start registration in a private browser window and complete the full test notification.
-
-   <div class="expected"><strong>Expected result:</strong> The new method appears as registered and a test prompt is approved successfully.</div>
-
-## Verification
-Sign out and perform one fresh sign-in that requires MFA. Confirm backup methods comply with policy.
+## Escalation Path
+1. Escalate to Identity & Access Management if identity cannot be verified, registration remains blocked, Conditional Access prevents setup, or no secure method is available.
+2. Include user ID, tenant/application, registration stage, device OS, exact error and timestamp. Never include one-time codes or authentication secrets.

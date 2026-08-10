@@ -1,40 +1,48 @@
 ---
 title: Verify data after a migration
 slug: verify-data-after-a-migration
-description: Enterprise runbook to verify data after a migration without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to verify data after a migration without skipping evidence, verification, rollback or escalation
+  requirements.
 content_type: procedure
 category: Data Protection, Backup & Recovery
 service: Data Protection, Backup & Recovery
-severity: medium
+severity: high
 support_tier: L1-L3
 owner_team: Backup, Storage or Data Protection
-platforms: &id001
-- Backup
-- File services
-- Cloud storage
+platforms:
+  - Backup
+  - File services
+  - Cloud storage
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- a
-- after
-- data
-- data-protection-backup-and-recovery
-- l1-l3
-- migration
-- verify
+  - a
+  - after
+  - data
+  - data-protection-backup-and-recovery
+  - l1-l3
+  - migration
+  - verify
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for verify data after a migration, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for verify data after a migration, verify the original business task, and escalate with complete logs if
+  recovery is not achieved.
 related_symptoms:
-- verify-data-after-a-migration
-- business-data-is-missing-corrupted-or-requires-recovery
+  - verify-data-after-a-migration
+  - business-data-is-missing-corrupted-or-requires-recovery
 symptom_weights:
   verify-data-after-a-migration: 10
   business-data-is-missing-corrupted-or-requires-recovery: 3
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Backup, Storage or Data Protection with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Backup, Storage or Data Protection with the exact user or service impact, timestamps and timezone,
+  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
+  status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -45,10 +53,19 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Backup
+  - File services
+  - Cloud storage
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: >-
+  High impact indicators detected: privileged, security-sensitive, access-control, credential, encryption or
+  data-exposure operation.
+verification_priority: P1
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **verify data after a migration** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

@@ -1,42 +1,50 @@
 ---
 title: Troubleshoot Windows 365 Cloud PC access
 slug: troubleshoot-windows-365-cloud-pc-access
-description: Enterprise runbook to troubleshoot windows 365 cloud pc access without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to troubleshoot windows 365 cloud pc access without skipping evidence, verification, rollback or
+  escalation requirements.
 content_type: procedure
 category: Remote Access, VDI & DaaS
 service: Remote Access, VDI & DaaS
 severity: medium
 support_tier: L1-L2
 owner_team: Virtual Workspace or EUC Engineering
-platforms: &id001
-- Citrix
-- AVD
-- RDS
-- Windows 365
+platforms:
+  - Citrix
+  - AVD
+  - RDS
+  - Windows 365
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- '365'
-- access
-- cloud
-- l1-l2
-- pc
-- remote-access-vdi-and-daas
-- troubleshoot
-- windows
+  - '365'
+  - access
+  - cloud
+  - l1-l2
+  - pc
+  - remote-access-vdi-and-daas
+  - troubleshoot
+  - windows
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot windows 365 cloud pc access, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for troubleshoot windows 365 cloud pc access, verify the original business task, and escalate with
+  complete logs if recovery is not achieved.
 related_symptoms:
-- windows-365-cloud-pc-access
-- remote-desktop-or-virtual-application-access-is-failing
+  - windows-365-cloud-pc-access
+  - remote-desktop-or-virtual-application-access-is-failing
 symptom_weights:
   windows-365-cloud-pc-access: 10
   remote-desktop-or-virtual-application-access-is-failing: 3
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Virtual Workspace or EUC Engineering with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Virtual Workspace or EUC Engineering with the exact user or service impact, timestamps and timezone,
+  affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback
+  status and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -47,10 +55,18 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Citrix
+  - AVD
+  - RDS
+  - Windows 365
 source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: 'Medium impact indicators detected: degraded/intermittent service, peripheral issue or an available workaround.'
+verification_priority: P2
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot windows 365 cloud pc access** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.

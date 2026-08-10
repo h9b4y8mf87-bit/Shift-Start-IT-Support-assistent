@@ -1,31 +1,36 @@
 ---
 title: Troubleshoot directory synchronisation
 slug: troubleshoot-directory-synchronisation
-description: Enterprise runbook to troubleshoot directory synchronisation without skipping evidence, verification, rollback or escalation requirements.
+description: >-
+  Enterprise runbook to troubleshoot directory synchronisation without skipping evidence, verification, rollback or
+  escalation requirements.
 content_type: procedure
 category: Identity & Access Management
 service: Identity & Access Management
-severity: medium
+severity: high
 support_tier: L1-L2
 owner_team: Identity and Access Management
-platforms: &id001
-- Active Directory
-- Entra ID
-- SSO
+platforms:
+  - Active Directory
+  - Entra ID
+  - SSO
 risk_level: controlled
 estimated_time: 15-45 minutes
 tags:
-- directory
-- identity-and-access-management
-- l1-l2
-- synchronisation
-- troubleshoot
+  - directory
+  - identity-and-access-management
+  - l1-l2
+  - synchronisation
+  - troubleshoot
 error_codes: []
-tldr: Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved remediation for troubleshoot directory synchronisation, verify the original business task, and escalate with complete logs if recovery is not achieved.
+tldr: >-
+  Confirm scope and authorisation, capture evidence, isolate the failing layer, apply the least disruptive approved
+  remediation for troubleshoot directory synchronisation, verify the original business task, and escalate with complete
+  logs if recovery is not achieved.
 related_symptoms:
-- directory-synchronisation
-- cannot-sign-in
-- access-is-denied-or-missing
+  - directory-synchronisation
+  - cannot-sign-in
+  - access-is-denied-or-missing
 symptom_weights:
   directory-synchronisation: 10
   cannot-sign-in: 3
@@ -33,8 +38,11 @@ symptom_weights:
 related_causes: []
 related_commands: []
 next_steps:
-- general-workstation-triage
-escalation: Escalate to Identity and Access Management with the exact user or service impact, timestamps and timezone, affected assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status and a clear statement of what remains broken.
+  - general-workstation-triage
+escalation: >-
+  Escalate to Identity and Access Management with the exact user or service impact, timestamps and timezone, affected
+  assets, screenshots or error text, diagnostic results, logs, recent changes, remediation attempted, rollback status
+  and a clear statement of what remains broken.
 last_reviewed: '2026-08-02'
 review_cycle_days: 180
 required_role: technician
@@ -45,10 +53,21 @@ content_status: under_review
 generated_baseline: true
 reviewed_by: ''
 last_tested: ''
-tested_platforms: *id001
+tested_platforms:
+  - Active Directory
+  - Entra ID
+  - SSO
 source_references: []
-change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
+change_record: >-
+  Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation;
+  full technical-owner validation remains pending.
 quality_gate: pending
+risk_model: impact-v1
+risk_basis: >-
+  High impact indicators detected: privileged, security-sensitive, access-control, credential, encryption or
+  data-exposure operation.
+verification_priority: P1
+verification_state: awaiting_live_validation
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot directory synchronisation** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
