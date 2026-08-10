@@ -1,4 +1,12 @@
 <header class="site-header rd-header ss-enterprise-header" data-site-header>
+  <input
+    class="ss-css-menu-toggle"
+    id="site-menu-toggle"
+    type="checkbox"
+    aria-label="Toggle navigation menu"
+    aria-controls="mobile-navigation"
+  >
+
   <div class="ss-header-topline">
     <div class="shell ss-header-primary">
       <a class="site-brand rd-brand ss-header-brand" href="{{ '/' | relative_url }}" aria-label="ShiftStart home">
@@ -12,7 +20,7 @@
       </a>
 
       <button class="ss-command-launch" type="button" data-command-trigger aria-label="Open ShiftStart command palette">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="7"></circle>
           <path d="m20 20-3.5-3.5"></path>
         </svg>
@@ -31,11 +39,11 @@
 
         <span class="ss-user-avatar" aria-label="Technician session" title="Technician session">IT</span>
 
-        <button class="header-icon-button mobile-menu-button ss-header-icon ss-menu-button" type="button" data-menu-toggle aria-controls="mobile-navigation" aria-expanded="false">
-          <span class="sr-only">Open navigation menu</span>
-          <svg class="menu-open-icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
-          <svg class="menu-close-icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"></path></svg>
-        </button>
+        <label class="header-icon-button mobile-menu-button ss-header-icon ss-menu-button" for="site-menu-toggle" aria-label="Toggle navigation menu">
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg class="menu-open-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          <svg class="menu-close-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+        </label>
       </div>
     </div>
   </div>
@@ -59,10 +67,10 @@
       </div>
     </div>
 
-    <nav id="mobile-navigation" class="mobile-nav rd-mobile-nav ss-mobile-nav" aria-label="Mobile navigation" hidden>
+    <nav id="mobile-navigation" class="mobile-nav rd-mobile-nav ss-mobile-nav" aria-label="Mobile navigation">
       <div class="shell ss-mobile-nav-grid">
         <form class="rd-global-search ss-mobile-search" action="{{ '/search/' | relative_url }}" method="get" role="search" data-search-region>
-          <svg class="rd-search-icon" aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <svg class="rd-search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
           <label class="sr-only" for="kb-search">Search symptoms, procedures, domains or error codes</label>
           <input id="kb-search" class="search-input rd-search-input ss-mobile-search-input" type="search" name="q" inputmode="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Search symptom, error code or procedure…" aria-controls="search-results" aria-autocomplete="list" aria-expanded="false">
           <button class="search-clear rd-search-clear ss-mobile-search-clear" type="button" data-search-clear aria-label="Clear search" hidden>Clear</button>
