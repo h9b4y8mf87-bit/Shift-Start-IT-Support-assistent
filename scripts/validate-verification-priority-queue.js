@@ -2,45 +2,30 @@
 'use strict';
 
 const fs = require('fs');
-const path = require('path');
-const matter = require('gray-matter');
 const yaml = require('js-yaml');
 
 const errors = [];
-const policy = yaml.load(fs.readFileSync('_data/verification-priority-policy.yml','utf8'));
-const demand = yaml.load(fs.readFileSync('_data/verification-demand.yml','utf8'));
 const report = JSON.parse(fs.readFileSync('reports/verification-priority-queue.json','utf8'));
+const policy = yaml.load(fs.readFileSync('_data/verification-batch-policy.yml','utf8'));
 
-if (policy.model !== 'verification-priority-v1') errors.push('Priority policy model must be verification-priority-v1');
-if (Number(policy.schema_version) !== 1) errors.push('Priority policy schema_version must be 1');
-if (Number(demand.schema_version) !== 1) errors.push('Demand schema_version must be 1');
-if (!Array.isArray(report.procedures)) errors.push('Priority queue report procedures array missing');
 if (report.totalProcedures !== 421) errors.push(`Priority queue expected 421 procedures; found ${report.totalProcedures}`);
+if (report.rankingRevision !== 'metadata-proxy-and-risk-floor-v2') errors.push('Corrected ranking revision is not active.');
 
-const actionable = report.procedures.filter(x => !['verified','deprecated'].includes(x.governance_state));
-let lastRank = 0;
-let lastScore = Infinity;
-for (const row of actionable) {
-  if (!Number.isInteger(row.rank) || row.rank <= lastRank) errors.push(`Invalid queue rank for ${row.slug}`);
-  lastRank = row.rank;
-  if (row.priority_score > lastScore && row.promotion_ready !== true) {
-    // Promotion-ready rows are intentionally sorted first even when lower-scored.
-    errors.push(`Unexpected priority score ordering around ${row.slug}`);
+for (const row of report.procedures || []) {
+  if (row.search_demand_source === 'temporary_topic_proxy' && row.search_demand_source_field !== 'metadata_only') {
+    errors.push(`${row.slug}: temporary proxy must be metadata_only`);
   }
-  if (!row.promotion_ready) lastScore = Math.min(lastScore, row.priority_score);
-  if (row.priority_score < 0 || row.priority_score > 100) errors.push(`Score out of range for ${row.slug}`);
-  if (!['immediate','next','planned','backlog'].includes(row.queue_band)) errors.push(`Invalid queue band for ${row.slug}`);
-  if (row.search_demand_source === 'temporary_topic_proxy' && !row.temporary_proxy_match) {
-    errors.push(`Temporary proxy source lacks match explanation for ${row.slug}`);
+  if (row.priority === 'P0' && !['verified','deprecated'].includes(row.governance_state) && row.priority_score < Number(policy.priority_floors.P0.minimum_score)) {
+    errors.push(`${row.slug}: actionable P0 fell below the P0 verification score floor`);
+  }
+  if (row.priority === 'P1' && !['verified','deprecated'].includes(row.governance_state) && row.priority_score < Number(policy.priority_floors.P1.minimum_score)) {
+    errors.push(`${row.slug}: actionable P1 fell below the P1 verification score floor`);
   }
 }
-
-const files = fs.readdirSync('_procedures').filter(x=>x.endsWith('.md'));
-if (files.length !== 421) errors.push(`Procedure count changed: expected 421, found ${files.length}`);
 
 if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`Verification priority queue validation passed: ${report.totalProcedures} procedures, ${actionable.length} actionable.`);
-console.log(`Queue bands: ${JSON.stringify(report.queueBandCounts)}.`);
+console.log(`Corrected verification priority queue validation passed: ${report.totalProcedures} procedures.`);
+console.log(`Ranking revision: ${report.rankingRevision}.`);

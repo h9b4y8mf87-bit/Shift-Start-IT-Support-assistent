@@ -10,7 +10,7 @@
     "jekyll": "bundle exec jekyll build",
     "build": "npm run clean && npm run remediate:apply && npm run vendor && npm run generate && npm run css && bundle exec jekyll build",
     "dev": "npm run remediate:apply && npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
-    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check && npm run readiness:check && npm run verification:queue && npm run verification:queue:check",
+    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check && npm run readiness:check && npm run verification:queue && npm run verification:queue:check && npm run verification:batches && npm run verification:batches:check && npm run verification:evidence:check",
     "test": "npm run remediate:apply && npm run check && npm run build",
     "audit-content": "node scripts/validate-content.js",
     "vendor": "node scripts/vendor-assets.js",
@@ -24,7 +24,12 @@
     "verification:v2:report": "node scripts/verification-v2.js",
     "verification:v2:apply": "node scripts/verification-v2.js --apply",
     "verification:queue": "node scripts/build-verification-priority-queue.js",
-    "verification:queue:check": "node scripts/validate-verification-priority-queue.js"
+    "verification:queue:check": "node scripts/validate-verification-priority-queue.js",
+    "verification:batches": "node scripts/build-verification-batches.js",
+    "verification:batches:check": "node scripts/validate-verification-batches.js",
+    "verification:evidence:create": "node scripts/create-verification-evidence-work-items.js",
+    "verification:evidence:check": "node scripts/validate-verification-evidence-work-items.js",
+    "verification:evidence:apply": "node scripts/apply-verification-evidence.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
