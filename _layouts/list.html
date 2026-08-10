@@ -11,7 +11,7 @@ layout: default
   <nav class="rd-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{ page.title }}</span></nav>
   <div class="rd-list-heading"><div><p class="rd-eyebrow">Complete catalogue</p><h1>{{ page.title }}</h1><p>{{ page.description }}</p></div><div class="rd-list-total"><strong>{{ items | size }}</strong><span>{{ page.collection_name }}</span></div></div>
 
-  <section class="rd-filter-panel" aria-label="Catalogue filters">
+  <section class="catalog-filter-panel rd-filter-panel" aria-label="Catalogue filters">
     <div class="rd-filter-grid">
       <label class="rd-filter-search"><span>Search</span><input class="wizard-input" type="search" data-catalog-search placeholder="Title, symptom, platform, tag or description"></label>
       <label><span>Domain</span><select class="wizard-input" data-catalog-category><option value="all">All domains</option>{% assign cats = items | map: 'category' | uniq | sort %}{% for cat in cats %}<option value="{{ cat | escape }}">{{ cat }}</option>{% endfor %}</select></label>
