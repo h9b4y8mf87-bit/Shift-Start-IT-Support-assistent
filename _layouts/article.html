@@ -1,101 +1,40 @@
 ---
 layout: default
 ---
-<article class="shell article-shell">
-  <div class="article-column">
-    {% if page.content_type == 'procedure' %}
-      {% assign assurance_status = page.content_status | default: 'under_review' %}
-      <section class="assurance-banner status-{{ assurance_status }}" aria-label="Content assurance status">
-        <div>
-          <p class="assurance-label">Content assurance</p>
-          <h2 class="!mt-1 text-lg">
-            {% case assurance_status %}
-              {% when 'verified' %}Verified operational guidance
-              {% when 'draft' %}Draft guidance — senior review required
-              {% when 'deprecated' %}Deprecated procedure — do not use for new work
-              {% else %}Technical-owner validation pending
-            {% endcase %}
-          </h2>
-          <p>
-            {% case assurance_status %}
-              {% when 'verified' %}This procedure has passed the current content quality gate. Continue to apply organisational approvals and change controls.
-              {% when 'draft' %}This procedure is incomplete. Use it only to gather evidence and involve the owning resolver team before changing production systems.
-              {% when 'deprecated' %}This page is retained for historical links or migration. Use the replacement procedure shown in related knowledge.
-              {% else %}The full runbook is retained, but commands and expected results still require validation in the target enterprise environment. Do not treat this status as production approval.
-            {% endcase %}
-          </p>
-          <p class="mt-3 text-sm"><a href="{{ '/content-quality/' | relative_url }}">Review the content-quality policy</a> · <a href="{{ '/reports/content-audit.json' | relative_url }}">Open the machine-readable audit</a></p>
-        </div>
-        <span class="assurance-status">{{ assurance_status | replace: '_', ' ' }}</span>
-      </section>
-    {% endif %}
+{% assign assurance_status = page.content_status | default: 'under_review' %}
+{% assign is_procedure = false %}{% if page.content_type == 'procedure' %}{% assign is_procedure = true %}{% endif %}
+<article class="shell rd-article-shell" data-article-page data-procedure="{{ is_procedure }}" data-title="{{ page.title | escape }}">
+  <nav class="rd-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a><span aria-hidden="true">/</span>{% if is_procedure %}<a href="{{ '/procedures/' | relative_url }}">Procedures</a>{% elsif page.content_type == 'symptom' %}<a href="{{ '/symptoms/' | relative_url }}">Symptoms</a>{% endif %}<span aria-hidden="true">/</span><span aria-current="page">{{ page.title }}</span></nav>
+  {% if is_procedure %}<a class="rd-back-link" href="{{ '/procedures/' | relative_url }}" data-back-to-results>← Back to procedures</a>{% endif %}
 
-    <div class="article-badges" aria-label="Article metadata">
-      <span class="badge">{{ page.content_type }}</span>
-      {% if page.category %}<span class="badge">{{ page.category }}</span>{% endif %}
-      {% if page.severity %}<span class="badge">Severity: {{ page.severity }}</span>{% endif %}
-      {% if page.support_tier %}<span class="badge">{{ page.support_tier }}</span>{% endif %}
-      {% if page.owner_team %}<span class="badge">Owner: {{ page.owner_team }}</span>{% endif %}
-      {% if page.estimated_time %}<span class="badge">{{ page.estimated_time }}</span>{% endif %}
-      {% if page.content_status %}<span class="badge status-{{ page.content_status }}">{{ page.content_status | replace: '_', ' ' }}</span>{% endif %}
-      {% for tag in page.tags %}<span class="badge">{{ tag }}</span>{% endfor %}
+  <header class="rd-article-header">
+    <div class="rd-article-heading">
+      <div class="rd-card-badges rd-article-badges">{% if page.severity %}<span class="rd-risk rd-risk-{{ page.severity | downcase }}">{{ page.severity }} risk</span>{% endif %}{% if page.content_status %}<span class="rd-status status-{{ page.content_status }}">{{ page.content_status | replace: '_', ' ' }}</span>{% endif %}{% if page.category %}<span class="badge">{{ page.category }}</span>{% endif %}</div>
+      <h1>{{ page.title }}</h1>{% if page.description %}<p class="rd-article-lead">{{ page.description }}</p>{% endif %}
     </div>
+    {% if is_procedure %}<div class="rd-article-meta-card"><dl><div><dt>Support tier</dt><dd>{{ page.support_tier | default: 'Not specified' }}</dd></div><div><dt>Estimated time</dt><dd>{{ page.estimated_time | default: 'Not specified' }}</dd></div><div><dt>Owner</dt><dd>{{ page.owner_team | default: 'Not specified' }}</dd></div><div><dt>Quality gate</dt><dd>{{ page.quality_gate | default: 'pending' }}</dd></div></dl></div>{% endif %}
+  </header>
 
-    <h1>{{ page.title }}</h1>
-    {% if page.description %}<p class="mt-3 text-lg text-slate-600">{{ page.description }}</p>{% endif %}
+  {% if is_procedure %}
+  <section class="rd-assurance-callout status-{{ assurance_status }}" aria-label="Content assurance"><div class="rd-assurance-icon" aria-hidden="true">{% if assurance_status == 'verified' %}✓{% else %}◷{% endif %}</div><div><strong>{% if assurance_status == 'verified' %}Verified operational guidance{% elsif assurance_status == 'draft' %}Draft — senior review required{% elsif assurance_status == 'deprecated' %}Deprecated — use replacement guidance{% else %}Technical-owner validation pending{% endif %}</strong><p>{% if assurance_status == 'verified' %}This procedure passed the current quality gate. Continue to follow organisational approvals and change controls.{% elsif assurance_status == 'under_review' %}Use this runbook with technical-owner judgement until validation is complete. Do not treat under-review content as production approval.{% else %}Review the content-quality status before applying changes to production systems.{% endif %}</p><span>Reviewed by: {{ page.reviewed_by | default: 'Not recorded' }} · Last tested: {{ page.last_tested | default: 'Not recorded' }}</span></div><a href="{{ '/content-quality/' | relative_url }}">Quality details</a></section>
+  <div class="rd-procedure-actions" aria-label="Procedure actions"><button class="btn-secondary" type="button" data-copy-article-link>Copy link</button><button class="btn-secondary" type="button" data-print-procedure>Print / PDF</button><a class="btn-secondary" href="{{ '/wizard/' | relative_url }}">Open wizard</a></div>
+  {% endif %}
 
-    {% if page.content_type == 'procedure' %}
-    <dl class="assurance-meta">
-      <div><dt>Reviewed by</dt><dd>{{ page.reviewed_by | default: 'Technical owner not yet recorded' }}</dd></div>
-      <div><dt>Last reviewed</dt><dd>{{ page.last_reviewed | default: 'Not recorded' }}</dd></div>
-      <div><dt>Last tested</dt><dd>{{ page.last_tested | default: 'Not yet recorded' }}</dd></div>
-      <div><dt>Quality gate</dt><dd>{{ page.quality_gate | default: 'pending' }}</dd></div>
-    </dl>
-    {% endif %}
-
-    {% if page.tldr %}<section class="tldr"><h2 class="!mt-0 text-lg">TL;DR</h2><p>{{ page.tldr }}</p></section>{% endif %}
-
-    <div class="article-body" data-article-body>{{ content }}</div>
-
-    {% assign has_related = false %}
-    {% if page.related_symptoms or page.related_causes or page.related_procedures or page.related_commands or page.next_steps %}{% assign has_related = true %}{% endif %}
-    {% if has_related %}
-    <section class="related-section">
-      <h2 class="!mt-0">Related knowledge</h2>
-      <div class="related-grid">
-        {% for slug in page.related_symptoms %}
-          {% assign item = site.symptoms | where: "slug", slug | first %}
-          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Symptom</p></a>{% endif %}
-        {% endfor %}
-        {% for slug in page.related_causes %}
-          {% assign item = site.causes | where: "slug", slug | first %}
-          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Cause</p></a>{% endif %}
-        {% endfor %}
-        {% for slug in page.related_procedures %}
-          {% assign item = site.procedures | where: "slug", slug | first %}
-          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Procedure · {{ item.content_status | default: 'under review' | replace: '_', ' ' }}</p></a>{% endif %}
-        {% endfor %}
-        {% for slug in page.next_steps %}
-          {% assign item = site.procedures | where: "slug", slug | first %}
-          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Next procedure · {{ item.content_status | default: 'under review' | replace: '_', ' ' }}</p></a>{% endif %}
-        {% endfor %}
-        {% for slug in page.related_commands %}
-          {% assign item = site.commands | where: "slug", slug | first %}
-          {% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p class="text-sm text-slate-600">Diagnostic command</p></a>{% endif %}
-        {% endfor %}
-      </div>
-    </section>
-    {% endif %}
-
-    {% if page.escalation %}<section class="escalation"><h2 class="!mt-0 text-xl">Escalation path</h2><p>{{ page.escalation }}</p></section>{% endif %}
-
-    {% if page.content_type == 'procedure' %}
-    <div class="procedure-actions" data-procedure-actions>
-      <a class="btn" data-ticket-link data-title="{{ page.title | escape }}" data-category="{{ page.category | escape }}" data-severity="{{ page.severity | escape }}" data-owner-team="{{ page.owner_team | escape }}">Create pre-filled ITSM ticket</a>
-      <button class="btn-secondary" type="button" data-feedback="up">👍 Helpful</button>
-      <button class="btn-secondary" type="button" data-feedback="down">👎 Not helpful</button>
+  <div class="rd-article-layout">
+    {% if is_procedure %}<aside class="rd-article-sidebar" data-article-sidebar><div class="rd-toc-panel"><p class="rd-eyebrow">On this page</p><nav data-article-toc aria-label="Procedure sections"></nav></div><div class="rd-trust-legend"><strong>Risk &amp; trust</strong><span><i class="rd-dot rd-dot-red"></i> Critical/high risk</span><span><i class="rd-dot rd-dot-green"></i> Verified</span><span><i class="rd-dot rd-dot-amber"></i> Under review</span></div></aside>{% endif %}
+    <div class="rd-article-main">
+      {% if page.tldr %}<section class="tldr rd-tldr"><span class="rd-eyebrow">Quick answer</span><h2>TL;DR</h2><p>{{ page.tldr }}</p></section>{% endif %}
+      <div class="article-body rd-article-body" data-article-body>{{ content }}</div>
+      {% if page.escalation %}<section class="escalation rd-escalation"><p class="rd-eyebrow">When resolution stops here</p><h2>Escalation path</h2><p>{{ page.escalation }}</p></section>{% endif %}
+      {% assign has_related = false %}{% if page.related_symptoms or page.related_causes or page.related_procedures or page.related_commands or page.next_steps %}{% assign has_related = true %}{% endif %}
+      {% if has_related %}<section class="related-section rd-related-section"><div class="rd-section-heading"><div><p class="rd-eyebrow">Keep context</p><h2>Related procedures &amp; knowledge</h2></div></div><div class="related-grid">
+        {% for slug in page.related_symptoms %}{% assign item = site.symptoms | where: "slug", slug | first %}{% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p>Symptom</p></a>{% endif %}{% endfor %}
+        {% for slug in page.related_causes %}{% assign item = site.causes | where: "slug", slug | first %}{% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p>Cause</p></a>{% endif %}{% endfor %}
+        {% for slug in page.related_procedures %}{% assign item = site.procedures | where: "slug", slug | first %}{% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p>Procedure · {{ item.content_status | replace: '_', ' ' }}</p></a>{% endif %}{% endfor %}
+        {% for slug in page.next_steps %}{% assign item = site.procedures | where: "slug", slug | first %}{% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p>Next procedure</p></a>{% endif %}{% endfor %}
+        {% for slug in page.related_commands %}{% assign item = site.commands | where: "slug", slug | first %}{% if item %}<a class="card" href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong><p>Command</p></a>{% endif %}{% endfor %}
+      </div></section>{% endif %}
+      {% if is_procedure %}<section class="rd-resolution-footer"><div><p class="rd-eyebrow">Close the loop</p><h2>Resolved, verified or ready to escalate?</h2><p>Record the outcome, evidence and rollback state before moving to the next ticket.</p></div><div class="procedure-actions" data-procedure-actions><a class="btn" data-ticket-link data-title="{{ page.title | escape }}" data-category="{{ page.category | escape }}" data-severity="{{ page.severity | escape }}" data-owner-team="{{ page.owner_team | escape }}">Create pre-filled ITSM ticket</a><button class="btn-secondary" type="button" data-feedback="up">👍 Helpful</button><button class="btn-secondary" type="button" data-feedback="down">👎 Not helpful</button></div><p id="feedback-status" class="feedback-status" aria-live="polite"></p></section>{% endif %}
     </div>
-    <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
-    {% endif %}
   </div>
 </article>

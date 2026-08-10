@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-10T03:51:52.123Z",
+  "generatedAt": "2026-08-10T04:13:50.374Z",
   "counts": {
     "procedures": 421,
     "symptoms": 446,
@@ -36,7 +36,7 @@
       "passed": false
     },
     "procedureAssuranceBanner": {
-      "passed": true
+      "passed": false
     },
     "globalQualityNavigation": {
       "passed": true

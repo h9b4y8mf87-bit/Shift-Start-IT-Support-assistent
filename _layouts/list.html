@@ -7,35 +7,37 @@ layout: default
   {% when 'causes' %}{% assign items = site.causes %}
   {% when 'commands' %}{% assign items = site.commands %}
 {% endcase %}
-<section class="shell page-section" data-catalog-root>
-  <div class="catalog-heading">
-    <div>
-      <p class="eyebrow">Complete catalogue</p>
-      <h1>{{ page.title }}</h1>
-      <p class="mt-3 max-w-3xl text-slate-600">{{ page.description }}</p>
-    </div>
-    <div class="catalog-total" aria-label="{{ items | size }} {{ page.collection_name }}"><strong>{{ items | size }}</strong><span>{{ page.collection_name }}</span></div>
-  </div>
+<section class="shell rd-list-page" data-catalog-root data-collection="{{ page.collection_name }}">
+  <nav class="rd-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{ page.title }}</span></nav>
+  <div class="rd-list-heading"><div><p class="rd-eyebrow">Complete catalogue</p><h1>{{ page.title }}</h1><p>{{ page.description }}</p></div><div class="rd-list-total"><strong>{{ items | size }}</strong><span>{{ page.collection_name }}</span></div></div>
 
-  <div class="catalog-filter-panel">
-    <div class="catalog-controls">
-      <label><span>Filter this catalogue</span><input class="wizard-input" type="search" inputmode="search" enterkeyhint="search" data-catalog-search placeholder="Title, category, platform, tag or description"></label>
-      <label><span>Category</span><select class="wizard-input" data-catalog-category><option value="all">All categories</option>{% assign cats = items | map: 'category' | uniq | sort %}{% for cat in cats %}<option value="{{ cat | escape }}">{{ cat }}</option>{% endfor %}</select></label>
+  <section class="rd-filter-panel" aria-label="Catalogue filters">
+    <div class="rd-filter-grid">
+      <label class="rd-filter-search"><span>Search</span><input class="wizard-input" type="search" data-catalog-search placeholder="Title, symptom, platform, tag or description"></label>
+      <label><span>Domain</span><select class="wizard-input" data-catalog-category><option value="all">All domains</option>{% assign cats = items | map: 'category' | uniq | sort %}{% for cat in cats %}<option value="{{ cat | escape }}">{{ cat }}</option>{% endfor %}</select></label>
+      {% if page.collection_name == 'procedures' %}
+      <label><span>Risk</span><select class="wizard-input" data-catalog-risk><option value="all">All risk levels</option><option value="critical">Critical</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select></label>
+      <label><span>Review status</span><select class="wizard-input" data-catalog-status><option value="all">All statuses</option><option value="verified">Verified</option><option value="under_review">Under review</option><option value="draft">Draft</option><option value="deprecated">Deprecated</option></select></label>
+      <label><span>Tier</span><select class="wizard-input" data-catalog-tier><option value="all">All tiers</option>{% assign tiers = items | map: 'support_tier' | compact | uniq | sort %}{% for tier in tiers %}<option value="{{ tier | escape }}">{{ tier }}</option>{% endfor %}</select></label>
+      <label><span>Sort</span><select class="wizard-input" data-catalog-sort><option value="name">Name A–Z</option><option value="risk">Highest risk first</option><option value="verified">Verified first</option></select></label>
+      {% endif %}
+      <button class="btn-secondary rd-filter-reset" type="button" data-catalog-reset>Reset filters</button>
     </div>
-    <p class="catalog-count" data-catalog-count aria-live="polite">Showing every {{ page.collection_name }} article. Nothing is paginated or truncated.</p>
-  </div>
+    <div class="rd-active-filters" data-active-filters aria-live="polite"></div>
+    <p class="catalog-count rd-catalog-count" data-catalog-count aria-live="polite">Showing all {{ items | size }} articles.</p>
+  </section>
 
-  <div class="catalog-grid" data-catalog-items>
+  <div class="rd-empty-state" data-catalog-empty hidden><span aria-hidden="true">⌕</span><strong>No matching articles</strong><p>Try fewer words or reset one of the filters.</p><button class="btn-secondary" type="button" data-catalog-reset>Reset filters</button></div>
+
+  <div class="catalog-grid rd-catalog-grid" data-catalog-items>
     {% assign sorted_items = items | sort: 'title' %}
     {% for item in sorted_items %}
-    <a class="card catalog-item" href="{{ item.url | relative_url }}" data-category="{{ item.category | escape }}" data-search="{{ item.title | append: ' ' | append: item.description | append: ' ' | append: item.category | append: ' ' | append: item.tags | append: ' ' | append: item.platforms | downcase | escape }}">
-      <div class="catalog-card-heading"><strong>{{ item.title }}</strong>{% if item.severity %}<span class="badge">{{ item.severity }}</span>{% endif %}</div>
-      <p class="mt-2 text-sm text-slate-600">{{ item.description }}</p>
-      {% if item.support_tier or item.owner_team %}<p class="mt-3 text-xs text-slate-500">{{ item.support_tier }}{% if item.support_tier and item.owner_team %} · {% endif %}{{ item.owner_team }}</p>{% endif %}
+    <a class="card catalog-item rd-procedure-card" href="{{ item.url | relative_url }}" data-title="{{ item.title | downcase | escape }}" data-category="{{ item.category | escape }}" data-risk="{{ item.severity | default: '' | downcase | escape }}" data-status="{{ item.content_status | default: '' | escape }}" data-tier="{{ item.support_tier | default: '' | escape }}" data-search="{{ item.title | append: ' ' | append: item.description | append: ' ' | append: item.category | append: ' ' | append: item.tags | append: ' ' | append: item.platforms | append: ' ' | append: item.error_codes | downcase | escape }}">
+      <div class="rd-card-badges">{% if item.severity %}<span class="rd-risk rd-risk-{{ item.severity | downcase }}">{{ item.severity }}</span>{% endif %}{% if item.content_status %}<span class="rd-status status-{{ item.content_status }}">{{ item.content_status | replace: '_', ' ' }}</span>{% endif %}</div>
+      <p class="rd-card-domain">{{ item.category }}</p><h2>{{ item.title }}</h2><p>{{ item.description }}</p>
+      <dl>{% if item.support_tier %}<div><dt>Tier</dt><dd>{{ item.support_tier }}</dd></div>{% endif %}{% if item.estimated_time %}<div><dt>Time</dt><dd>{{ item.estimated_time }}</dd></div>{% endif %}{% if item.owner_team %}<div><dt>Owner</dt><dd>{{ item.owner_team }}</dd></div>{% endif %}</dl>
+      <span class="rd-card-link">Open {{ item.content_type | default: page.collection_name | remove: 's' }} <span aria-hidden="true">→</span></span>
     </a>
     {% endfor %}
   </div>
 </section>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{const root=document.querySelector('[data-catalog-root]');if(!root)return;const q=root.querySelector('[data-catalog-search]');const c=root.querySelector('[data-catalog-category]');const items=[...root.querySelectorAll('.catalog-item')];const count=root.querySelector('[data-catalog-count]');let frame;const apply=()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{const term=q.value.trim().toLowerCase();let shown=0;items.forEach(el=>{const ok=(!term||el.dataset.search.includes(term))&&(c.value==='all'||el.dataset.category===c.value);el.hidden=!ok;if(ok)shown++;});count.textContent=`Showing ${shown} of ${items.length} articles. No pagination is used.`;});};q.addEventListener('input',apply,{passive:true});c.addEventListener('change',apply);});
-</script>
