@@ -65,9 +65,7 @@ change_record: >-
   full technical-owner validation remains pending.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: >-
-  High impact indicators detected: privileged, security-sensitive, access-control, credential, encryption or
-  data-exposure operation.
+risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
 verification_priority: P1
 verification_state: awaiting_live_validation
 ---
