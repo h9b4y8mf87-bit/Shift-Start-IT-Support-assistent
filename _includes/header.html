@@ -1,57 +1,75 @@
-<header class="site-header rd-header" data-site-header>
-  <div class="rd-header-main">
-    <div class="shell rd-header-grid">
-      <a class="site-brand rd-brand" href="{{ '/' | relative_url }}" aria-label="ShiftStart home">
-        <span class="site-brand-mark rd-brand-mark" aria-hidden="true"><img src="{{ '/assets/img/shiftstart-mark.svg' | relative_url }}" alt=""></span>
-        <span class="rd-brand-copy"><strong>ShiftStart</strong><small>IT Support Assistant</small></span>
+<header class="site-header rd-header ss-enterprise-header" data-site-header>
+  <div class="ss-header-topline">
+    <div class="shell ss-header-primary">
+      <a class="site-brand rd-brand ss-header-brand" href="{{ '/' | relative_url }}" aria-label="ShiftStart home">
+        <span class="site-brand-mark rd-brand-mark" aria-hidden="true">
+          <img src="{{ '/assets/img/shiftstart-mark.svg' | relative_url }}" alt="">
+        </span>
+        <span class="rd-brand-copy ss-brand-copy">
+          <strong>ShiftStart</strong>
+          <small>IT Support Assistant</small>
+        </span>
       </a>
-      <form class="rd-global-search" action="{{ '/search/' | relative_url }}" method="get" role="search" data-search-region>
-        <svg class="rd-search-icon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
-        <label class="sr-only" for="kb-search">Search symptoms, procedures, domains or error codes</label>
-        <input id="kb-search" class="search-input rd-search-input" type="search" name="q" inputmode="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Search symptom, error code, procedure or domain…" aria-controls="search-results" aria-autocomplete="list" aria-expanded="false">
-        <button class="search-clear rd-search-clear" type="button" data-search-clear aria-label="Clear search" hidden>Clear</button>
-        <span class="search-shortcut rd-search-shortcut" aria-hidden="true">/</span>
-        <div id="search-results" class="search-results rd-search-results hidden" role="listbox" aria-label="Search suggestions"></div>
-        <p id="search-status" class="sr-only" aria-live="polite"></p>
-      </form>
-      <nav class="desktop-nav rd-nav" aria-label="Primary navigation">
-        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-        <a href="{{ '/procedures/' | relative_url }}"{% if page.url contains '/procedures/' %} aria-current="page"{% endif %}>Procedures</a>
-        {% assign nav_domains = site.procedures | group_by: 'category' | sort: 'name' %}
-        <details class="rd-domain-menu" data-domain-menu>
-          <summary>Domains</summary>
-          <div class="rd-domain-popover">
-            {% for domain in nav_domains %}
-              <a href="{{ '/procedures/?category=' | append: domain.name | uri_escape | relative_url }}">
-                <strong>{{ domain.name }}</strong>
-                <span>{{ domain.items | size }}</span>
-              </a>
-            {% endfor %}
-            <div class="rd-domain-popover-footer"><a href="{{ '/enterprise-coverage/' | relative_url }}">Open complete coverage map →</a></div>
-          </div>
-        </details>
-        <a class="rd-nav-wizard" href="{{ '/wizard/' | relative_url }}"{% if page.url == '/wizard/' %} aria-current="page"{% endif %}>Wizard</a>
-        <a class="rd-commercial-nav" href="{{ '/organisations/' | relative_url }}"{% if page.url == '/organisations/' %} aria-current="page"{% endif %}>For Organisations</a>
-        <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
-      </nav>
-      <div class="header-actions rd-header-actions">
-        <a class="rd-quality-link" href="{{ '/content-quality/' | relative_url }}">Quality</a>
-        <button class="header-icon-button mobile-menu-button" type="button" data-menu-toggle aria-controls="mobile-navigation" aria-expanded="false">
+
+      <button class="ss-command-launch" type="button" data-command-trigger aria-label="Open ShiftStart command palette">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5"></path>
+        </svg>
+        <span class="ss-command-launch-copy">
+          <strong>Search ShiftStart</strong>
+          <small>Symptoms, procedures, error codes</small>
+        </span>
+        <kbd data-header-command-key>Ctrl K</kbd>
+      </button>
+
+      <div class="header-actions rd-header-actions ss-header-actions">
+        <button class="ss-header-icon ss-theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" title="Switch colour theme">
+          <span class="ss-theme-light" aria-hidden="true">☀</span>
+          <span class="ss-theme-dark" aria-hidden="true">☾</span>
+        </button>
+
+        <span class="ss-user-avatar" aria-label="Technician session" title="Technician session">IT</span>
+
+        <button class="header-icon-button mobile-menu-button ss-header-icon ss-menu-button" type="button" data-menu-toggle aria-controls="mobile-navigation" aria-expanded="false">
           <span class="sr-only">Open navigation menu</span>
-          <svg class="menu-open-icon" aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
-          <svg class="menu-close-icon" aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+          <svg class="menu-open-icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          <svg class="menu-close-icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"></path></svg>
         </button>
       </div>
     </div>
-    <nav id="mobile-navigation" class="mobile-nav rd-mobile-nav" aria-label="Mobile navigation" hidden>
-      <div class="shell mobile-nav-grid">
-        <a href="{{ '/' | relative_url }}">Home</a>
+  </div>
+
+  <div class="ss-header-navline">
+    <div class="shell ss-header-secondary">
+      <nav class="desktop-nav rd-nav ss-primary-nav" aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Dashboard</a>
+        <a href="{{ '/procedures/' | relative_url }}"{% if page.url contains '/procedures/' %} aria-current="page"{% endif %}>Procedures</a>
+        <a class="rd-nav-wizard" href="{{ '/wizard/' | relative_url }}"{% if page.url == '/wizard/' %} aria-current="page"{% endif %}>Symptom Wizard</a>
+        <a href="{{ '/enterprise-coverage/' | relative_url }}"{% if page.url == '/enterprise-coverage/' %} aria-current="page"{% endif %}>Coverage</a>
+        <a href="{{ '/content-quality/' | relative_url }}"{% if page.url == '/content-quality/' %} aria-current="page"{% endif %}>Quality</a>
+        <a class="rd-commercial-nav" href="{{ '/organisations/' | relative_url }}"{% if page.url == '/organisations/' %} aria-current="page"{% endif %}>For Organisations</a>
+      </nav>
+
+      <div class="ss-header-context">
+        <span class="ss-header-trust"><i aria-hidden="true"></i>Governed knowledge</span>
+        <button class="ss-request-inline" type="button" data-open-request-modal>
+          <span aria-hidden="true">＋</span> Request procedure
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-navigation" class="mobile-nav rd-mobile-nav ss-mobile-nav" aria-label="Mobile navigation" hidden>
+      <div class="shell ss-mobile-nav-grid">
+        <a href="{{ '/' | relative_url }}">Dashboard</a>
         <a href="{{ '/procedures/' | relative_url }}">Procedures</a>
-        <a href="{{ '/wizard/' | relative_url }}">Symptom wizard</a>
+        <a href="{{ '/wizard/' | relative_url }}">Symptom Wizard</a>
         <a href="{{ '/symptoms/' | relative_url }}">Symptoms</a>
-        <a href="{{ '/enterprise-coverage/' | relative_url }}">Coverage / Domains</a>
+        <a href="{{ '/enterprise-coverage/' | relative_url }}">Coverage</a>
         <a href="{{ '/content-quality/' | relative_url }}">Quality</a>
-        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/organisations/' | relative_url }}">For Organisations</a>
+        <a href="{{ '/about/' | relative_url }}">About ShiftStart</a>
+        <button type="button" data-open-request-modal><span aria-hidden="true">＋</span> Request New Procedure</button>
       </div>
     </nav>
   </div>
