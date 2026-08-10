@@ -32,3 +32,8 @@ contentGovernance:
   verifiedRequiresNamedReviewer: true
   generatedBaselineCanBeVerified: false
   qualityReport: /reports/content-audit.json
+
+commercial:
+  enabled: true
+  enquiryEmail: ''
+  responseWindow: 'Scoped after enquiry'
