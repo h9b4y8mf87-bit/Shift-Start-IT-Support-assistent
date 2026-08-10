@@ -18,6 +18,16 @@ layout: default
   {% if is_procedure %}
   <section class="assurance-banner rd-assurance-callout status-{{ assurance_status }}" aria-label="Content assurance"><div class="rd-assurance-icon" aria-hidden="true">{% if assurance_status == 'verified' %}✓{% else %}◷{% endif %}</div><div><strong>{% if assurance_status == 'verified' %}Verified operational guidance{% elsif assurance_status == 'draft' %}Draft — senior review required{% elsif assurance_status == 'deprecated' %}Deprecated — use replacement guidance{% else %}Technical-owner validation pending{% endif %}</strong><p>{% if assurance_status == 'verified' %}This procedure passed the current quality gate. Continue to follow organisational approvals and change controls.{% elsif assurance_status == 'under_review' %}Use this runbook with technical-owner judgement until validation is complete. Do not treat under-review content as production approval.{% else %}Review the content-quality status before applying changes to production systems.{% endif %}</p><span>Reviewed by: {{ page.reviewed_by | default: 'Not recorded' }} · Last tested: {{ page.last_tested | default: 'Not recorded' }}</span><span>Governance: <a href="{{ '/reports/content-audit.json' | relative_url }}">Open machine-readable audit report</a></span></div><a href="{{ '/content-quality/' | relative_url }}">Quality details</a></section>
   <div class="rd-procedure-actions" aria-label="Procedure actions"><button class="btn-secondary" type="button" data-copy-article-link>Copy link</button><button class="btn-secondary" type="button" data-print-procedure>Print / PDF</button><a class="btn-secondary" href="{{ '/wizard/' | relative_url }}">Open wizard</a></div>
+
+  <section class="rd-quick-glance" aria-label="Procedure quick glance">
+    <span class="rd-quick-glance-label">Quick glance</span>
+    {% if page.severity %}<dl class="rd-quick-glance-item"><dt>Risk</dt><dd>{{ page.severity }}</dd></dl>{% endif %}
+    <dl class="rd-quick-glance-item"><dt>Status</dt><dd>{{ assurance_status | replace: '_', ' ' }}</dd></dl>
+    {% if page.support_tier %}<dl class="rd-quick-glance-item"><dt>Tier</dt><dd>{{ page.support_tier }}</dd></dl>{% endif %}
+    {% if page.estimated_time %}<dl class="rd-quick-glance-item"><dt>Time</dt><dd>{{ page.estimated_time }}</dd></dl>{% endif %}
+    {% if page.owner_team %}<dl class="rd-quick-glance-item"><dt>Owner</dt><dd>{{ page.owner_team }}</dd></dl>{% endif %}
+    <button class="btn-secondary rd-focus-mode-button" type="button" data-focus-mode aria-pressed="false">Focus mode</button>
+  </section>
   {% endif %}
 
   <div class="rd-article-layout">

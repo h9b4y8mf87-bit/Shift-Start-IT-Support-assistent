@@ -17,7 +17,20 @@
       <nav class="desktop-nav rd-nav" aria-label="Primary navigation">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
         <a href="{{ '/procedures/' | relative_url }}"{% if page.url contains '/procedures/' %} aria-current="page"{% endif %}>Procedures</a>
-        <a href="{{ '/wizard/' | relative_url }}"{% if page.url == '/wizard/' %} aria-current="page"{% endif %}>Wizard</a>
+        {% assign nav_domains = site.procedures | group_by: 'category' | sort: 'name' %}
+        <details class="rd-domain-menu" data-domain-menu>
+          <summary>Domains</summary>
+          <div class="rd-domain-popover">
+            {% for domain in nav_domains %}
+              <a href="{{ '/procedures/?category=' | append: domain.name | uri_escape | relative_url }}">
+                <strong>{{ domain.name }}</strong>
+                <span>{{ domain.items | size }}</span>
+              </a>
+            {% endfor %}
+            <div class="rd-domain-popover-footer"><a href="{{ '/enterprise-coverage/' | relative_url }}">Open complete coverage map →</a></div>
+          </div>
+        </details>
+        <a class="rd-nav-wizard" href="{{ '/wizard/' | relative_url }}"{% if page.url == '/wizard/' %} aria-current="page"{% endif %}>Wizard</a>
         <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
       </nav>
       <div class="header-actions rd-header-actions">
@@ -31,7 +44,13 @@
     </div>
     <nav id="mobile-navigation" class="mobile-nav rd-mobile-nav" aria-label="Mobile navigation" hidden>
       <div class="shell mobile-nav-grid">
-        <a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/procedures/' | relative_url }}">Procedures</a><a href="{{ '/wizard/' | relative_url }}">Symptom wizard</a><a href="{{ '/symptoms/' | relative_url }}">Symptoms</a><a href="{{ '/enterprise-coverage/' | relative_url }}">Coverage</a><a href="{{ '/content-quality/' | relative_url }}">Quality</a><a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/procedures/' | relative_url }}">Procedures</a>
+        <a href="{{ '/wizard/' | relative_url }}">Symptom wizard</a>
+        <a href="{{ '/symptoms/' | relative_url }}">Symptoms</a>
+        <a href="{{ '/enterprise-coverage/' | relative_url }}">Coverage / Domains</a>
+        <a href="{{ '/content-quality/' | relative_url }}">Quality</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
       </div>
     </nav>
   </div>
