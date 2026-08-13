@@ -50,7 +50,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-5 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -73,10 +73,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot linux certificate trust** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check system time/NTP state and the active CA trust store for the distribution/application.
+2. Use `openssl s_client` or the application's supported TLS diagnostics to inspect the presented chain, hostname and verification errors.
+3. Check whether the affected service uses the system trust store, a Java/application-specific trust store or a container/image-specific store.
+
+### Rollback / undo
+- Back up trust-store/certificate configuration before change. If an authorised trust/certificate update causes regression, restore the previous approved CA/certificate bundle and restart/reload only the affected service as required.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -105,6 +116,12 @@ Use this runbook for **troubleshoot linux certificate trust** in a managed enter
 ### Scenario-specific success criterion
 The original command, build, connection or service works in the supported environment.
 
+
+## Linux certificate trust decision path
+1. Verify date/time/NTP and identify which trust store the failing application actually uses.
+2. Inspect the presented TLS chain and verification result with approved tooling such as `openssl s_client`.
+3. Check hostname, issuer/intermediate chain, expiry and whether the required CA exists in the relevant system/application/container trust store.
+4. Back up trust-store configuration before change; restore the previous approved CA/certificate bundle if an authorised update causes regression.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

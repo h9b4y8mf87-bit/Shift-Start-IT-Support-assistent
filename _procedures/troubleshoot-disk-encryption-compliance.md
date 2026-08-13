@@ -54,7 +54,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-5 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -77,10 +77,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot disk-encryption compliance** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check the authoritative MDM/endpoint-management encryption state and confirm recovery-key escrow is healthy before changing BitLocker/FileVault protection.
+2. Check TPM/Secure Enclave/secure-chip state, relevant firmware/security settings and current protectors.
+3. Check for an authorised pending suspend/resume operation and identify why the device is reported non-compliant.
+
+### Rollback / undo
+- Do not decrypt the device as routine remediation. If encryption was intentionally suspended for an authorised maintenance action, resume protection after verification. If a policy change causes incorrect compliance reporting, restore the previous approved policy while preserving encryption and recovery escrow.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -109,6 +120,12 @@ Use this runbook for **troubleshoot disk-encryption compliance** in a managed en
 ### Scenario-specific success criterion
 The exact scenario “Troubleshoot disk-encryption compliance” is resolved and the original business task succeeds.
 
+
+## Encryption compliance decision path
+1. Confirm actual encryption state and recovery-key escrow in the authoritative MDM/endpoint-management platform.
+2. Determine whether the issue is encryption disabled, protection suspended, missing escrow, unhealthy TPM/Secure Enclave, or only stale compliance reporting.
+3. Preserve recovery access before firmware, protector or policy changes.
+4. Do not decrypt the device as routine remediation; resume protection after authorised maintenance and verify escrow/compliance.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

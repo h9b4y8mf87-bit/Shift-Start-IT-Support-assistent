@@ -55,7 +55,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-5 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -78,10 +78,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot citrix audio or microphone** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Confirm the local microphone/audio device works outside Citrix before changing the VDI.
+2. Check Citrix session/VDA health plus applicable HDX audio or real-time media optimisation components where deployed.
+3. Review Citrix policy for audio redirection, device mapping and bandwidth/quality limits.
+
+### Rollback / undo
+- Record VDA/master-image and Citrix policy versions before change. If an approved VDA/media component or policy change causes regression, restore the previous approved image/component/policy through the Citrix change process.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

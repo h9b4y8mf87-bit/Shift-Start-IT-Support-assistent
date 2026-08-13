@@ -10,7 +10,7 @@
     "jekyll": "bundle exec jekyll build",
     "build": "npm run clean && npm run remediate:apply && npm run vendor && npm run generate && npm run css && bundle exec jekyll build",
     "dev": "npm run remediate:apply && npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
-    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check && npm run readiness:check && npm run verification:queue && npm run verification:queue:check && npm run verification:batches && npm run verification:batches:check && npm run verification:evidence:check && npm run sprint1:audit:check && npm run batch:b1:check && npm run batch:b2:check && npm run batch:b3:check && npm run batch:b4:check",
+    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check && npm run readiness:check && npm run verification:queue && npm run verification:queue:check && npm run verification:batches && npm run verification:batches:check && npm run verification:evidence:check && npm run sprint1:audit:check && npm run batch:b1:check && npm run batch:b2:check && npm run batch:b3:check && npm run batch:b4:check && npm run batch:b5:check",
     "test": "npm run remediate:apply && npm run check && npm run build",
     "audit-content": "node scripts/validate-content.js",
     "vendor": "node scripts/vendor-assets.js",
@@ -34,7 +34,8 @@
     "batch:b1:check": "node scripts/validate-batch-b1-remediation.js",
     "batch:b2:check": "python3 scripts/validate-batch-b2-remediation.py",
     "batch:b3:check": "python3 scripts/validate-batch-b3-remediation.py",
-    "batch:b4:check": "python3 scripts/validate-batch-b4-remediation.py"
+    "batch:b4:check": "python3 scripts/validate-batch-b4-remediation.py",
+    "batch:b5:check": "python3 scripts/validate-batch-b5-remediation.py"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

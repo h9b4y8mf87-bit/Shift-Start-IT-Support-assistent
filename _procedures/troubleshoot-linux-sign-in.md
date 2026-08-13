@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot linux sign-in without skipping 
 content_type: procedure
 category: Linux & Developer Workstations
 service: Linux & Developer Workstations
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Linux Platform or Developer Experience
 platforms:
@@ -50,13 +50,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-5 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -71,12 +71,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot linux sign-in** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Determine local-console versus SSH versus directory/SSO login scope and verify the account is not locked/expired.
+2. Review SSH/authentication logs for the exact attempt and check authorized keys/home-directory ownership/permissions as relevant.
+3. Check PAM/SSSD/LDAP/Kerberos or other configured identity-provider health before changing authentication files.
+
+### Rollback / undo
+- Back up PAM/SSSD/SSH authentication configuration before change. Restore the previous approved configuration if a confirmed edit causes lockout; keep an authorised recovery session/console path available before remote authentication changes.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

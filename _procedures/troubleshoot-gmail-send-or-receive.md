@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot gmail send or receive without s
 content_type: procedure
 category: Google Workspace & Web Collaboration
 service: Google Workspace & Web Collaboration
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Google Workspace Administration
 platforms:
@@ -53,13 +53,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-5 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -74,12 +74,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot gmail send or receive** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check Google Workspace Status Dashboard/admin service alerts before changing Gmail routing or client settings.
+2. Determine whether the issue affects one user, domain/OU/group or all mail flow; capture message IDs, timestamps and bounce/error details.
+3. Check mailbox/storage state, sending limits, routing/compliance rules and attachment/message limits relevant to the failure.
+
+### Rollback / undo
+- Export/capture the affected routing/compliance policy before change. If an authorised policy change caused mail-flow failure, restore the previous approved policy and verify controlled test messages.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -110,6 +120,8 @@ The user sends, receives, searches or opens the required message successfully.
 
 
 ## Procedure
+0. **Check Google Workspace service health before mail-flow changes.** Check current Workspace/Gmail service alerts and determine whether the failure is user-specific, policy/routing-specific or domain-wide before changing mail flow.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

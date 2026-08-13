@@ -53,7 +53,7 @@ source_references: []
 change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-5 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -76,10 +76,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot directory synchronisation** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check Microsoft Entra Connect/Cloud Sync health and active service incidents before changing synchronization configuration.
+2. Review Sync Service Manager / connector run history and exact import, synchronization or export errors for the incident window.
+3. Check connectivity to on-premises directory and Entra endpoints, connector credentials/permissions and object conflicts such as duplicate UPN/proxy addresses or immutable-identity mismatches.
+
+### Rollback / undo
+- Export/capture synchronization rules and connector configuration before change. If an approved sync-rule/configuration change caused failures, restore the previous known-good configuration. Do not stop or replace a full synchronization solely because it is slow; stop only when an authorised operator confirms it is erroneous and understands the object-impact risk.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -109,7 +120,12 @@ Use this runbook for **troubleshoot directory synchronisation** in a managed ent
 The affected files synchronise and match the validated cloud version.
 
 
+## Directory synchronization escalation gate
+Keep the runbook P1 by default. Escalate to the organisation's major-incident/P0 process based on actual scope and business impact—such as widespread authentication/provisioning failure or a critical identity dependency—not on elapsed time alone.
+
 ## Procedure
+0. **Check directory-sync service health before synchronization changes.** Check Microsoft Entra Connect/Cloud Sync health and active service incidents, then inspect connector run history and export/import errors before changing rules or forcing synchronisation.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

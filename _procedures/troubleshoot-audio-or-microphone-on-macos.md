@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot audio or microphone on macos wi
 content_type: procedure
 category: macOS Endpoints
 service: macOS Endpoints
-severity: high
+severity: low
 support_tier: L1-L2
 owner_team: Apple Platform or Endpoint Engineering
 platforms:
@@ -52,13 +52,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-5 audit classification: P3 / low.'
+verification_priority: P3
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -70,15 +70,25 @@ verification_v2_missing:
   - authoritative_source_provenance
   - last_tested
   - minimum_peer_reviewers
-  - minimum_sme_reviewers
+  - minimum_technical_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot audio or microphone on macos** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify selected input/output device and volume/mute state in macOS Sound settings.
+2. Check application microphone permission in Privacy & Security and test recording with a built-in supported app.
+3. Test a known-good headset/microphone or alternate port/device to separate hardware from application configuration.
+
+### Rollback / undo
+- Record audio/device/application settings before change. Restore prior approved configuration if an app/MDM change caused regression. Do not attempt unsupported macOS audio-driver rollback; use supported OS/vendor remediation.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

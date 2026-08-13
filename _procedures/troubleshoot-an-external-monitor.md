@@ -137,6 +137,13 @@ Start with monitor power/input, cable/adapter/dock and a known-good connection b
 - Verify monitor input source and whether POST/firmware output appears.
 - If no signal persists with known-good hardware, isolate endpoint GPU/port versus monitor/cable failure and route hardware repair appropriately.
 
+### Arrangement and resolution branch
+- Confirm all expected displays are detected before changing arrangement or resolution.
+- Record the current topology, primary display, orientation, scaling and resolution.
+- Apply supported/native resolutions and arrange displays to match physical placement.
+- If a confirmed graphics/display driver change caused regression, restore the previous approved driver/configuration.
+
+
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 

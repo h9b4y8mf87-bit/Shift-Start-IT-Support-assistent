@@ -51,7 +51,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-5 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -74,10 +74,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot high load on linux** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Use `uptime`, `top`/`ps` and load averages to establish scope and identify consuming/runnable processes.
+2. Use approved tools such as `vmstat`, `iostat` and filesystem/network checks to separate CPU, memory, I/O wait and blocked-task pressure.
+3. Check recent deployments/jobs and unexpected connection/process patterns; route suspected attack activity to Security Operations.
+
+### Rollback / undo
+- Capture service/deployment state before changes. Restore a confirmed bad deployment/configuration through the approved release process. Restart a leaking/runaway service only after dependencies and business impact are understood.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

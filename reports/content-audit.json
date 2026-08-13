@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-13T12:31:14.378Z",
+  "generatedAt": "2026-08-13T12:33:32.974Z",
   "counts": {
     "procedures": 421,
     "symptoms": 446,
@@ -8,9 +8,9 @@
     "commands": 3
   },
   "statusCounts": {
-    "under_review": 404,
+    "under_review": 403,
     "verified": 11,
-    "deprecated": 6
+    "deprecated": 7
   },
   "errors": [
     "_procedures/investigate-repeated-account-lockouts.md: procedure content is too short for enterprise use",
@@ -18,10 +18,11 @@
     "_procedures/troubleshoot-a-mapped-drive-reconnect-failure.md: procedure content is too short for enterprise use",
     "_procedures/troubleshoot-an-external-display-on-macos.md: procedure content is too short for enterprise use",
     "_procedures/troubleshoot-an-external-monitor-with-no-signal.md: procedure content is too short for enterprise use",
-    "_procedures/troubleshoot-dns-name-resolution.md: procedure content is too short for enterprise use"
+    "_procedures/troubleshoot-dns-name-resolution.md: procedure content is too short for enterprise use",
+    "_procedures/troubleshoot-multiple-monitor-arrangement-or-resolution.md: procedure content is too short for enterprise use"
   ],
   "warnings": [
-    "Generic command block reused by 45 under-review procedures: Get-ComputerInfo | Select CsName,WindowsProductName,WindowsVersion,OsBuildNumber; Get-CimInstance Win32_OperatingSystem ...",
+    "Generic command block reused by 44 under-review procedures: Get-ComputerInfo | Select CsName,WindowsProductName,WindowsVersion,OsBuildNumber; Get-CimInstance Win32_OperatingSystem ...",
     "Generic command block reused by 25 under-review procedures: Get-Service | Where-Object Status -ne Running | Select -First 30 Name,Status,StartType; Get-Volume | Select DriveLetter,...",
     "Generic command block reused by 14 under-review procedures: Get-Printer | Select Name,PrinterStatus,DriverName,PortName; Get-Service Spooler; Get-PrintJob -PrinterName \"Printer nam...",
     "Generic command block reused by 40 under-review procedures: dsregcmd /status...",

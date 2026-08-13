@@ -54,7 +54,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-5 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -77,10 +77,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b5-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot endpoint protection health** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-5 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check the EDR/AV management console for device health, last check-in, sensor/service state and active alerts.
+2. Verify real-time protection, tamper protection, engine/definition/sensor version and management connectivity.
+3. Determine whether this is a health/configuration issue or an active security alert; active threat evidence must route to the incident/EDR-alert runbook rather than being treated as routine agent repair.
+
+### Rollback / undo
+- Record the current approved endpoint-protection policy/sensor version before change. Restore the previous approved policy or vendor-supported sensor version if a confirmed update causes regression. Do not disable protection as a troubleshooting shortcut.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -109,6 +120,12 @@ Use this runbook for **troubleshoot endpoint protection health** in a managed en
 ### Scenario-specific success criterion
 The exact scenario “Troubleshoot endpoint protection health” is resolved and the original business task succeeds.
 
+
+## Endpoint protection health decision path
+1. Check EDR/AV console health, last sensor check-in, engine/signature/sensor state and tamper protection.
+2. If the device has an active credible threat alert or compromise evidence, stop routine health repair and use `investigate-an-antivirus-or-edr-alert`.
+3. For health-only faults, repair management connectivity, policy or the supported sensor/agent without disabling protection as a shortcut.
+4. Return the endpoint to normal service only after expected protection and management telemetry are healthy.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
