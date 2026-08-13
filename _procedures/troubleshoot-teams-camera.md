@@ -115,6 +115,9 @@ These audit-derived controls are mandatory before more invasive remediation.
 The peripheral works in the original application and remains stable after reconnect or restart.
 
 
+## Camera troubleshooting relationship
+If the camera also fails in the Windows Camera app or Device Manager/privacy diagnostics indicate an OS/hardware problem, use `troubleshoot-a-webcam-on-windows`. Keep this Teams procedure for Teams-specific permissions, device selection, client state and policy.
+
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 

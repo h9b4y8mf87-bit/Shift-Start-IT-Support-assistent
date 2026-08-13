@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot an external monitor without ski
 content_type: procedure
 category: Windows Endpoints
 service: Windows Endpoints
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Endpoint Engineering
 platforms:
@@ -52,13 +52,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-4 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -73,12 +73,24 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
+canonical_role: definitive-cross-platform-external-monitor-runbook
+cross_platform_scope: true
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot an external monitor** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check monitor power/input selection, cable/adapter/dock and physical connection using a known-good compatible path.
+2. Determine whether the fault follows the monitor/cable/dock or the endpoint, and whether it occurs before sign-in/OS where testable.
+3. Use the platform branch: Windows display/driver settings or macOS Displays/system information, without assuming an OS update rollback is available.
+
+### Rollback / undo
+- Record display/driver/dock configuration before changes. Restore the previous approved driver/display configuration if a change causes regression; replace faulty cable/adapter/dock/monitor through hardware support rather than attempting unsupported OS rollback.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -107,6 +119,23 @@ Use this runbook for **troubleshoot an external monitor** in a managed enterpris
 ### Scenario-specific success criterion
 The peripheral works in the original application and remains stable after reconnect or restart.
 
+
+## Cross-platform external monitor decision path
+Start with monitor power/input, cable/adapter/dock and a known-good connection before changing software.
+
+### Windows branch
+- Check Settings > System > Display, display detection, graphics/display adapter state and approved driver history.
+- Test another cable/port/dock/monitor to isolate the failing component.
+- Restore the previous approved display/graphics driver if a confirmed driver change caused regression.
+
+### macOS branch
+- Check Displays settings/system information, cable/adapter/dock compatibility and supported refresh/resolution.
+- Test another cable/port/dock/monitor to isolate the failing component.
+- Use vendor/Apple-supported updates or configuration recovery; do not assume an OS downgrade is an available rollback.
+
+### No-signal branch
+- Verify monitor input source and whether POST/firmware output appears.
+- If no signal persists with known-good hardware, isolate endpoint GPU/port versus monitor/cable failure and route hardware repair appropriately.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

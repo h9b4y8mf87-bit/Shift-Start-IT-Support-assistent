@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot a shared mailbox without skippi
 content_type: procedure
 category: Microsoft 365 & Collaboration
 service: Microsoft 365 & Collaboration
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Microsoft 365 or Collaboration Services
 platforms:
@@ -50,13 +50,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-4 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -71,12 +71,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a shared mailbox** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify the user has the correct permissions (Full Access, Send As, Send on Behalf).
+2. Check if the shared mailbox is visible in Outlook or Outlook on the web.
+3. Confirm the shared mailbox is licensed correctly (requires a license if it has >50GB data).
+
+### Rollback / undo
+- If a permission change breaks access, revert the permissions immediately via Exchange Admin Center.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -105,6 +115,9 @@ Use this runbook for **troubleshoot a shared mailbox** in a managed enterprise e
 ### Scenario-specific success criterion
 The user sends, receives, searches or opens the required message successfully.
 
+
+## Shared mailbox relationship
+Use `grant-shared-mailbox-access` for an approved request to add Full Access, Send As or Send on Behalf permissions. Use this procedure when previously expected shared-mailbox functionality is failing.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

@@ -53,7 +53,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit critical classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -77,10 +77,21 @@ verification_v2_missing:
   - negative_path_tested
 verification_promotion_ready: false
 classification_audit: sprint1-2026-08-13
+reaudit_batch: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a print server outage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check print-server system/spool volume free space before clearing queues or restarting the Print Spooler.
+2. Confirm whether the server itself is unreachable versus the Spooler, one queue, driver, port or downstream printer.
+3. Check PrintService/System logs, Spooler dependencies and network/RPC reachability; preserve queued-job evidence before destructive cleanup.
+
+### Rollback / undo
+- Export/capture printer queues, ports and drivers before changes. Restore the previous approved print configuration if service worsens; do not mass-delete queued jobs without preserving required evidence and owner approval.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -112,6 +123,8 @@ Monitoring and the dependent business transaction remain healthy.
 
 
 ## Procedure
+0. **Check print-server disk capacity before queue/service changes.** Confirm free space on system/spool volumes, capture PrintService/System evidence and preserve queued-job state before restarting the Spooler or clearing jobs.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
@@ -156,6 +169,9 @@ Get-Printer | Select Name,PrinterStatus,DriverName,PortName; Get-Service Spooler
 10. **Document and close correctly.** Record the cause or best evidence, every command and change, before-and-after results, user confirmation, linked problem/change/vendor records, assets involved and follow-up actions. Do not close while a workaround is unowned or monitoring is still unstable.
 
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
+
+## Batch B-4 print-server rollback detail
+Before driver, queue or port changes, export/capture the current printer configuration with approved tooling such as `Printbrm -B -f backup.printerexport` where supported. Restore the previous approved configuration if service worsens.
 
 ## Rollback and stop conditions
 - **Print rollback:** export printer configuration before driver/queue/port changes and restore the original configuration if service worsens.

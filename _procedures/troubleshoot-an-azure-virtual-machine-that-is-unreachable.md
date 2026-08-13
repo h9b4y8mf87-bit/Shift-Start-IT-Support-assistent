@@ -58,7 +58,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -81,10 +81,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot an azure virtual machine that is unreachable** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check Azure Service Health/resource health for the affected region/subscription before changing the VM or network.
+2. Check VM power/provisioning state, Resource Health and Boot Diagnostics.
+3. Check NSG, route, firewall and NIC configuration plus the intended management path before guest-OS changes.
+
+### Rollback / undo
+- Export/capture NSG, route and VM/network configuration before change. If an Azure network-policy change causes lockout, restore the previous approved configuration through Azure control-plane/IaC access; use Serial Console/Boot Diagnostics for guest-OS diagnosis, not as a substitute for restoring an incorrect NSG.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -115,6 +126,8 @@ The resource is healthy, reachable and serving its intended workload.
 
 
 ## Procedure
+0. **Check Azure service/resource health before VM changes.** Check Azure Service Health and Resource Health for the affected subscription/region, then capture VM state, Boot Diagnostics and network policy before remediation.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

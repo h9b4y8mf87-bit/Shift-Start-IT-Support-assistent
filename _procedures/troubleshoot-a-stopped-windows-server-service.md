@@ -56,7 +56,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -79,10 +79,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a stopped windows server service** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Review System/Application/service-specific event logs for the stop/failure reason before restarting the service.
+2. Check service dependencies and dependency health.
+3. Check the service identity/credential, required permissions, resource capacity and recent configuration/update changes.
+
+### Rollback / undo
+- Capture the service configuration and recent change record. If a confirmed configuration/update caused the stop, revert only that approved change or restore the prior known-good service configuration; do not repeatedly restart a crashing service without diagnosis.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

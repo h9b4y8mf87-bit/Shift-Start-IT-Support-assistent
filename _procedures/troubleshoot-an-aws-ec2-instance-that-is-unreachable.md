@@ -58,7 +58,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -81,10 +81,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot an aws ec2 instance that is unreachable** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check AWS Health / service events for the affected account/region before changing the instance or network.
+2. Check instance state plus EC2 system/instance status checks and recent events.
+3. Check security groups, subnet route tables, NACLs and the intended management path before changing guest networking.
+
+### Rollback / undo
+- Record security-group, route and NACL state before change. If a network-policy change causes lockout, restore the prior approved cloud-network configuration directly through AWS/IaC/control-plane access. Use Systems Manager only when it is already configured and reachable; do not assume it bypasses network controls.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -115,6 +126,8 @@ The resource is healthy, reachable and serving its intended workload.
 
 
 ## Procedure
+0. **Check AWS service/account health before instance changes.** Check AWS Health/service events for the affected account and region, then capture instance state/status checks and network policy before remediation.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

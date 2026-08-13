@@ -52,7 +52,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -75,10 +75,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot an erp client** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Determine whether the problem is client-specific or affects multiple users/sites.
+2. Check ERP application/server/database dependency health and relevant connection/session limits.
+3. Verify user role/authorisation and recent client/server changes before reinstalling the client.
+
+### Rollback / undo
+- Record the current supported ERP client/configuration. If a confirmed client patch/configuration change caused failure, deploy the previous approved version/configuration through the enterprise software/ERP management process.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

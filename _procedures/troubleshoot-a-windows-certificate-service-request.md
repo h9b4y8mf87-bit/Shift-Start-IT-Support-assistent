@@ -56,7 +56,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -79,10 +79,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a windows certificate service request** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check Certificate Authority and enrollment-service health before changing the requestor/client.
+2. Verify certificate template publication, enrollment permissions and intended EKU/subject requirements.
+3. Confirm time synchronization, trust chain and whether auto-enrollment/NDES/SCEP/web enrollment dependencies are healthy where applicable.
+
+### Rollback / undo
+- Preserve the prior valid certificate until the replacement is verified where possible. If an incorrectly issued certificate causes failure, revoke it through the CA according to policy and reissue a valid certificate; do not export/reuse private keys as a rollback shortcut.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

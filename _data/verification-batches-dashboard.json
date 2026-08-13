@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "model": "verification-batch-v1",
-  "generatedAt": "2026-08-13T11:53:22.626Z",
+  "generatedAt": "2026-08-13T12:31:13.358Z",
   "counts": {
     "A": 7,
     "B": 15,
@@ -501,7 +501,7 @@
       "procedures": [
         {
           "batchOrder": 1,
-          "rank": 187,
+          "rank": 170,
           "slug": "password-reset",
           "title": "Resolve a locked, forgotten or expired user password",
           "category": "Identity & Access Management",
@@ -529,7 +529,7 @@
         },
         {
           "batchOrder": 2,
-          "rank": 188,
+          "rank": 171,
           "slug": "mapped-drive-missing",
           "title": "Resolve a missing or disconnected mapped drive",
           "category": "File Services",
@@ -557,7 +557,7 @@
         },
         {
           "batchOrder": 3,
-          "rank": 189,
+          "rank": 172,
           "slug": "mfa-setup-fails",
           "title": "Resolve MFA setup or approval failure",
           "category": "Identity & Access Management",
@@ -585,7 +585,7 @@
         },
         {
           "batchOrder": 4,
-          "rank": 190,
+          "rank": 173,
           "slug": "vpn-not-connecting",
           "title": "Resolve VPN connection failure",
           "category": "Network & Connectivity",
@@ -613,7 +613,7 @@
         },
         {
           "batchOrder": 5,
-          "rank": 224,
+          "rank": 207,
           "slug": "teams-microphone-not-working",
           "title": "Resolve a Teams microphone not working",
           "category": "Microsoft 365 & Collaboration",
@@ -641,7 +641,7 @@
         },
         {
           "batchOrder": 6,
-          "rank": 225,
+          "rank": 208,
           "slug": "general-workstation-triage",
           "title": "Resolve a vague or multi-component workstation issue",
           "category": "Windows Endpoints",
@@ -669,7 +669,7 @@
         },
         {
           "batchOrder": 7,
-          "rank": 226,
+          "rank": 209,
           "slug": "no-network-docking-station",
           "title": "Resolve no network on a docking station",
           "category": "Network & Connectivity",
@@ -697,7 +697,7 @@
         },
         {
           "batchOrder": 8,
-          "rank": 227,
+          "rank": 210,
           "slug": "outlook-crashes",
           "title": "Resolve Outlook crashes or failure to open",
           "category": "Microsoft 365 & Collaboration",
@@ -725,7 +725,7 @@
         },
         {
           "batchOrder": 9,
-          "rank": 412,
+          "rank": 408,
           "slug": "printer-offline",
           "title": "Resolve a printer showing Offline",
           "category": "Printing & Scanning",
@@ -753,7 +753,7 @@
         },
         {
           "batchOrder": 10,
-          "rank": 413,
+          "rank": 409,
           "slug": "slow-windows-pc",
           "title": "Resolve an unusually slow Windows PC",
           "category": "Windows Endpoints",

@@ -54,7 +54,7 @@ source_references: []
 change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -77,10 +77,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a service account** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check whether the service identity is disabled, expired, locked or affected by password/secret/certificate expiry.
+2. Check exact service/application authentication logs and all dependent services/tasks that use the identity before rotating credentials.
+3. Review group/delegated permissions and confirm least privilege; identify whether the identity is a managed service account, vault-managed secret or traditional account.
+
+### Rollback / undo
+- Do not roll back to an old secret merely because it is known. If credential rotation causes failure, restore service using the organisation's approved secret-management/rotation process, update all dependent consumers consistently, and revoke superseded credentials only after verification.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

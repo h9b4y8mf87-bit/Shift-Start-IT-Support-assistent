@@ -53,7 +53,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -76,10 +76,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a saml application error** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check the identity-provider and application-provider service health before changing federation configuration.
+2. Review sign-in/SAML diagnostic evidence for assertion, audience, recipient/ACS, issuer/entity-ID, clock-skew or signature/certificate errors.
+3. Compare the Service Provider configuration with the authoritative IdP metadata, including certificate validity and endpoints.
+
+### Rollback / undo
+- Export/capture the working federation configuration before change. If a new federation configuration caused failure, restore the previous approved metadata/certificate/endpoints through the provider's supported administration process.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -110,6 +121,8 @@ The identity provider issues a valid assertion and the application creates a ses
 
 
 ## Procedure
+0. **Check identity-provider health before federation changes.** Confirm the IdP and application-provider service health, then capture sign-in/SAML error evidence before editing metadata, certificates, ACS URLs or entity IDs.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

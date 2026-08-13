@@ -53,7 +53,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-4 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -76,10 +76,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot an http 403 error** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Determine scope with another authorised user/client and capture the exact URL, identity, timestamp and 403 substatus/error detail.
+2. Check reverse proxy/web/WAF/IIS or application logs to identify the layer returning 403.
+3. Review identity/group membership and the relevant application/web/NTFS/ACL policy before granting additional access.
+
+### Rollback / undo
+- Export/capture the relevant ACL/web/application configuration before change. If an authorised permission/configuration change broadens access or worsens the fault, restore the previous approved ACL/configuration immediately and verify least privilege.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -108,6 +119,13 @@ Use this runbook for **troubleshoot an http 403 error** in a managed enterprise 
 ### Scenario-specific success criterion
 The user completes the original transaction and data is committed correctly.
 
+
+## HTTP 403 decision path
+1. Capture exact URL, identity, timestamp, response headers and available 403 substatus/error detail.
+2. Compare another authorised user/browser/client to determine identity-specific versus application-wide scope.
+3. Identify which layer returned 403: reverse proxy/WAF, web server, application authorization, filesystem/NTFS or upstream identity policy.
+4. Review the relevant logs before changing permissions.
+5. Change access only under least privilege and with the existing ACL/configuration captured for rollback.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

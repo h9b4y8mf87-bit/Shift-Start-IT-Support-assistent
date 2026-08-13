@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot a mobile work profile without s
 content_type: procedure
 category: Mobile Devices & MDM
 service: Mobile Devices & MDM
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Mobility or Endpoint Engineering
 platforms:
@@ -57,13 +57,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-4 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -78,12 +78,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b4-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a mobile work profile** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-4 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify the device is enrolled in Intune/MDM and the work profile is provisioned.
+2. Check the user's compliance status and app protection policies.
+3. Confirm the work profile apps (Outlook, Teams) are up to date.
+
+### Rollback / undo
+- If the work profile becomes corrupted, remove and re-provision the profile via the Company Portal.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
