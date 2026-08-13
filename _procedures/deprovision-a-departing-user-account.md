@@ -55,7 +55,7 @@ source_references: []
 change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-3 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -78,10 +78,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **deprovision a departing user account** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: verify the offboarding request, effective termination time and authorisation through the approved HR/identity-lifecycle record.
+2. Check for legal hold, retention, investigation or preservation requirements before deleting or altering user data.
+3. At the authorised effective time, block sign-in/revoke sessions promptly; preserve the account/object while mailbox, OneDrive and business-data ownership/retention are transferred under policy.
+
+### Rollback / undo
+- Re-enable access only through an explicit HR/manager-approved reversal. If the account was only disabled, re-enable and restore approved licensing/access; if an object was deleted, use the organisation's supported directory recovery process. Do not bypass legal/retention controls.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -111,7 +122,17 @@ Use this runbook for **deprovision a departing user account** in a managed enter
 Access is removed at the authorised time and retained data remains owned and recoverable.
 
 
+## Identity lifecycle relationship
+This procedure is part of the governed Joiner/Mover/Leaver lifecycle.
+
+- **Provision:** `provision-a-new-user-account`
+- **Deprovision:** `deprovision-a-departing-user-account`
+
+Both workflows must use an approved HR/identity-lifecycle record, least privilege, dated ownership/approval and auditable completion evidence. Deprovisioning additionally enforces legal/retention preservation and immediate access revocation at the authorised effective time.
+
 ## Procedure
+0. **Verify authorised offboarding before action.** Confirm the approved HR/identity-lifecycle record, effective time, target identity and any legal/retention constraints before disabling access or altering data.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

@@ -4,7 +4,7 @@ slug: a-device-requesting-a-bitlocker-recovery-key
 description: 'Observable report: A device requesting a BitLocker recovery key. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: Windows Endpoints
-severity: medium
+severity: high
 tags:
   - recover-a-device-requesting-a-bitlocker-recovery-key
   - windows-endpoints
@@ -13,6 +13,7 @@ related_procedures:
 permalink: /symptoms/a-device-requesting-a-bitlocker-recovery-key/
 layout: article
 last_reviewed: '2026-08-02'
+classification_audit: batch-b3-2026-08-13
 ---
 
 ## What to capture

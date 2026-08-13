@@ -5,7 +5,7 @@ description: 'Enterprise runbook to provision a new user account without skippin
 content_type: procedure
 category: Identity & Access Management
 service: Identity & Access Management
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Identity and Access Management
 platforms:
@@ -55,13 +55,13 @@ source_references: []
 change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-3 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -76,12 +76,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **provision a new user account** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify the HR ticket/request has been approved and contains all required details (name, manager, department, start date).
+2. Check that the requested licenses are available (budget/quota).
+3. Confirm the manager and required groups/permissions are correctly identified.
+
+### Rollback / undo
+- Immediately disable the account if the user's start date is postponed or the request is canceled. Log all actions for audit.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -110,6 +120,14 @@ Use this runbook for **provision a new user account** in a managed enterprise en
 ### Scenario-specific success criterion
 The new user can authenticate and access only approved services.
 
+
+## Identity lifecycle relationship
+This procedure is part of the governed Joiner/Mover/Leaver lifecycle.
+
+- **Provision:** `provision-a-new-user-account`
+- **Deprovision:** `deprovision-a-departing-user-account`
+
+Both workflows must use an approved HR/identity-lifecycle record, least privilege, dated ownership/approval and auditable completion evidence. Deprovisioning additionally enforces legal/retention preservation and immediate access revocation at the authorised effective time.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

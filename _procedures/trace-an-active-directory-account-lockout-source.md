@@ -124,6 +124,9 @@ These audit-derived controls are mandatory before more invasive remediation.
 The account stays unlocked and the user signs in to the original service.
 
 
+## Repeated lockout decision path
+Use this as the definitive account-lockout source runbook. Correlate domain-controller lockout evidence, stale cached credentials, services/scheduled tasks, mapped resources and mobile clients before repeatedly unlocking the user.
+
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 

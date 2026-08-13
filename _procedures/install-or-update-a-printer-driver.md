@@ -5,7 +5,7 @@ description: 'Enterprise runbook to install or update a printer driver without s
 content_type: procedure
 category: Printing & Scanning
 service: Printing & Scanning
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Workplace Technology or Print Services
 platforms:
@@ -54,13 +54,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-3 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -75,12 +75,23 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
+canonical_role: definitive-printer-driver-device-management
 ---
 ## Purpose and scope
 Use this runbook for **install or update a printer driver** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check the print server's disk space (Rule E) before downloading/extracting drivers.
+2. Verify the driver version is compatible with the OS and printer model.
+3. Check if the driver is signed and from a trusted source.
+
+### Rollback / undo
+- Export the current driver configuration (`Printbrm -B -f backup.printerexport`) before installing the new one. If the new driver breaks printing, use Print Management to roll back to the previous driver.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -110,6 +121,11 @@ Use this runbook for **install or update a printer driver** in a managed enterpr
 The required document prints or scans with correct destination, security and finishing.
 
 
+## Printer driver and device management decision path
+- Update/install branch: verify model, architecture/OS compatibility, signed/trusted source and current driver before change.
+- Clean reinstall branch: export current printer/driver configuration with approved tooling such as Printbrm before removing the queue/driver.
+- Check disk space and Print Spooler health before extracting/installing drivers.
+- If the new driver causes regression, restore the previous approved driver/configuration and verify a controlled print job.
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 

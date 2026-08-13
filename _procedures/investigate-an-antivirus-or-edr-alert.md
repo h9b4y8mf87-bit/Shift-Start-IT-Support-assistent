@@ -56,7 +56,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-3 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -79,10 +79,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **investigate an antivirus or edr alert** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: for a credible active or high-severity threat, isolate the affected endpoint through approved EDR/network controls before ordinary investigation.
+2. Review alert evidence including file hash, process tree, command line, network connections, affected user and timeline.
+3. Correlate with allowlists/software inventory/threat intelligence before declaring a false positive.
+
+### Rollback / undo
+- Release isolation only after Security Operations confirms the alert is benign or containment/eradication criteria are met. Record the release and verify normal management/security telemetry.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -113,7 +124,9 @@ The exact scenario “Investigate an antivirus or EDR alert” is resolved and t
 
 
 ## Procedure
-1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
+0. **Contain a credible active threat before ordinary investigation.** For an active or high-severity threat, isolate the affected endpoint through approved EDR/network controls and preserve the alert evidence.
+
+1. **Confirm the incident without recreating the risky action.** Validate the report from preserved telemetry, message/log evidence and user statements. Do not re-open, resend or re-execute suspicious content merely to reproduce the incident.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
 

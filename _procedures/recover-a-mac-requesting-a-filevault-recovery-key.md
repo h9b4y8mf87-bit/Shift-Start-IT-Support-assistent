@@ -5,7 +5,7 @@ description: 'Enterprise runbook to recover a mac requesting a filevault recover
 content_type: procedure
 category: macOS Endpoints
 service: macOS Endpoints
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Apple Platform or Endpoint Engineering
 platforms:
@@ -53,13 +53,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-3 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -74,12 +74,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **recover a mac requesting a filevault recovery key** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: verify the user's identity and exact managed Mac before disclosing or using a FileVault recovery secret.
+2. Retrieve the recovery key only from the authorised MDM/escrow service.
+3. Confirm the device/escrow record and recovery-key context match before use.
+
+### Rollback / undo
+- Recovery-key use is not a normal rollback action. After recovery, rotate/re-escrow the FileVault personal recovery key where supported/policy requires and confirm MDM escrow health; never copy the key into tickets.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -110,6 +120,8 @@ The device boots normally and encryption is fully protected and escrowed.
 
 
 ## Procedure
+0. **Verify identity and exact Mac before using a recovery key.** Match the managed Mac/escrow record before disclosing or applying the FileVault recovery secret.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

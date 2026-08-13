@@ -2,12 +2,13 @@
   "schemaVersion": 2,
   "model": "verification-priority-v1",
   "rankingRevision": "metadata-proxy-and-risk-floor-v2",
-  "generatedAt": "2026-08-13T11:50:28.330Z",
-  "actionableProcedures": 419,
+  "generatedAt": "2026-08-13T11:53:22.199Z",
+  "actionableProcedures": 417,
   "queueBandCounts": {
     "immediate": 7,
-    "next": 205,
-    "planned": 207
+    "next": 183,
+    "planned": 224,
+    "backlog": 3
   },
   "telemetryAvailable": false,
   "temporaryProxyEnabled": true,

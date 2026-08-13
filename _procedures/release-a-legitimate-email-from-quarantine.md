@@ -5,7 +5,7 @@ description: 'Enterprise runbook to release a legitimate email from quarantine w
 content_type: procedure
 category: Microsoft 365 & Collaboration
 service: Microsoft 365 & Collaboration
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Microsoft 365 or Collaboration Services
 platforms:
@@ -52,13 +52,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-3 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -73,12 +73,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **release a legitimate email from quarantine** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Validate sender, authentication results, message headers/content and the exact quarantine reason before release.
+2. Check whether the message was classified as phishing/malware or blocked by a mandatory policy; do not release solely because the user expects it.
+3. Use Security/Messaging approval for high-risk quarantine reasons or policy exceptions.
+
+### Rollback / undo
+- If a released message is later determined malicious, invoke the approved phishing/malware containment workflow to purge/quarantine it, block indicators as appropriate and assess user interaction. Do not rely on sender blocking alone.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

@@ -55,7 +55,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-3 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -78,10 +78,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **escalate a legal-hold or retention request** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: verify a formal Legal/Compliance instruction or authorised case/ticket before placing, changing or releasing a hold.
+2. Identify custodians, workloads/data locations, matter/case reference and required date range.
+3. Record existing holds/retention policies and escalate conflicts to Legal/Compliance rather than overriding them.
+
+### Rollback / undo
+- A hold/retention action is not removed as an ordinary rollback. Release or change it only on formal written Legal/Compliance instruction, preserving the case/audit trail.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -112,6 +123,8 @@ The owner validates data integrity, completeness, permissions and usability.
 
 
 ## Procedure
+0. **Verify Legal/Compliance authority before action.** Confirm the authorised case/ticket, custodians, scope and written instruction before placing, changing or releasing a hold.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

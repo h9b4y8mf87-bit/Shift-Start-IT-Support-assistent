@@ -52,7 +52,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-3 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -75,10 +75,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **report and contain a phishing email** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: report and contain immediately using approved mail/security tooling; preserve message/header evidence, quarantine/purge the malicious message where authorised and block confirmed malicious indicators.
+2. Determine recipients and whether anyone clicked links, opened attachments, entered credentials or approved MFA.
+3. If compromise is suspected, invoke the compromised-account/endpoint incident runbook immediately rather than relying on password reset alone.
+
+### Rollback / undo
+- If the message/indicator was blocked in error, Security/Messaging must validate the false positive before removing the block or restoring mail. Preserve the investigation record and avoid re-delivering suspected malicious content.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -109,7 +120,9 @@ The user sends, receives, searches or opens the required message successfully.
 
 
 ## Procedure
-1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
+0. **Report and contain the phishing message immediately.** Preserve message/header evidence and use approved mail/security tooling to quarantine/purge confirmed malicious content and block confirmed indicators.
+
+1. **Confirm the incident without recreating the risky action.** Validate the report from preserved telemetry, message/log evidence and user statements. Do not re-open, resend or re-execute suspicious content merely to reproduce the incident.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
 

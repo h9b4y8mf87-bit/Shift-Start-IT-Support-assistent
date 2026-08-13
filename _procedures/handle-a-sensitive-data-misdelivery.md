@@ -55,7 +55,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-3 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -78,10 +78,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **handle a sensitive-data misdelivery** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: contain the exposure immediately using approved controls: revoke external sharing, disable the affected link/session or use authorised mail/security containment while preserving evidence.
+2. Identify recipients, internal/external scope, delivery time and whether the content/link was accessed.
+3. Check DLP/Purview/audit evidence and data classification; engage Privacy/Legal/Security according to policy.
+
+### Rollback / undo
+- Containment actions are restored only after Security/Privacy approval. A message recall or purge is not treated as reversible; if legitimate access must be restored, re-share/re-send through an approved controlled path.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -112,7 +123,9 @@ Security Operations confirms containment and evidence preservation.
 
 
 ## Procedure
-1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
+0. **Contain the data exposure immediately.** Revoke the affected sharing path/session or use approved mail/security containment while preserving evidence; then determine recipients, access and classification.
+
+1. **Confirm the incident without recreating the risky action.** Validate the report from preserved telemetry, message/log evidence and user statements. Do not re-open, resend or re-execute suspicious content merely to reproduce the incident.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
 

@@ -4,7 +4,7 @@ slug: a-mac-requesting-a-filevault-recovery-key
 description: 'Observable report: A Mac requesting a FileVault recovery key. Select it with any other symptoms to receive ranked procedures.'
 content_type: symptom
 category: macOS Endpoints
-severity: medium
+severity: high
 tags:
   - macos-endpoints
   - recover-a-mac-requesting-a-filevault-recovery-key
@@ -13,6 +13,7 @@ related_procedures:
 permalink: /symptoms/a-mac-requesting-a-filevault-recovery-key/
 layout: article
 last_reviewed: '2026-08-02'
+classification_audit: batch-b3-2026-08-13
 ---
 
 ## What to capture

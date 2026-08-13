@@ -5,7 +5,7 @@ description: 'Enterprise runbook to migrate a user profile without skipping evid
 content_type: procedure
 category: 'Data Protection, Backup & Recovery'
 service: 'Data Protection, Backup & Recovery'
-severity: high
+severity: medium
 support_tier: L1-L3
 owner_team: 'Backup, Storage or Data Protection'
 platforms:
@@ -52,13 +52,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-3 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -73,12 +73,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **migrate a user profile** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify the source and destination drives have sufficient space.
+2. Use USMT (User State Migration Tool) or a similar enterprise tool for a structured migration.
+3. Ensure the user is logged off during the migration.
+
+### Rollback / undo
+- Keep the original profile intact for at least 7 days. If the new profile is corrupted, re-point the user to the old profile and document the failure.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

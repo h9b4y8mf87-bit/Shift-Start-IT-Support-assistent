@@ -5,7 +5,7 @@ description: 'Enterprise runbook to install or renew a mobile certificate withou
 content_type: procedure
 category: Mobile Devices & MDM
 service: Mobile Devices & MDM
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Mobility or Endpoint Engineering
 platforms:
@@ -58,13 +58,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-3 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -79,12 +79,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **install or renew a mobile certificate** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify device ownership/enrolment/compliance and the user's identity before certificate issuance.
+2. Check CA/NDES/SCEP or equivalent certificate service health and the intended certificate template/profile.
+3. Confirm current certificate subject, expiry, EKU and trust chain without exporting private keys.
+
+### Rollback / undo
+- Do not export or restore private keys as a rollback shortcut. If the new certificate/profile causes regression, revoke the incorrect certificate where authorised and redeploy the previous approved profile or issue a fresh valid certificate through the CA/MDM workflow.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

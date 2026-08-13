@@ -5,7 +5,7 @@ description: 'Enterprise runbook to correct a broken file association without sk
 content_type: procedure
 category: Windows Endpoints
 service: Windows Endpoints
-severity: high
+severity: low
 support_tier: L1-L2
 owner_team: Endpoint Engineering
 platforms:
@@ -53,13 +53,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-3 audit classification: P3 / low.'
+verification_priority: P3
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -71,15 +71,25 @@ verification_v2_missing:
   - authoritative_source_provenance
   - last_tested
   - minimum_peer_reviewers
-  - minimum_sme_reviewers
+  - minimum_technical_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b3-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **correct a broken file association** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-3 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify the application is installed and functional.
+2. Check if the file extension is correct (e.g., `.docx` vs `.doc`).
+3. Use Windows "Set Default Programs" or `assoc`/`ftype` commands.
+
+### Rollback / undo
+- Export the current file association registry key (`HKEY_CLASSES_ROOT\.ext`) before changing it. If the change fails, re-import the registry.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
