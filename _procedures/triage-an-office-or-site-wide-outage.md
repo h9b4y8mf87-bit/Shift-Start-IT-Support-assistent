@@ -76,6 +76,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **triage an office or site-wide outage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -98,8 +99,9 @@ Use this runbook for **triage an office or site-wide outage** in a managed enter
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Confirm the exact condition described by “Triage an office or site-wide outage” and identify its first failing dependency.
-- Compare a known-good user, device, location or service path to isolate scope.
+- Check building/site power, UPS and core network equipment before user-device troubleshooting.
+- Check WAN/ISP, LAN core, DNS/DHCP, identity and relevant cloud-provider health in a defined order.
+- Search for an existing major incident and assign/confirm the Incident Commander when impact criteria are met.
 
 ### Targeted remediation sequence
 1. Apply the documented least-disruptive correction for the confirmed dependency.
@@ -151,6 +153,8 @@ The exact scenario “Triage an office or site-wide outage” is resolved and th
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- This umbrella procedure must not make broad technical changes directly; each resolver-group change must use its own approved backout plan.
+- If impact drops below major-incident criteria, downgrade deliberately while preserving ownership and monitoring until stability is confirmed.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

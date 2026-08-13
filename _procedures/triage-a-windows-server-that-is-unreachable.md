@@ -5,7 +5,7 @@ description: 'Enterprise runbook to triage a windows server that is unreachable 
 content_type: procedure
 category: Servers & Core Infrastructure
 service: Servers & Core Infrastructure
-severity: critical
+severity: high
 support_tier: L2-L3
 owner_team: Server or Infrastructure Operations
 platforms:
@@ -58,7 +58,7 @@ change_record: Enterprise baseline retained in full; technical-owner validation 
 quality_gate: pending
 risk_model: impact-v1
 risk_basis: Existing explicit critical classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P0
+verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
@@ -80,6 +80,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **triage a windows server that is unreachable** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -102,8 +103,9 @@ Use this runbook for **triage a windows server that is unreachable** in a manage
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Check monitoring and redundancy before touching production; review recent changes and affected dependencies.
-- Capture service state, capacity, events and transaction tests from more than one point.
+- Check iDRAC/iLO/IPMI or approved OOB management for power state, POST/hardware alarms and console availability.
+- For virtual servers, check hypervisor/cloud console, host health and VM power state.
+- Test required service ports/dependencies from more than one network point and review redundancy/recent changes before restart.
 
 ### Targeted remediation sequence
 1. Restore the smallest component under the approved runbook and change authority.
@@ -114,6 +116,8 @@ Monitoring and the dependent business transaction remain healthy.
 
 
 ## Procedure
+0. **Check out-of-band management first.** Use iDRAC/iLO/IPMI or the approved hardware/hypervisor console to confirm power, POST/hardware health and console availability before OS-level remediation.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
@@ -160,6 +164,7 @@ Get-Service | Where-Object Status -ne Running | Select -First 30 Name,Status,Sta
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- Before restart/failover, record redundancy state, current service ownership, start order and dependencies; define the failback path and verify redundancy after recovery.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

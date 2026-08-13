@@ -52,6 +52,27 @@ tested_platforms:
   - Identity
   - Email security
 source_references: []
+source_provenance:
+  - publisher: CISA
+    title: '#StopRansomware Guide'
+    url: 'https://www.cisa.gov/stopransomware/ransomware-guide'
+    retrieved_at: '2026-08-10'
+    authoritative: true
+  - publisher: Microsoft
+    title: Responding to ransomware attacks - Microsoft Defender XDR
+    url: 'https://learn.microsoft.com/en-us/defender-xdr/playbook-responding-ransomware-m365-defender'
+    retrieved_at: '2026-08-10'
+    authoritative: true
+  - publisher: Microsoft
+    title: Take response actions on a device - Microsoft Defender for Endpoint
+    url: 'https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts'
+    retrieved_at: '2026-08-10'
+    authoritative: true
+  - publisher: NIST
+    title: 'NIST IR 8374 Rev. 1 - Ransomware Risk Management: A Cybersecurity Framework 2.0 Community Profile'
+    url: 'https://csrc.nist.gov/pubs/ir/8374/r1/final'
+    retrieved_at: '2026-08-10'
+    authoritative: true
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
@@ -61,7 +82,7 @@ verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 28
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -70,7 +91,6 @@ verification_v2_missing:
   - time_validated
   - expected_result_confirmed
   - owner_signoff
-  - authoritative_source_provenance
   - last_tested
   - minimum_peer_reviewers
   - minimum_sme_reviewers
@@ -78,6 +98,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **respond to a ransomware alert** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -85,9 +106,11 @@ Use this runbook for **respond to a ransomware alert** in a managed enterprise e
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
-- Protect unsaved work and business data before restarts, profile resets, re-enrolment, removal, wipe, restore or replacement actions.
+- Treat a credible ransomware alert as a security incident. Containment and evidence preservation take precedence over preserving unsaved user work.
+- Establish approved secure or out-of-band communication with Security Operations / Incident Response when compromise may still be active.
 - Use named administrative accounts and approved privileged-access workflows. Never request or record a user's password or MFA code.
-- Stop when there is a safety risk, suspected security incident, legal hold, active major incident, unsupported device, data-loss risk or action outside your authority.
+- Never ask the user to re-open a suspicious attachment, execute a suspected payload or reproduce ransomware behaviour.
+- Stop when there is a safety risk, legal hold, unsupported device, data-loss risk or action outside your authority; escalate immediately through the incident-response process.
 
 ## Information and evidence to capture
 - User, department, contact method, location and working hours.
@@ -100,31 +123,37 @@ Use this runbook for **respond to a ransomware alert** in a managed enterprise e
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Do not delete messages/files or run unapproved cleanup; preserve timestamps, headers, alerts and user account/device details.
-- Determine whether credentials were entered, content opened, data sent or execution occurred.
+- Identify affected and at-risk devices, identities, services and network paths from EDR/SIEM, identity, email and network evidence.
+- Preserve alerts, timestamps and volatile/high-value evidence before cleanup where feasible.
+- Determine whether execution, credential theft, exfiltration or lateral movement is still active.
+- Never ask the user to re-open suspicious content or re-execute the suspected payload.
 
 ### Targeted remediation sequence
-1. Contain through approved SOC actions and follow the incident commander’s instructions.
-2. Do not reconnect or return a contained device without security approval.
+1. Immediately contain affected systems through approved incident-response/SOC actions. Isolate compromised endpoints from the network where appropriate.
+2. Preserve compromised systems for analysis. Do not shut them down merely for convenience; if network disconnection is impossible, follow the approved incident-response decision for power-down and record the evidence impact.
+3. Contain compromised identities, remote sessions, malicious indicators and attacker communication paths as directed by Security Operations.
+4. Do not reconnect, restore or return a contained device/service until Security Operations confirms that investigation and mitigation are complete.
 
 ### Scenario-specific success criterion
 Security Operations confirms containment and evidence preservation.
 
 
 ## Procedure
-1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
+0. **Isolate and contain immediately.** Treat a credible ransomware alert as an active security incident. Isolate affected endpoints/identities through approved EDR, identity or network controls before ordinary investigation; establish the incident owner and preserve evidence.
 
-   <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
+1. **Confirm and declare the incident without reproducing the payload.** Validate the ransomware alert using the original alert, timestamps, affected asset/account, EDR/SIEM evidence and user report. Do **not** ask the user to reopen suspicious content or execute the suspected payload. Establish secure incident-response communications and link the alert to an existing incident or declare a new ransomware incident.
 
-2. **Determine scope and priority.** Compare another user, device, location or service path where safe. Check monitoring, service-health notices, known errors, major incidents and recent changes.
+   <div class="expected"><strong>Expected result:</strong> The incident record contains the triggering evidence, first-seen time, affected entities, business impact and incident owner without re-executing suspicious content.</div>
 
-   <div class="expected"><strong>Expected result:</strong> The issue is correctly classified as local, user-specific, device-specific, site-specific, service-wide or a standard request.</div>
+2. **Determine scope and prioritise containment.** Identify impacted and at-risk devices, user/service accounts, applications, network communications, payloads and possible originating/spreader systems. Prioritise isolation of affected entities while investigation continues.
 
-3. **Protect data and establish a rollback point.** Save work, record current settings and export or back up configuration where supported. Obtain approval before actions that can interrupt service or remove data.
+   <div class="expected"><strong>Expected result:</strong> The response team has an evidence-based scope hypothesis and the highest-risk affected entities are contained or queued for approved containment.</div>
 
-   <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
+3. **Preserve evidence and record reversible containment state.** Record the current incident/device/account state and collect approved forensic or investigation evidence before cleanup where feasible. Do not delay urgent containment merely to save user work. Record how each containment action can be released or reversed and obtain approval for high-impact actions.
 
-4. **Run non-destructive diagnostics.** Preserve evidence and review the approved EDR, identity, email, network and device telemetry without deleting artefacts or alerting a suspected attacker unnecessarily.
+   <div class="expected"><strong>Expected result:</strong> Volatile/high-value evidence is preserved where feasible, containment is not unnecessarily delayed, and reversal/release conditions are documented.</div>
+
+4. **Collect incident evidence and non-destructive diagnostics.** Review the approved EDR/SIEM incident, device timeline, identity activity, email evidence, network telemetry and available investigation package. Preserve artefacts and avoid cleanup until the incident owner authorises eradication.
 
 {% capture enterprise_command %}
 Get-MpComputerStatus | Select AntivirusEnabled,RealTimeProtectionEnabled,AntivirusSignatureLastUpdated,QuickScanAge,FullScanAge
@@ -133,13 +162,13 @@ Get-MpComputerStatus | Select AntivirusEnabled,RealTimeProtectionEnabled,Antivir
 
    <div class="expected"><strong>Expected result:</strong> Evidence identifies the failing layer or eliminates likely causes without changing production state.</div>
 
-5. **Apply the primary approved remediation.** Contain through approved controls such as account session revocation, message quarantine or endpoint isolation; do not improvise destructive actions.
+5. **Apply approved containment.** Use authorised controls such as endpoint isolation, compromised-account/session containment, indicator blocking, message quarantine or equivalent SOC actions. For critical infrastructure, assess service impact and use the approved containment method rather than improvising destructive changes.
 
-   <div class="expected"><strong>Expected result:</strong> The affected component returns to a supported, known-good state with minimal user or service disruption.</div>
+   <div class="expected"><strong>Expected result:</strong> Attack propagation and unauthorised access paths are constrained, the containment action is visible in the relevant control plane, and evidence remains available for investigation.</div>
 
-6. **Re-test the original task.** Repeat the exact business action using the same account, device, network and data path. Also test a controlled alternative where useful.
+6. **Verify containment without re-triggering ransomware.** Confirm isolation/containment status, loss of unauthorised network paths, preservation of Defender/EDR management connectivity where applicable, and that related alerts or lateral movement are no longer progressing. Do not re-run the suspected ransomware payload as a verification step.
 
-   <div class="expected"><strong>Expected result:</strong> The original failure is resolved or the remaining fault is narrowed to a specific dependency.</div>
+   <div class="expected"><strong>Expected result:</strong> The incident owner confirms containment is effective and investigation can continue without new propagation from the affected entity.</div>
 
 7. **Apply secondary remediation only when justified.** Follow the security incident playbook for eradication, recovery, notification and evidence retention under Security Operations direction.
 
@@ -149,15 +178,17 @@ Get-MpComputerStatus | Select AntivirusEnabled,RealTimeProtectionEnabled,Antivir
 
    <div class="expected"><strong>Expected result:</strong> Recovery has not created a security, compliance, licensing or manageability gap.</div>
 
-9. **Complete end-to-end verification.** The incident owner confirms containment, required evidence is preserved and the affected service or device is returned only after security approval.
+9. **Complete end-to-end security verification before release.** The incident owner confirms containment, eradication/recovery criteria, required evidence preservation and monitoring results. Release isolation or return a device/service only after the approved security decision.
 
-   <div class="expected"><strong>Expected result:</strong> The user or service owner confirms the business task is restored and monitoring remains stable.</div>
+   <div class="expected"><strong>Expected result:</strong> Security Operations confirms the entity can safely return to service, the business owner confirms restoration where applicable, and monitoring shows no continuing ransomware activity.</div>
 
 10. **Document and close correctly.** Record the cause or best evidence, every command and change, before-and-after results, user confirmation, linked problem/change/vendor records, assets involved and follow-up actions. Do not close while a workaround is unowned or monitoring is still unstable.
 
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- **Containment rollback:** release from isolation only after Incident Response confirms investigation and mitigation are complete; verify security telemetry before restoring normal access.
+- Do not wipe, reimage or destroy artefacts merely to recover service without incident-owner approval.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

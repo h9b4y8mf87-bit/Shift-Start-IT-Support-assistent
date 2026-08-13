@@ -83,6 +83,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **triage a site-wide lan outage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -105,8 +106,9 @@ Use this runbook for **triage a site-wide lan outage** in a managed enterprise e
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Confirm the exact condition described by “Triage a site-wide LAN outage” and identify its first failing dependency.
-- Compare a known-good user, device, location or service path to isolate scope.
+- Check core/distribution switch health, stack/MLAG state, power/UPS and uplinks before endpoint troubleshooting.
+- Check STP state, trunks, VLAN gateways, DHCP/DNS and recent switch/firewall changes from more than one segment.
+- Confirm WAN/Internet health to distinguish LAN failure from site-WAN failure.
 
 ### Targeted remediation sequence
 1. Apply the documented least-disruptive correction for the confirmed dependency.
@@ -163,6 +165,7 @@ Get-NetAdapter | Select Name,Status,LinkSpeed; Get-NetIPConfiguration; Resolve-D
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- Before Cisco IOS/IOS-XE configuration changes, capture the running configuration and schedule `reload in 10`; cancel with `reload cancel` only after topology and service verification. Use the vendor-equivalent rollback timer elsewhere.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

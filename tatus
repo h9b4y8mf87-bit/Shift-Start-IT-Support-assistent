@@ -1,0 +1,12 @@
+[1mdiff --git a/reports/content-audit.json b/reports/content-audit.json[m
+[1mindex f70b8a1..da0b423 100644[m
+[1m--- a/reports/content-audit.json[m
+[1m+++ b/reports/content-audit.json[m
+[36m@@ -1,6 +1,6 @@[m
+ {[m
+   "schemaVersion": 2,[m
+[31m-  "generatedAt": "2026-08-10T17:09:56.253Z",[m
+[32m+[m[32m  "generatedAt": "2026-08-13T10:19:28.100Z",[m
+   "counts": {[m
+     "procedures": 421,[m
+     "symptoms": 446,[m

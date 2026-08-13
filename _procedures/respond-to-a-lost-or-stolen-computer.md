@@ -5,7 +5,7 @@ description: 'Enterprise runbook to respond to a lost or stolen computer without
 content_type: procedure
 category: Security & Compliance
 service: Security & Compliance
-severity: critical
+severity: high
 support_tier: L1-L3
 owner_team: Security Operations or Incident Response
 platforms:
@@ -58,7 +58,7 @@ change_record: Enterprise baseline retained in full; technical-owner validation 
 quality_gate: pending
 risk_model: impact-v1
 risk_basis: Existing explicit critical classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P0
+verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
@@ -80,6 +80,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **respond to a lost or stolen computer** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -102,8 +103,9 @@ Use this runbook for **respond to a lost or stolen computer** in a managed enter
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Confirm the exact condition described by “Respond to a lost or stolen computer” and identify its first failing dependency.
-- Compare a known-good user, device, location or service path to isolate scope.
+- Confirm serial/asset number, ownership, encryption status and last MDM/EDR check-in.
+- Determine user privilege level, sensitive-data exposure and evidence of activity after loss.
+- Confirm Legal/Security/asset-management requirements before remote wipe.
 
 ### Targeted remediation sequence
 1. Apply the documented least-disruptive correction for the confirmed dependency.
@@ -114,6 +116,8 @@ The exact scenario “Respond to a lost or stolen computer” is resolved and th
 
 
 ## Procedure
+0. **Contain corporate access immediately.** Revoke/restrict corporate sessions and remotely lock/isolate the missing computer where policy and platform controls support it; record the serial/asset number.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
@@ -160,6 +164,8 @@ Get-MpComputerStatus | Select AntivirusEnabled,RealTimeProtectionEnabled,Antivir
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- Restore lock/isolation only after physical recovery, identity verification and Security/Endpoint approval.
+- **Remote wipe is irreversible:** record the serial number, ownership and Legal/Security/asset-owner approval before issuing wipe.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

@@ -82,6 +82,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **triage a site internet outage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -104,8 +105,9 @@ Use this runbook for **triage a site internet outage** in a managed enterprise e
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Confirm the exact condition described by “Triage a site internet outage” and identify its first failing dependency.
-- Compare a known-good user, device, location or service path to isolate scope.
+- Check ISP/provider circuit status and edge/WAN monitoring before changing endpoints.
+- Check firewall/router/SD-WAN HA state, WAN interfaces, routing, DNS and recent network changes.
+- Confirm site power/UPS state and test raw-IP versus DNS/application reachability from multiple clients/VLANs.
 
 ### Targeted remediation sequence
 1. Apply the documented least-disruptive correction for the confirmed dependency.
@@ -162,6 +164,7 @@ Get-NetAdapter | Select Name,Status,LinkSpeed; Get-NetIPConfiguration; Resolve-D
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- Before any remote Cisco IOS/IOS-XE switch/router configuration change, capture the running configuration and schedule `reload in 10`; use `reload cancel` only after management and service verification. Use the vendor-equivalent confirmed-commit/rollback timer on other platforms.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

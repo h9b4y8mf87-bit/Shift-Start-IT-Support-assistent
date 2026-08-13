@@ -5,7 +5,7 @@ description: 'Enterprise runbook to respond to a suspected compromised account w
 content_type: procedure
 category: Identity & Access Management
 service: Identity & Access Management
-severity: critical
+severity: high
 support_tier: L1-L2
 owner_team: Identity and Access Management
 platforms:
@@ -57,7 +57,7 @@ change_record: Generic account-status command replaced with procedure-specific e
 quality_gate: pending
 risk_model: impact-v1
 risk_basis: 'Critical impact indicators detected: system/boot outage, data-integrity risk, security breach, or broad service outage.'
-verification_priority: P0
+verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
@@ -79,6 +79,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **respond to a suspected compromised account** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -101,8 +102,9 @@ Use this runbook for **respond to a suspected compromised account** in a managed
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Confirm the exact condition described by “Respond to a suspected compromised account” and identify its first failing dependency.
-- Compare a known-good user, device, location or service path to isolate scope.
+- Check Entra sign-in/risk evidence, recent MFA/security-info changes, registered authentication methods and privileged-role activity.
+- Check suspicious OAuth/application consent and high-risk sessions.
+- Preserve source IP, device, application, Conditional Access and timestamp evidence before changing credentials.
 
 ### Targeted remediation sequence
 1. Apply the documented least-disruptive correction for the confirmed dependency.
@@ -113,6 +115,8 @@ The exact scenario “Respond to a suspected compromised account” is resolved 
 
 
 ## Procedure
+0. **Contain the identity immediately.** Block or restrict the suspected account and revoke active sessions/tokens through the approved identity-incident process before normal troubleshooting.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
@@ -139,9 +143,18 @@ Get-MgUserAuthenticationMethod -UserId "user@contoso.com" |
 
    <div class="expected"><strong>Expected result:</strong> Potentially malicious sign-ins and registered methods are preserved as evidence so containment can be authorised and scoped correctly.</div>
 
-5. **Apply the primary approved remediation.** Correct only the approved identity object, group, licence, credential or authentication method after identity and authorisation checks pass.
+5. **Reset credentials and check persistence immediately.** After approved identity verification, reset the compromised password, revoke sessions and remove unauthorised authentication methods. Immediately inspect Exchange inbox rules and mailbox forwarding before restoring normal access.
 
-   <div class="expected"><strong>Expected result:</strong> The affected component returns to a supported, known-good state with minimal user or service disruption.</div>
+{% capture enterprise_exchange_persistence %}
+$Mailbox = "user@contoso.com"
+Get-InboxRule -Mailbox $Mailbox -IncludeHidden |
+  Select-Object Name,Enabled,Priority,ForwardTo,ForwardAsAttachmentTo,RedirectTo,DeleteMessage
+Get-Mailbox -Identity $Mailbox |
+  Format-List ForwardingAddress,ForwardingSmtpAddress,DeliverToMailboxAndForward
+{% endcapture %}
+{% include command.html shell="powershell" label="Mailbox forwarding and Inbox-rule persistence check" command=enterprise_exchange_persistence %}
+
+   <div class="expected"><strong>Expected result:</strong> Credential/session containment is complete and no unauthorised Inbox rule or mailbox forwarding remains.</div>
 
 6. **Re-test the original task.** Repeat the exact business action using the same account, device, network and data path. Also test a controlled alternative where useful.
 
@@ -164,6 +177,8 @@ Get-MgUserAuthenticationMethod -UserId "user@contoso.com" |
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- **Identity containment rollback:** re-enable the account only after Security/IAM clears the incident, legitimate authentication methods are restored and unauthorised sessions/rules/forwarding are removed.
+- Restore a legitimate mailbox rule only after owner verification; do not blindly restore the compromised state.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

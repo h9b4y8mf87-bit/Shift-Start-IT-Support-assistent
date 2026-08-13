@@ -78,6 +78,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **triage a cloud service outage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -100,8 +101,9 @@ Use this runbook for **triage a cloud service outage** in a managed enterprise e
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Review provider health, resource status, console diagnostics, network/security rules, identity, quota and recent changes.
-- Confirm disks, snapshots and recovery options before restart or redeploy.
+- **First check the official provider health/status source** before blaming internal networking: Azure Service Health/Azure Status, Microsoft 365 Service health, AWS Health or the provider equivalent.
+- Confirm provider region, tenant/subscription/account, affected service/resource health, quotas and incident/advisory IDs.
+- Check recent deployments/configuration changes and dependencies only after provider status is captured.
 
 ### Targeted remediation sequence
 1. Apply the smallest supported platform action and preserve audit evidence.
@@ -153,6 +155,8 @@ The resource is healthy, reachable and serving its intended workload.
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- Preserve resource configuration, disks/snapshots and routing/DNS state before failover or redeployment; define explicit backout and failback criteria.
+- Do not repeatedly restart healthy customer resources when the official provider health/status source confirms an upstream outage.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

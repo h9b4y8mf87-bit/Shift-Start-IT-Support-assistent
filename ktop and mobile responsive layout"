@@ -1,0 +1,68 @@
+[1mdiff --git a/_includes/header.html b/_includes/header.html[m
+[1mindex 7c24fa3..1cc78ac 100644[m
+[1m--- a/_includes/header.html[m
+[1m+++ b/_includes/header.html[m
+[36m@@ -1,4 +1,12 @@[m
+ <header class="site-header rd-header ss-enterprise-header" data-site-header>[m
+[32m+[m[32m  <input[m
+[32m+[m[32m    class="ss-css-menu-toggle"[m
+[32m+[m[32m    id="site-menu-toggle"[m
+[32m+[m[32m    type="checkbox"[m
+[32m+[m[32m    aria-label="Toggle navigation menu"[m
+[32m+[m[32m    aria-controls="mobile-navigation"[m
+[32m+[m[32m  >[m
+[32m+[m
+   <div class="ss-header-topline">[m
+     <div class="shell ss-header-primary">[m
+       <a class="site-brand rd-brand ss-header-brand" href="{{ '/' | relative_url }}" aria-label="ShiftStart home">[m
+[36m@@ -12,7 +20,7 @@[m
+       </a>[m
+ [m
+       <button class="ss-command-launch" type="button" data-command-trigger aria-label="Open ShiftStart command palette">[m
+[31m-        <svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2">[m
+[32m+[m[32m        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">[m
+           <circle cx="11" cy="11" r="7"></circle>[m
+           <path d="m20 20-3.5-3.5"></path>[m
+         </svg>[m
+[36m@@ -31,11 +39,11 @@[m
+ [m
+         <span class="ss-user-avatar" aria-label="Technician session" title="Technician session">IT</span>[m
+ [m
+[31m-        <button class="header-icon-button mobile-menu-button ss-header-icon ss-menu-button" type="button" data-menu-toggle aria-controls="mobile-navigation" aria-expanded="false">[m
+[31m-          <span class="sr-only">Open navigation menu</span>[m
+[31m-          <svg class="menu-open-icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>[m
+[31m-          <svg class="menu-close-icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"></path></svg>[m
+[31m-        </button>[m
+[32m+[m[32m        <label class="header-icon-button mobile-menu-button ss-header-icon ss-menu-button" for="site-menu-toggle" aria-label="Toggle navigation menu">[m
+[32m+[m[32m          <span class="sr-only">Toggle navigation menu</span>[m
+[32m+[m[32m          <svg class="menu-open-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>[m
+[32m+[m[32m          <svg class="menu-close-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"></path></svg>[m
+[32m+[m[32m        </label>[m
+       </div>[m
+     </div>[m
+   </div>[m
+[36m@@ -59,10 +67,10 @@[m
+       </div>[m
+     </div>[m
+ [m
+[31m-    <nav id="mobile-navigation" class="mobile-nav rd-mobile-nav ss-mobile-nav" aria-label="Mobile navigation" hidden>[m
+[32m+[m[32m    <nav id="mobile-navigation" class="mobile-nav rd-mobile-nav ss-mobile-nav" aria-label="Mobile navigation">[m
+       <div class="shell ss-mobile-nav-grid">[m
+         <form class="rd-global-search ss-mobile-search" action="{{ '/search/' | relative_url }}" method="get" role="search" data-search-region>[m
+[31m-          <svg class="rd-search-icon" aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>[m
+[32m+[m[32m          <svg class="rd-search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>[m
+           <label class="sr-only" for="kb-search">Search symptoms, procedures, domains or error codes</label>[m
+           <input id="kb-search" class="search-input rd-search-input ss-mobile-search-input" type="search" name="q" inputmode="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Search symptom, error code or procedure…" aria-controls="search-results" aria-autocomplete="list" aria-expanded="false">[m
+           <button class="search-clear rd-search-clear ss-mobile-search-clear" type="button" data-search-clear aria-label="Clear search" hidden>Clear</button>[m
+[1mdiff --git a/_layouts/default.html b/_layouts/default.html[m
+[1mindex c56bda9..5147bf8 100644[m
+[1m--- a/_layouts/default.html[m
+[1m+++ b/_layouts/default.html[m
+[36m@@ -34,6 +34,7 @@[m
+   </script>[m
+   <link rel="stylesheet" href="{{ '/assets/css/commercial.css' | relative_url }}">[m
+   <link rel="stylesheet" href="{{ '/assets/css/header-enterprise-fix.css' | relative_url }}">[m
+[32m+[m[32m  <link rel="stylesheet" href="{{ '/assets/css/mobile-responsive.css' | relative_url }}">[m
+ </head>[m
+ <body class="min-h-full clay-ui redesigned-kb" data-required-role="{{ page.required_role | default: 'technician' | escape }}" data-content-status="{{ page.content_status | default: '' | escape }}" data-page-kind="{{ page.page_kind | default: page.content_type | default: 'page' | escape }}">[m
+   <a class="skip-link" href="#main-content">Skip to main content</a>[m

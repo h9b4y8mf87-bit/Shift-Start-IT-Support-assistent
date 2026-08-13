@@ -5,7 +5,7 @@ description: 'Enterprise runbook to respond to a lost or stolen mobile device wi
 content_type: procedure
 category: Mobile Devices & MDM
 service: Mobile Devices & MDM
-severity: critical
+severity: high
 support_tier: L1-L2
 owner_team: Mobility or Endpoint Engineering
 platforms:
@@ -61,7 +61,7 @@ change_record: Enterprise baseline retained in full; technical-owner validation 
 quality_gate: pending
 risk_model: impact-v1
 risk_basis: Existing explicit critical classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P0
+verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
@@ -83,6 +83,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **respond to a lost or stolen mobile device** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -105,8 +106,9 @@ Use this runbook for **respond to a lost or stolen mobile device** in a managed 
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Confirm the exact condition described by “Respond to a lost or stolen mobile device” and identify its first failing dependency.
-- Compare a known-good user, device, location or service path to isolate scope.
+- Confirm corporate-owned versus BYOD ownership, IMEI/serial, encryption/compliance state and last MDM check-in.
+- Determine corporate apps/tokens/data exposed.
+- Confirm permitted lost-mode, lock, selective-wipe and full-wipe actions before destructive commands.
 
 ### Targeted remediation sequence
 1. Apply the documented least-disruptive correction for the confirmed dependency.
@@ -117,6 +119,8 @@ The exact scenario “Respond to a lost or stolen mobile device” is resolved a
 
 
 ## Procedure
+0. **Contain corporate access and mark the device lost.** Revoke corporate sessions/tokens and issue the approved MDM lost-mode/lock action; record IMEI/serial and ownership.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
@@ -158,6 +162,8 @@ The exact scenario “Respond to a lost or stolen mobile device” is resolved a
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- Remove lost mode or restore corporate access only after physical recovery, identity verification and MDM/Security approval.
+- **Selective wipe is irreversible** for managed data; full wipe can destroy personal/corporate data. Record IMEI/serial, ownership, scope and approval first.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

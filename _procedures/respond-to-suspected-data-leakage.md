@@ -78,6 +78,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **respond to suspected data leakage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -100,8 +101,10 @@ Use this runbook for **respond to suspected data leakage** in a managed enterpri
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Do not delete messages/files or run unapproved cleanup; preserve timestamps, headers, alerts and user account/device details.
-- Determine whether credentials were entered, content opened, data sent or execution occurred.
+- Identify the active leakage path: account/session, endpoint, mailbox rule, sharing link, cloud storage, application/API, removable media or other channel.
+- Preserve DLP/Purview/SIEM/EDR, identity, email and file-access audit evidence.
+- Determine data classification, volume, recipients/destinations and regulatory/privacy impact.
+- Do not reproduce the suspected leakage by resending or re-sharing protected data.
 
 ### Targeted remediation sequence
 1. Contain through approved SOC actions and follow the incident commander’s instructions.
@@ -112,6 +115,8 @@ Security Operations confirms containment and evidence preservation.
 
 
 ## Procedure
+0. **Contain the active leakage path immediately.** Disable or isolate the suspected exfiltration channel before ordinary investigation while preserving audit evidence.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
@@ -158,6 +163,8 @@ Get-MpComputerStatus | Select AntivirusEnabled,RealTimeProtectionEnabled,Antivir
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- **Containment rollback:** restore legitimate sharing or account/device access only after Security/Privacy approval and verification that the leakage path has been corrected.
+- Do not delete audit records, messages, files or DLP evidence as a rollback method.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

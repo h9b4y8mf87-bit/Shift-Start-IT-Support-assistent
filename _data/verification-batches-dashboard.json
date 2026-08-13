@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "model": "verification-batch-v1",
-  "generatedAt": "2026-08-10T18:26:25.513Z",
+  "generatedAt": "2026-08-13T10:19:15.138Z",
   "counts": {
-    "A": 17,
+    "A": 7,
     "B": 15,
     "C": 11
   },
   "batches": {
     "A": {
       "name": "Critical P0 verification",
-      "count": 17,
+      "count": 7,
       "procedures": [
         {
           "batchOrder": 1,
@@ -21,7 +21,7 @@
           "priority": "P0",
           "governanceState": "under_review",
           "priorityScore": 72,
-          "evidenceScorePercent": 22,
+          "evidenceScorePercent": 28,
           "promotionReady": false,
           "missingRequirements": [
             "diagnostic_tested",
@@ -31,7 +31,6 @@
             "time_validated",
             "expected_result_confirmed",
             "owner_signoff",
-            "authoritative_source_provenance",
             "last_tested",
             "minimum_peer_reviewers",
             "minimum_sme_reviewers",
@@ -43,34 +42,6 @@
         {
           "batchOrder": 2,
           "rank": 2,
-          "slug": "respond-to-a-suspected-compromised-account",
-          "title": "Respond to a suspected compromised account",
-          "category": "Identity & Access Management",
-          "priority": "P0",
-          "governanceState": "under_review",
-          "priorityScore": 72,
-          "evidenceScorePercent": 22,
-          "promotionReady": false,
-          "missingRequirements": [
-            "diagnostic_tested",
-            "remediation_tested",
-            "rollback_or_irreversibility_confirmed",
-            "escalation_confirmed",
-            "time_validated",
-            "expected_result_confirmed",
-            "owner_signoff",
-            "authoritative_source_provenance",
-            "last_tested",
-            "minimum_peer_reviewers",
-            "minimum_sme_reviewers",
-            "minimum_test_records",
-            "minimum_distinct_environments",
-            "negative_path_tested"
-          ]
-        },
-        {
-          "batchOrder": 3,
-          "rank": 3,
           "slug": "triage-a-site-internet-outage",
           "title": "Triage a site internet outage",
           "category": "Network & Connectivity",
@@ -97,8 +68,8 @@
           ]
         },
         {
-          "batchOrder": 4,
-          "rank": 4,
+          "batchOrder": 3,
+          "rank": 3,
           "slug": "triage-a-site-wide-lan-outage",
           "title": "Triage a site-wide LAN outage",
           "category": "Network & Connectivity",
@@ -125,36 +96,8 @@
           ]
         },
         {
-          "batchOrder": 5,
-          "rank": 5,
-          "slug": "troubleshoot-windows-no-boot-or-boot-loop",
-          "title": "Troubleshoot Windows no-boot or boot loop",
-          "category": "Windows Endpoints",
-          "priority": "P0",
-          "governanceState": "under_review",
-          "priorityScore": 72,
-          "evidenceScorePercent": 22,
-          "promotionReady": false,
-          "missingRequirements": [
-            "diagnostic_tested",
-            "remediation_tested",
-            "rollback_or_irreversibility_confirmed",
-            "escalation_confirmed",
-            "time_validated",
-            "expected_result_confirmed",
-            "owner_signoff",
-            "authoritative_source_provenance",
-            "last_tested",
-            "minimum_peer_reviewers",
-            "minimum_sme_reviewers",
-            "minimum_test_records",
-            "minimum_distinct_environments",
-            "negative_path_tested"
-          ]
-        },
-        {
-          "batchOrder": 6,
-          "rank": 6,
+          "batchOrder": 4,
+          "rank": 4,
           "slug": "declare-and-coordinate-a-major-incident",
           "title": "Declare and coordinate a major incident",
           "category": "Service Desk & ITSM",
@@ -181,66 +124,10 @@
           ]
         },
         {
-          "batchOrder": 7,
-          "rank": 7,
-          "slug": "recover-a-corrupted-office-document",
-          "title": "Recover a corrupted Office document",
-          "category": "Data Protection, Backup & Recovery",
-          "priority": "P0",
-          "governanceState": "under_review",
-          "priorityScore": 70,
-          "evidenceScorePercent": 22,
-          "promotionReady": false,
-          "missingRequirements": [
-            "diagnostic_tested",
-            "remediation_tested",
-            "rollback_or_irreversibility_confirmed",
-            "escalation_confirmed",
-            "time_validated",
-            "expected_result_confirmed",
-            "owner_signoff",
-            "authoritative_source_provenance",
-            "last_tested",
-            "minimum_peer_reviewers",
-            "minimum_sme_reviewers",
-            "minimum_test_records",
-            "minimum_distinct_environments",
-            "negative_path_tested"
-          ]
-        },
-        {
-          "batchOrder": 8,
-          "rank": 8,
-          "slug": "repair-a-corrupted-outlook-data-cache",
-          "title": "Repair a corrupted Outlook data cache",
-          "category": "Microsoft 365 & Collaboration",
-          "priority": "P0",
-          "governanceState": "under_review",
-          "priorityScore": 70,
-          "evidenceScorePercent": 22,
-          "promotionReady": false,
-          "missingRequirements": [
-            "diagnostic_tested",
-            "remediation_tested",
-            "rollback_or_irreversibility_confirmed",
-            "escalation_confirmed",
-            "time_validated",
-            "expected_result_confirmed",
-            "owner_signoff",
-            "authoritative_source_provenance",
-            "last_tested",
-            "minimum_peer_reviewers",
-            "minimum_sme_reviewers",
-            "minimum_test_records",
-            "minimum_distinct_environments",
-            "negative_path_tested"
-          ]
-        },
-        {
-          "batchOrder": 9,
-          "rank": 9,
-          "slug": "respond-to-a-lost-or-stolen-computer",
-          "title": "Respond to a lost or stolen computer",
+          "batchOrder": 5,
+          "rank": 5,
+          "slug": "respond-to-suspected-data-leakage",
+          "title": "Respond to suspected data leakage",
           "category": "Security & Compliance",
           "priority": "P0",
           "governanceState": "under_review",
@@ -265,11 +152,39 @@
           ]
         },
         {
-          "batchOrder": 10,
-          "rank": 10,
-          "slug": "respond-to-a-lost-or-stolen-mobile-device",
-          "title": "Respond to a lost or stolen mobile device",
-          "category": "Mobile Devices & MDM",
+          "batchOrder": 6,
+          "rank": 6,
+          "slug": "triage-a-cloud-service-outage",
+          "title": "Triage a cloud service outage",
+          "category": "Cloud & Virtualisation",
+          "priority": "P0",
+          "governanceState": "under_review",
+          "priorityScore": 70,
+          "evidenceScorePercent": 22,
+          "promotionReady": false,
+          "missingRequirements": [
+            "diagnostic_tested",
+            "remediation_tested",
+            "rollback_or_irreversibility_confirmed",
+            "escalation_confirmed",
+            "time_validated",
+            "expected_result_confirmed",
+            "owner_signoff",
+            "authoritative_source_provenance",
+            "last_tested",
+            "minimum_peer_reviewers",
+            "minimum_sme_reviewers",
+            "minimum_test_records",
+            "minimum_distinct_environments",
+            "negative_path_tested"
+          ]
+        },
+        {
+          "batchOrder": 7,
+          "rank": 7,
+          "slug": "triage-an-office-or-site-wide-outage",
+          "title": "Triage an office or site-wide outage",
+          "category": "Service Desk & ITSM",
           "priority": "P0",
           "governanceState": "under_review",
           "priorityScore": 70,
@@ -300,7 +215,35 @@
       "procedures": [
         {
           "batchOrder": 1,
-          "rank": 18,
+          "rank": 8,
+          "slug": "respond-to-a-suspected-compromised-account",
+          "title": "Respond to a suspected compromised account",
+          "category": "Identity & Access Management",
+          "priority": "P1",
+          "governanceState": "under_review",
+          "priorityScore": 62,
+          "evidenceScorePercent": 22,
+          "promotionReady": false,
+          "missingRequirements": [
+            "diagnostic_tested",
+            "remediation_tested",
+            "rollback_or_irreversibility_confirmed",
+            "escalation_confirmed",
+            "time_validated",
+            "expected_result_confirmed",
+            "owner_signoff",
+            "authoritative_source_provenance",
+            "last_tested",
+            "minimum_peer_reviewers",
+            "minimum_sme_reviewers",
+            "minimum_test_records",
+            "minimum_distinct_environments",
+            "negative_path_tested"
+          ]
+        },
+        {
+          "batchOrder": 2,
+          "rank": 9,
           "slug": "troubleshoot-a-cloud-vpn-gateway",
           "title": "Troubleshoot a cloud VPN gateway",
           "category": "Cloud & Virtualisation",
@@ -327,8 +270,8 @@
           ]
         },
         {
-          "batchOrder": 2,
-          "rank": 19,
+          "batchOrder": 3,
+          "rank": 10,
           "slug": "troubleshoot-linux-vpn",
           "title": "Troubleshoot Linux VPN",
           "category": "Linux & Developer Workstations",
@@ -355,8 +298,8 @@
           ]
         },
         {
-          "batchOrder": 3,
-          "rank": 20,
+          "batchOrder": 4,
+          "rank": 11,
           "slug": "troubleshoot-macos-vpn",
           "title": "Troubleshoot macOS VPN",
           "category": "macOS Endpoints",
@@ -383,8 +326,8 @@
           ]
         },
         {
-          "batchOrder": 4,
-          "rank": 21,
+          "batchOrder": 5,
+          "rank": 12,
           "slug": "troubleshoot-mobile-vpn",
           "title": "Troubleshoot mobile VPN",
           "category": "Mobile Devices & MDM",
@@ -411,8 +354,8 @@
           ]
         },
         {
-          "batchOrder": 5,
-          "rank": 22,
+          "batchOrder": 6,
+          "rank": 13,
           "slug": "troubleshoot-slow-vpn-performance",
           "title": "Troubleshoot slow VPN performance",
           "category": "Network & Connectivity",
@@ -439,8 +382,8 @@
           ]
         },
         {
-          "batchOrder": 6,
-          "rank": 23,
+          "batchOrder": 7,
+          "rank": 14,
           "slug": "troubleshoot-vpn-certificate-failure",
           "title": "Troubleshoot VPN certificate failure",
           "category": "Network & Connectivity",
@@ -467,8 +410,8 @@
           ]
         },
         {
-          "batchOrder": 7,
-          "rank": 24,
+          "batchOrder": 8,
+          "rank": 15,
           "slug": "troubleshoot-vpn-disconnections",
           "title": "Troubleshoot VPN disconnections",
           "category": "Network & Connectivity",
@@ -495,8 +438,8 @@
           ]
         },
         {
-          "batchOrder": 8,
-          "rank": 25,
+          "batchOrder": 9,
+          "rank": 16,
           "slug": "password-reset",
           "title": "Resolve a locked, forgotten or expired user password",
           "category": "Identity & Access Management",
@@ -524,40 +467,11 @@
           ]
         },
         {
-          "batchOrder": 9,
-          "rank": 26,
+          "batchOrder": 10,
+          "rank": 17,
           "slug": "mapped-drive-missing",
           "title": "Resolve a missing or disconnected mapped drive",
           "category": "File Services",
-          "priority": "P1",
-          "governanceState": "revalidation_required",
-          "priorityScore": 60,
-          "evidenceScorePercent": 17,
-          "promotionReady": false,
-          "missingRequirements": [
-            "diagnostic_tested",
-            "remediation_tested",
-            "rollback_or_irreversibility_confirmed",
-            "escalation_confirmed",
-            "time_validated",
-            "expected_result_confirmed",
-            "owner_signoff",
-            "authoritative_source_provenance",
-            "tested_platforms",
-            "last_tested",
-            "minimum_peer_reviewers",
-            "minimum_sme_reviewers",
-            "minimum_test_records",
-            "minimum_distinct_environments",
-            "negative_path_tested"
-          ]
-        },
-        {
-          "batchOrder": 10,
-          "rank": 27,
-          "slug": "mfa-setup-fails",
-          "title": "Resolve MFA setup or approval failure",
-          "category": "Identity & Access Management",
           "priority": "P1",
           "governanceState": "revalidation_required",
           "priorityScore": 60,
@@ -589,36 +503,7 @@
       "procedures": [
         {
           "batchOrder": 1,
-          "rank": 17,
-          "slug": "bsod-0x0000007b",
-          "title": "Resolve BSOD stop error 0x0000007B",
-          "category": "Windows Endpoints",
-          "priority": "P0",
-          "governanceState": "revalidation_required",
-          "priorityScore": 70,
-          "evidenceScorePercent": 17,
-          "promotionReady": false,
-          "missingRequirements": [
-            "diagnostic_tested",
-            "remediation_tested",
-            "rollback_or_irreversibility_confirmed",
-            "escalation_confirmed",
-            "time_validated",
-            "expected_result_confirmed",
-            "owner_signoff",
-            "authoritative_source_provenance",
-            "tested_platforms",
-            "last_tested",
-            "minimum_peer_reviewers",
-            "minimum_sme_reviewers",
-            "minimum_test_records",
-            "minimum_distinct_environments",
-            "negative_path_tested"
-          ]
-        },
-        {
-          "batchOrder": 2,
-          "rank": 25,
+          "rank": 16,
           "slug": "password-reset",
           "title": "Resolve a locked, forgotten or expired user password",
           "category": "Identity & Access Management",
@@ -646,8 +531,8 @@
           ]
         },
         {
-          "batchOrder": 3,
-          "rank": 26,
+          "batchOrder": 2,
+          "rank": 17,
           "slug": "mapped-drive-missing",
           "title": "Resolve a missing or disconnected mapped drive",
           "category": "File Services",
@@ -675,8 +560,8 @@
           ]
         },
         {
-          "batchOrder": 4,
-          "rank": 27,
+          "batchOrder": 3,
+          "rank": 18,
           "slug": "mfa-setup-fails",
           "title": "Resolve MFA setup or approval failure",
           "category": "Identity & Access Management",
@@ -704,8 +589,8 @@
           ]
         },
         {
-          "batchOrder": 5,
-          "rank": 28,
+          "batchOrder": 4,
+          "rank": 19,
           "slug": "vpn-not-connecting",
           "title": "Resolve VPN connection failure",
           "category": "Network & Connectivity",
@@ -733,8 +618,8 @@
           ]
         },
         {
-          "batchOrder": 6,
-          "rank": 259,
+          "batchOrder": 5,
+          "rank": 256,
           "slug": "teams-microphone-not-working",
           "title": "Resolve a Teams microphone not working",
           "category": "Microsoft 365 & Collaboration",
@@ -761,8 +646,8 @@
           ]
         },
         {
-          "batchOrder": 7,
-          "rank": 260,
+          "batchOrder": 6,
+          "rank": 257,
           "slug": "general-workstation-triage",
           "title": "Resolve a vague or multi-component workstation issue",
           "category": "Windows Endpoints",
@@ -789,8 +674,8 @@
           ]
         },
         {
-          "batchOrder": 8,
-          "rank": 261,
+          "batchOrder": 7,
+          "rank": 258,
           "slug": "no-network-docking-station",
           "title": "Resolve no network on a docking station",
           "category": "Network & Connectivity",
@@ -817,8 +702,8 @@
           ]
         },
         {
-          "batchOrder": 9,
-          "rank": 262,
+          "batchOrder": 8,
+          "rank": 259,
           "slug": "outlook-crashes",
           "title": "Resolve Outlook crashes or failure to open",
           "category": "Microsoft 365 & Collaboration",
@@ -845,8 +730,8 @@
           ]
         },
         {
-          "batchOrder": 10,
-          "rank": 420,
+          "batchOrder": 9,
+          "rank": 419,
           "slug": "printer-offline",
           "title": "Resolve a printer showing Offline",
           "category": "Printing & Scanning",
@@ -868,6 +753,34 @@
             "last_tested",
             "minimum_peer_reviewers",
             "minimum_technical_reviewers",
+            "minimum_test_records",
+            "minimum_distinct_environments"
+          ]
+        },
+        {
+          "batchOrder": 10,
+          "rank": 420,
+          "slug": "slow-windows-pc",
+          "title": "Resolve an unusually slow Windows PC",
+          "category": "Windows Endpoints",
+          "priority": "P2",
+          "governanceState": "revalidation_required",
+          "priorityScore": 30,
+          "evidenceScorePercent": 18,
+          "promotionReady": false,
+          "missingRequirements": [
+            "diagnostic_tested",
+            "remediation_tested",
+            "rollback_or_irreversibility_confirmed",
+            "escalation_confirmed",
+            "time_validated",
+            "expected_result_confirmed",
+            "owner_signoff",
+            "authoritative_source_provenance",
+            "tested_platforms",
+            "last_tested",
+            "minimum_peer_reviewers",
+            "minimum_sme_reviewers",
             "minimum_test_records",
             "minimum_distinct_environments"
           ]

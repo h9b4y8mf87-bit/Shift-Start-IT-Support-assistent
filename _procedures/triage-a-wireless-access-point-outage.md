@@ -5,7 +5,7 @@ description: 'Enterprise runbook to triage a wireless access point outage withou
 content_type: procedure
 category: Network & Connectivity
 service: Network & Connectivity
-severity: critical
+severity: high
 support_tier: L1-L2
 owner_team: Network Operations
 platforms:
@@ -61,7 +61,7 @@ change_record: Enterprise baseline retained in full; technical-owner validation 
 quality_gate: pending
 risk_model: impact-v1
 risk_basis: Existing explicit critical classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P0
+verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
@@ -83,6 +83,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **triage a wireless access point outage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -105,8 +106,9 @@ Use this runbook for **triage a wireless access point outage** in a managed ente
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Confirm the exact condition described by “Triage a wireless access point outage” and identify its first failing dependency.
-- Compare a known-good user, device, location or service path to isolate scope.
+- Check the wireless controller/cloud platform and confirm whether the AP is unreachable, disabled or isolated.
+- Check switch-port link, VLAN/trunk and **PoE power budget** before restarting or replacing the AP.
+- Check neighbouring AP health/client coverage, cabling and recent controller/switch changes.
 
 ### Targeted remediation sequence
 1. Apply the documented least-disruptive correction for the confirmed dependency.
@@ -163,6 +165,7 @@ Get-NetAdapter | Select Name,Status,LinkSpeed; Get-NetIPConfiguration; Resolve-D
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- Capture existing port/VLAN/PoE configuration before changes. On Cisco IOS/IOS-XE schedule `reload in 10` before a remote switch change and use `reload cancel` only after verification; use the vendor-equivalent safety mechanism elsewhere.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

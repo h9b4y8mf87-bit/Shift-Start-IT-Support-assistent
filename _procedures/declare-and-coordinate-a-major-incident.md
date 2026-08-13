@@ -75,6 +75,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **declare and coordinate a major incident** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -97,8 +98,9 @@ Use this runbook for **declare and coordinate a major incident** in a managed en
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Confirm the exact condition described by “Declare and coordinate a major incident” and identify its first failing dependency.
-- Compare a known-good user, device, location or service path to isolate scope.
+- Confirm major-incident criteria: business impact, urgency, affected critical services, users/sites and workaround availability.
+- Search for an existing parent/major incident before creating a duplicate.
+- Assign an Incident Commander, technical lead and communications owner; establish the bridge/channel and single ITSM source of truth.
 
 ### Targeted remediation sequence
 1. Apply the documented least-disruptive correction for the confirmed dependency.
@@ -150,6 +152,8 @@ The exact scenario “Declare and coordinate a major incident” is resolved and
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- **Incident-status rollback:** if declaration criteria are not met, downgrade the incident deliberately, notify stakeholders and retain the audit trail.
+- Every emergency technical change must reference its own tested backout plan.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.

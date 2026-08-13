@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot a print server outage without s
 content_type: procedure
 category: Printing & Scanning
 service: Printing & Scanning
-severity: critical
+severity: high
 support_tier: L1-L2
 owner_team: Workplace Technology or Print Services
 platforms:
@@ -54,7 +54,7 @@ change_record: Enterprise baseline retained in full; technical-owner validation 
 quality_gate: pending
 risk_model: impact-v1
 risk_basis: Existing explicit critical classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P0
+verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
@@ -76,6 +76,7 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: sprint1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a print server outage** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -98,8 +99,9 @@ Use this runbook for **troubleshoot a print server outage** in a managed enterpr
 ## Scenario-specific diagnostic and remediation plan
 
 ### Targeted checks
-- Check monitoring and redundancy before touching production; review recent changes and affected dependencies.
-- Capture service state, capacity, events and transaction tests from more than one point.
+- Confirm whether the print server is unreachable versus only the Spooler, one queue, driver or printer.
+- Check disk/free space, PrintService/System event logs, Spooler dependencies, RPC/network reachability and cluster/failover role.
+- Test from the server and multiple clients; preserve queued-job evidence before destructive queue cleanup.
 
 ### Targeted remediation sequence
 1. Restore the smallest component under the approved runbook and change authority.
@@ -156,6 +158,8 @@ Get-Printer | Select Name,PrinterStatus,DriverName,PortName; Get-Service Spooler
    <div class="expected"><strong>Expected result:</strong> Another technician can reconstruct the incident, continue the work or audit the decision trail from the ticket alone.</div>
 
 ## Rollback and stop conditions
+- **Print rollback:** export printer configuration before driver/queue/port changes and restore the original configuration if service worsens.
+- Preserve queued-job evidence before mass deletion and document print-role ownership before restart/failover.
 - Roll back the last change if service worsens, a new error appears or verification fails.
 - Stop immediately for electrical, battery, overheating, liquid, smoke, physical-security or personal-safety risk.
 - Stop and invoke the security process for suspected compromise, malware, phishing, data exposure or unauthorised access.
