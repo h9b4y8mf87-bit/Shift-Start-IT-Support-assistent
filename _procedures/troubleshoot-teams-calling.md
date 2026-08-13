@@ -49,7 +49,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-2 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -72,10 +72,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot teams calling** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check Microsoft 365 / Teams Phone service health before changing client or calling configuration.
+2. Check licence/calling-plan assignment or Direct Routing/SBC health as applicable.
+3. Capture call ID/time/user and call diagnostics/client logs before policy or SBC changes.
+
+### Rollback / undo
+- Record calling policy, routing and SBC configuration before change. Restore the previous approved policy/routing/SBC configuration if call establishment worsens.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

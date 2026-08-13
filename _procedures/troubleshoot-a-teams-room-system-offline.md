@@ -54,7 +54,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-2 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -77,10 +77,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a teams room system offline** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check room-system power, network link and console error state.
+2. Check device registration/health in Teams Rooms management or the Teams Admin Center.
+3. Check the room resource/mailbox, licensing and sign-in state before resetting the room device.
+
+### Rollback / undo
+- Record meeting policy, room configuration and device state before change. Restore the previous approved policy/configuration if the change makes the room less functional.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

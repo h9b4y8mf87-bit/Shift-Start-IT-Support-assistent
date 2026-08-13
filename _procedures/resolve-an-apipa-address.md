@@ -5,7 +5,7 @@ description: 'Enterprise runbook to resolve an apipa address without skipping ev
 content_type: procedure
 category: Network & Connectivity
 service: Network & Connectivity
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Network Operations
 platforms:
@@ -58,13 +58,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -79,11 +79,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **resolve an apipa address** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Confirm the endpoint has a 169.254.0.0/16 address and capture adapter/VLAN information.
+2. Check DHCP scope availability and relay/helper reachability before assigning a static address.
+3. Check switch-port/VLAN path if more than one device is affected.
+
+### Rollback / undo
+- Record existing adapter configuration and restore the approved DHCP/static configuration if remediation produces a worse network state.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.

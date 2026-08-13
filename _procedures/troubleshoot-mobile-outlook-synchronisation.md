@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot mobile outlook synchronisation 
 content_type: procedure
 category: Mobile Devices & MDM
 service: Mobile Devices & MDM
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Mobility or Endpoint Engineering
 platforms:
@@ -56,13 +56,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-2 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -77,12 +77,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot mobile outlook synchronisation** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Test Outlook on the web to confirm mailbox/service health.
+2. Check MDM/Intune compliance, application protection policy and account licensing.
+3. Check the installed Outlook mobile version and managed configuration.
+
+### Rollback / undo
+- Record the current managed app/profile state. If an approved app/profile change breaks synchronisation, restore or redeploy the previous approved managed configuration.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

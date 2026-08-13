@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot no ethernet connectivity withou
 content_type: procedure
 category: Network & Connectivity
 service: Network & Connectivity
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Network Operations
 platforms:
@@ -58,13 +58,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-2 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -79,12 +79,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot no ethernet connectivity** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check cable/link LEDs, NIC state and physical port before changing software.
+2. Check switch-port VLAN/access configuration and port-security state.
+3. Check STP, errors and MAC-learning evidence when the fault points to the switch rather than the endpoint.
+
+### Rollback / undo
+- Capture the current switch-port configuration before a change. Restore the prior port configuration if connectivity worsens; use the platform's supported remote rollback safety mechanism for switch changes.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

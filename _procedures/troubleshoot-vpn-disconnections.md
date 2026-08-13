@@ -57,7 +57,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-1 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -80,9 +80,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot vpn disconnections** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check gateway logs for IKE/IPsec rekey, Dead Peer Detection and session-timeout failures.
+2. Check address-pool/session capacity.
+3. Capture packet-loss/route behaviour during the disconnect window.
+
+### Rollback / undo
+- Record existing rekey/DPD/session values and restore previous stable values if disconnect frequency worsens; use the vendor-supported rollback mechanism for remote gateway changes.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.

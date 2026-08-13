@@ -4,7 +4,7 @@ slug: mfa-setup-fails
 description: 'Resolve MFA registration loops, missing prompts, time drift and stale authentication methods safely.'
 content_type: procedure
 category: Identity & Access Management
-severity: high
+severity: medium
 support_tier: L2
 estimated_time: 10-20 mins
 owner_team: Identity & Access Management
@@ -26,8 +26,8 @@ next_steps:
   - password-reset
 escalation: 'Escalate to Identity & Access Management if identity cannot be verified, the tenant or Conditional Access policy blocks registration, no secure method remains, or a fresh registration still fails.'
 risk_model: impact-v1
-risk_basis: High impact - failed MFA can block all user access and changes to authentication methods affect account security.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P2 / medium.'
+verification_priority: P2
 last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/mfa-setup-fails/
 layout: article
@@ -44,7 +44,7 @@ verification_evidence_state: legacy_verified_pending_revalidation
 verification_schema_version: 2
 verification_governance_state: revalidation_required
 verification_v2_complete: false
-verification_v2_score_percent: 17
+verification_v2_score_percent: 18
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -60,9 +60,20 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check identity-provider/service health before changing MFA registration.
+2. Review registered authentication methods and policy/Conditional Access requirements.
+3. Confirm mobile device date/time and push-notification capability where relevant.
+
+### Rollback / undo
+- Before deleting an authentication method, record the approved recovery path; if re-registration fails, use the organisation's approved temporary-access method.
+
 ## Diagnostic Steps
 1. Verify the user's identity through the approved organisational process.
 2. Confirm the user is using the official authenticator application and the correct corporate account.

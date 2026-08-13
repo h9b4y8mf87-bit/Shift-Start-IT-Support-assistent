@@ -4,7 +4,7 @@ slug: password-reset
 description: 'Restore user access safely after a forgotten password, expiry or lockout without weakening identity controls.'
 content_type: procedure
 category: Identity & Access Management
-severity: high
+severity: medium
 support_tier: L1
 estimated_time: 10-15 mins
 owner_team: Identity & Access Management
@@ -25,8 +25,8 @@ next_steps:
   - mfa-setup-fails
 escalation: 'Escalate to Identity & Access Management if identity cannot be verified, the account repeatedly locks, the source of bad-password attempts is unknown, the account is disabled unexpectedly, or policy prevents a standard reset.'
 risk_model: impact-v1
-risk_basis: High impact - the user may be unable to work and password or lockout remediation affects account security.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P2 / medium.'
+verification_priority: P2
 last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/password-reset/
 layout: article
@@ -44,7 +44,7 @@ verification_evidence_state: legacy_verified_pending_revalidation
 verification_schema_version: 2
 verification_governance_state: revalidation_required
 verification_v2_complete: false
-verification_v2_score_percent: 17
+verification_v2_score_percent: 18
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -60,9 +60,20 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify the user's identity through the approved out-of-band verification process.
+2. Check whether the lockout/failed-sign-in pattern indicates brute-force or suspicious activity.
+3. Confirm required MFA/authentication methods remain available after reset.
+
+### Rollback / undo
+- If access fails after the reset, use the organisation's approved temporary-access/recovery method rather than recycling or disclosing old credentials.
+
 ## Diagnostic Steps
 1. Verify the user's identity using the organisation's approved process. Never ask for an existing password or MFA code.
 2. Confirm the exact username, affected service and error message.

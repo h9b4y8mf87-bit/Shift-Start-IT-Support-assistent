@@ -53,7 +53,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-2 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -76,10 +76,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot scan to network folder** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check scanner/MFP network and DNS reachability to the file server.
+2. Check the scanner/service account's share and NTFS write permissions.
+3. Check destination disk/quota capacity and exact SMB/path/authentication error.
+
+### Rollback / undo
+- Export or record ACL/share and scanner destination settings before change. Restore the previous permissions/path/configuration if scanning worsens; firmware rollback is only permitted where vendor-supported.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

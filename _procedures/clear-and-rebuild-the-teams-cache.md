@@ -5,7 +5,7 @@ description: 'Enterprise runbook to clear and rebuild the teams cache without sk
 content_type: procedure
 category: Microsoft 365 & Collaboration
 service: Microsoft 365 & Collaboration
-severity: high
+severity: low
 support_tier: L1-L2
 owner_team: Microsoft 365 or Collaboration Services
 platforms:
@@ -52,13 +52,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P3 / low.'
+verification_priority: P3
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -70,14 +70,25 @@ verification_v2_missing:
   - authoritative_source_provenance
   - last_tested
   - minimum_peer_reviewers
-  - minimum_sme_reviewers
+  - minimum_technical_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **clear and rebuild the teams cache** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check Microsoft 365/Teams service health.
+2. Test Teams on the web to prove the issue is local to the desktop client.
+3. Confirm which Teams client generation is installed before using a cache path.
+
+### Rollback / undo
+- Close Teams and preserve/rename relevant client cache/profile data before deletion where supported; restore preserved state or reinstall through the approved channel if rebuild fails.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.

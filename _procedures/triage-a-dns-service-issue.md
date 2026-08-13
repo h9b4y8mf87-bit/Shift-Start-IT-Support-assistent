@@ -55,7 +55,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-1 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -78,10 +78,32 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
+canonical_role: definitive-dns-service-runbook
 ---
 ## Purpose and scope
 Use this runbook for **triage a dns service issue** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Test resolution against primary and secondary DNS servers from multiple network locations.
+2. Check authoritative zone/forwarder/replication health before restarting DNS services.
+3. Check server resource/query-rate anomalies and recent DNS changes.
+
+### Rollback / undo
+- Export or record the affected zone/forwarder configuration and restore the previous known-good DNS configuration if resolution worsens.
+
+## Merged DNS decision path
+This is the definitive DNS service and name-resolution runbook.
+
+1. **Determine scope first.** Compare more than one client/subnet. A single endpoint points to client resolver configuration; multiple endpoints or zones point to DNS service/infrastructure.
+2. **Test primary and secondary DNS explicitly.** Query the configured primary and secondary DNS servers and compare an external/forwarder lookup only where policy permits.
+3. **Check client configuration.** Confirm the client points to the approved internal resolver and has the expected suffix/search configuration.
+4. **Check service infrastructure.** Review DNS service state, authoritative zones, replication, zone/forwarder settings, root hints, resource health and recent changes.
+5. **Protect configuration before change.** Export or otherwise capture the affected zone/forwarder/server configuration before editing it.
+6. **Verify after remediation.** Confirm authoritative and recursive resolution from multiple clients and verify dependent business services.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

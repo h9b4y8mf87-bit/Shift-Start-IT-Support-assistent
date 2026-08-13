@@ -4,7 +4,7 @@ slug: vpn-not-connecting
 description: 'Diagnose internet, DNS, client, credential and gateway causes without unnecessary reinstallation or certificate removal.'
 content_type: procedure
 category: Network & Connectivity
-severity: high
+severity: medium
 support_tier: L1-L2
 estimated_time: 15-30 mins
 owner_team: Network Operations
@@ -26,8 +26,8 @@ next_steps:
   - password-reset
 escalation: 'Escalate to Network Operations if the gateway is unreachable from multiple networks, authentication fails after identity validation, the managed client profile is corrupt, or multiple users report the same VPN outage.'
 risk_model: impact-v1
-risk_basis: High impact - a remote user can be unable to perform core work and a gateway issue may represent wider service degradation.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P2 / medium.'
+verification_priority: P2
 last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/vpn-not-connecting/
 layout: article
@@ -46,7 +46,7 @@ verification_evidence_state: legacy_verified_pending_revalidation
 verification_schema_version: 2
 verification_governance_state: revalidation_required
 verification_v2_complete: false
-verification_v2_score_percent: 17
+verification_v2_score_percent: 18
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -62,47 +62,41 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
-## Diagnostic Steps
-1. Confirm the user can browse a public website without the VPN and that airplane mode is off.
-2. Confirm date, time and time zone are correct.
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
 
-{% capture kb_command_1 %}
-Get-Date
-w32tm /query /status
-{% endcapture %}
-{% include command.html shell="powershell" label="PowerShell" command=kb_command_1 %}
+### Pre-checks
+1. Determine scope first: one endpoint, one platform, multiple users or gateway-wide.
+2. Check provider/gateway service health before client remediation.
+3. Check Conditional Access/NAC/identity blocks before deleting profiles or certificates.
 
-3. Resolve and test the configured VPN gateway.
+### Rollback / undo
+- This procedure is a triage parent; do not perform destructive profile/certificate changes here. Route to the child runbook that owns rollback.
 
-{% capture kb_command_2 %}
-Resolve-DnsName vpn.example.com
-Test-NetConnection vpn.example.com -Port 443
-{% endcapture %}
-{% include command.html shell="powershell" label="PowerShell" command=kb_command_2 %}
+## Parent triage decision path
+Use this procedure to identify the failing VPN layer. Do not use it as a catch-all remediation runbook.
 
-4. Record the VPN client version, exact error and timestamp.
-5. Test from a mobile hotspot or another approved network to distinguish local ISP/router restrictions from the corporate VPN service.
+1. **Determine scope.**
+   - One Linux endpoint → `troubleshoot-linux-vpn`
+   - One macOS endpoint → `troubleshoot-macos-vpn`
+   - One mobile endpoint → `troubleshoot-mobile-vpn`
+   - Certificate-specific failure → `troubleshoot-vpn-certificate-failure`
+   - Repeated disconnects → `troubleshoot-vpn-disconnections`
+   - Slow performance → `troubleshoot-slow-vpn-performance`
+   - Multiple users / cloud gateway issue → `troubleshoot-a-cloud-vpn-gateway`
 
-## Remediation Steps
-1. Fully exit the approved VPN client.
-2. Restart only the approved VPN client service.
-3. Reconnect using the managed profile.
-4. Do not clear certificates, tokens or managed profiles unless the product-specific runbook explicitly requires it.
-
-## Rollback Steps
-1. If a service restart does not help, leave the service in its normal running state.
-2. If an approved profile repair causes regression, restore the managed profile from the authorised configuration source.
-3. Do not restore or import untrusted certificate material.
+2. **Check service/gateway health before client changes.**
+3. **Check basic endpoint prerequisites:** public internet, time, DNS, gateway reachability, approved client version and exact error.
+4. **Check identity/policy blocks:** Conditional Access, NAC, disabled account or expired certificate.
+5. **Route to the child runbook.** Do not delete certificates, managed profiles or authentication material here.
 
 ## Verification Steps
-1. Connect the VPN successfully.
-2. Open one approved internal service.
-3. Confirm the expected corporate route or assigned VPN address.
-4. Disconnect and reconnect once to confirm the result is repeatable.
+1. The correct child/gateway runbook is selected from observed evidence.
+2. Scope is documented as single endpoint, platform-specific, multi-user or gateway-wide.
+3. The child runbook owns remediation, rollback and live verification.
 
 ## Escalation Path
-1. Escalate to Network Operations if the gateway is unreachable from multiple networks, multiple users are affected, authentication still fails after identity validation, or the managed client profile is damaged.
-2. Include user, public IP, VPN client version, gateway, timestamp, exact error, approved log bundle and DNS/reachability results.
+Escalate to Network Operations when multiple users/networks are affected, the gateway is unhealthy/unreachable, or evidence points to a gateway/provider issue.

@@ -4,7 +4,7 @@ slug: mapped-drive-missing
 description: 'Restore an approved network drive by validating network, VPN, DNS, permissions and mapping state.'
 content_type: procedure
 category: File Services
-severity: high
+severity: medium
 support_tier: L1
 estimated_time: 15-30 mins
 owner_team: File Services
@@ -25,8 +25,8 @@ next_steps:
   - vpn-not-connecting
 escalation: 'Escalate to File Services if the approved UNC path is unreachable, access is denied despite confirmed entitlement, repeated credential prompts occur, or a recreated mapping does not persist.'
 risk_model: impact-v1
-risk_basis: High impact - loss of an approved file share can prevent a user from completing core work and may involve access-control issues.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P2 / medium.'
+verification_priority: P2
 last_reviewed: 2026-08-10T00:00:00.000Z
 permalink: /procedures/mapped-drive-missing/
 layout: article
@@ -43,7 +43,7 @@ verification_evidence_state: legacy_verified_pending_revalidation
 verification_schema_version: 2
 verification_governance_state: revalidation_required
 verification_v2_complete: false
-verification_v2_score_percent: 17
+verification_v2_score_percent: 18
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -59,13 +59,25 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
+canonical_role: definitive-mapped-drive-runbook
 ---
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Confirm corporate network/VPN connectivity.
+2. Test the approved UNC path directly.
+3. Check entitlement/group membership and capture current mappings with net use before deleting a mapping.
+
+### Rollback / undo
+- If remapping fails, remove only the mapping created during this procedure and restore the previously documented approved mapping.
+
 ## Diagnostic Steps
 1. Confirm the user is on the corporate network or connected to the approved VPN.
 2. Record the expected drive letter and approved UNC path.
-3. List current mappings and test the file server.
+3. Capture current mappings with `net use`, then test the file server and the approved UNC path before deleting any mapping.
 
 {% capture kb_command_1 %}
 net use

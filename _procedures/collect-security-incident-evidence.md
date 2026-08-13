@@ -54,7 +54,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-2 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -77,10 +77,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **collect security incident evidence** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: establish chain of custody: incident/ticket ID, asset, collector, date/time/timezone, evidence source and transfer location.
+2. Preserve volatile evidence before reboot/destructive remediation where authorised; capture memory only with approved forensic tooling and trained personnel.
+3. Export relevant EDR/SIEM/event/email/identity/network evidence to an approved protected location and record cryptographic hashes.
+
+### Rollback / undo
+- Evidence preservation is intentionally non-reversible. Do not modify original evidence to undo collection. Protect originals, hash copies with SHA-256 or the organisation's approved algorithm, and document every custody transfer.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -111,7 +122,9 @@ Security Operations confirms containment and evidence preservation.
 
 
 ## Procedure
-1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
+0. **Establish chain of custody before collection.** Record the incident/ticket ID, asset, collector, date/time/timezone, evidence source, storage destination and every custody transfer before collecting or moving evidence.
+
+1. **Confirm the incident evidence request without reproducing suspicious activity.** Identify what evidence is required, the authorised collection scope and the relevant time window. Do not execute suspected malware or recreate the incident merely to generate evidence.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
 

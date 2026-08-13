@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot outlook that will not open with
 content_type: procedure
 category: Microsoft 365 & Collaboration
 service: Microsoft 365 & Collaboration
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Microsoft 365 or Collaboration Services
 platforms:
@@ -52,13 +52,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-2 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -73,12 +73,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot outlook that will not open** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Try Outlook Safe Mode before profile recreation.
+2. Check navigation-pane/profile and Office activation/licensing state.
+3. Use the Outlook decision links to route launch, send/receive, credential, add-in and search failures to the correct child procedure.
+
+### Rollback / undo
+- Record the current supported Outlook profile/account configuration before recreating it. Restore the previous supported configuration if the replacement fails; do not import untrusted registry/profile material.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -108,6 +118,16 @@ Use this runbook for **troubleshoot outlook that will not open** in a managed en
 The user sends, receives, searches or opens the required message successfully.
 
 
+## Outlook client decision path
+Use the failure mode to select the narrowest Outlook procedure:
+
+- Outlook does not launch: continue with this procedure.
+- Outlook opens but cannot send/receive: `troubleshoot-outlook-send-and-receive`.
+- Outlook repeatedly prompts for credentials: `troubleshoot-recurring-outlook-credential-prompts`.
+- Outlook launches only in Safe Mode / add-in suspected: `troubleshoot-outlook-add-ins`.
+- Outlook works but search is incomplete: `troubleshoot-outlook-search`.
+
+Do not recreate the Outlook profile merely because a related child symptom exists; follow the child procedure's pre-checks first.
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 

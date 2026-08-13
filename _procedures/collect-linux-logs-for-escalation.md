@@ -5,7 +5,7 @@ description: 'Enterprise runbook to collect linux logs for escalation without sk
 content_type: procedure
 category: Linux & Developer Workstations
 service: Linux & Developer Workstations
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Linux Platform or Developer Experience
 platforms:
@@ -51,13 +51,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-2 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -72,12 +72,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **collect linux logs for escalation** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Identify the failing service and the smallest relevant log/time window before collecting.
+2. Collect appropriate journal/system/authentication/application logs plus basic system metadata.
+3. Check whether logs contain secrets, personal data or tokens that require redaction/protected transfer.
+
+### Rollback / undo
+- Log collection is read-only and normally needs no rollback. Do not change log retention/rotation merely to collect evidence; remove temporary copies only according to retention policy.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

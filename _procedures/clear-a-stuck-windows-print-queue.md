@@ -54,7 +54,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-2 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -77,10 +77,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **clear a stuck windows print queue** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Determine whether the queue is local or shared and identify the affected jobs/users.
+2. Check print-server/local disk free space and Print Spooler state before clearing anything.
+3. Capture queue/driver/printer state before stopping services or moving spool files.
+
+### Rollback / undo
+- Do not immediately delete spool files. Move/copy the affected spool files to an approved temporary evidence/backup location where policy permits, clear only the affected queue, and restore the prior queue/service state or escalate if the fault persists.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -110,6 +121,12 @@ Use this runbook for **clear a stuck windows print queue** in a managed enterpri
 The required document prints or scans with correct destination, security and finishing.
 
 
+## Batch B-2 print-queue safety sequence
+1. Confirm whether the queue is local or shared and identify affected users/jobs.
+2. Record queue state and check disk free space before stopping the Print Spooler.
+3. Where policy permits, move/copy affected spool files to an approved temporary backup/evidence location rather than deleting them immediately.
+4. Clear only the affected queue, restart the Print Spooler and verify a controlled test job.
+5. If the queue immediately re-stalls, stop repeated deletion and escalate with preserved queue/driver/event-log evidence.
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 

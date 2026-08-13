@@ -59,7 +59,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-1 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -82,9 +82,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a firewall-blocked application** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check firewall logs for the exact source, destination, protocol and port denial.
+2. Verify the application's documented network requirements before adding a rule.
+3. Check NAT/PAT and upstream security controls.
+
+### Rollback / undo
+- Capture the current ACL/rule state; if the new rule causes unintended access, remove/revert only that change and restore the prior known-good policy.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.

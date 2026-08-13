@@ -5,7 +5,7 @@ description: 'Enterprise runbook to recover an outlook pst file without skipping
 content_type: procedure
 category: 'Data Protection, Backup & Recovery'
 service: 'Data Protection, Backup & Recovery'
-severity: high
+severity: low
 support_tier: L1-L3
 owner_team: 'Backup, Storage or Data Protection'
 platforms:
@@ -53,13 +53,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P3 / low.'
+verification_priority: P3
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -71,14 +71,25 @@ verification_v2_missing:
   - authoritative_source_provenance
   - last_tested
   - minimum_peer_reviewers
-  - minimum_sme_reviewers
+  - minimum_technical_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **recover an outlook pst file** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Make a byte-for-byte copy of the PST before any repair attempt.
+2. Confirm Outlook is closed and the PST is on a supported local storage path.
+3. Record file size and available free disk space.
+
+### Rollback / undo
+- Never repair the only copy. Restore the untouched backup PST if repair reduces recoverable data or Outlook can no longer open the file.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.

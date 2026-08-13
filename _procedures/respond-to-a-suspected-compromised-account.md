@@ -56,7 +56,7 @@ source_references: []
 change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: 'Critical impact indicators detected: system/boot outage, data-integrity risk, security breach, or broad service outage.'
+risk_basis: 'Batch B-1 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -79,10 +79,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
-classification_audit: sprint1-2026-08-13
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **respond to a suspected compromised account** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Contain the identity before ordinary investigation: block or restrict sign-in and revoke active sessions/tokens through the approved identity-incident process.
+2. Review Entra sign-in/risk evidence, recent MFA/security-info changes, registered authentication methods, privileged-role activity and suspicious OAuth/application consent.
+3. Immediately after approved credential reset, inspect Exchange Inbox rules and mailbox forwarding using Get-InboxRule and Get-Mailbox ForwardingAddress/ForwardingSmtpAddress.
+
+### Rollback / undo
+- Re-enable the identity only after Security/IAM clearance, legitimate MFA methods are restored, malicious sessions/rules/forwarding are removed and the user validates normal access.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
@@ -117,7 +128,7 @@ The exact scenario “Respond to a suspected compromised account” is resolved 
 ## Procedure
 0. **Contain the identity immediately.** Block or restrict the suspected account and revoke active sessions/tokens through the approved identity-incident process before normal troubleshooting.
 
-1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
+1. **Confirm the incident without reproducing suspicious activity.** Validate the report from sign-in, identity, application and mailbox evidence. Do not ask the user to reproduce suspicious actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>
 
@@ -129,7 +140,7 @@ The exact scenario “Respond to a suspected compromised account” is resolved 
 
    <div class="expected"><strong>Expected result:</strong> Current state and recovery options are documented before any material change.</div>
 
-4. **Collect sign-in and authentication evidence before containment.** Follow the security-incident process and preserve timestamps, IP addresses, applications, devices and authentication methods.
+4. **Collect sign-in and authentication evidence after immediate containment.** Follow the security-incident process and preserve timestamps, IP addresses, applications, devices and authentication methods.
 
 {% capture enterprise_command %}
 Connect-MgGraph -Scopes "AuditLog.Read.All","UserAuthenticationMethod.Read.All","User.RevokeSessions.All"

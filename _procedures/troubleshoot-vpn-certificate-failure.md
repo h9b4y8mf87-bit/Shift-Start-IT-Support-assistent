@@ -58,7 +58,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-1 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -81,9 +81,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot vpn certificate failure** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check VPN gateway/server authentication certificate expiry and chain before changing the client.
+2. Confirm client and gateway system time are synchronised.
+3. Check certificate revocation/trust state and required root/intermediate certificates.
+
+### Rollback / undo
+- Preserve the previous valid approved certificate/profile where supported; restore it if the replacement breaks authentication.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.

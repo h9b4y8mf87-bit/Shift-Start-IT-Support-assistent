@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot a web-filter block without skip
 content_type: procedure
 category: Network & Connectivity
 service: Network & Connectivity
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Network Operations
 platforms:
@@ -59,13 +59,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-2 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -80,12 +80,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b2-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot a web-filter block** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-2 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check the web-filter/security-gateway log for the exact user, URL, category, rule and reason for the block.
+2. Determine whether the block is a security control for malware/phishing versus a content-category or business-policy restriction.
+3. Compare another authorised user/device to establish scope before requesting an exception.
+
+### Rollback / undo
+- Record the current policy before change. If an approved exception causes wider exposure or incorrect access, remove it and restore the previous policy. Any temporary exception must be authorised, least-privilege and time-bounded.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

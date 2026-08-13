@@ -5,7 +5,7 @@ description: 'Safely validate, add, remove and verify an approved user, computer
 content_type: procedure
 category: Identity & Access Management
 service: Directory group management
-severity: high
+severity: medium
 support_tier: L2
 owner_team: Identity and Access Management
 platforms:
@@ -53,13 +53,13 @@ quality_gate: pending
 permalink: /procedures/add-or-remove-security-group-membership/
 layout: article
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -74,9 +74,20 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Verify approved requester/change authority.
+2. Confirm group scope/type, nested membership and target entitlement.
+3. Record existing membership state before the change.
+
+### Rollback / undo
+- If the change causes unintended access impact, restore the exact previous membership state and document the reversal.
+
 ## Purpose and scope
 Use this procedure for an approved request to add or remove a user, computer, service account or nested group from a security group. It covers:
 

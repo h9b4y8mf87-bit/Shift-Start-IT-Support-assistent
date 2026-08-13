@@ -2,12 +2,12 @@
   "schemaVersion": 2,
   "model": "verification-priority-v1",
   "rankingRevision": "metadata-proxy-and-risk-floor-v2",
-  "generatedAt": "2026-08-13T10:19:14.733Z",
-  "actionableProcedures": 421,
+  "generatedAt": "2026-08-13T11:50:28.330Z",
+  "actionableProcedures": 419,
   "queueBandCounts": {
     "immediate": 7,
-    "next": 236,
-    "planned": 178
+    "next": 205,
+    "planned": 207
   },
   "telemetryAvailable": false,
   "temporaryProxyEnabled": true,
@@ -275,9 +275,9 @@
     },
     {
       "rank": 10,
-      "slug": "troubleshoot-linux-vpn",
-      "title": "Troubleshoot Linux VPN",
-      "category": "Linux & Developer Workstations",
+      "slug": "troubleshoot-slow-vpn-performance",
+      "title": "Troubleshoot slow VPN performance",
+      "category": "Network & Connectivity",
       "priority": "P1",
       "governance_state": "under_review",
       "verification_score_percent": 22,

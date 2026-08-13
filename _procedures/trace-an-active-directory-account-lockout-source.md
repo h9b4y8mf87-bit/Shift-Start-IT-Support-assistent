@@ -5,7 +5,7 @@ description: 'Enterprise runbook to trace an active directory account lockout so
 content_type: procedure
 category: Servers & Core Infrastructure
 service: Servers & Core Infrastructure
-severity: high
+severity: medium
 support_tier: L2-L3
 owner_team: Server or Infrastructure Operations
 platforms:
@@ -57,13 +57,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -78,11 +78,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **trace an active directory account lockout source** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Use domain-controller lockout evidence and approved lockout tooling/logs to identify the source system.
+2. Check cached credentials on old endpoints/mobile clients and disconnected sessions.
+3. Check services and scheduled tasks that may still use the old password.
+
+### Rollback / undo
+- Do not repeatedly unlock without fixing the source. If a service/task credential is changed, record the previous service configuration and restore only through the approved change path if the service fails.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.

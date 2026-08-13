@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot linux vpn without skipping evid
 content_type: procedure
 category: Linux & Developer Workstations
 service: Linux & Developer Workstations
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Linux Platform or Developer Experience
 platforms:
@@ -49,13 +49,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-1 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -70,11 +70,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b1-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot linux vpn** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
+
+## Mandatory Batch B-1 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Confirm gateway reachability and DNS resolution from the Linux endpoint.
+2. Review journal/system/client VPN logs before changing the client.
+3. Confirm system date/time and NTP synchronisation.
+
+### Rollback / undo
+- Record the current approved VPN client package/profile and restore the previous approved version/profile through package management or software distribution if the change causes regression.
 
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
