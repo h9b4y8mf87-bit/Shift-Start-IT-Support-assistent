@@ -21,6 +21,7 @@ file_patterns = [
     "shiftstart-shift-workspace-enhancements*.zip",
     "ShiftStart_Mobile_Responsive_Update*.zip",
     "shiftstart-final-corrective-patch*.zip",
+    "shiftstart-phase1a-*.zip",
 ]
 dir_patterns = [
     "shiftstart-batch-b*-remediation",
@@ -29,6 +30,7 @@ dir_patterns = [
     "shiftstart-sprint1-p0-01-ransomware",
     "shiftstart-shift-workspace-enhancements*",
     "shiftstart-final-corrective-patch*",
+    "shiftstart-phase1a-*",
 ]
 exact_noise = [
     "tatus",
