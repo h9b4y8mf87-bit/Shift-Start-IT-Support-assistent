@@ -80,8 +80,40 @@ jobs:
           const data = require('./assets/data/wizard-data.json');
           if (data.counts.procedures !== 421) throw new Error(`Expected 421 procedures, found ${data.counts.procedures}`);
           if (data.counts.symptoms !== 446) throw new Error(`Expected 446 symptoms, found ${data.counts.symptoms}`);
-          if (!data.counts.statuses?.verified) throw new Error('No verified procedures were included');
-          if (!data.counts.statuses?.under_review) throw new Error('Under-review procedures were not labelled');
+          const statuses = data.counts.statuses || {};
+
+          if (!statuses.under_review) {
+            throw new Error('Under-review procedures were not labelled');
+          }
+
+          const statusTotal = Object.values(statuses)
+            .reduce((sum, count) => sum + Number(count || 0), 0);
+
+          if (statusTotal !== data.counts.procedures) {
+            throw new Error(
+              `Procedure status counts total ${statusTotal}, expected ${data.counts.procedures}`
+            );
+          }
+
+          const verifiedProcedures = data.procedures.filter(
+            procedure => procedure.contentStatus === 'verified'
+          );
+
+          const invalidVerified = verifiedProcedures.filter(
+            procedure =>
+              procedure.verificationV2Complete !== true ||
+              procedure.verificationPromotionReady !== true
+          );
+
+          if (invalidVerified.length) {
+            throw new Error(
+              `Found ${invalidVerified.length} procedure(s) marked Verified without complete Verification v2 evidence`
+            );
+          }
+
+          console.log(
+            `Governed status validation passed. Evidence-complete Verified=${verifiedProcedures.length}`
+          );
           console.log(data.counts);
           NODE
 
