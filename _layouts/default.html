@@ -20,7 +20,15 @@
       } catch (_) { document.documentElement.dataset.theme = 'light'; }
     })();
   </script>
-  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/shiftstart-favicon.svg' | relative_url }}">
+  <link id="shiftstart-favicon" rel="icon" type="image/png" href="{{ '/assets/img/shiftstart-logo-light-theme.png' | relative_url }}" data-light-href="{{ '/assets/img/shiftstart-logo-light-theme.png' | relative_url }}" data-dark-href="{{ '/assets/img/shiftstart-logo-dark-theme.png' | relative_url }}">
+  <script>
+    (() => {
+      const icon = document.getElementById('shiftstart-favicon');
+      if (!icon) return;
+      const theme = document.documentElement.dataset.theme || 'light';
+      icon.href = theme === 'dark' ? icon.dataset.darkHref : icon.dataset.lightHref;
+    })();
+  </script>
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/supportvault-fusion.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/redesign.css' | relative_url }}">
@@ -36,6 +44,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/header-enterprise-fix.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/mobile-responsive.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/supportvault-product-polish.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/theme-logo-favicon.css' | relative_url }}">
 </head>
 <body class="min-h-full clay-ui redesigned-kb" data-required-role="{{ page.required_role | default: 'technician' | escape }}" data-content-status="{{ page.content_status | default: '' | escape }}" data-page-kind="{{ page.page_kind | default: page.content_type | default: 'page' | escape }}">
   <a class="skip-link" href="#main-content">Skip to main content</a>
