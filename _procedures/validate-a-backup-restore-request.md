@@ -53,7 +53,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-6 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -76,10 +76,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **validate a backup restore request** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: verify the restore request, data owner/requester, approval, exact source data, requested restore point and retention/legal constraints before any restore.
+2. Validate that the backup/restore point is catalogued and usable; perform an isolated test/verification where policy or criticality requires it.
+3. Prefer an alternate restore destination or protected recovery location so current production data is not overwritten until the restored data is validated.
+
+### Rollback / undo
+- A destructive overwrite may be irreversible. Preserve/snapshot the current destination where supported, stop immediately if the restore targets the wrong data/location, and restore/cut back to the preserved known-good state under the approved recovery plan.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -109,7 +120,12 @@ Use this runbook for **validate a backup restore request** in a managed enterpri
 The owner validates data integrity, completeness, permissions and usability.
 
 
+## Restore overwrite safety
+A destructive overwrite may be irreversible. Prefer an alternate restore destination or preserve/snapshot the current destination before any approved overwrite.
+
 ## Procedure
+0. **Verify restore authority and target before restoration.** Confirm requester/data owner approval, source data, restore point, destination and overwrite risk before initiating any restore.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

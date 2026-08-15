@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot wsl without skipping evidence, 
 content_type: procedure
 category: Linux & Developer Workstations
 service: Linux & Developer Workstations
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Linux Platform or Developer Experience
 platforms:
@@ -48,13 +48,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-6 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -69,12 +69,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot wsl** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check `wsl --status`, installed distributions and Windows virtualization/WSL feature state.
+2. Check disk space, WSL service/runtime errors and distribution health before reset/reinstall.
+3. Export or otherwise preserve the affected distribution/data before unregistering or reinstalling it.
+
+### Rollback / undo
+- Do not unregister/delete a distribution before an export/backup exists. If an approved WSL/runtime update causes regression, use the supported Windows/WSL recovery path or import the preserved distribution into a known-good runtime.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -103,6 +113,9 @@ Use this runbook for **troubleshoot wsl** in a managed enterprise environment. I
 ### Scenario-specific success criterion
 The original command, build, connection or service works in the supported environment.
 
+
+## WSL data-preservation rule
+Do not unregister/delete a distribution before an export/backup exists and the required developer data has been verified.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

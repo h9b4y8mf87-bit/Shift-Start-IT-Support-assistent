@@ -54,7 +54,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-6 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -77,10 +77,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot secure or follow-me printing** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check the print-management platform/release service health and whether the user's held job exists.
+2. Verify badge/PIN/identity mapping and release-station/printer connectivity.
+3. Check print-server queue, management-agent/client and recent policy/software changes before deleting jobs.
+
+### Rollback / undo
+- Capture print-management policy/version and queue configuration before change. Restore the previous approved policy/software/configuration if a confirmed update causes regression; preserve required job evidence.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

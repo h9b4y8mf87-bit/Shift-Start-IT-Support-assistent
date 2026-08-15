@@ -62,6 +62,7 @@ verification_v2_missing:
   - minimum_distinct_environments
 verification_promotion_ready: false
 classification_audit: batch-b1-2026-08-13
+canonical_role: definitive-user-account-access-recovery
 ---
 ## Mandatory Batch B-1 controls
 These audit-derived controls are mandatory before more invasive remediation.
@@ -107,3 +108,14 @@ Get-ADUser -Identity username -Properties LockedOut,Enabled,PasswordExpired,Last
 ## Escalation Path
 1. Escalate to Identity & Access Management if identity verification fails, the account repeatedly locks, the account is unexpectedly disabled, or standard reset policy cannot restore access.
 2. Include the verified username, lockout time, suspected source device if known, actions taken and repeated-lockout evidence.
+
+## User account access recovery decision path
+Use the narrowest recovery path after verifying the user's identity:
+
+- **One-time lockout, no compromise evidence:** identify obvious stale-credential causes, unlock under policy, then verify sign-in.
+- **Forgotten/expired password:** follow the approved password-reset flow and MFA/recovery controls.
+- **Repeated lockout:** use `trace-an-active-directory-account-lockout-source` before repeatedly unlocking the account.
+- **Brute force or suspected compromise:** stop routine unlock/reset handling and invoke the compromised-account/security process.
+
+Do not repeatedly unlock an account without diagnosing an immediate relock.
+

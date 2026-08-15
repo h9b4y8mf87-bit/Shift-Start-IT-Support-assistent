@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot vdi multi-monitor support witho
 content_type: procedure
 category: 'Remote Access, VDI & DaaS'
 service: 'Remote Access, VDI & DaaS'
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Virtual Workspace or EUC Engineering
 platforms:
@@ -55,13 +55,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-6 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -76,12 +76,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot vdi multi-monitor support** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Confirm the physical monitors work locally using the canonical external-monitor procedure before treating this as VDI-specific.
+2. Check Citrix/VMware/AVD client multi-monitor capability, client version and relevant session/policy limits.
+3. Compare single-monitor and multi-monitor sessions and check resolution/scaling/GPU/display policy constraints.
+
+### Rollback / undo
+- Record client and VDI display policy before change. Restore the previous approved client/policy if an authorised update causes regression; keep the generic physical-monitor remediation separate.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -110,6 +120,9 @@ Use this runbook for **troubleshoot vdi multi-monitor support** in a managed ent
 ### Scenario-specific success criterion
 The peripheral works in the original application and remains stable after reconnect or restart.
 
+
+## VDI display relationship
+First use `troubleshoot-an-external-monitor` to confirm the physical displays, cable/dock and local OS arrangement are healthy. Continue here only when the fault appears inside the VDI session/client or VDI display policy.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

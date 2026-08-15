@@ -53,7 +53,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-6 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -76,10 +76,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot remote desktop connection failure** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Determine whether the target is a server or workstation and confirm the approved management path and business impact.
+2. Test DNS/network reachability and TCP 3389 (or the organisation's configured RDP path); ICMP success is not required.
+3. Check Remote Desktop service/configuration, firewall policy and user/group entitlement. For servers/VMs, ensure an approved console or out-of-band management path is available before remote policy changes.
+
+### Rollback / undo
+- Capture firewall/GPO/RDP configuration before change. If an authorised change causes lockout, restore the previous configuration through the approved console/out-of-band/hypervisor management path; do not describe that path as a security bypass.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -108,6 +119,9 @@ Use this runbook for **troubleshoot remote desktop connection failure** in a man
 ### Scenario-specific success criterion
 The exact scenario “Troubleshoot Remote Desktop connection failure” is resolved and the original business task succeeds.
 
+
+## Remote management recovery rule
+For servers and VMs, keep an approved console/out-of-band/hypervisor management path available before changing RDP/firewall/GPO configuration; do not describe that path as a security bypass.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

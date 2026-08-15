@@ -9,6 +9,16 @@ const readCollection = (dir) => fs.readdirSync(dir).filter((name) => name.endsWi
   return { file, slug: parsed.data.slug || path.basename(name, ".md"), data: parsed.data };
 });
 
+const effectiveProcedureStatus = (data) => {
+  const governance = data.verification_governance_state || data.content_status || "under_review";
+  if (governance === "verified") {
+    return data.verification_v2_complete === true && data.verification_promotion_ready === true
+      ? "verified"
+      : "revalidation_required";
+  }
+  return governance;
+};
+
 const symptoms = readCollection("_symptoms");
 const procedures = readCollection("_procedures");
 const inferred = new Map(symptoms.map((symptom) => [symptom.slug, new Set(symptom.data.related_procedures || [])]));
@@ -20,7 +30,7 @@ for (const procedure of procedures) {
 }
 
 const statusCounts = procedures.reduce((acc, procedure) => {
-  const status = procedure.data.content_status || "under_review";
+  const status = effectiveProcedureStatus(procedure.data);
   acc[status] = (acc[status] || 0) + 1;
   return acc;
 }, {});
@@ -50,7 +60,11 @@ const payload = {
     platforms: procedure.data.platforms || [],
     symptoms: procedure.data.related_symptoms || [],
     symptomWeights: procedure.data.symptom_weights || {},
-    contentStatus: procedure.data.content_status || "under_review",
+    contentStatus: effectiveProcedureStatus(procedure.data),
+    legacyContentStatus: procedure.data.content_status || "under_review",
+    verificationGovernanceState: procedure.data.verification_governance_state || "",
+    verificationV2Complete: procedure.data.verification_v2_complete === true,
+    verificationPromotionReady: procedure.data.verification_promotion_ready === true,
     reviewedBy: procedure.data.reviewed_by || "",
     lastTested: procedure.data.last_tested || "",
     qualityGate: procedure.data.quality_gate || "pending",

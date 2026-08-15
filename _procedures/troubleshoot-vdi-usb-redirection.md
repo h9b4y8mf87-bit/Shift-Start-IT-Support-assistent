@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot vdi usb redirection without ski
 content_type: procedure
 category: 'Remote Access, VDI & DaaS'
 service: 'Remote Access, VDI & DaaS'
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Virtual Workspace or EUC Engineering
 platforms:
@@ -54,13 +54,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-6 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -75,12 +75,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot vdi usb redirection** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Confirm the USB device works locally and identify its device class.
+2. Check Citrix/VMware/AVD USB redirection policy, client/agent version and whether the device class is intentionally restricted.
+3. Distinguish generic USB redirection from optimised smart-card, security-token, scanner or storage redirection and follow the appropriate security policy.
+
+### Rollback / undo
+- Capture the existing VDI redirection policy/client state. Restore the previous approved policy/client if a confirmed change causes regression; do not weaken device-control policy to make an unsupported USB device redirect.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

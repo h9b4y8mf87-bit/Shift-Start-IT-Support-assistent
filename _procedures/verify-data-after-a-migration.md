@@ -53,7 +53,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-6 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -76,10 +76,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **verify data after a migration** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Compare source and destination object/file counts, aggregate sizes and migration-tool success/error reports.
+2. Validate representative or risk-based samples using hashes/checksums where practical, plus open/read tests for critical file types.
+3. Verify permissions/ownership, timestamps/metadata and application-specific integrity before final cutover.
+
+### Rollback / undo
+- If verification fails, halt/fail back the cutover and keep the source environment/data protected and authoritative until discrepancies are reconciled. Do not decommission or overwrite the source until acceptance criteria pass.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -108,6 +119,9 @@ Use this runbook for **verify data after a migration** in a managed enterprise e
 ### Scenario-specific success criterion
 The owner validates data integrity, completeness, permissions and usability.
 
+
+## Migration acceptance gate
+Do not decommission or overwrite the source environment/data until file/object counts, integrity samples, permissions/metadata and business acceptance criteria pass.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.

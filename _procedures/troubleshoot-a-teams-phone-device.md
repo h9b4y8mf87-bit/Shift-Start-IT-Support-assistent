@@ -119,6 +119,15 @@ These audit-derived controls are mandatory before more invasive remediation.
 The test meeting or call completes with required audio, video and collaboration features.
 
 
+## No-dial-tone branch
+Use this branch when a managed desk/Teams phone powers on but has no dial tone or cannot place calls.
+
+1. Check handset/cabling, PoE/power and device registration.
+2. Check Teams Phone/voice service health and the assigned line/account/profile.
+3. Confirm network reachability and that the device is not failing registration/authentication.
+4. Preserve the current profile/update state before restart, reset or firmware action.
+5. Verify an outbound and inbound test call after remediation.
+
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 

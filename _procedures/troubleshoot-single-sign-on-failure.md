@@ -55,7 +55,7 @@ source_references: []
 change_record: Generic account-status command replaced with procedure-specific evidence collection during phase-two IAM remediation; full technical-owner validation remains pending.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-6 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -78,10 +78,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot single sign-on failure** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check Microsoft Entra/identity-provider and application/service-provider health before changing SSO configuration.
+2. Review sign-in/federation logs for the exact SAML/OIDC/OAuth error, request/correlation ID and affected scope.
+3. Check federation metadata, redirect/ACS URI, issuer/entity ID, certificate/secret expiry and clock/time validity as appropriate.
+
+### Rollback / undo
+- Export/capture the working SSO/federation configuration before change. If an authorised metadata/certificate/secret configuration change causes failure, restore the previous approved configuration through the identity/application administration path.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -111,7 +122,12 @@ Use this runbook for **troubleshoot single sign-on failure** in a managed enterp
 The identity provider issues a valid assertion and the application creates a session.
 
 
+## SSO protocol relationship
+Use this procedure as the broad SSO decision path. If evidence shows a SAML-specific assertion, metadata, ACS, issuer/entity-ID or signing-certificate problem, continue with `troubleshoot-a-saml-application-error`.
+
 ## Procedure
+0. **Check identity and application service health before SSO changes.** Confirm the IdP and application/provider are healthy, then capture the exact sign-in/federation error before editing SSO configuration.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

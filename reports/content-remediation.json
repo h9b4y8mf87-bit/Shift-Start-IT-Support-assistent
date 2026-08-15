@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-13T12:35:56.034Z",
+  "generatedAt": "2026-08-15T12:35:07.916Z",
   "applied": true,
   "procedures": {
     "total": 421,
     "verified": 11,
-    "under_review": 403,
+    "under_review": 398,
     "draft": 0,
-    "deprecated": 7
+    "deprecated": 12
   },
   "symptoms": {
     "total": 446,

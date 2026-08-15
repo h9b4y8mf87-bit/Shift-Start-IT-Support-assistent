@@ -66,37 +66,97 @@ verification_promotion_ready: false
 classification_audit: batch-b1-2026-08-13
 ---
 ## Mandatory Batch B-1 controls
-These audit-derived controls are mandatory before more invasive remediation.
 
-### Pre-checks
-1. Determine scope first: one endpoint, one platform, multiple users or gateway-wide.
-2. Check provider/gateway service health before client remediation.
-3. Check Conditional Access/NAC/identity blocks before deleting profiles or certificates.
+These Batch B-1 controls remain mandatory for VPN triage:
 
-### Rollback / undo
-- This procedure is a triage parent; do not perform destructive profile/certificate changes here. Route to the child runbook that owns rollback.
+1. Determine scope before making endpoint changes: one endpoint, one platform, multiple users, or gateway-wide.
+2. Check VPN provider or corporate gateway service health before client remediation.
+3. Check identity, Conditional Access, NAC and certificate-related blocks before deleting profiles or authentication material.
+4. Do not perform destructive certificate, managed-profile or VPN-configuration changes from this parent triage procedure.
+5. Route remediation and rollback to the child runbook responsible for the failing VPN layer.
+
+## Diagnostic Steps
+
+1. **Determine the scope of the VPN failure.**
+   - Confirm whether one endpoint, one platform, several users, or the corporate VPN gateway is affected.
+   - Record the exact VPN client error, timestamp and affected network.
+
+2. **Check external service and gateway health first.**
+   - Confirm whether the approved VPN gateway or provider reports an outage.
+   - If multiple users or networks are affected, avoid unnecessary endpoint remediation.
+
+3. **Check endpoint prerequisites.**
+   - Confirm normal public internet connectivity.
+   - Confirm the system date and time are correct.
+   - Verify DNS resolution and gateway reachability.
+   - Confirm the approved VPN client version is installed.
+
+4. **Check identity and policy controls.**
+   - Confirm the user account is enabled.
+   - Check Conditional Access, NAC or equivalent access-control decisions where applicable.
+   - Determine whether certificate expiry or authentication policy is involved.
+
+5. **Select the appropriate child procedure from the observed evidence.**
+   - Linux endpoint → `troubleshoot-linux-vpn`
+   - macOS endpoint → `troubleshoot-macos-vpn`
+   - Mobile endpoint → `troubleshoot-mobile-vpn`
+   - Certificate failure → `troubleshoot-vpn-certificate-failure`
+   - Repeated disconnects → `troubleshoot-vpn-disconnections`
+   - Slow VPN → `troubleshoot-slow-vpn-performance`
+   - Multiple users or gateway issue → `troubleshoot-a-cloud-vpn-gateway`
 
 ## Parent triage decision path
-Use this procedure to identify the failing VPN layer. Do not use it as a catch-all remediation runbook.
 
-1. **Determine scope.**
-   - One Linux endpoint → `troubleshoot-linux-vpn`
-   - One macOS endpoint → `troubleshoot-macos-vpn`
-   - One mobile endpoint → `troubleshoot-mobile-vpn`
-   - Certificate-specific failure → `troubleshoot-vpn-certificate-failure`
-   - Repeated disconnects → `troubleshoot-vpn-disconnections`
-   - Slow performance → `troubleshoot-slow-vpn-performance`
-   - Multiple users / cloud gateway issue → `troubleshoot-a-cloud-vpn-gateway`
+Use the evidence collected during diagnostics to select the correct resolution path:
 
-2. **Check service/gateway health before client changes.**
-3. **Check basic endpoint prerequisites:** public internet, time, DNS, gateway reachability, approved client version and exact error.
-4. **Check identity/policy blocks:** Conditional Access, NAC, disabled account or expired certificate.
-5. **Route to the child runbook.** Do not delete certificates, managed profiles or authentication material here.
+- Linux endpoint → `troubleshoot-linux-vpn`
+- macOS endpoint → `troubleshoot-macos-vpn`
+- Mobile endpoint → `troubleshoot-mobile-vpn`
+- Certificate-specific failure → `troubleshoot-vpn-certificate-failure`
+- Repeated disconnects → `troubleshoot-vpn-disconnections`
+- Slow VPN performance → `troubleshoot-slow-vpn-performance`
+- Multiple users or gateway-wide impact → `troubleshoot-a-cloud-vpn-gateway`
+
+The parent procedure identifies the failing layer. The selected child procedure owns any state-changing remediation, rollback and live verification.
+
+## Remediation Steps
+
+This procedure is a **parent triage runbook**. It deliberately does not perform destructive VPN remediation.
+
+1. Route the incident to the child procedure identified during diagnostics.
+2. Apply remediation only from the child runbook that owns the affected VPN layer.
+3. Do not delete managed profiles, certificates, authentication material or enterprise VPN configuration from this parent procedure.
+4. Where the evidence identifies a gateway/provider outage, stop endpoint remediation and follow the gateway or provider escalation path.
+5. Record the selected child procedure and the evidence used to select it.
+
+## Rollback Steps
+
+This parent procedure does not intentionally make state-changing configuration changes, so rollback should normally not be required.
+
+1. If no configuration was changed during triage, record **No rollback required — diagnostic activity only**.
+2. If a child runbook made a configuration change, use the rollback instructions in that child runbook.
+3. If an unplanned change was made before this procedure was followed, stop further remediation and restore the previous approved configuration where safe.
+4. Escalate if the previous state cannot be safely restored.
 
 ## Verification Steps
-1. The correct child/gateway runbook is selected from observed evidence.
-2. Scope is documented as single endpoint, platform-specific, multi-user or gateway-wide.
-3. The child runbook owns remediation, rollback and live verification.
+
+1. Confirm the correct child or gateway runbook was selected from observed evidence.
+2. Confirm scope is documented as single endpoint, platform-specific, multi-user or gateway-wide.
+3. Confirm any remediation and rollback are owned by the selected child procedure.
+4. Confirm the original VPN issue is either resolved or has a documented escalation path.
+5. Record the outcome and supporting diagnostic evidence.
 
 ## Escalation Path
-Escalate to Network Operations when multiple users/networks are affected, the gateway is unhealthy/unreachable, or evidence points to a gateway/provider issue.
+
+Escalate to Network Operations when:
+
+- multiple users or networks are affected;
+- the VPN gateway is unhealthy or unreachable;
+- evidence indicates a provider-side outage;
+- authentication continues to fail after identity validation;
+- managed VPN configuration appears damaged;
+- certificate or Conditional Access investigation requires elevated administrative access; or
+- the appropriate child runbook does not restore service.
+
+Include the affected users/devices, timestamps and timezone, exact error text, network used, DNS/gateway test results, authentication findings, remediation attempted and rollback state.
+

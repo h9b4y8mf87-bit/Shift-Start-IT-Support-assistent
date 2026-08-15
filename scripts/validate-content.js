@@ -21,6 +21,25 @@ const malformedTitle = /^(?:Need to (?:a|an) |Request to (?:a|an) |And rebuild\b
 const duplicateCategories = new Set(Object.keys(governance.canonicalCategories));
 const genericDescriptions = /^Enterprise runbook to\b/i;
 
+const effectiveProcedureStatus = (data) => {
+  const governanceStatus =
+    data.verification_governance_state ||
+    data.content_status ||
+    "under_review";
+
+  if (governanceStatus === "verified") {
+    return (
+      data.verification_v2_complete === true &&
+      data.verification_promotion_ready === true
+    )
+      ? "verified"
+      : "revalidation_required";
+  }
+
+  return governanceStatus;
+};
+
+
 for (const collection of collections) {
   const dir = `_${collection}`;
   records[collection] = new Map();
@@ -47,20 +66,52 @@ for (const collection of collections) {
     if (data.content_type === "procedure") {
       if (!statuses.has(data.content_status)) errors.push(`${file}: invalid content_status '${data.content_status}'`);
       if (!data.related_symptoms?.length) errors.push(`${file}: procedure is absent from symptom matching`);
-      if (data.owner_team && parsed.content.length < 1200) errors.push(`${file}: procedure content is too short for enterprise use`);
+      const effectiveStatus = effectiveProcedureStatus(data);
+      const isDeprecatedCompatibility =
+        effectiveStatus === "deprecated" ||
+        data.content_status === "deprecated";
+
+      if (data.owner_team && !isDeprecatedCompatibility && parsed.content.length < 1200) {
+        errors.push(
+          `${file}: procedure content is too short for enterprise use`
+        );
+      }
 
       const generated = data.generated_baseline === true || genericDescriptions.test(String(data.description || ""));
-      if (data.content_status === "verified") {
-        if (!data.reviewed_by) errors.push(`${file}: verified procedure requires reviewed_by`);
-        if (generated) errors.push(`${file}: generated baseline cannot be marked verified`);
-        if (data.quality_gate !== "passed") errors.push(`${file}: verified procedure requires quality_gate: passed`);
+      if (effectiveStatus === "verified") {
+        if (!data.reviewed_by) {
+          errors.push(`${file}: verified procedure requires reviewed_by`);
+        }
+
+        if (generated) {
+          errors.push(`${file}: generated baseline cannot be marked verified`);
+        }
+
+        if (data.quality_gate !== "passed") {
+          errors.push(
+            `${file}: verified procedure requires quality_gate: passed`
+          );
+        }
+
+        if (
+          data.verification_v2_complete !== true ||
+          data.verification_promotion_ready !== true
+        ) {
+          errors.push(
+            `${file}: governance verified requires verification-v2 completion and promotion readiness`
+          );
+        }
+      } else if (data.content_status === "verified") {
+        warnings.push(
+          `${file}: legacy content_status verified is non-authoritative; effective status is '${effectiveStatus}'`
+        );
       }
 
       const captures = [...parsed.content.matchAll(/\{% capture [^%]+ %\}\n([\s\S]*?)\n\{% endcapture %\}/g)].map((match) => match[1].trim());
       for (const command of captures) {
         const key = command.replace(/\s+/g, " ").trim();
         if (!commandUse.has(key)) commandUse.set(key, []);
-        commandUse.get(key).push({ file, status: data.content_status, category: data.category });
+        commandUse.get(key).push({ file, status: effectiveStatus, category: data.category });
       }
     }
   }
@@ -113,6 +164,11 @@ const report = {
   generatedAt: new Date().toISOString(),
   counts: Object.fromEntries(Object.entries(records).map(([name, collection]) => [name, collection.size])),
   statusCounts: [...records.procedures.values()].reduce((acc, item) => {
+    const status = effectiveProcedureStatus(item.data);
+    acc[status] = (acc[status] || 0) + 1;
+    return acc;
+  }, {}),
+  legacyStatusCounts: [...records.procedures.values()].reduce((acc, item) => {
     const status = item.data.content_status || "missing";
     acc[status] = (acc[status] || 0) + 1;
     return acc;

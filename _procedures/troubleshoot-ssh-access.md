@@ -49,7 +49,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-6 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -72,10 +72,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot ssh access** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Test DNS/network reachability and TCP 22 (or the configured SSH port); ICMP success is not required.
+2. Check sshd/service state and authentication logs using an approved local, hypervisor or out-of-band console when remote SSH is unavailable.
+3. Verify the account/key, home/.ssh ownership and permissions, and relevant PAM/SSSD/identity-provider state before editing sshd_config.
+
+### Rollback / undo
+- Back up SSH/authentication configuration before change and maintain an approved console/out-of-band recovery path. Validate configuration syntax before reload/restart; restore the previous approved configuration if access worsens.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

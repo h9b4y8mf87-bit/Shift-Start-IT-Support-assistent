@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot voicemail access without skippi
 content_type: procedure
 category: 'Voice, Telephony & Meeting Rooms'
 service: 'Voice, Telephony & Meeting Rooms'
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Unified Communications or AV Support
 platforms:
@@ -51,13 +51,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-6 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -72,12 +72,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot voicemail access** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Check the applicable voice/Teams/PBX service health and the user's voicemail entitlement/licensing.
+2. Verify voicemail/call-routing policy, mailbox/voicemail provisioning and whether the issue is access, greeting, deposit or notification.
+3. Use a controlled test message/call and review provider/admin diagnostics where available.
+
+### Rollback / undo
+- Capture the current voicemail/call policy before change. Restore the previous approved policy/provisioning state if an authorised change causes regression.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

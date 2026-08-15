@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot printing from macos without ski
 content_type: procedure
 category: macOS Endpoints
 service: macOS Endpoints
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Apple Platform or Endpoint Engineering
 platforms:
@@ -50,13 +50,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-6 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -71,12 +71,22 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot printing from macos** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Confirm the printer is reachable/available and can be used by another authorised client before treating the issue as macOS-specific.
+2. Check the macOS printer queue, selected driver/PPD or AirPrint path and test from another application.
+3. Check print-server/printer logs and network/DNS reachability when the queue is network-based.
+
+### Rollback / undo
+- Record the current queue/driver configuration. Restore the previous approved printer/driver configuration if a confirmed change caused regression; use vendor-supported packages rather than arbitrary driver downgrades.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot onedrive synchronisation withou
 content_type: procedure
 category: Microsoft 365 & Collaboration
 service: Microsoft 365 & Collaboration
-severity: high
+severity: medium
 support_tier: L1-L2
 owner_team: Microsoft 365 or Collaboration Services
 platforms:
@@ -49,13 +49,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-6 audit classification: P2 / medium.'
+verification_priority: P2
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -70,12 +70,23 @@ verification_v2_missing:
   - minimum_sme_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
+canonical_role: definitive-onedrive-sharepoint-sync-runbook
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot onedrive synchronisation** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check Microsoft 365/OneDrive service health before local-client remediation.
+2. Verify OneDrive web access, storage quota, client sync status and the exact blocked/conflicted items.
+3. Establish the local/cloud source of truth and preserve unsynchronised local data before unlinking, resetting or moving files.
+
+### Rollback / undo
+- Use OneDrive version history/recycle bin or preserved local data to recover a confirmed bad sync result. If a managed OneDrive/KFM policy change caused the issue, restore the previous approved policy; do not overwrite cloud data to force synchronisation.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -105,7 +116,18 @@ Use this runbook for **troubleshoot onedrive synchronisation** in a managed ente
 The affected files synchronise and match the validated cloud version.
 
 
+## SharePoint library synchronisation branch
+SharePoint document-library synchronisation uses the OneDrive sync client, so diagnose it here rather than in a second competing runbook.
+
+1. Confirm the library is accessible in SharePoint web and identify whether the problem is one library, one user or broader.
+2. Check OneDrive client status, storage/disk state, path/name restrictions, permissions and exact sync error.
+3. Establish the source of truth between SharePoint cloud content and unsynchronised local files before reset or relink.
+4. Preserve unsynchronised local data and use version history/recycle-bin recovery where required.
+5. Verify the affected SharePoint library synchronises end-to-end after remediation.
+
 ## Procedure
+0. **Check Microsoft 365/OneDrive service health before sync repair.** Confirm the service is healthy and establish local/cloud source of truth before unlink/reset actions.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

@@ -5,7 +5,7 @@ description: 'Enterprise runbook to troubleshoot pop-ups required by a business 
 content_type: procedure
 category: Business Applications & Browsers
 service: Business Applications & Browsers
-severity: high
+severity: low
 support_tier: L1-L2
 owner_team: Application Support
 platforms:
@@ -56,13 +56,13 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
-verification_priority: P1
+risk_basis: 'Batch B-6 audit classification: P3 / low.'
+verification_priority: P3
 verification_state: awaiting_live_validation
 verification_schema_version: 2
 verification_governance_state: under_review
 verification_v2_complete: false
-verification_v2_score_percent: 22
+verification_v2_score_percent: 24
 verification_v2_missing:
   - diagnostic_tested
   - remediation_tested
@@ -74,15 +74,25 @@ verification_v2_missing:
   - authoritative_source_provenance
   - last_tested
   - minimum_peer_reviewers
-  - minimum_sme_reviewers
+  - minimum_technical_reviewers
   - minimum_test_records
   - minimum_distinct_environments
-  - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot pop-ups required by a business application** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Confirm the business application's approved URL/domain and whether the block comes from browser settings, an extension or managed browser/GPO policy.
+2. Allow pop-ups only for the minimum approved site scope required by the application.
+3. Use private/incognito testing only to isolate extensions/session state; do not bypass a corporate security policy without approval.
+
+### Rollback / undo
+- Remove the site exception or restore the previous approved browser policy if the change causes unwanted pop-ups or weakens security.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.

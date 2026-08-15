@@ -52,7 +52,7 @@ source_references: []
 change_record: Enterprise baseline retained in full; technical-owner validation is required before production changes.
 quality_gate: pending
 risk_model: impact-v1
-risk_basis: Existing explicit high classification retained after impact-model review; no stronger critical indicator was detected.
+risk_basis: 'Batch B-6 audit classification: P1 / high.'
 verification_priority: P1
 verification_state: awaiting_live_validation
 verification_schema_version: 2
@@ -75,10 +75,21 @@ verification_v2_missing:
   - minimum_distinct_environments
   - negative_path_tested
 verification_promotion_ready: false
+classification_audit: batch-b6-2026-08-13
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot one-way audio** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
 
+## Mandatory Batch B-6 controls
+These audit-derived controls are mandatory before more invasive remediation.
+
+### Pre-checks
+1. Step 0: check the applicable voice/UC provider service health before changing firewall, client or endpoint configuration.
+2. Capture call/session ID, direction of failed media and affected parties, then verify RTP/SRTP/STUN/TURN/media path as appropriate to the platform.
+3. Confirm local microphone/speaker/device selection works outside the call so endpoint hardware is not confused with network/media failure.
+
+### Rollback / undo
+- Capture the relevant firewall/NAT/media policy before change. If an authorised policy change causes regression, restore the previous approved policy immediately and re-test two-way media.
 ## Preconditions and authorisation
 - Verify the requester, affected user, asset and business service.
 - Confirm that the requested action is permitted for your support role.
@@ -109,6 +120,8 @@ The peripheral works in the original application and remains stable after reconn
 
 
 ## Procedure
+0. **Check voice/UC service health before media-policy changes.** Confirm the applicable provider/service is healthy and capture call/session evidence before changing firewall, NAT or media policy.
+
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
 
    <div class="expected"><strong>Expected result:</strong> The ticket contains a precise, reproducible statement of the failure and its business impact.</div>

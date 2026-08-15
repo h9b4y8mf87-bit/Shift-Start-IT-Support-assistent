@@ -76,6 +76,7 @@ verification_v2_missing:
   - negative_path_tested
 verification_promotion_ready: false
 classification_audit: batch-b5-2026-08-13
+canonical_role: definitive-high-memory-utilisation-runbook
 ---
 ## Purpose and scope
 Use this runbook for **troubleshoot high memory utilisation** in a managed enterprise environment. It covers intake, evidence, safe diagnosis, remediation, verification, documentation and escalation. It does not replace organisation-specific security, change, safety, privacy, regulatory or vendor procedures.
@@ -118,6 +119,14 @@ These audit-derived controls are mandatory before more invasive remediation.
 ### Scenario-specific success criterion
 Resource use returns to baseline and the business workload performs acceptably.
 
+
+## Server/service high-memory branch
+For servers or shared services:
+
+- Identify top consumers, commit/private memory, paging/swap and sustained leak patterns.
+- Correlate growth with deployments, scheduled jobs and service/application errors.
+- Capture evidence before restarting services or changing memory limits.
+- Restore a confirmed bad deployment/configuration through the approved service change process.
 
 ## Procedure
 1. **Confirm the report and reproduce safely.** Ask the user to demonstrate the original task or reproduce it with non-sensitive test data. Do not repeatedly trigger lockouts, failed jobs, duplicate transactions or destructive actions.
