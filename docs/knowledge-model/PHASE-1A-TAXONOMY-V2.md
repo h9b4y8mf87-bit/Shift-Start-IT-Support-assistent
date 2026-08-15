@@ -36,6 +36,19 @@ The wizard data generator consumes the generated taxonomy ledger and exposes `ob
 5. Run `npm run taxonomy:v2:build && npm run taxonomy:v2:check`.
 6. Repeat until all 446 records have `review_required=false`.
 
+
+## Final QA
+
+Clearing `review_required` is necessary but is not, by itself, evidence that every accepted deterministic classification received an explicit QA decision.
+
+After Review Pass 1, run the Phase 1A Final QA over the remaining deterministic-only records. The final authoritative baseline requires:
+
+- all 446 records to have `classificationOrigin: review_override`;
+- all 446 records to have a non-empty review source;
+- `explicitReviewed: 446`;
+- `explicitReviewRequired: 0`;
+- `npm run taxonomy:v2:qa:check` to pass.
+
 ## Completion gate
 
 Phase 1A is complete only when:
@@ -44,6 +57,8 @@ Phase 1A is complete only when:
 - all 446 slugs are represented exactly once;
 - every record has one of the five valid object types;
 - every record has been reviewed/accepted;
+- every record has an explicit reviewed override and review source;
+- the final QA validator reports 446 explicit reviews and 0 deterministic-only records;
 - no legacy URL is removed;
 - procedure count remains 421;
 - wizard data exposes the new taxonomy consistently.

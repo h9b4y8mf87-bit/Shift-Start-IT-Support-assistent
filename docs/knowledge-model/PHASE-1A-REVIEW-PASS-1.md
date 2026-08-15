@@ -30,7 +30,7 @@ The decisions are stored centrally in `_data/symptom-taxonomy-v2-overrides.json`
 
 ## Important limitation
 
-This is **Review Pass 1**. It resolves the 249 records that the classifier itself flagged as uncertain. The 197 records previously accepted by deterministic high-confidence rules are not silently treated as independently human-audited by this document. They should receive a separate QA pass before the taxonomy is frozen as the final Knowledge Model v2 baseline.
+This is **Review Pass 1**. It resolves the 249 records that the classifier itself flagged as uncertain. The 197 records already accepted before this pass comprised 192 deterministic high-confidence classifications plus 5 pre-existing explicit review overrides. The remaining 192 deterministic-only records require a separate final QA pass before the taxonomy is frozen as the Knowledge Model v2 baseline.
 
 ## Expected post-build result
 

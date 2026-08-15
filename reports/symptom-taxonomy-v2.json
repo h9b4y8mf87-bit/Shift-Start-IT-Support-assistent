@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "model": "ShiftStart Knowledge Model v2 / Phase 1A",
-  "generatedAt": "2026-08-15T15:06:55.532Z",
+  "generatedAt": "2026-08-15T18:05:22.231Z",
   "sourceCollection": "_symptoms",
   "sourceCount": 446,
   "objectTypes": [
@@ -32,16 +32,19 @@
     }
   ],
   "counts": {
-    "observable_symptom": 207,
-    "known_condition": 56,
-    "incident_event": 24,
+    "observable_symptom": 204,
+    "known_condition": 60,
+    "incident_event": 23,
     "context": 40,
     "service_request": 119
   },
   "review": {
     "reviewed": 446,
     "reviewRequired": 0,
-    "completionPercent": 100
+    "completionPercent": 100,
+    "explicitReviewed": 446,
+    "explicitReviewRequired": 0,
+    "explicitCompletionPercent": 100
   },
   "records": {
     "802-1x-authentication": {
@@ -85,9 +88,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-browser-certificate-warning"
       ]
@@ -133,9 +136,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-browser-sign-in-loop"
       ]
@@ -149,9 +152,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "clear-browser-cache-and-cookies-safely",
         "collect-business-application-logs",
@@ -279,9 +282,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "triage-a-cloud-service-outage"
       ]
@@ -311,9 +314,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-conditional-access-block"
       ]
@@ -452,12 +455,12 @@
       "legacyContentType": "symptom",
       "legacySeverity": "high",
       "category": "Network & Connectivity",
-      "objectType": "observable_symptom",
+      "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Final QA: the record names the default gateway as the identified failing network condition rather than only reporting loss of connectivity.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-default-gateway-failure"
       ]
@@ -503,9 +506,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-desktop-with-no-power"
       ]
@@ -680,9 +683,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-domain-trust-relationship-failure"
       ]
@@ -712,9 +715,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-failed-endpoint-backup"
       ]
@@ -744,9 +747,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-failed-mouse-or-pointing-device"
       ]
@@ -760,9 +763,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-failed-scheduled-task"
       ]
@@ -776,9 +779,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-failed-server-backup"
       ]
@@ -792,9 +795,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-failed-systemd-service"
       ]
@@ -936,9 +939,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-google-workspace-storage-quota-issue"
       ]
@@ -1032,9 +1035,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-laptop-battery-not-charging"
       ]
@@ -1128,9 +1131,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-macos-diagnostic-logs",
         "enrol-a-mac-into-mdm",
@@ -1193,9 +1196,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-mapped-drive-reconnect-failure"
       ]
@@ -1209,9 +1212,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-missing-dll-or-runtime-dependency"
       ]
@@ -1241,9 +1244,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-network-access-control-block"
       ]
@@ -1257,9 +1260,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-network-printer-that-is-unreachable"
       ]
@@ -1273,9 +1276,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-network-share-access-failure"
       ]
@@ -1305,9 +1308,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-onedrive-sign-in-loop"
       ]
@@ -1337,9 +1340,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-patch-compliance-failure"
       ]
@@ -1353,9 +1356,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-pdf-that-will-not-open"
       ]
@@ -1401,9 +1404,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-remote-desktop-black-screen"
       ]
@@ -1449,9 +1452,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-saml-application-error"
       ]
@@ -1465,9 +1468,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-scanner-not-detected"
       ]
@@ -1606,9 +1609,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "triage-a-site-internet-outage"
       ]
@@ -1622,9 +1625,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "triage-a-site-wide-lan-outage"
       ]
@@ -1718,9 +1721,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-teams-room-system-offline"
       ]
@@ -1734,9 +1737,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-temporary-windows-profile"
       ]
@@ -1830,9 +1833,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "triage-a-web-server-http-500-error"
       ]
@@ -1846,9 +1849,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "triage-a-web-server-http-503-error"
       ]
@@ -1878,9 +1881,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-windows-certificate-service-request"
       ]
@@ -1894,9 +1897,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-windows-device-that-will-not-power-on"
       ]
@@ -1910,9 +1913,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "assess-storage-drive-health",
         "collect-a-windows-crash-dump",
@@ -1986,9 +1989,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "triage-a-windows-server-that-is-unreachable"
       ]
@@ -2002,9 +2005,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-windows-service-that-will-not-start"
       ]
@@ -2018,9 +2021,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-a-windows-update-failure"
       ]
@@ -2034,9 +2037,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "triage-a-wireless-access-point-outage"
       ]
@@ -2237,9 +2240,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-an-apipa-address"
       ]
@@ -2253,9 +2256,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-application-access-denied-error"
       ]
@@ -2269,9 +2272,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-an-application-role-assignment-failure"
       ]
@@ -2285,9 +2288,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-application-that-crashes"
       ]
@@ -2301,9 +2304,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-application-that-will-not-install"
       ]
@@ -2317,9 +2320,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-application-timeout"
       ]
@@ -2349,9 +2352,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-aws-ec2-instance-that-is-unreachable"
       ]
@@ -2365,9 +2368,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-an-azure-virtual-desktop-black-screen"
       ]
@@ -2397,9 +2400,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-azure-virtual-machine-that-is-unreachable"
       ]
@@ -2461,9 +2464,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-an-exhausted-dhcp-scope"
       ]
@@ -2477,9 +2480,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-an-expired-user-certificate"
       ]
@@ -2509,9 +2512,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-external-monitor-with-no-signal"
       ]
@@ -2541,9 +2544,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-http-403-error"
       ]
@@ -2557,9 +2560,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-http-404-error"
       ]
@@ -2573,9 +2576,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-an-http-500-error"
       ]
@@ -2589,9 +2592,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-an-intune-compliance-failure"
       ]
@@ -2621,9 +2624,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "triage-an-office-or-site-wide-outage"
       ]
@@ -2749,9 +2752,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-blocked-office-macros-safely"
       ]
@@ -2868,9 +2871,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "prepare-and-validate-a-high-priority-video-conference",
         "provision-or-change-a-phone-extension",
@@ -2915,9 +2918,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "add-or-remove-security-group-membership",
         "assign-or-remove-a-microsoft-365-licence",
@@ -2976,9 +2979,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-chrome-profile-synchronisation"
       ]
@@ -3175,9 +3178,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-a-network-diagnostic-baseline",
         "resolve-a-duplicate-ip-address",
@@ -3221,9 +3224,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "configure-corporate-email-on-android",
         "configure-corporate-email-on-ios",
@@ -3334,9 +3337,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-directory-synchronisation"
       ]
@@ -3590,9 +3593,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-excessive-mobile-battery-drain"
       ]
@@ -3686,9 +3689,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-google-drive-synchronisation"
       ]
@@ -3718,9 +3721,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-a-google-workspace-storage-quota-issue",
         "restore-a-google-drive-file-version",
@@ -3842,9 +3845,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-high-cpu-utilisation"
       ]
@@ -3874,9 +3877,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-high-memory-utilisation"
       ]
@@ -3890,9 +3893,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-incorrect-system-time"
       ]
@@ -4066,9 +4069,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-linux-logs-for-escalation",
         "resolve-low-disk-space-on-linux",
@@ -4147,9 +4150,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-low-disk-space-on-a-server"
       ]
@@ -4163,9 +4166,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-low-disk-space-on-linux"
       ]
@@ -4179,9 +4182,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-low-disk-space-on-windows"
       ]
@@ -4195,9 +4198,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-low-virtualisation-datastore-capacity"
       ]
@@ -4211,9 +4214,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-macos-diagnostic-logs",
         "enrol-a-mac-into-mdm",
@@ -4276,9 +4279,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-macos-mdm-compliance-failure"
       ]
@@ -4292,9 +4295,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-macos-sign-in-failure"
       ]
@@ -4385,12 +4388,12 @@
       "legacyContentType": "symptom",
       "legacySeverity": "medium",
       "category": "Hardware & Peripherals",
-      "objectType": "observable_symptom",
+      "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Final QA: memory hardware errors indicate an identified hardware condition; downstream symptoms such as crashes or boot failures remain observable symptoms.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-memory-hardware-errors"
       ]
@@ -4404,9 +4407,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "teams-microphone-not-working"
       ]
@@ -4436,9 +4439,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "clear-and-rebuild-the-teams-cache",
         "recover-a-deleted-email",
@@ -4635,9 +4638,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "resolve-mobile-device-compliance-failure"
       ]
@@ -4684,9 +4687,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-mobile-outlook-synchronisation"
       ]
@@ -4748,9 +4751,9 @@
       "objectType": "context",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit scope/business-context language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed context.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "assess-business-impact-and-urgency",
         "classify-incident-category-and-priority",
@@ -4783,9 +4786,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "grant-access-through-an-approved-request"
       ]
@@ -4799,9 +4802,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "grant-calendar-delegate-access"
       ]
@@ -4815,9 +4818,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "provide-secure-remote-support-to-macos"
       ]
@@ -4831,9 +4834,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "provide-secure-remote-support"
       ]
@@ -4847,9 +4850,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "grant-shared-mailbox-access"
       ]
@@ -4927,9 +4930,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "apply-an-approved-standard-configuration"
       ]
@@ -4943,9 +4946,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "assess-accidental-or-liquid-damage"
       ]
@@ -4959,9 +4962,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "assess-business-impact-and-urgency"
       ]
@@ -4975,9 +4978,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "assess-storage-drive-health"
       ]
@@ -4991,9 +4994,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "audit-assigned-equipment"
       ]
@@ -5007,9 +5010,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "assign-or-remove-a-microsoft-365-licence"
       ]
@@ -5023,9 +5026,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "add-or-remove-security-group-membership"
       ]
@@ -5039,9 +5042,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-a-network-diagnostic-baseline"
       ]
@@ -5055,9 +5058,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-a-windows-crash-dump"
       ]
@@ -5071,9 +5074,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-business-application-logs"
       ]
@@ -5087,9 +5090,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-cloud-resource-diagnostics"
       ]
@@ -5103,9 +5106,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-linux-logs-for-escalation"
       ]
@@ -5119,9 +5122,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-macos-diagnostic-logs"
       ]
@@ -5135,9 +5138,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-returned-equipment"
       ]
@@ -5151,9 +5154,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-security-incident-evidence"
       ]
@@ -5167,9 +5170,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-server-logs-for-escalation"
       ]
@@ -5183,9 +5186,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "collect-windows-event-logs-for-escalation"
       ]
@@ -5199,9 +5202,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "complete-a-post-incident-review"
       ]
@@ -5215,9 +5218,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "configure-corporate-email-on-android"
       ]
@@ -5231,9 +5234,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "configure-corporate-email-on-ios"
       ]
@@ -5247,9 +5250,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "declare-and-coordinate-a-major-incident"
       ]
@@ -5263,9 +5266,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "coordinate-an-approved-server-restart"
       ]
@@ -5279,9 +5282,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "create-a-problem-record-from-recurring-incidents"
       ]
@@ -5295,9 +5298,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "create-or-update-a-knowledge-article"
       ]
@@ -5311,9 +5314,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "engage-a-third-party-vendor-for-support"
       ]
@@ -5327,9 +5330,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "handle-a-duplicate-incident"
       ]
@@ -5343,9 +5346,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "handle-a-sensitive-data-misdelivery"
       ]
@@ -5375,9 +5378,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "install-or-renew-a-mobile-certificate"
       ]
@@ -5391,9 +5394,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "install-or-update-a-printer-driver"
       ]
@@ -5407,9 +5410,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "join-a-windows-device-to-the-corporate-directory"
       ]
@@ -5423,9 +5426,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "link-an-incident-to-a-recent-change"
       ]
@@ -5439,9 +5442,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "manage-a-distribution-group-membership-request"
       ]
@@ -5455,9 +5458,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "manage-an-sla-breach-risk"
       ]
@@ -5471,9 +5474,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "prepare-a-device-for-reassignment"
       ]
@@ -5487,9 +5490,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "prepare-a-device-for-warranty-repair"
       ]
@@ -5503,9 +5506,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "prepare-a-standard-corporate-workstation"
       ]
@@ -5519,9 +5522,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "prepare-and-validate-a-high-priority-video-conference"
       ]
@@ -5535,9 +5538,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "provision-a-device-with-windows-autopilot"
       ]
@@ -5551,9 +5554,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "provision-a-new-user-account"
       ]
@@ -5567,9 +5570,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "provision-external-guest-access"
       ]
@@ -5583,9 +5586,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "provision-or-change-a-phone-extension"
       ]
@@ -5599,9 +5602,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "record-a-new-asset-in-inventory"
       ]
@@ -5615,9 +5618,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "remove-an-unauthorised-browser-extension"
       ]
@@ -5631,9 +5634,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "remove-and-reinstall-a-printer-cleanly"
       ]
@@ -5647,9 +5650,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "remove-corporate-data-from-a-personal-device"
       ]
@@ -5663,9 +5666,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "remove-inappropriate-or-expired-access"
       ]
@@ -5679,9 +5682,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "rename-a-corporate-windows-device"
       ]
@@ -5695,9 +5698,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "review-and-remove-stale-vm-snapshots-safely"
       ]
@@ -5711,9 +5714,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "review-privileged-access-activation-failure"
       ]
@@ -5727,9 +5730,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "securely-collect-logs-for-the-security-team"
       ]
@@ -5743,9 +5746,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "securely-transfer-large-business-files"
       ]
@@ -5759,9 +5762,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "securely-wipe-a-retired-device"
       ]
@@ -5791,9 +5794,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "update-bios-or-device-firmware-safely"
       ]
@@ -5807,9 +5810,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "validate-a-backup-restore-request"
       ]
@@ -5823,9 +5826,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "validate-accessories-issued-with-a-device"
       ]
@@ -5839,9 +5842,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "validate-critical-security-patch-deployment"
       ]
@@ -5855,9 +5858,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "validate-microsoft-365-service-health"
       ]
@@ -5871,9 +5874,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "validate-replacement-hardware-before-handover"
       ]
@@ -5887,9 +5890,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "validate-service-restoration-before-closure"
       ]
@@ -5965,9 +5968,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-no-dial-tone-on-a-desk-phone"
       ]
@@ -5981,9 +5984,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-no-ethernet-connectivity"
       ]
@@ -5997,9 +6000,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-no-wi-fi-connectivity"
       ]
@@ -6045,9 +6048,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-offline-files-synchronisation"
       ]
@@ -6077,9 +6080,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-one-way-audio"
       ]
@@ -6093,9 +6096,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-onedrive-synchronisation"
       ]
@@ -6125,9 +6128,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-outlook-search"
       ]
@@ -6157,9 +6160,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-outlook-that-will-not-open"
       ]
@@ -6173,9 +6176,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "outlook-crashes"
       ]
@@ -6189,9 +6192,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-packet-loss"
       ]
@@ -6221,9 +6224,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-poor-call-quality"
       ]
@@ -6269,9 +6272,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-post-errors-or-beep-codes"
       ]
@@ -6333,9 +6336,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "printer-offline"
       ]
@@ -6365,9 +6368,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "clear-a-stuck-windows-print-queue",
         "install-or-update-a-printer-driver",
@@ -6411,9 +6414,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-recurring-outlook-credential-prompts"
       ]
@@ -6459,9 +6462,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-remote-desktop-connection-failure"
       ]
@@ -6475,9 +6478,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-remote-desktop-licensing-errors"
       ]
@@ -6633,9 +6636,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-a-lost-or-stolen-computer"
       ]
@@ -6649,9 +6652,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-a-lost-or-stolen-mobile-device"
       ]
@@ -6665,9 +6668,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-a-malicious-or-unknown-usb-device"
       ]
@@ -6697,9 +6700,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-a-suspected-compromised-account"
       ]
@@ -6713,9 +6716,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-a-suspected-malware-infection"
       ]
@@ -6729,9 +6732,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-a-suspected-phishing-message"
       ]
@@ -6742,12 +6745,12 @@
       "legacyContentType": "symptom",
       "legacySeverity": "medium",
       "category": "Servers & Core Infrastructure",
-      "objectType": "incident_event",
+      "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Final QA: an expiring TLS certificate is a known lifecycle/configuration condition requiring planned remediation, not an incident merely because it was reported.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-an-expiring-tls-certificate"
       ]
@@ -6761,9 +6764,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-an-impossible-travel-alert"
       ]
@@ -6777,9 +6780,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-suspected-data-leakage"
       ]
@@ -6793,9 +6796,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-suspicious-account-activity"
       ]
@@ -6809,9 +6812,9 @@
       "objectType": "incident_event",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit incident/security/outage event language.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "respond-to-unauthorised-software"
       ]
@@ -6857,9 +6860,9 @@
       "objectType": "service_request",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Explicit request/need wording.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "process-a-standard-service-request"
       ]
@@ -6953,9 +6956,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-screen-flicker-or-graphics-corruption"
       ]
@@ -6985,9 +6988,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-server-high-cpu"
       ]
@@ -7001,9 +7004,9 @@
       "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title states a technical condition/diagnosis rather than an initial observation.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-server-high-memory"
       ]
@@ -7033,9 +7036,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-sharepoint-document-synchronisation"
       ]
@@ -7065,9 +7068,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-single-sign-on-failure"
       ]
@@ -7097,9 +7100,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "slow-windows-pc"
       ]
@@ -7113,9 +7116,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-slow-internet-access"
       ]
@@ -7129,9 +7132,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-slow-vpn-performance"
       ]
@@ -7276,9 +7279,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-teams-meeting-join-failure"
       ]
@@ -7388,9 +7391,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-usb-storage-not-detected"
       ]
@@ -7513,12 +7516,12 @@
       "legacyContentType": "symptom",
       "legacySeverity": "high",
       "category": "Network & Connectivity",
-      "objectType": "observable_symptom",
+      "objectType": "known_condition",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Final QA: the record already identifies certificate failure as the VPN authentication condition; 'VPN fails to connect' remains the observable symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-vpn-certificate-failure"
       ]
@@ -7548,9 +7551,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "vpn-not-connecting"
       ]
@@ -7628,9 +7631,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "assess-storage-drive-health",
         "collect-a-windows-crash-dump",
@@ -7704,9 +7707,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-windows-no-boot-or-boot-loop"
       ]
@@ -7752,9 +7755,9 @@
       "objectType": "observable_symptom",
       "confidence": "high",
       "reviewRequired": false,
-      "classificationOrigin": "deterministic_v2",
-      "reason": "Title directly describes observable behaviour/failure.",
-      "reviewSource": "",
+      "classificationOrigin": "review_override",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "reviewSource": "Phase 1A Final QA",
       "relatedProcedures": [
         "troubleshoot-word-or-excel-crashes"
       ]

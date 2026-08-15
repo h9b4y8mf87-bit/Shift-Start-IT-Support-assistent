@@ -26,6 +26,10 @@ const ACTION_PREFIXES = [
 ];
 
 const KNOWN_CONDITION_PATTERNS = [
+  /\bdefault gateway failure\b/,
+  /\bexpiring tls certificate\b/,
+  /\bmemory hardware errors?\b/,
+  /\bvpn certificate failure\b/,
   /\bduplicate ip\b/,
   /\bapipa\b/,
   /\bconditional access block\b/,
@@ -114,6 +118,11 @@ function classify(symptom) {
     return classification("context", "high", "Explicit scope/business-context language.");
   }
 
+  // Known technical conditions outrank generic reported/event wording.
+  if (KNOWN_CONDITION_PATTERNS.some((pattern) => pattern.test(title))) {
+    return classification("known_condition", "high", "Title states a technical condition/diagnosis rather than an initial observation.");
+  }
+
   if (
     title.startsWith("reported ") ||
     INCIDENT_EVENT_PATTERNS.some((pattern) => pattern.test(title))
@@ -132,10 +141,6 @@ function classify(symptom) {
 
   if (ACTION_PREFIXES.some((prefix) => title.startsWith(prefix))) {
     return classification("service_request", "medium", "Imperative action wording; review to confirm request versus event.");
-  }
-
-  if (KNOWN_CONDITION_PATTERNS.some((pattern) => pattern.test(title))) {
-    return classification("known_condition", "high", "Title states a technical condition/diagnosis rather than an initial observation.");
   }
 
   if (OBSERVABLE_TOKENS.some((token) => title.includes(token))) {
@@ -195,9 +200,11 @@ for (const symptom of symptoms) {
 
 const counts = {};
 let reviewRequired = 0;
+let explicitReviewed = 0;
 for (const record of Object.values(records)) {
   counts[record.objectType] = (counts[record.objectType] || 0) + 1;
   if (record.reviewRequired) reviewRequired += 1;
+  if (record.classificationOrigin === "review_override") explicitReviewed += 1;
 }
 
 const payload = {
@@ -217,7 +224,10 @@ const payload = {
   review: {
     reviewed: symptoms.length - reviewRequired,
     reviewRequired,
-    completionPercent: symptoms.length ? Math.round(((symptoms.length - reviewRequired) / symptoms.length) * 1000) / 10 : 0
+    completionPercent: symptoms.length ? Math.round(((symptoms.length - reviewRequired) / symptoms.length) * 1000) / 10 : 0,
+    explicitReviewed,
+    explicitReviewRequired: symptoms.length - explicitReviewed,
+    explicitCompletionPercent: symptoms.length ? Math.round((explicitReviewed / symptoms.length) * 1000) / 10 : 0
   },
   records
 };
@@ -242,3 +252,4 @@ fs.writeFileSync(
 console.log(`Phase 1A taxonomy built for ${symptoms.length} records.`);
 console.log(`Object types: ${JSON.stringify(counts)}.`);
 console.log(`Reviewed/accepted: ${payload.review.reviewed}; review required: ${reviewRequired}.`);
+console.log(`Explicit review overrides: ${payload.review.explicitReviewed}; deterministic-only: ${payload.review.explicitReviewRequired}.`);

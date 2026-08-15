@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "description": "Human-reviewed Phase 1A taxonomy overrides. Do not use this file for incident priority or execution risk.",
+  "description": "Explicitly reviewed Phase 1A taxonomy overrides. Do not use this file for incident priority or execution risk.",
   "records": {
     "802-1x-authentication": {
       "object_type": "observable_symptom",
@@ -16,6 +16,13 @@
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-browser-certificate-warning": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-browser-extension-conflict": {
       "object_type": "known_condition",
       "reviewed": true,
@@ -29,6 +36,20 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-browser-sign-in-loop": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-business-application-or-website-is-not-working": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-business-application-sign-in": {
       "object_type": "observable_symptom",
@@ -65,12 +86,26 @@
       "reason": "Manual Review Pass 1: the record represents a security event, outage, service degradation or other incident/event requiring incident handling.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-cloud-service-outage": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-cloud-vpn-gateway": {
       "object_type": "context",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-conditional-access-block": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-conference-room-camera": {
       "object_type": "context",
@@ -128,6 +163,13 @@
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-default-gateway-failure": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Final QA: the record names the default gateway as the identified failing network condition rather than only reporting loss of connectivity.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-deleted-email": {
       "object_type": "known_condition",
       "reviewed": true,
@@ -141,6 +183,13 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-desktop-with-no-power": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-developer-ide": {
       "object_type": "context",
@@ -205,6 +254,13 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-domain-trust-relationship-failure": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-duplicate-ip-address": {
       "object_type": "known_condition",
       "reviewed": true,
@@ -212,12 +268,47 @@
       "reason": "Duplicate IP address is a diagnosed technical condition rather than an initial user observation.",
       "review_source": "Phase 1A external review"
     },
+    "a-failed-endpoint-backup": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-failed-keyboard": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "A failed keyboard is an observable endpoint/peripheral condition before root cause is known.",
       "review_source": "Phase 1A external review"
+    },
+    "a-failed-mouse-or-pointing-device": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-failed-scheduled-task": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-failed-server-backup": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-failed-systemd-service": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-failing-storage-device": {
       "object_type": "known_condition",
@@ -275,6 +366,13 @@
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-google-workspace-storage-quota-issue": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-headset": {
       "object_type": "context",
       "reviewed": true,
@@ -309,6 +407,13 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-laptop-battery-not-charging": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-laptop-display-with-no-image": {
       "object_type": "observable_symptom",
@@ -345,6 +450,13 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-macos-error-or-access-issue-is-reported": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-macos-kernel-panic": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -359,12 +471,47 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-mapped-drive-reconnect-failure": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-missing-dll-or-runtime-dependency": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-mobile-work-profile": {
       "object_type": "context",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-network-access-control-block": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-network-printer-that-is-unreachable": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-network-share-access-failure": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-onedrive-or-sharepoint-version": {
       "object_type": "service_request",
@@ -373,12 +520,33 @@
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-onedrive-sign-in-loop": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-paper-jam-safely": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-patch-compliance-failure": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-pdf-that-will-not-open": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-print-server": {
       "object_type": "context",
@@ -394,6 +562,13 @@
       "reason": "Manual Review Pass 1: the record represents a security event, outage, service degradation or other incident/event requiring incident handling.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-remote-desktop-black-screen": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-room-booking-panel": {
       "object_type": "context",
       "reviewed": true,
@@ -407,6 +582,20 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-saml-application-error": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-scanner-not-detected": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-security-or-compliance-concern-is-reported": {
       "object_type": "incident_event",
@@ -443,6 +632,20 @@
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-site-internet-outage": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-site-wide-lan-outage": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-softphone-sign-in": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -477,6 +680,20 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-teams-room-system-offline": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-temporary-windows-profile": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-usb-peripheral": {
       "object_type": "context",
@@ -513,6 +730,20 @@
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-web-server-http-500-error": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-web-server-http-503-error": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-webcam-on-windows": {
       "object_type": "context",
       "reviewed": true,
@@ -520,12 +751,61 @@
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "a-windows-certificate-service-request": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-windows-device-that-will-not-power-on": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-windows-error-or-performance-issue-is-reported": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "a-windows-file-share": {
       "object_type": "context",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "a-windows-server-that-is-unreachable": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-windows-service-that-will-not-start": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-windows-update-failure": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "a-wireless-access-point-outage": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
     },
     "a-zero-trust-network-client": {
       "object_type": "context",
@@ -597,6 +877,48 @@
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "an-apipa-address": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-application-access-denied-error": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-application-role-assignment-failure": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-application-that-crashes": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-application-that-will-not-install": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-application-timeout": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "an-asset-inventory-mismatch": {
       "object_type": "known_condition",
       "reviewed": true,
@@ -604,12 +926,33 @@
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "an-aws-ec2-instance-that-is-unreachable": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-azure-virtual-desktop-black-screen": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "an-azure-virtual-desktop-sign-in": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "an-azure-virtual-machine-that-is-unreachable": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "an-earlier-onedrive-file-version": {
       "object_type": "service_request",
@@ -632,6 +975,20 @@
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "an-exhausted-dhcp-scope": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-expired-user-certificate": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "an-external-display-on-macos": {
       "object_type": "context",
       "reviewed": true,
@@ -646,12 +1003,54 @@
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "an-external-monitor-with-no-signal": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-http-403-error": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-http-404-error": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-http-500-error": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "an-intune-compliance-failure": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "an-odbc-data-source": {
       "object_type": "context",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "an-office-or-site-wide-outage": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
     },
     "an-outlook-profile": {
       "object_type": "context",
@@ -702,6 +1101,13 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "blocked-office-macros-safely": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "bluetooth-devices": {
       "object_type": "context",
       "reviewed": true,
@@ -737,6 +1143,13 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "calling-audio-video-or-meeting-room-technology-is-not-working": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "camera-access-on-macos": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -744,12 +1157,26 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "cannot-sign-in": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "check-domain-controller-health": {
       "object_type": "service_request",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "chrome-profile-synchronisation": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "citrix-audio-or-microphone": {
       "object_type": "observable_symptom",
@@ -814,6 +1241,20 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "connection-is-slow-or-intermittent": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "corporate-access-on-a-mobile-device-is-not-working": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "corporate-wi-fi-on-mobile": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -848,6 +1289,13 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "directory-synchronisation": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "disk-encryption-compliance": {
       "object_type": "known_condition",
@@ -954,6 +1402,13 @@
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "excessive-mobile-battery-drain": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "general-workstation-triage": {
       "object_type": "service_request",
       "reviewed": true,
@@ -989,12 +1444,26 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "google-drive-synchronisation": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "google-meet-audio-or-video": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "google-workspace-feature-is-not-working": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "google-workspace-mobile-access": {
       "object_type": "observable_symptom",
@@ -1031,12 +1500,33 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "high-cpu-utilisation": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "high-load-on-linux": {
       "object_type": "known_condition",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "high-memory-utilisation": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "incorrect-system-time": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
     },
     "intermittent-network-connectivity": {
       "object_type": "observable_symptom",
@@ -1108,6 +1598,13 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "linux-or-developer-tooling-is-not-working": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "linux-package-installation": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -1129,6 +1626,41 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "low-disk-space-on-a-server": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "low-disk-space-on-linux": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "low-disk-space-on-windows": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "low-virtualisation-datastore-capacity": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "mac-is-not-working-correctly": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "macos-application-permission-prompts": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -1142,6 +1674,20 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "macos-mdm-compliance-failure": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "macos-sign-in-failure": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "macos-software-update": {
       "object_type": "observable_symptom",
@@ -1178,12 +1724,33 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "memory-hardware-errors": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Final QA: memory hardware errors indicate an identified hardware condition; downstream symptoms such as crashes or boot failures remain observable symptoms.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "microphone-fails": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "microsoft-365-apps-installation": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "microsoft-365-feature-is-not-working": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "microsoft-forms-access": {
       "object_type": "observable_symptom",
@@ -1248,12 +1815,26 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "mobile-device-compliance-failure": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "mobile-device-is-not-compliant": {
       "object_type": "known_condition",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "mobile-outlook-synchronisation": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "mobile-storage-exhaustion": {
       "object_type": "known_condition",
@@ -1275,6 +1856,48 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "multiple-users-or-services-may-be-affected": {
+      "object_type": "context",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed context.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-access-through-an-approved-request": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-calendar-delegate-access": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-secure-remote-support": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-secure-remote-support-to-macos": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-shared-mailbox-access": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
     },
     "need-to-a-desk-move": {
       "object_type": "service_request",
@@ -1304,6 +1927,195 @@
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "need-to-apply-an-approved-standard-configuration": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-assess-accidental-or-liquid-damage": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-assess-business-impact-and-urgency": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-assess-storage-drive-health": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-audit-assigned-equipment": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-change-a-microsoft-365-licence": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-change-security-group-membership": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-a-network-diagnostic-baseline": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-a-windows-crash-dump": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-business-application-logs": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-cloud-resource-diagnostics": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-linux-logs-for-escalation": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-macos-diagnostic-logs": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-returned-equipment": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-security-incident-evidence": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-server-logs-for-escalation": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-collect-windows-event-logs-for-escalation": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-complete-a-post-incident-review": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-configure-corporate-email-on-android": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-configure-corporate-email-on-ios": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-coordinate-a-major-incident": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-coordinate-an-approved-server-restart": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-create-a-problem-record-from-recurring-incidents": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-create-or-update-a-knowledge-article": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-engage-a-third-party-vendor-for-support": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-handle-a-duplicate-incident": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-handle-a-sensitive-data-misdelivery": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
     "need-to-initial-incident-triage": {
       "object_type": "service_request",
       "reviewed": true,
@@ -1311,12 +2123,236 @@
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "need-to-install-or-renew-a-mobile-certificate": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-install-or-update-a-printer-driver": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-join-a-windows-device-to-the-corporate-directory": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-link-an-incident-to-a-recent-change": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-manage-a-distribution-group-membership-request": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-manage-an-sla-breach-risk": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-prepare-a-device-for-reassignment": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-prepare-a-device-for-warranty-repair": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-prepare-a-standard-corporate-workstation": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-prepare-and-validate-a-high-priority-video-conference": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-provision-a-device-with-windows-autopilot": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-provision-a-new-user-account": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-provision-external-guest-access": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-provision-or-change-a-phone-extension": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-record-a-new-asset-in-inventory": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-remove-an-unauthorised-browser-extension": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-remove-and-reinstall-a-printer-cleanly": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-remove-corporate-data-from-a-personal-device": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-remove-inappropriate-or-expired-access": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-rename-a-corporate-windows-device": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-review-and-remove-stale-vm-snapshots-safely": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-review-privileged-access-activation-failure": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-securely-collect-logs-for-the-security-team": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-securely-transfer-large-business-files": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-securely-wipe-a-retired-device": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
     "need-to-shift-handover-for-open-incidents": {
       "object_type": "service_request",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "need-to-update-bios-or-device-firmware-safely": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-validate-a-backup-restore-request": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-validate-accessories-issued-with-a-device": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-validate-critical-security-patch-deployment": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-validate-microsoft-365-service-health": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-validate-replacement-hardware-before-handover": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "need-to-validate-service-restoration-before-closure": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
     },
     "network-latency": {
       "object_type": "observable_symptom",
@@ -1332,6 +2368,27 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "no-dial-tone-on-a-desk-phone": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "no-ethernet-connectivity": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "no-wi-fi-connectivity": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "offboard-and-recover-a-departing-employee-device": {
       "object_type": "service_request",
       "reviewed": true,
@@ -1346,12 +2403,33 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "offline-files-synchronisation": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "onboard-a-new-employee-device": {
       "object_type": "service_request",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "one-way-audio": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "onedrive-synchronisation": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "outlook-add-ins": {
       "object_type": "observable_symptom",
@@ -1360,6 +2438,13 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "outlook-search": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "outlook-send-and-receive": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -1367,12 +2452,40 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "outlook-that-will-not-open": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "outlook-wont-open": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "packet-loss": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
     "passwordless-sign-in": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "poor-call-quality": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "poor-print-quality": {
       "object_type": "observable_symptom",
@@ -1387,6 +2500,13 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record states an identified technical, configuration, capacity, compliance, data-state or physical condition.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "post-errors-or-beep-codes": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "power-bi-sign-in-or-access": {
       "object_type": "observable_symptom",
@@ -1409,6 +2529,13 @@
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "printer-offline-symptom": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "printing-from-macos": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -1416,12 +2543,26 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "printing-or-scanning-is-not-working": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "proxy-configuration": {
       "object_type": "context",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily names the affected technology, component or environment and is useful as diagnostic context rather than a standalone fault.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "recurring-outlook-credential-prompts": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "reimage-a-managed-windows-device": {
       "object_type": "service_request",
@@ -1436,6 +2577,20 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "remote-desktop-connection-failure": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "remote-desktop-licensing-errors": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "remote-desktop-or-virtual-application-access-is-failing": {
       "object_type": "observable_symptom",
@@ -1493,12 +2648,89 @@
       "reason": "Manual Review Pass 1: the record represents a security event, outage, service degradation or other incident/event requiring incident handling.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "reported-a-lost-or-stolen-computer": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-a-lost-or-stolen-mobile-device": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-a-malicious-or-unknown-usb-device": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
     "reported-a-ransomware-alert": {
       "object_type": "incident_event",
       "reviewed": true,
       "confidence": "high",
       "reason": "Ransomware alert is a security incident/event requiring response handling.",
       "review_source": "Phase 1A external review"
+    },
+    "reported-a-suspected-compromised-account": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-a-suspected-malware-infection": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-a-suspected-phishing-message": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-an-expiring-tls-certificate": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Final QA: an expiring TLS certificate is a known lifecycle/configuration condition requiring planned remediation, not an incident merely because it was reported.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-an-impossible-travel-alert": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-suspected-data-leakage": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-suspicious-account-activity": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "reported-unauthorised-software": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed incident_event.",
+      "review_source": "Phase 1A Final QA"
     },
     "request-to-a-hardware-request": {
       "object_type": "service_request",
@@ -1513,6 +2745,13 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "request-to-a-standard-service-request": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed service_request.",
+      "review_source": "Phase 1A Final QA"
     },
     "request-to-a-vendor-rma": {
       "object_type": "service_request",
@@ -1549,12 +2788,33 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "screen-flicker-or-graphics-corruption": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "secure-or-follow-me-printing": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "server-high-cpu": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "server-high-memory": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed known_condition.",
+      "review_source": "Phase 1A Final QA"
     },
     "sharepoint-access": {
       "object_type": "observable_symptom",
@@ -1563,6 +2823,13 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "sharepoint-document-synchronisation": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "sharepoint-external-sharing": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -1570,12 +2837,40 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "single-sign-on-failure": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "sleep-wake-or-hibernation": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "slow-computer": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "slow-internet-access": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
+    "slow-vpn-performance": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "smart-card-sign-in": {
       "object_type": "observable_symptom",
@@ -1626,6 +2921,13 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "teams-meeting-join-failure": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "teams-presence": {
       "object_type": "observable_symptom",
       "reviewed": true,
@@ -1667,6 +2969,13 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record primarily represents a requested or required approved support action, change, recovery, validation or administrative task.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "usb-storage-not-detected": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "user-account-control-or-admin-rights-requests": {
       "object_type": "service_request",
@@ -1717,12 +3026,26 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "vpn-certificate-failure": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Final QA: the record already identifies certificate failure as the VPN authentication condition; 'VPN fails to connect' remains the observable symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "vpn-disconnections": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "vpn-fails": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "windows-365-cloud-pc-access": {
       "object_type": "observable_symptom",
@@ -1752,12 +3075,26 @@
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
     },
+    "windows-device-is-not-working-correctly": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
+    },
     "windows-hello-enrolment": {
       "object_type": "observable_symptom",
       "reviewed": true,
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "windows-no-boot-or-boot-loop": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "wireless-presentation": {
       "object_type": "observable_symptom",
@@ -1772,6 +3109,13 @@
       "confidence": "high",
       "reason": "Manual Review Pass 1: the record expresses an observed failure, behaviour or access problem before root cause is established.",
       "review_source": "Phase 1A Review Pass 1"
+    },
+    "word-or-excel-crashes": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Phase 1A Final QA: reviewed deterministic classification and confirmed observable_symptom.",
+      "review_source": "Phase 1A Final QA"
     },
     "wsl": {
       "object_type": "context",
