@@ -21,6 +21,18 @@ const effectiveProcedureStatus = (data) => {
 
 const symptoms = readCollection("_symptoms");
 const procedures = readCollection("_procedures");
+
+const taxonomyPath = path.join("reports", "symptom-taxonomy-v2.json");
+if (!fs.existsSync(taxonomyPath)) {
+  throw new Error("Phase 1A taxonomy report missing. Run npm run taxonomy:v2:build first.");
+}
+const taxonomy = JSON.parse(fs.readFileSync(taxonomyPath, "utf8"));
+const taxonomyRecords = taxonomy.records || {};
+for (const symptom of symptoms) {
+  if (!taxonomyRecords[symptom.slug]) {
+    throw new Error(`Missing Phase 1A taxonomy record for ${symptom.slug}`);
+  }
+}
 const inferred = new Map(symptoms.map((symptom) => [symptom.slug, new Set(symptom.data.related_procedures || [])]));
 for (const procedure of procedures) {
   for (const symptom of procedure.data.related_symptoms || []) {
@@ -35,10 +47,17 @@ const statusCounts = procedures.reduce((acc, procedure) => {
   return acc;
 }, {});
 
+const objectTypeCounts = symptoms.reduce((acc, symptom) => {
+  const type = taxonomyRecords[symptom.slug].objectType;
+  acc[type] = (acc[type] || 0) + 1;
+  return acc;
+}, {});
+
 const payload = {
-  schemaVersion: 4,
+  schemaVersion: 5,
   generatedAt: new Date().toISOString(),
-  counts: { symptoms: symptoms.length, procedures: procedures.length, statuses: statusCounts },
+  counts: { symptoms: symptoms.length, procedures: procedures.length, statuses: statusCounts, objectTypes: objectTypeCounts },
+  objectTypes: taxonomy.objectTypes || [],
   categories: [...new Set(symptoms.map((symptom) => symptom.data.category || "Other"))].sort(),
   symptoms: symptoms.map((symptom) => ({
     id: symptom.slug,
@@ -46,6 +65,10 @@ const payload = {
     description: symptom.data.description || "",
     category: symptom.data.category || "Other",
     severity: symptom.data.severity || "medium",
+    legacySeverity: symptom.data.severity || "medium",
+    objectType: taxonomyRecords[symptom.slug].objectType,
+    taxonomyConfidence: taxonomyRecords[symptom.slug].confidence,
+    taxonomyReviewRequired: taxonomyRecords[symptom.slug].reviewRequired,
     tags: symptom.data.tags || [],
     relatedProcedures: [...(inferred.get(symptom.slug) || [])].sort()
   })).sort((a, b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title)),

@@ -5,12 +5,12 @@
   "description": "Enterprise-scale, device-optimised technician-first IT support knowledge base built with Jekyll, Tailwind and a multi-select symptom matcher.",
   "scripts": {
     "clean": "rimraf _site assets/data assets/css/site.css",
-    "generate": "node scripts/generate-wizard.js && node scripts/generate-search-data.js",
+    "generate": "npm run taxonomy:v2:build && node scripts/generate-wizard.js && node scripts/generate-search-data.js",
     "css": "tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --minify",
     "jekyll": "bundle exec jekyll build",
     "build": "npm run clean && npm run remediate:apply && npm run vendor && npm run generate && npm run css && bundle exec jekyll build && npm run site:artifact:clean",
     "dev": "npm run remediate:apply && npm run vendor && npm run generate && npm run css && concurrently \"tailwindcss -i ./_assets/css/tailwind.css -o ./assets/css/site.css --watch\" \"bundle exec jekyll serve --livereload\"",
-    "check": "node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check && npm run readiness:check && npm run verification:queue && npm run verification:queue:check && npm run verification:batches && npm run verification:batches:check && npm run verification:evidence:check && npm run sprint1:audit:check && npm run batch:b1:check && npm run batch:b2:check && npm run batch:b3:check && npm run batch:b4:check && npm run batch:b5:check && npm run batch:b6:check && npm run post:b6:governance:check && npm run product:polish:check && npm run final:governance:check",
+    "check": "npm run taxonomy:v2:build && npm run taxonomy:v2:check && node scripts/validate-content.js && node scripts/post-remediation-check.js && npm run responsive:check && npm run readiness:check && npm run verification:queue && npm run verification:queue:check && npm run verification:batches && npm run verification:batches:check && npm run verification:evidence:check && npm run sprint1:audit:check && npm run batch:b1:check && npm run batch:b2:check && npm run batch:b3:check && npm run batch:b4:check && npm run batch:b5:check && npm run batch:b6:check && npm run post:b6:governance:check && npm run product:polish:check && npm run final:governance:check",
     "test": "npm run remediate:apply && npm run check && npm run build",
     "audit-content": "node scripts/validate-content.js",
     "vendor": "node scripts/vendor-assets.js",
@@ -40,7 +40,9 @@
     "post:b6:governance:check": "python3 scripts/validate-post-b6-governance.py",
     "product:polish:check": "python3 scripts/validate-supportvault-product-polish.py",
     "final:governance:check": "python3 scripts/validate-final-governance-consistency.py",
-    "site:artifact:clean": "python3 scripts/clean-pages-artifact.py"
+    "site:artifact:clean": "python3 scripts/clean-pages-artifact.py",
+    "taxonomy:v2:build": "node scripts/build-symptom-taxonomy-v2.js",
+    "taxonomy:v2:check": "node scripts/validate-symptom-taxonomy-v2.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

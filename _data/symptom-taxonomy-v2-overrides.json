@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "description": "Human-reviewed Phase 1A taxonomy overrides. Do not use this file for incident priority or execution risk.",
+  "records": {
+    "enrol-an-iphone-or-ipad-into-mdm": {
+      "object_type": "service_request",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "This is an enrolment action/request, not an observable fault.",
+      "review_source": "Phase 1A external review"
+    },
+    "reported-a-ransomware-alert": {
+      "object_type": "incident_event",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Ransomware alert is a security incident/event requiring response handling.",
+      "review_source": "Phase 1A external review"
+    },
+    "a-failed-keyboard": {
+      "object_type": "observable_symptom",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "A failed keyboard is an observable endpoint/peripheral condition before root cause is known.",
+      "review_source": "Phase 1A external review"
+    },
+    "a-duplicate-ip-address": {
+      "object_type": "known_condition",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "Duplicate IP address is a diagnosed technical condition rather than an initial user observation.",
+      "review_source": "Phase 1A external review"
+    },
+    "support-a-vip-or-executive-user": {
+      "object_type": "context",
+      "reviewed": true,
+      "confidence": "high",
+      "reason": "VIP/executive status is business context that changes handling and urgency, not a fault.",
+      "review_source": "Phase 1A external review"
+    }
+  }
+}
