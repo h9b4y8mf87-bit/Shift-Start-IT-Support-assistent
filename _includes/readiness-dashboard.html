@@ -1,9 +1,31 @@
-{% assign readiness_verified = site.procedures | where: 'content_status', 'verified' %}
-{% assign readiness_review = site.procedures | where: 'content_status', 'under_review' %}
-{% assign readiness_draft = site.procedures | where: 'content_status', 'draft' %}
+{% assign readiness_verified = 0 %}
+{% assign readiness_revalidation = 0 %}
+{% assign readiness_review = 0 %}
+{% assign readiness_draft = 0 %}
+{% assign readiness_deprecated = 0 %}
+{% assign readiness_evidence_complete = 0 %}
 {% assign readiness_missing_risk = 0 %}
-{% assign readiness_evidence_complete = site.procedures | where: 'verification_evidence_state', 'complete' %}
 {% for procedure in site.procedures %}
+  {% assign effective_status = procedure.verification_governance_state | default: procedure.content_status | default: 'under_review' %}
+  {% if effective_status == 'verified' and procedure.verification_v2_complete != true %}
+    {% assign effective_status = 'revalidation_required' %}
+  {% endif %}
+  {% if effective_status == 'verified' and procedure.verification_promotion_ready != true %}
+    {% assign effective_status = 'revalidation_required' %}
+  {% endif %}
+
+  {% case effective_status %}
+    {% when 'verified' %}{% assign readiness_verified = readiness_verified | plus: 1 %}
+    {% when 'revalidation_required' %}{% assign readiness_revalidation = readiness_revalidation | plus: 1 %}
+    {% when 'draft' %}{% assign readiness_draft = readiness_draft | plus: 1 %}
+    {% when 'deprecated' %}{% assign readiness_deprecated = readiness_deprecated | plus: 1 %}
+    {% else %}{% assign readiness_review = readiness_review | plus: 1 %}
+  {% endcase %}
+
+  {% if procedure.verification_v2_complete == true and procedure.verification_promotion_ready == true %}
+    {% assign readiness_evidence_complete = readiness_evidence_complete | plus: 1 %}
+  {% endif %}
+
   {% unless procedure.severity == 'critical' or procedure.severity == 'high' or procedure.severity == 'medium' or procedure.severity == 'low' %}
     {% assign readiness_missing_risk = readiness_missing_risk | plus: 1 %}
   {% endunless %}
@@ -18,29 +40,29 @@
         <p class="rd-eyebrow">Verification dashboard</p>
         <h2>Knowledge trust at a glance</h2>
       </div>
-      <p>Status is not promoted automatically. A new Verified result requires live diagnostic/remediation testing, rollback and escalation confirmation, time validation and owner sign-off.</p>
+      <p>Verification v2 is authoritative. A procedure is shown as Verified only after the live diagnostic/remediation evidence, rollback and escalation confirmation, time validation and owner sign-off gates are complete and promotion-ready.</p>
     </div>
 
     <div class="rd-readiness-grid">
       <div class="rd-readiness-stat verified">
-        <span>✓ Verified status</span>
-        <strong>{{ readiness_verified | size }}</strong>
+        <span>✓ Verified</span>
+        <strong>{{ readiness_verified }}</strong>
         <small>80% target: {{ readiness_target }}</small>
       </div>
-      <div class="rd-readiness-stat verified">
-        <span>✓ Evidence-complete</span>
-        <strong>{{ readiness_evidence_complete | size }}</strong>
-        <small>Recorded live-test gate</small>
+      <div class="rd-readiness-stat review">
+        <span>◷ Revalidation required</span>
+        <strong>{{ readiness_revalidation }}</strong>
+        <small>Historical/expired gate</small>
       </div>
       <div class="rd-readiness-stat review">
         <span>↻ Under review</span>
-        <strong>{{ readiness_review | size }}</strong>
+        <strong>{{ readiness_review }}</strong>
         <small>Prioritised P0 → P3</small>
       </div>
       <div class="rd-readiness-stat">
-        <span>📝 Draft</span>
-        <strong>{{ readiness_draft | size }}</strong>
-        <small>Not for routine production use</small>
+        <span>× Deprecated</span>
+        <strong>{{ readiness_deprecated }}</strong>
+        <small>Compatibility/history only</small>
       </div>
       <div class="rd-readiness-stat missing">
         <span>⚠ Missing risk</span>
@@ -50,7 +72,7 @@
     </div>
 
     <div class="rd-readiness-foot">
-      <span>Risk model: impact-v1 · Critical=P0 · High=P1 · Medium=P2 · Low=P3</span>
+      <span>Evidence-complete &amp; promotion-ready: {{ readiness_evidence_complete }} · Draft: {{ readiness_draft }} · Risk model: impact-v1 · Critical=P0 · High=P1 · Medium=P2 · Low=P3</span>
       <a class="rd-text-action" href="{{ '/content-quality/' | relative_url }}">Open quality controls →</a>
     </div>
   </div>

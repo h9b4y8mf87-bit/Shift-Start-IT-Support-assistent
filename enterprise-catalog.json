@@ -10,7 +10,10 @@ permalink: /assets/data/enterprise-catalog.json
       {% assign severity = item.severity | default: 'low' | downcase %}
       {% assign priority = item.verification_priority %}
       {% unless priority %}{% case severity %}{% when 'critical' %}{% assign priority = 'P0' %}{% when 'high' %}{% assign priority = 'P1' %}{% when 'medium' %}{% assign priority = 'P2' %}{% else %}{% assign priority = 'P3' %}{% endcase %}{% endunless %}
-      {% assign governance = item.verification_governance_state | default: 'under_review' %}
+      {% assign recorded_governance = item.verification_governance_state | default: item.content_status | default: 'under_review' %}
+      {% assign effective_status = recorded_governance %}
+      {% if effective_status == 'verified' and item.verification_v2_complete != true %}{% assign effective_status = 'revalidation_required' %}{% endif %}
+      {% if effective_status == 'verified' and item.verification_promotion_ready != true %}{% assign effective_status = 'revalidation_required' %}{% endif %}
       {
         "id": {{ item.slug | jsonify }},
         "title": {{ item.title | jsonify }},
@@ -20,8 +23,10 @@ permalink: /assets/data/enterprise-catalog.json
         "category": {{ item.category | default: 'Uncategorised' | jsonify }},
         "severity": {{ severity | jsonify }},
         "priority": {{ priority | jsonify }},
-        "contentStatus": {{ item.content_status | default: 'under_review' | jsonify }},
-        "governanceStatus": {{ governance | jsonify }},
+        "contentStatus": {{ effective_status | jsonify }},
+        "legacyContentStatus": {{ item.content_status | default: '' | jsonify }},
+        "governanceStatus": {{ effective_status | jsonify }},
+        "recordedGovernanceStatus": {{ recorded_governance | jsonify }},
         "owner": {{ item.owner_team | default: 'Not assigned' | jsonify }},
         "lastUpdated": {{ item.last_updated | default: item.last_tested | default: item.date | default: '' | date: '%Y-%m-%d' | jsonify }},
         "lastVerified": {{ item.last_verified | default: '' | date: '%Y-%m-%d' | jsonify }},
@@ -31,8 +36,9 @@ permalink: /assets/data/enterprise-catalog.json
         "tags": {% if item.tags %}{{ item.tags | jsonify }}{% else %}[]{% endif %},
         "platforms": {% if item.platforms %}{{ item.platforms | jsonify }}{% else %}[]{% endif %},
         "evidenceScore": {{ item.verification_v2_score_percent | default: 0 }},
-        "evidenceComplete": {% if governance == 'verified' %}true{% else %}false{% endif %},
-        "promotionReady": {% if item.verification_promotion_ready %}true{% else %}false{% endif %}
+        "verificationV2Complete": {% if item.verification_v2_complete == true %}true{% else %}false{% endif %},
+        "evidenceComplete": {% if effective_status == 'verified' and item.verification_v2_complete == true and item.verification_promotion_ready == true %}true{% else %}false{% endif %},
+        "promotionReady": {% if item.verification_promotion_ready == true %}true{% else %}false{% endif %}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],

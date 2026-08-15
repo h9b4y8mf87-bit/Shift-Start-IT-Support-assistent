@@ -67,6 +67,9 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Remove development patch artifacts from Pages output
+        run: npm run site:artifact:clean
+
       - name: Verify complete enterprise build
         run: |
           test -s _site/index.html
@@ -74,8 +77,10 @@ jobs:
           test -s _site/assets/data/search-index.json
           test -s _site/assets/data/search-documents.json
           test -s _site/assets/data/wizard-data.json
+          test -s _site/assets/data/enterprise-catalog.json
           test -s _site/assets/js/lunr.min.js
           test -s reports/content-audit.json
+          python3 scripts/clean-pages-artifact.py --check
           node - <<'NODE'
           const data = require('./assets/data/wizard-data.json');
           if (data.counts.procedures !== 421) throw new Error(`Expected 421 procedures, found ${data.counts.procedures}`);
@@ -111,10 +116,48 @@ jobs:
             );
           }
 
+          const enterprise = require('./_site/assets/data/enterprise-catalog.json');
+          if (enterprise.procedures.length !== data.counts.procedures) {
+            throw new Error(
+              `Enterprise catalogue has ${enterprise.procedures.length} procedures, expected ${data.counts.procedures}`
+            );
+          }
+
+          const enterpriseStatuses = enterprise.procedures.reduce((counts, procedure) => {
+            counts[procedure.contentStatus] = (counts[procedure.contentStatus] || 0) + 1;
+            return counts;
+          }, {});
+
+          for (const [status, count] of Object.entries(statuses)) {
+            if (Number(enterpriseStatuses[status] || 0) !== Number(count)) {
+              throw new Error(
+                `Enterprise catalogue status ${status}=${enterpriseStatuses[status] || 0}, wizard=${count}`
+              );
+            }
+          }
+
+          const invalidEnterpriseVerified = enterprise.procedures.filter(
+            procedure =>
+              procedure.contentStatus === 'verified' &&
+              (
+                procedure.governanceStatus !== 'verified' ||
+                procedure.verificationV2Complete !== true ||
+                procedure.evidenceComplete !== true ||
+                procedure.promotionReady !== true
+              )
+          );
+
+          if (invalidEnterpriseVerified.length) {
+            throw new Error(
+              `Enterprise catalogue exposes ${invalidEnterpriseVerified.length} invalid Verified procedure(s)`
+            );
+          }
+
           console.log(
             `Governed status validation passed. Evidence-complete Verified=${verifiedProcedures.length}`
           );
           console.log(data.counts);
+          console.log('Enterprise catalogue status counts:', enterpriseStatuses);
           NODE
 
       - name: Upload content audit report
