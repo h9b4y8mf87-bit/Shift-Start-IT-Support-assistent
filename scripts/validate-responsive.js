@@ -8,11 +8,20 @@ const requireText = (file, text, message) => {
 const requirePattern = (file, pattern, message) => {
   if (!pattern.test(read(file))) errors.push(`${file}: ${message}`);
 };
+const forbidText = (file, text, message) => {
+  if (read(file).includes(text)) errors.push(`${file}: ${message}`);
+};
 
 requireText("_layouts/default.html", "viewport-fit=cover", "viewport must support notches and safe areas");
 requireText("_layouts/default.html", 'class="skip-link"', "skip link is required for keyboard and assistive-technology users");
 requireText("_layouts/default.html", 'id="main-content"', "main content landmark must have a focus target");
+requireText("_layouts/default.html", "shiftstart-favicon.svg", "approved SVG favicon must be used");
+requireText("_layouts/default.html", "theme-visibility.css", "theme visibility corrections must be loaded");
+forbidText("_layouts/default.html", "shiftstart-logo-light-theme.png", "generated light-theme logo must not be applied");
+forbidText("_layouts/default.html", "shiftstart-logo-dark-theme.png", "generated dark-theme logo must not be applied");
 requireText("_includes/header.html", "data-menu-toggle", "responsive navigation toggle is missing");
+requireText("_includes/header.html", "shiftstart-mark.svg", "approved SVG brand mark must be used");
+forbidText("_includes/header.html", "data-theme-brand-mark", "generated theme logo replacement hook must not be present");
 requireText("_includes/header.html", "mobile-navigation", "mobile navigation region is missing");
 requireText("_includes/header.html", 'inputmode="search"', "mobile search keyboard hint is missing");
 requireText("_includes/header.html", "data-search-clear", "search clear control is missing");
@@ -40,6 +49,10 @@ requireText("assets/js/app.js", "copyText", "clipboard fallback is missing");
 requireText("assets/js/app.js", "updateSelectionState", "wizard selection must update without rebuilding all 446 symptoms");
 requireText("assets/js/search.js", "pointerdown", "touch/click outside search dismissal is missing");
 requireText("assets/js/search.js", "aria-activedescendant", "accessible search result navigation is missing");
+requireText("assets/css/theme-visibility.css", 'html[data-theme="light"] .site-brand-mark', "light-theme logo contrast correction is missing");
+requireText("assets/css/theme-visibility.css", ".rd-home-hero-copy h1", "dark-theme hero text contrast correction is missing");
+requireText("assets/css/theme-visibility.css", ".rd-first-response .rd-panel-heading h2", "dark-theme first-response heading contrast correction is missing");
+forbidText("assets/css/theme-visibility.css", "background-image", "theme visibility CSS must not replace the approved logo artwork");
 
 for (const file of ["assets/js/app.js", "assets/js/search.js"]) {
   const source = read(file);
