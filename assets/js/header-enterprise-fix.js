@@ -1,15 +1,7 @@
 (() => {
   'use strict';
 
-  function syncThemeBranding(theme) {
-    const favicon = document.getElementById('shiftstart-favicon');
-    if (!favicon) return;
-    const nextHref = theme === 'dark' ? favicon.dataset.darkHref : favicon.dataset.lightHref;
-    if (nextHref) favicon.href = nextHref;
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
-    syncThemeBranding(document.documentElement.dataset.theme || 'light');
     const theme = document.querySelector('[data-theme-toggle]');
     const key = document.querySelector('[data-header-command-key]');
 
@@ -22,7 +14,6 @@
         const current = document.documentElement.dataset.theme || 'light';
         const next = current === 'dark' ? 'light' : 'dark';
         document.documentElement.dataset.theme = next;
-        syncThemeBranding(next);
         try { localStorage.setItem('shiftstart-theme', next); } catch (_) {}
 
         const region = document.querySelector('[data-ss-toast-region]');
